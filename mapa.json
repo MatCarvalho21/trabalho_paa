@@ -1,2396 +1,2609 @@
-{
-    "listaAdj": [
-        [
-            {
-                "id": 0,
-                "vSaida": 0,
-                "vEntrada": 1,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 132,
-                "rua": "Gran Via de les Corts Catalanes"
-            },
-            {
-                "id": 1,
-                "vSaida": 0,
-                "vEntrada": 34,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 150,
-                "rua": "Carrer de Casanova"
-            }
-        ],
-        [
-            {
-                "id": 2,
-                "vSaida": 1,
-                "vEntrada": 75,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 19,
-                "rua": "Carrer de Muntaner"
-            },
-            {
-                "id": 3,
-                "vSaida": 1,
-                "vEntrada": 105,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 134,
-                "rua": "Gran Via de les Corts Catalanes"
-            }
-        ],
-        [
-            {
-                "id": 4,
-                "vSaida": 2,
-                "vEntrada": 3,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 137,
-                "rua": "Carrer de París"
-            },
-            {
-                "id": 5,
-                "vSaida": 2,
-                "vEntrada": 49,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 130,
-                "rua": "Carrer de Villarroel"
-            }
-        ],
-        [
-            {
-                "id": 6,
-                "vSaida": 3,
-                "vEntrada": 10,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 136,
-                "rua": "Carrer de Casanova"
-            },
-            {
-                "id": 7,
-                "vSaida": 3,
-                "vEntrada": 4,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 132,
-                "rua": "Carrer de París"
-            }
-        ],
-        [
-            {
-                "id": 8,
-                "vSaida": 4,
-                "vEntrada": 5,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 133,
-                "rua": "Carrer de París"
-            },
-            {
-                "id": 9,
-                "vSaida": 4,
-                "vEntrada": 21,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 129,
-                "rua": "Carrer de Muntaner"
-            }
-        ],
-        [
-            {
-                "id": 10,
-                "vSaida": 5,
-                "vEntrada": 12,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 139,
-                "rua": "Carrer d'Aribau"
-            },
-            {
-                "id": 11,
-                "vSaida": 5,
-                "vEntrada": 6,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 135,
-                "rua": "Carrer de París"
-            }
-        ],
-        [
-            {
-                "id": 12,
-                "vSaida": 6,
-                "vEntrada": 52,
-                "imoveis": [],
-                "limVel": "10",
-                "tamanho": 131,
-                "rua": "Carrer d'Enric Granados"
-            },
-            {
-                "id": 13,
-                "vSaida": 6,
-                "vEntrada": 7,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 133,
-                "rua": "Carrer de París"
-            }
-        ],
-        [
-            {
-                "id": 14,
-                "vSaida": 7,
-                "vEntrada": 55,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 131,
-                "rua": "Carrer de Balmes"
-            }
-        ],
-        [
-            {
-                "id": 15,
-                "vSaida": 8,
-                "vEntrada": 47,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 56,
-                "rua": "Avinguda de Sarrià"
-            }
-        ],
-        [
-            {
-                "id": 16,
-                "vSaida": 9,
-                "vEntrada": 63,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 136,
-                "rua": "Carrer de Londres"
-            },
-            {
-                "id": 17,
-                "vSaida": 9,
-                "vEntrada": 2,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 136,
-                "rua": "Carrer de Villarroel"
-            }
-        ],
-        [
-            {
-                "id": 18,
-                "vSaida": 10,
-                "vEntrada": 86,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 43,
-                "rua": "Carrer de Casanova"
-            },
-            {
-                "id": 19,
-                "vSaida": 10,
-                "vEntrada": 9,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 135,
-                "rua": "Carrer de Londres"
-            }
-        ],
-        [
-            {
-                "id": 20,
-                "vSaida": 11,
-                "vEntrada": 4,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 138,
-                "rua": "Carrer de Muntaner"
-            },
-            {
-                "id": 21,
-                "vSaida": 11,
-                "vEntrada": 10,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 133,
-                "rua": "Carrer de Londres"
-            }
-        ],
-        [
-            {
-                "id": 22,
-                "vSaida": 12,
-                "vEntrada": 11,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 132,
-                "rua": "Carrer de Londres"
-            },
-            {
-                "id": 23,
-                "vSaida": 12,
-                "vEntrada": 13,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 28,
-                "rua": "Carrer d'Aribau"
-            }
-        ],
-        [
-            {
-                "id": 24,
-                "vSaida": 13,
-                "vEntrada": 54,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 300,
-                "rua": "Avinguda Diagonal (lateral mar)"
-            },
-            {
-                "id": 25,
-                "vSaida": 13,
-                "vEntrada": 87,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 14,
-                "rua": "Carrer d'Aribau"
-            }
-        ],
-        [
-            {
-                "id": 26,
-                "vSaida": 14,
-                "vEntrada": 5,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 129,
-                "rua": "Carrer d'Aribau"
-            },
-            {
-                "id": 27,
-                "vSaida": 14,
-                "vEntrada": 21,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 133,
-                "rua": "Carrer de Còrsega"
-            }
-        ],
-        [
-            {
-                "id": 28,
-                "vSaida": 15,
-                "vEntrada": 53,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 140,
-                "rua": "Carrer del Rosselló"
-            },
-            {
-                "id": 29,
-                "vSaida": 15,
-                "vEntrada": 14,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 132,
-                "rua": "Carrer d'Aribau"
-            }
-        ],
-        [
-            {
-                "id": 30,
-                "vSaida": 16,
-                "vEntrada": 15,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 136,
-                "rua": "Carrer d'Aribau"
-            },
-            {
-                "id": 31,
-                "vSaida": 16,
-                "vEntrada": 23,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 129,
-                "rua": "Carrer de Provença"
-            }
-        ],
-        [
-            {
-                "id": 32,
-                "vSaida": 17,
-                "vEntrada": 24,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 132,
-                "rua": "Carrer de Mallorca"
-            },
-            {
-                "id": 33,
-                "vSaida": 17,
-                "vEntrada": 16,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 131,
-                "rua": "Carrer d'Aribau"
-            }
-        ],
-        [
-            {
-                "id": 34,
-                "vSaida": 18,
-                "vEntrada": 41,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 136,
-                "rua": "Carrer de València"
-            },
-            {
-                "id": 35,
-                "vSaida": 18,
-                "vEntrada": 17,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 135,
-                "rua": "Carrer d'Aribau"
-            }
-        ],
-        [
-            {
-                "id": 36,
-                "vSaida": 19,
-                "vEntrada": 26,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 133,
-                "rua": "Carrer d'Aragó"
-            },
-            {
-                "id": 37,
-                "vSaida": 19,
-                "vEntrada": 18,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 132,
-                "rua": "Carrer d'Aribau"
-            }
-        ],
-        [
-            {
-                "id": 38,
-                "vSaida": 20,
-                "vEntrada": 27,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 133,
-                "rua": "Carrer de la Diputació"
-            },
-            {
-                "id": 39,
-                "vSaida": 20,
-                "vEntrada": 126,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 117,
-                "rua": "Carrer d'Aribau"
-            }
-        ],
-        [
-            {
-                "id": 40,
-                "vSaida": 21,
-                "vEntrada": 29,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 133,
-                "rua": "Carrer de Còrsega"
-            },
-            {
-                "id": 41,
-                "vSaida": 21,
-                "vEntrada": 22,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 132,
-                "rua": "Carrer de Muntaner"
-            }
-        ],
-        [
-            {
-                "id": 42,
-                "vSaida": 22,
-                "vEntrada": 15,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 131,
-                "rua": "Carrer del Rosselló"
-            },
-            {
-                "id": 43,
-                "vSaida": 22,
-                "vEntrada": 23,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 136,
-                "rua": "Carrer de Muntaner"
-            }
-        ],
-        [
-            {
-                "id": 44,
-                "vSaida": 23,
-                "vEntrada": 31,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 127,
-                "rua": "Carrer de Provença"
-            },
-            {
-                "id": 45,
-                "vSaida": 23,
-                "vEntrada": 24,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 135,
-                "rua": "Carrer de Muntaner"
-            }
-        ],
-        [
-            {
-                "id": 46,
-                "vSaida": 24,
-                "vEntrada": 25,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 135,
-                "rua": "Carrer de Muntaner"
-            },
-            {
-                "id": 47,
-                "vSaida": 24,
-                "vEntrada": 32,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 138,
-                "rua": "Carrer de Mallorca"
-            }
-        ],
-        [
-            {
-                "id": 48,
-                "vSaida": 25,
-                "vEntrada": 18,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 133,
-                "rua": "Carrer de València"
-            },
-            {
-                "id": 49,
-                "vSaida": 25,
-                "vEntrada": 26,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 130,
-                "rua": "Carrer de Muntaner"
-            }
-        ],
-        [
-            {
-                "id": 50,
-                "vSaida": 26,
-                "vEntrada": 65,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 134,
-                "rua": "Carrer d'Aragó"
-            },
-            {
-                "id": 51,
-                "vSaida": 26,
-                "vEntrada": 122,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 115,
-                "rua": "Carrer de Muntaner"
-            }
-        ],
-        [
-            {
-                "id": 52,
-                "vSaida": 27,
-                "vEntrada": 101,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 66,
-                "rua": "Carrer de la Diputació"
-            },
-            {
-                "id": 53,
-                "vSaida": 27,
-                "vEntrada": 1,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 149,
-                "rua": "Carrer de Muntaner"
-            }
-        ],
-        [
-            {
-                "id": 54,
-                "vSaida": 28,
-                "vEntrada": 68,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 28,
-                "rua": "Carrer de Casanova"
-            }
-        ],
-        [
-            {
-                "id": 55,
-                "vSaida": 29,
-                "vEntrada": 49,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 136,
-                "rua": "Carrer de Còrsega"
-            },
-            {
-                "id": 56,
-                "vSaida": 29,
-                "vEntrada": 3,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 130,
-                "rua": "Carrer de Casanova"
-            }
-        ],
-        [
-            {
-                "id": 57,
-                "vSaida": 30,
-                "vEntrada": 29,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 137,
-                "rua": "Carrer de Casanova"
-            },
-            {
-                "id": 58,
-                "vSaida": 30,
-                "vEntrada": 22,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 111,
-                "rua": "Carrer del Rosselló"
-            }
-        ],
-        [
-            {
-                "id": 59,
-                "vSaida": 31,
-                "vEntrada": 30,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 137,
-                "rua": "Carrer de Casanova"
-            },
-            {
-                "id": 60,
-                "vSaida": 31,
-                "vEntrada": 35,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 138,
-                "rua": "Carrer de Provença"
-            }
-        ],
-        [
-            {
-                "id": 61,
-                "vSaida": 32,
-                "vEntrada": 31,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 134,
-                "rua": "Carrer de Casanova"
-            },
-            {
-                "id": 62,
-                "vSaida": 32,
-                "vEntrada": 43,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 129,
-                "rua": "Carrer de Mallorca"
-            }
-        ],
-        [
-            {
-                "id": 63,
-                "vSaida": 33,
-                "vEntrada": 25,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 134,
-                "rua": "Carrer de València"
-            },
-            {
-                "id": 64,
-                "vSaida": 33,
-                "vEntrada": 32,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 136,
-                "rua": "Carrer de Casanova"
-            }
-        ],
-        [
-            {
-                "id": 65,
-                "vSaida": 34,
-                "vEntrada": 124,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 116,
-                "rua": "Carrer de Casanova"
-            },
-            {
-                "id": 66,
-                "vSaida": 34,
-                "vEntrada": 39,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 133,
-                "rua": "Carrer de la Diputació"
-            }
-        ],
-        [
-            {
-                "id": 67,
-                "vSaida": 35,
-                "vEntrada": 116,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 69,
-                "rua": "Carrer de Provença"
-            },
-            {
-                "id": 68,
-                "vSaida": 35,
-                "vEntrada": 43,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 130,
-                "rua": "Carrer de Villarroel"
-            }
-        ],
-        [
-            {
-                "id": 69,
-                "vSaida": 36,
-                "vEntrada": 44,
-                "imoveis": [],
-                "limVel": "10",
-                "tamanho": 132,
-                "rua": "Carrer d'Enric Granados"
-            },
-            {
-                "id": 70,
-                "vSaida": 36,
-                "vEntrada": 16,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 142,
-                "rua": "Carrer de Provença"
-            }
-        ],
-        [
-            {
-                "id": 71,
-                "vSaida": 37,
-                "vEntrada": 45,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 132,
-                "rua": "Carrer de Balmes"
-            },
-            {
-                "id": 72,
-                "vSaida": 37,
-                "vEntrada": 36,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 127,
-                "rua": "Carrer de Provença"
-            }
-        ],
-        [
-            {
-                "id": 73,
-                "vSaida": 38,
-                "vEntrada": 120,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 115,
-                "rua": "Carrer del Comte d'Urgell"
-            }
-        ],
-        [
-            {
-                "id": 74,
-                "vSaida": 39,
-                "vEntrada": 117,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 149,
-                "rua": "Carrer de Villarroel"
-            },
-            {
-                "id": 75,
-                "vSaida": 39,
-                "vEntrada": 38,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 133,
-                "rua": "Carrer de la Diputació"
-            }
-        ],
-        [
-            {
-                "id": 76,
-                "vSaida": 40,
-                "vEntrada": 33,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 134,
-                "rua": "Carrer de València"
-            },
-            {
-                "id": 77,
-                "vSaida": 40,
-                "vEntrada": 50,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 96,
-                "rua": "Carrer de Villarroel"
-            }
-        ],
-        [
-            {
-                "id": 78,
-                "vSaida": 41,
-                "vEntrada": 73,
-                "imoveis": [],
-                "limVel": "10",
-                "tamanho": 68,
-                "rua": "Carrer d'Enric Granados"
-            },
-            {
-                "id": 79,
-                "vSaida": 41,
-                "vEntrada": 42,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 130,
-                "rua": "Carrer de València"
-            }
-        ],
-        [
-            {
-                "id": 80,
-                "vSaida": 42,
-                "vEntrada": 57,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 130,
-                "rua": "Carrer de Balmes"
-            }
-        ],
-        [
-            {
-                "id": 81,
-                "vSaida": 43,
-                "vEntrada": 40,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 134,
-                "rua": "Carrer de Villarroel"
-            },
-            {
-                "id": 82,
-                "vSaida": 43,
-                "vEntrada": 95,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 133,
-                "rua": "Carrer de Mallorca"
-            }
-        ],
-        [
-            {
-                "id": 83,
-                "vSaida": 44,
-                "vEntrada": 41,
-                "imoveis": [],
-                "limVel": "10",
-                "tamanho": 136,
-                "rua": "Carrer d'Enric Granados"
-            },
-            {
-                "id": 84,
-                "vSaida": 44,
-                "vEntrada": 17,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 136,
-                "rua": "Carrer de Mallorca"
-            }
-        ],
-        [
-            {
-                "id": 85,
-                "vSaida": 45,
-                "vEntrada": 42,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 136,
-                "rua": "Carrer de Balmes"
-            },
-            {
-                "id": 86,
-                "vSaida": 45,
-                "vEntrada": 44,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 129,
-                "rua": "Carrer de Mallorca"
-            }
-        ],
-        [
-            {
-                "id": 87,
-                "vSaida": 46,
-                "vEntrada": 58,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 131,
-                "rua": "Carrer de Buenos Aires"
-            }
-        ],
-        [
-            {
-                "id": 88,
-                "vSaida": 47,
-                "vEntrada": 46,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 94,
-                "rua": "Carrer del Comte Borrell"
-            },
-            {
-                "id": 89,
-                "vSaida": 47,
-                "vEntrada": 81,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 111,
-                "rua": "Avinguda de Sarrià"
-            }
-        ],
-        [
-            {
-                "id": 90,
-                "vSaida": 48,
-                "vEntrada": 28,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 133,
-                "rua": "Carrer de Buenos Aires"
-            },
-            {
-                "id": 91,
-                "vSaida": 48,
-                "vEntrada": 9,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 133,
-                "rua": "Carrer de Villarroel"
-            }
-        ],
-        [
-            {
-                "id": 92,
-                "vSaida": 49,
-                "vEntrada": 99,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 132,
-                "rua": "Carrer de Còrsega"
-            },
-            {
-                "id": 93,
-                "vSaida": 49,
-                "vEntrada": 35,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 270,
-                "rua": "Carrer de Villarroel"
-            }
-        ],
-        [
-            {
-                "id": 94,
-                "vSaida": 50,
-                "vEntrada": 60,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 140,
-                "rua": "Avinguda de Roma"
-            },
-            {
-                "id": 95,
-                "vSaida": 50,
-                "vEntrada": 94,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 37,
-                "rua": "Carrer de Villarroel"
-            }
-        ],
-        [
-            {
-                "id": 96,
-                "vSaida": 51,
-                "vEntrada": 70,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 133,
-                "rua": "Gran Via de les Corts Catalanes (lateral mar)"
-            }
-        ],
-        [
-            {
-                "id": 97,
-                "vSaida": 52,
-                "vEntrada": 14,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 135,
-                "rua": "Carrer de Còrsega"
-            },
-            {
-                "id": 98,
-                "vSaida": 52,
-                "vEntrada": 53,
-                "imoveis": [],
-                "limVel": "10",
-                "tamanho": 133,
-                "rua": "Carrer d'Enric Granados"
-            }
-        ],
-        [
-            {
-                "id": 99,
-                "vSaida": 53,
-                "vEntrada": 56,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 127,
-                "rua": "Carrer del Rosselló"
-            },
-            {
-                "id": 100,
-                "vSaida": 53,
-                "vEntrada": 36,
-                "imoveis": [],
-                "limVel": "10",
-                "tamanho": 135,
-                "rua": "Carrer d'Enric Granados"
-            }
-        ],
-        [
-            {
-                "id": 101,
-                "vSaida": 54,
-                "vEntrada": 7,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 32,
-                "rua": "Carrer de Balmes"
-            }
-        ],
-        [
-            {
-                "id": 102,
-                "vSaida": 55,
-                "vEntrada": 52,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 131,
-                "rua": "Carrer de Còrsega"
-            },
-            {
-                "id": 103,
-                "vSaida": 55,
-                "vEntrada": 56,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 135,
-                "rua": "Carrer de Balmes"
-            }
-        ],
-        [
-            {
-                "id": 104,
-                "vSaida": 56,
-                "vEntrada": 37,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 133,
-                "rua": "Carrer de Balmes"
-            }
-        ],
-        [
-            {
-                "id": 105,
-                "vSaida": 57,
-                "vEntrada": 129,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 76,
-                "rua": "Carrer d'Aragó"
-            },
-            {
-                "id": 106,
-                "vSaida": 57,
-                "vEntrada": 106,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 118,
-                "rua": "Carrer de Balmes"
-            }
-        ],
-        [
-            {
-                "id": 107,
-                "vSaida": 58,
-                "vEntrada": 48,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 137,
-                "rua": "Carrer de Buenos Aires"
-            },
-            {
-                "id": 108,
-                "vSaida": 58,
-                "vEntrada": 63,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 136,
-                "rua": "Carrer del Comte d'Urgell"
-            }
-        ],
-        [
-            {
-                "id": 109,
-                "vSaida": 59,
-                "vEntrada": 109,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 29,
-                "rua": "Carrer de París"
-            },
-            {
-                "id": 110,
-                "vSaida": 59,
-                "vEntrada": 108,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 13,
-                "rua": "Avinguda de Sarrià"
-            }
-        ],
-        [
-            {
-                "id": 111,
-                "vSaida": 60,
-                "vEntrada": 62,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 54,
-                "rua": "Carrer del Comte d'Urgell"
-            }
-        ],
-        [
-            {
-                "id": 112,
-                "vSaida": 61,
-                "vEntrada": 38,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 149,
-                "rua": "Carrer del Comte d'Urgell"
-            },
-            {
-                "id": 113,
-                "vSaida": 61,
-                "vEntrada": 117,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 133,
-                "rua": "Gran Via de les Corts Catalanes"
-            }
-        ],
-        [
-            {
-                "id": 114,
-                "vSaida": 62,
-                "vEntrada": 40,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 131,
-                "rua": "Carrer de València"
-            },
-            {
-                "id": 115,
-                "vSaida": 62,
-                "vEntrada": 95,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 134,
-                "rua": "Carrer del Comte d'Urgell"
-            }
-        ],
-        [
-            {
-                "id": 116,
-                "vSaida": 63,
-                "vEntrada": 8,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 99,
-                "rua": "Carrer de Londres"
-            },
-            {
-                "id": 117,
-                "vSaida": 63,
-                "vEntrada": 110,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 114,
-                "rua": "Carrer del Comte d'Urgell"
-            }
-        ],
-        [
-            {
-                "id": 118,
-                "vSaida": 64,
-                "vEntrada": 79,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 18,
-                "rua": "Carrer de Balmes"
-            }
-        ],
-        [
-            {
-                "id": 119,
-                "vSaida": 65,
-                "vEntrada": 50,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 139,
-                "rua": "Avinguda de Roma"
-            },
-            {
-                "id": 120,
-                "vSaida": 65,
-                "vEntrada": 104,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 68,
-                "rua": "Carrer d'Aragó"
-            },
-            {
-                "id": 121,
-                "vSaida": 65,
-                "vEntrada": 33,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 129,
-                "rua": "Carrer de Casanova"
-            }
-        ],
-        [
-            {
-                "id": 122,
-                "vSaida": 66,
-                "vEntrada": 111,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 26,
-                "rua": "Plaça de Francesc Macià"
-            }
-        ],
-        [
-            {
-                "id": 123,
-                "vSaida": 67,
-                "vEntrada": 69,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 222,
-                "rua": "Avinguda de Josep Tarradellas"
-            },
-            {
-                "id": 124,
-                "vSaida": 67,
-                "vEntrada": 66,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 33,
-                "rua": "Plaça de Francesc Macià"
-            }
-        ],
-        [
-            {
-                "id": 125,
-                "vSaida": 68,
-                "vEntrada": 72,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 149,
-                "rua": "Avinguda Diagonal (lateral mar)"
-            },
-            {
-                "id": 126,
-                "vSaida": 68,
-                "vEntrada": 84,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 16,
-                "rua": "Carrer de Casanova"
-            }
-        ],
-        [],
-        [
-            {
-                "id": 127,
-                "vSaida": 70,
-                "vEntrada": 75,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 131,
-                "rua": "Gran Via de les Corts Catalanes (lateral mar)"
-            },
-            {
-                "id": 128,
-                "vSaida": 70,
-                "vEntrada": 0,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 17,
-                "rua": "Carrer de Casanova"
-            }
-        ],
-        [
-            {
-                "id": 129,
-                "vSaida": 71,
-                "vEntrada": 48,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 93,
-                "rua": "Carrer de Villarroel"
-            },
-            {
-                "id": 130,
-                "vSaida": 71,
-                "vEntrada": 68,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 148,
-                "rua": "Avinguda Diagonal (lateral mar)"
-            }
-        ],
-        [
-            {
-                "id": 131,
-                "vSaida": 72,
-                "vEntrada": 85,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 50,
-                "rua": "Carrer de Muntaner"
-            },
-            {
-                "id": 132,
-                "vSaida": 72,
-                "vEntrada": 13,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 146,
-                "rua": "Avinguda Diagonal (lateral mar)"
-            }
-        ],
-        [
-            {
-                "id": 133,
-                "vSaida": 73,
-                "vEntrada": 107,
-                "imoveis": [],
-                "limVel": "10",
-                "tamanho": 84,
-                "rua": "Plaça del Doctor Letamendi"
-            }
-        ],
-        [
-            {
-                "id": 134,
-                "vSaida": 74,
-                "vEntrada": 107,
-                "imoveis": [],
-                "limVel": "20",
-                "tamanho": 86,
-                "rua": "Plaça del Doctor Letamendi"
-            }
-        ],
-        [
-            {
-                "id": 135,
-                "vSaida": 75,
-                "vEntrada": 76,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 135,
-                "rua": "Gran Via de les Corts Catalanes (lateral mar)"
-            }
-        ],
-        [
-            {
-                "id": 136,
-                "vSaida": 76,
-                "vEntrada": 105,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 21,
-                "rua": "Plaça de la Universitat"
-            },
-            {
-                "id": 137,
-                "vSaida": 76,
-                "vEntrada": 78,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 121,
-                "rua": "Gran Via de les Corts Catalanes (lateral mar)"
-            }
-        ],
-        [
-            {
-                "id": 138,
-                "vSaida": 77,
-                "vEntrada": 51,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 133,
-                "rua": "Gran Via de les Corts Catalanes (lateral mar)"
-            },
-            {
-                "id": 139,
-                "vSaida": 77,
-                "vEntrada": 61,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 18,
-                "rua": "Carrer del Comte d'Urgell"
-            }
-        ],
-        [
-            {
-                "id": 140,
-                "vSaida": 78,
-                "vEntrada": 79,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 146,
-                "rua": "Gran Via de les Corts Catalanes (lateral mar)"
-            }
-        ],
-        [],
-        [
-            {
-                "id": 141,
-                "vSaida": 80,
-                "vEntrada": 99,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 134,
-                "rua": "Carrer del Comte d'Urgell"
-            },
-            {
-                "id": 142,
-                "vSaida": 80,
-                "vEntrada": 113,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 113,
-                "rua": "Carrer del Rosselló"
-            },
-            {
-                "id": 209,
-                "vSaida": 80,
-                "vEntrada": 113,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 113,
-                "rua": "Carrer del Rosselló"
-            }
-        ],
-        [
-            {
-                "id": 144,
-                "vSaida": 81,
-                "vEntrada": 46,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 61,
-                "rua": "Carrer de Buenos Aires"
-            },
-            {
-                "id": 145,
-                "vSaida": 81,
-                "vEntrada": 90,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 40,
-                "rua": "Avinguda de Sarrià"
-            }
-        ],
-        [
-            {
-                "id": 146,
-                "vSaida": 82,
-                "vEntrada": 84,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 150,
-                "rua": "Avinguda Diagonal"
-            },
-            {
-                "id": 148,
-                "vSaida": 82,
-                "vEntrada": 72,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 15,
-                "rua": "Carrer de Muntaner"
-            },
-            {
-                "id": 149,
-                "vSaida": 82,
-                "vEntrada": 87,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 147,
-                "rua": "Avinguda Diagonal"
-            },
-            {
-                "id": 155,
-                "vSaida": 82,
-                "vEntrada": 84,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 150,
-                "rua": "Avinguda Diagonal"
-            },
-            {
-                "id": 164,
-                "vSaida": 82,
-                "vEntrada": 87,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 147,
-                "rua": "Avinguda Diagonal"
-            }
-        ],
-        [
-            {
-                "id": 151,
-                "vSaida": 83,
-                "vEntrada": 54,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 15,
-                "rua": "Carrer de Balmes"
-            },
-            {
-                "id": 152,
-                "vSaida": 83,
-                "vEntrada": 87,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 300,
-                "rua": "Avinguda Diagonal"
-            },
-            {
-                "id": 162,
-                "vSaida": 83,
-                "vEntrada": 87,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 300,
-                "rua": "Avinguda Diagonal"
-            }
-        ],
-        [
-            {
-                "id": 147,
-                "vSaida": 84,
-                "vEntrada": 82,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 150,
-                "rua": "Avinguda Diagonal"
-            },
-            {
-                "id": 154,
-                "vSaida": 84,
-                "vEntrada": 82,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 150,
-                "rua": "Avinguda Diagonal"
-            },
-            {
-                "id": 156,
-                "vSaida": 84,
-                "vEntrada": 88,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 200,
-                "rua": "Avinguda Diagonal"
-            },
-            {
-                "id": 169,
-                "vSaida": 84,
-                "vEntrada": 88,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 200,
-                "rua": "Avinguda Diagonal"
-            }
-        ],
-        [
-            {
-                "id": 158,
-                "vSaida": 85,
-                "vEntrada": 11,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 43,
-                "rua": "Carrer de Muntaner"
-            },
-            {
-                "id": 159,
-                "vSaida": 85,
-                "vEntrada": 86,
-                "imoveis": [],
-                "limVel": "20",
-                "tamanho": 134,
-                "rua": "Passatge Lluis Pellicer"
-            }
-        ],
-        [
-            {
-                "id": 160,
-                "vSaida": 86,
-                "vEntrada": 28,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 87,
-                "rua": "Carrer de Casanova"
-            }
-        ],
-        [
-            {
-                "id": 150,
-                "vSaida": 87,
-                "vEntrada": 82,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 147,
-                "rua": "Avinguda Diagonal"
-            },
-            {
-                "id": 153,
-                "vSaida": 87,
-                "vEntrada": 83,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 300,
-                "rua": "Avinguda Diagonal"
-            },
-            {
-                "id": 161,
-                "vSaida": 87,
-                "vEntrada": 83,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 300,
-                "rua": "Avinguda Diagonal"
-            },
-            {
-                "id": 163,
-                "vSaida": 87,
-                "vEntrada": 82,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 147,
-                "rua": "Avinguda Diagonal"
-            }
-        ],
-        [
-            {
-                "id": 157,
-                "vSaida": 88,
-                "vEntrada": 84,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 200,
-                "rua": "Avinguda Diagonal"
-            },
-            {
-                "id": 165,
-                "vSaida": 88,
-                "vEntrada": 98,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 59,
-                "rua": "Avinguda Diagonal"
-            },
-            {
-                "id": 167,
-                "vSaida": 88,
-                "vEntrada": 89,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 16,
-                "rua": "Carrer de Calvet"
-            },
-            {
-                "id": 168,
-                "vSaida": 88,
-                "vEntrada": 84,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 200,
-                "rua": "Avinguda Diagonal"
-            },
-            {
-                "id": 185,
-                "vSaida": 88,
-                "vEntrada": 98,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 59,
-                "rua": "Avinguda Diagonal"
-            }
-        ],
-        [
-            {
-                "id": 170,
-                "vSaida": 89,
-                "vEntrada": 71,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 53,
-                "rua": "Avinguda Diagonal (lateral mar)"
-            }
-        ],
-        [
-            {
-                "id": 171,
-                "vSaida": 90,
-                "vEntrada": 91,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 96,
-                "rua": "Avinguda de Josep Tarradellas"
-            },
-            {
-                "id": 172,
-                "vSaida": 90,
-                "vEntrada": 69,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 30,
-                "rua": "Avinguda de Sarrià"
-            }
-        ],
-        [
-            {
-                "id": 173,
-                "vSaida": 91,
-                "vEntrada": 46,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 83,
-                "rua": "Carrer del Comte Borrell"
-            },
-            {
-                "id": 174,
-                "vSaida": 91,
-                "vEntrada": 66,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 124,
-                "rua": "Avinguda de Josep Tarradellas"
-            }
-        ],
-        [
-            {
-                "id": 175,
-                "vSaida": 92,
-                "vEntrada": 60,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 14,
-                "rua": "Carrer del Comte d'Urgell"
-            }
-        ],
-        [
-            {
-                "id": 176,
-                "vSaida": 93,
-                "vEntrada": 92,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 66,
-                "rua": "Carrer del Comte d'Urgell"
-            }
-        ],
-        [
-            {
-                "id": 177,
-                "vSaida": 94,
-                "vEntrada": 118,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 115,
-                "rua": "Carrer de Villarroel"
-            },
-            {
-                "id": 178,
-                "vSaida": 94,
-                "vEntrada": 93,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 131,
-                "rua": "Carrer d'Aragó"
-            }
-        ],
-        [
-            {
-                "id": 179,
-                "vSaida": 95,
-                "vEntrada": 114,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 134,
-                "rua": "Carrer del Comte d'Urgell"
-            }
-        ],
-        [
-            {
-                "id": 180,
-                "vSaida": 96,
-                "vEntrada": 59,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 23,
-                "rua": "Carrer del Comte d'Urgell"
-            },
-            {
-                "id": 181,
-                "vSaida": 96,
-                "vEntrada": 109,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 26,
-                "rua": "Rua desconhecida 181"
-            }
-        ],
-        [
-            {
-                "id": 182,
-                "vSaida": 97,
-                "vEntrada": 89,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 81,
-                "rua": "Avinguda Diagonal (lateral mar)"
-            },
-            {
-                "id": 183,
-                "vSaida": 97,
-                "vEntrada": 98,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 30,
-                "rua": "Plaça de Francesc Macià"
-            }
-        ],
-        [
-            {
-                "id": 166,
-                "vSaida": 98,
-                "vEntrada": 88,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 59,
-                "rua": "Avinguda Diagonal"
-            },
-            {
-                "id": 184,
-                "vSaida": 98,
-                "vEntrada": 88,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 59,
-                "rua": "Avinguda Diagonal"
-            }
-        ],
-        [
-            {
-                "id": 186,
-                "vSaida": 99,
-                "vEntrada": 96,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 112,
-                "rua": "Carrer del Comte d'Urgell"
-            }
-        ],
-        [
-            {
-                "id": 187,
-                "vSaida": 100,
-                "vEntrada": 101,
-                "imoveis": [],
-                "limVel": "20",
-                "tamanho": 130,
-                "rua": "Passatge de Valeri Serra"
-            }
-        ],
-        [
-            {
-                "id": 188,
-                "vSaida": 101,
-                "vEntrada": 102,
-                "imoveis": [],
-                "limVel": "20",
-                "tamanho": 133,
-                "rua": "Passatge de Valeri Serra"
-            },
-            {
-                "id": 189,
-                "vSaida": 101,
-                "vEntrada": 34,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 67,
-                "rua": "Carrer de la Diputació"
-            }
-        ],
-        [
-            {
-                "id": 190,
-                "vSaida": 102,
-                "vEntrada": 123,
-                "imoveis": [],
-                "limVel": "10",
-                "tamanho": 74,
-                "rua": [
-                    "Carrer de Muntaner",
-                    "Carrer del Consell de Cent"
-                ]
-            }
-        ],
-        [
-            {
-                "id": 191,
-                "vSaida": 103,
-                "vEntrada": 104,
-                "imoveis": [],
-                "limVel": "20",
-                "tamanho": 87,
-                "rua": "Passatge d'Aragó"
-            },
-            {
-                "id": 195,
-                "vSaida": 103,
-                "vEntrada": 104,
-                "imoveis": [],
-                "limVel": "20",
-                "tamanho": 87,
-                "rua": "Passatge d'Aragó"
-            }
-        ],
-        [
-            {
-                "id": 192,
-                "vSaida": 104,
-                "vEntrada": 103,
-                "imoveis": [],
-                "limVel": "20",
-                "tamanho": 87,
-                "rua": "Passatge d'Aragó"
-            },
-            {
-                "id": 193,
-                "vSaida": 104,
-                "vEntrada": 94,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 66,
-                "rua": "Carrer d'Aragó"
-            },
-            {
-                "id": 194,
-                "vSaida": 104,
-                "vEntrada": 103,
-                "imoveis": [],
-                "limVel": "20",
-                "tamanho": 87,
-                "rua": "Passatge d'Aragó"
-            }
-        ],
-        [
-            {
-                "id": 196,
-                "vSaida": 105,
-                "vEntrada": 64,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 267,
-                "rua": "Gran Via de les Corts Catalanes"
-            },
-            {
-                "id": 197,
-                "vSaida": 105,
-                "vEntrada": 20,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 148,
-                "rua": "Carrer d'Aribau"
-            }
-        ],
-        [
-            {
-                "id": 198,
-                "vSaida": 106,
-                "vEntrada": 121,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 34,
-                "rua": "Carrer de Balmes"
-            }
-        ],
-        [
-            {
-                "id": 199,
-                "vSaida": 107,
-                "vEntrada": 19,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 83,
-                "rua": "Carrer d'Aragó"
-            }
-        ],
-        [
-            {
-                "id": 200,
-                "vSaida": 108,
-                "vEntrada": 8,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 149,
-                "rua": "Avinguda de Sarrià"
-            }
-        ],
-        [
-            {
-                "id": 201,
-                "vSaida": 109,
-                "vEntrada": 2,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 116,
-                "rua": "Carrer de París"
-            }
-        ],
-        [
-            {
-                "id": 202,
-                "vSaida": 110,
-                "vEntrada": 108,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 19,
-                "rua": "Carrer del Comte d'Urgell"
-            },
-            {
-                "id": 203,
-                "vSaida": 110,
-                "vEntrada": 109,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 28,
-                "rua": "Rua desconhecida 203"
-            }
-        ],
-        [
-            {
-                "id": 204,
-                "vSaida": 111,
-                "vEntrada": 58,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 134,
-                "rua": "Carrer del Comte d'Urgell"
-            },
-            {
-                "id": 205,
-                "vSaida": 111,
-                "vEntrada": 97,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 15,
-                "rua": "Plaça de Francesc Macià"
-            }
-        ],
-        [
-            {
-                "id": 206,
-                "vSaida": 112,
-                "vEntrada": 64,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 149,
-                "rua": "Carrer de Balmes"
-            },
-            {
-                "id": 207,
-                "vSaida": 112,
-                "vEntrada": 20,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 268,
-                "rua": "Carrer de la Diputació"
-            }
-        ],
-        [
-            {
-                "id": 143,
-                "vSaida": 113,
-                "vEntrada": 80,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 113,
-                "rua": "Carrer del Rosselló"
-            },
-            {
-                "id": 208,
-                "vSaida": 113,
-                "vEntrada": 80,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 113,
-                "rua": "Carrer del Rosselló"
-            }
-        ],
-        [
-            {
-                "id": 210,
-                "vSaida": 114,
-                "vEntrada": 80,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 129,
-                "rua": "Carrer del Comte d'Urgell"
-            }
-        ],
-        [],
-        [
-            {
-                "id": 211,
-                "vSaida": 116,
-                "vEntrada": 114,
-                "imoveis": [],
-                "limVel": "30",
-                "tamanho": 65,
-                "rua": "Carrer de Provença"
-            },
-            {
-                "id": 212,
-                "vSaida": 116,
-                "vEntrada": 115,
-                "imoveis": [],
-                "limVel": "N/A",
-                "tamanho": 124,
-                "rua": "Passatge de Batlló"
-            }
-        ],
-        [
-            {
-                "id": 213,
-                "vSaida": 117,
-                "vEntrada": 0,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 133,
-                "rua": "Gran Via de les Corts Catalanes"
-            },
-            {
-                "id": 214,
-                "vSaida": 117,
-                "vEntrada": 51,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 18,
-                "rua": "Carrer de Villarroel"
-            }
-        ],
-        [
-            {
-                "id": 215,
-                "vSaida": 118,
-                "vEntrada": 119,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 32,
-                "rua": "Carrer de Villarroel"
-            },
-            {
-                "id": 216,
-                "vSaida": 118,
-                "vEntrada": 125,
-                "imoveis": [],
-                "limVel": "10",
-                "tamanho": 146,
-                "rua": [
-                    "Carrer de Casanova",
-                    "Carrer de Villarroel",
-                    "Carrer del Consell de Cent"
-                ]
-            }
-        ],
-        [
-            {
-                "id": 217,
-                "vSaida": 119,
-                "vEntrada": 39,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 119,
-                "rua": "Carrer de Villarroel"
-            }
-        ],
-        [
-            {
-                "id": 218,
-                "vSaida": 120,
-                "vEntrada": 93,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 152,
-                "rua": "Carrer del Comte d'Urgell"
-            },
-            {
-                "id": 219,
-                "vSaida": 120,
-                "vEntrada": 119,
-                "imoveis": [],
-                "limVel": "10",
-                "tamanho": 143,
-                "rua": [
-                    "Carrer del Comte d'Urgell",
-                    "Carrer de Villarroel",
-                    "Carrer del Consell de Cent"
-                ]
-            }
-        ],
-        [
-            {
-                "id": 220,
-                "vSaida": 121,
-                "vEntrada": 112,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 115,
-                "rua": "Carrer de Balmes"
-            }
-        ],
-        [
-            {
-                "id": 221,
-                "vSaida": 122,
-                "vEntrada": 123,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 35,
-                "rua": "Carrer de Muntaner"
-            },
-            {
-                "id": 222,
-                "vSaida": 122,
-                "vEntrada": 127,
-                "imoveis": [],
-                "limVel": "10",
-                "tamanho": 147,
-                "rua": [
-                    "Carrer de Muntaner",
-                    "Carrer del Consell de Cent"
-                ]
-            }
-        ],
-        [
-            {
-                "id": 223,
-                "vSaida": 123,
-                "vEntrada": 27,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 115,
-                "rua": "Carrer de Muntaner"
-            }
-        ],
-        [
-            {
-                "id": 224,
-                "vSaida": 124,
-                "vEntrada": 125,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 33,
-                "rua": "Carrer de Casanova"
-            },
-            {
-                "id": 225,
-                "vSaida": 124,
-                "vEntrada": 102,
-                "imoveis": [],
-                "limVel": "10",
-                "tamanho": 73,
-                "rua": [
-                    "Carrer de Casanova",
-                    "Carrer del Consell de Cent"
-                ]
-            }
-        ],
-        [
-            {
-                "id": 226,
-                "vSaida": 125,
-                "vEntrada": 65,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 117,
-                "rua": "Carrer de Casanova"
-            }
-        ],
-        [
-            {
-                "id": 227,
-                "vSaida": 126,
-                "vEntrada": 127,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 33,
-                "rua": "Carrer d'Aribau"
-            },
-            {
-                "id": 228,
-                "vSaida": 126,
-                "vEntrada": 128,
-                "imoveis": [],
-                "limVel": "10",
-                "tamanho": 152,
-                "rua": "Carrer del Consell de Cent"
-            }
-        ],
-        [
-            {
-                "id": 229,
-                "vSaida": 127,
-                "vEntrada": 19,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 116,
-                "rua": "Carrer d'Aribau"
-            }
-        ],
-        [
-            {
-                "id": 230,
-                "vSaida": 128,
-                "vEntrada": 74,
-                "imoveis": [],
-                "limVel": "10",
-                "tamanho": 44,
-                "rua": "Carrer d'Enric Granados"
-            },
-            {
-                "id": 231,
-                "vSaida": 128,
-                "vEntrada": 121,
-                "imoveis": [],
-                "limVel": "10",
-                "tamanho": 149,
-                "rua": [
-                    "Carrer de Balmes",
-                    "Carrer del Consell de Cent"
-                ]
-            }
-        ],
-        [
-            {
-                "id": 232,
-                "vSaida": 129,
-                "vEntrada": 74,
-                "imoveis": [],
-                "limVel": "20",
-                "tamanho": 87,
-                "rua": "Plaça del Doctor Letamendi"
-            },
-            {
-                "id": 233,
-                "vSaida": 129,
-                "vEntrada": 73,
-                "imoveis": [],
-                "limVel": "10",
-                "tamanho": 87,
-                "rua": "Plaça del Doctor Letamendi"
-            },
-            {
-                "id": 234,
-                "vSaida": 129,
-                "vEntrada": 107,
-                "imoveis": [],
-                "limVel": "50",
-                "tamanho": 109,
-                "rua": "Carrer d'Aragó"
-            }
-        ]
+[
+    [
+        {
+            "id": 0,
+            "vSaida": 0,
+            "vEntrada": 1,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 132,
+            "rua": "Gran Via de les Corts Catalanes_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 1,
+            "vSaida": 0,
+            "vEntrada": 34,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 150,
+            "rua": "Carrer de Casanova_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 2,
+            "vSaida": 1,
+            "vEntrada": 75,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 19,
+            "rua": "Carrer de Muntaner_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 3,
+            "vSaida": 1,
+            "vEntrada": 105,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 134,
+            "rua": "Gran Via de les Corts Catalanes_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 4,
+            "vSaida": 2,
+            "vEntrada": 3,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 137,
+            "rua": "Carrer de París_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 5,
+            "vSaida": 2,
+            "vEntrada": 49,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 130,
+            "rua": "Carrer de Villarroel_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 6,
+            "vSaida": 3,
+            "vEntrada": 10,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 136,
+            "rua": "Carrer de Casanova_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 7,
+            "vSaida": 3,
+            "vEntrada": 4,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 132,
+            "rua": "Carrer de París_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 8,
+            "vSaida": 4,
+            "vEntrada": 5,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 133,
+            "rua": "Carrer de París_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 9,
+            "vSaida": 4,
+            "vEntrada": 21,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 129,
+            "rua": "Carrer de Muntaner_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 10,
+            "vSaida": 5,
+            "vEntrada": 12,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 139,
+            "rua": "Carrer d'Aribau_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 11,
+            "vSaida": 5,
+            "vEntrada": 6,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 135,
+            "rua": "Carrer de París_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 12,
+            "vSaida": 6,
+            "vEntrada": 52,
+            "imoveis": [],
+            "limVel": "10",
+            "tamanho": 131,
+            "rua": "Carrer d'Enric Granados_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 13,
+            "vSaida": 6,
+            "vEntrada": 7,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 133,
+            "rua": "Carrer de París_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 14,
+            "vSaida": 7,
+            "vEntrada": 55,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 131,
+            "rua": "Carrer de Balmes_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 15,
+            "vSaida": 8,
+            "vEntrada": 47,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 56,
+            "rua": "Avinguda de Sarrià_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 16,
+            "vSaida": 9,
+            "vEntrada": 63,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 136,
+            "rua": "Carrer de Londres_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 17,
+            "vSaida": 9,
+            "vEntrada": 2,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 136,
+            "rua": "Carrer de Villarroel_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 18,
+            "vSaida": 10,
+            "vEntrada": 86,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 43,
+            "rua": "Carrer de Casanova_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 19,
+            "vSaida": 10,
+            "vEntrada": 9,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 135,
+            "rua": "Carrer de Londres_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 20,
+            "vSaida": 11,
+            "vEntrada": 4,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 138,
+            "rua": "Carrer de Muntaner_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 21,
+            "vSaida": 11,
+            "vEntrada": 10,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 133,
+            "rua": "Carrer de Londres_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 22,
+            "vSaida": 12,
+            "vEntrada": 11,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 132,
+            "rua": "Carrer de Londres_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 23,
+            "vSaida": 12,
+            "vEntrada": 13,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 28,
+            "rua": "Carrer d'Aribau_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 24,
+            "vSaida": 13,
+            "vEntrada": 54,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 300,
+            "rua": "Avinguda Diagonal (lateral mar)_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 25,
+            "vSaida": 13,
+            "vEntrada": 87,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 14,
+            "rua": "Carrer d'Aribau_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 26,
+            "vSaida": 14,
+            "vEntrada": 5,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 129,
+            "rua": "Carrer d'Aribau_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 27,
+            "vSaida": 14,
+            "vEntrada": 21,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 133,
+            "rua": "Carrer de Còrsega_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 28,
+            "vSaida": 15,
+            "vEntrada": 53,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 140,
+            "rua": "Carrer del Rosselló_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 29,
+            "vSaida": 15,
+            "vEntrada": 14,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 132,
+            "rua": "Carrer d'Aribau_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 30,
+            "vSaida": 16,
+            "vEntrada": 15,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 136,
+            "rua": "Carrer d'Aribau_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 31,
+            "vSaida": 16,
+            "vEntrada": 23,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 129,
+            "rua": "Carrer de Provença_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 32,
+            "vSaida": 17,
+            "vEntrada": 24,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 132,
+            "rua": "Carrer de Mallorca_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 33,
+            "vSaida": 17,
+            "vEntrada": 16,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 131,
+            "rua": "Carrer d'Aribau_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 34,
+            "vSaida": 18,
+            "vEntrada": 41,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 136,
+            "rua": "Carrer de València_sudeste",
+            "regiao": "sudeste"
+        },
+        {
+            "id": 35,
+            "vSaida": 18,
+            "vEntrada": 17,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 135,
+            "rua": "Carrer d'Aribau_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 36,
+            "vSaida": 19,
+            "vEntrada": 26,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 133,
+            "rua": "Carrer d'Aragó_sudeste",
+            "regiao": "sudeste"
+        },
+        {
+            "id": 37,
+            "vSaida": 19,
+            "vEntrada": 18,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 132,
+            "rua": "Carrer d'Aribau_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 38,
+            "vSaida": 20,
+            "vEntrada": 27,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 133,
+            "rua": "Carrer de la Diputació_sudeste",
+            "regiao": "sudeste"
+        },
+        {
+            "id": 39,
+            "vSaida": 20,
+            "vEntrada": 126,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 117,
+            "rua": "Carrer d'Aribau_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 40,
+            "vSaida": 21,
+            "vEntrada": 29,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 133,
+            "rua": "Carrer de Còrsega_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 41,
+            "vSaida": 21,
+            "vEntrada": 22,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 132,
+            "rua": "Carrer de Muntaner_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 42,
+            "vSaida": 22,
+            "vEntrada": 15,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 131,
+            "rua": "Carrer del Rosselló_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 43,
+            "vSaida": 22,
+            "vEntrada": 23,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 136,
+            "rua": "Carrer de Muntaner_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 44,
+            "vSaida": 23,
+            "vEntrada": 31,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 127,
+            "rua": "Carrer de Provença_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 45,
+            "vSaida": 23,
+            "vEntrada": 24,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 135,
+            "rua": "Carrer de Muntaner_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 46,
+            "vSaida": 24,
+            "vEntrada": 25,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 135,
+            "rua": "Carrer de Muntaner_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 47,
+            "vSaida": 24,
+            "vEntrada": 32,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 138,
+            "rua": "Carrer de Mallorca_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 48,
+            "vSaida": 25,
+            "vEntrada": 18,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 133,
+            "rua": "Carrer de València_sudeste",
+            "regiao": "sudeste"
+        },
+        {
+            "id": 49,
+            "vSaida": 25,
+            "vEntrada": 26,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 130,
+            "rua": "Carrer de Muntaner_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 50,
+            "vSaida": 26,
+            "vEntrada": 65,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 134,
+            "rua": "Carrer d'Aragó_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 51,
+            "vSaida": 26,
+            "vEntrada": 122,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 115,
+            "rua": "Carrer de Muntaner_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 52,
+            "vSaida": 27,
+            "vEntrada": 101,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 66,
+            "rua": "Carrer de la Diputació_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 53,
+            "vSaida": 27,
+            "vEntrada": 1,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 149,
+            "rua": "Carrer de Muntaner_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 54,
+            "vSaida": 28,
+            "vEntrada": 68,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 28,
+            "rua": "Carrer de Casanova_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 55,
+            "vSaida": 29,
+            "vEntrada": 49,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 136,
+            "rua": "Carrer de Còrsega_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 56,
+            "vSaida": 29,
+            "vEntrada": 3,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 130,
+            "rua": "Carrer de Casanova_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 57,
+            "vSaida": 30,
+            "vEntrada": 29,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 137,
+            "rua": "Carrer de Casanova_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 58,
+            "vSaida": 30,
+            "vEntrada": 22,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 111,
+            "rua": "Carrer del Rosselló_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 59,
+            "vSaida": 31,
+            "vEntrada": 30,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 137,
+            "rua": "Carrer de Casanova_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 60,
+            "vSaida": 31,
+            "vEntrada": 35,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 138,
+            "rua": "Carrer de Provença_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 61,
+            "vSaida": 32,
+            "vEntrada": 31,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 134,
+            "rua": "Carrer de Casanova_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 62,
+            "vSaida": 32,
+            "vEntrada": 43,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 129,
+            "rua": "Carrer de Mallorca_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 63,
+            "vSaida": 33,
+            "vEntrada": 25,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 134,
+            "rua": "Carrer de València_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 64,
+            "vSaida": 33,
+            "vEntrada": 32,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 136,
+            "rua": "Carrer de Casanova_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 65,
+            "vSaida": 34,
+            "vEntrada": 124,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 116,
+            "rua": "Carrer de Casanova_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 66,
+            "vSaida": 34,
+            "vEntrada": 39,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 133,
+            "rua": "Carrer de la Diputació_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 67,
+            "vSaida": 35,
+            "vEntrada": 116,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 69,
+            "rua": "Carrer de Provença_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 68,
+            "vSaida": 35,
+            "vEntrada": 43,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 130,
+            "rua": "Carrer de Villarroel_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 69,
+            "vSaida": 36,
+            "vEntrada": 44,
+            "imoveis": [],
+            "limVel": "10",
+            "tamanho": 132,
+            "rua": "Carrer d'Enric Granados_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 70,
+            "vSaida": 36,
+            "vEntrada": 16,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 142,
+            "rua": "Carrer de Provença_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 71,
+            "vSaida": 37,
+            "vEntrada": 45,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 132,
+            "rua": "Carrer de Balmes_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 72,
+            "vSaida": 37,
+            "vEntrada": 36,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 127,
+            "rua": "Carrer de Provença_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 73,
+            "vSaida": 38,
+            "vEntrada": 120,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 115,
+            "rua": "Carrer del Comte d'Urgell_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 74,
+            "vSaida": 39,
+            "vEntrada": 117,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 149,
+            "rua": "Carrer de Villarroel_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 75,
+            "vSaida": 39,
+            "vEntrada": 38,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 133,
+            "rua": "Carrer de la Diputació_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 76,
+            "vSaida": 40,
+            "vEntrada": 33,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 134,
+            "rua": "Carrer de València_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 77,
+            "vSaida": 40,
+            "vEntrada": 50,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 96,
+            "rua": "Carrer de Villarroel_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 78,
+            "vSaida": 41,
+            "vEntrada": 73,
+            "imoveis": [],
+            "limVel": "10",
+            "tamanho": 68,
+            "rua": "Carrer d'Enric Granados_sudeste",
+            "regiao": "sudeste"
+        },
+        {
+            "id": 79,
+            "vSaida": 41,
+            "vEntrada": 42,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 130,
+            "rua": "Carrer de València_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 80,
+            "vSaida": 42,
+            "vEntrada": 57,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 130,
+            "rua": "Carrer de Balmes_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 81,
+            "vSaida": 43,
+            "vEntrada": 40,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 134,
+            "rua": "Carrer de Villarroel_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 82,
+            "vSaida": 43,
+            "vEntrada": 95,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 133,
+            "rua": "Carrer de Mallorca_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 83,
+            "vSaida": 44,
+            "vEntrada": 41,
+            "imoveis": [],
+            "limVel": "10",
+            "tamanho": 136,
+            "rua": "Carrer d'Enric Granados_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 84,
+            "vSaida": 44,
+            "vEntrada": 17,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 136,
+            "rua": "Carrer de Mallorca_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 85,
+            "vSaida": 45,
+            "vEntrada": 42,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 136,
+            "rua": "Carrer de Balmes_sudeste",
+            "regiao": "sudeste"
+        },
+        {
+            "id": 86,
+            "vSaida": 45,
+            "vEntrada": 44,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 129,
+            "rua": "Carrer de Mallorca_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 87,
+            "vSaida": 46,
+            "vEntrada": 58,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 131,
+            "rua": "Carrer de Buenos Aires_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 88,
+            "vSaida": 47,
+            "vEntrada": 46,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 94,
+            "rua": "Carrer del Comte Borrell_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 89,
+            "vSaida": 47,
+            "vEntrada": 81,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 111,
+            "rua": "Avinguda de Sarrià_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 90,
+            "vSaida": 48,
+            "vEntrada": 28,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 133,
+            "rua": "Carrer de Buenos Aires_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 91,
+            "vSaida": 48,
+            "vEntrada": 9,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 133,
+            "rua": "Carrer de Villarroel_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 92,
+            "vSaida": 49,
+            "vEntrada": 99,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 132,
+            "rua": "Carrer de Còrsega_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 93,
+            "vSaida": 49,
+            "vEntrada": 35,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 270,
+            "rua": "Carrer de Villarroel_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 94,
+            "vSaida": 50,
+            "vEntrada": 60,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 140,
+            "rua": "Avinguda de Roma_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 95,
+            "vSaida": 50,
+            "vEntrada": 94,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 37,
+            "rua": "Carrer de Villarroel_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 96,
+            "vSaida": 51,
+            "vEntrada": 70,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 133,
+            "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 97,
+            "vSaida": 52,
+            "vEntrada": 14,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 135,
+            "rua": "Carrer de Còrsega_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 98,
+            "vSaida": 52,
+            "vEntrada": 53,
+            "imoveis": [],
+            "limVel": "10",
+            "tamanho": 133,
+            "rua": "Carrer d'Enric Granados_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 99,
+            "vSaida": 53,
+            "vEntrada": 56,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 127,
+            "rua": "Carrer del Rosselló_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 100,
+            "vSaida": 53,
+            "vEntrada": 36,
+            "imoveis": [],
+            "limVel": "10",
+            "tamanho": 135,
+            "rua": "Carrer d'Enric Granados_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 101,
+            "vSaida": 54,
+            "vEntrada": 7,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 32,
+            "rua": "Carrer de Balmes_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 102,
+            "vSaida": 55,
+            "vEntrada": 52,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 131,
+            "rua": "Carrer de Còrsega_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 103,
+            "vSaida": 55,
+            "vEntrada": 56,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 135,
+            "rua": "Carrer de Balmes_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 104,
+            "vSaida": 56,
+            "vEntrada": 37,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 133,
+            "rua": "Carrer de Balmes_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 105,
+            "vSaida": 57,
+            "vEntrada": 129,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 76,
+            "rua": "Carrer d'Aragó_sudeste",
+            "regiao": "sudeste"
+        },
+        {
+            "id": 106,
+            "vSaida": 57,
+            "vEntrada": 106,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 118,
+            "rua": "Carrer de Balmes_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 107,
+            "vSaida": 58,
+            "vEntrada": 48,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 137,
+            "rua": "Carrer de Buenos Aires_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 108,
+            "vSaida": 58,
+            "vEntrada": 63,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 136,
+            "rua": "Carrer del Comte d'Urgell_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 109,
+            "vSaida": 59,
+            "vEntrada": 109,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 29,
+            "rua": "Carrer de París_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 110,
+            "vSaida": 59,
+            "vEntrada": 108,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 13,
+            "rua": "Avinguda de Sarrià_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 111,
+            "vSaida": 60,
+            "vEntrada": 62,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 54,
+            "rua": "Carrer del Comte d'Urgell_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 112,
+            "vSaida": 61,
+            "vEntrada": 38,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 149,
+            "rua": "Carrer del Comte d'Urgell_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 113,
+            "vSaida": 61,
+            "vEntrada": 117,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 133,
+            "rua": "Gran Via de les Corts Catalanes_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 114,
+            "vSaida": 62,
+            "vEntrada": 40,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 131,
+            "rua": "Carrer de València_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 115,
+            "vSaida": 62,
+            "vEntrada": 95,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 134,
+            "rua": "Carrer del Comte d'Urgell_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 116,
+            "vSaida": 63,
+            "vEntrada": 8,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 99,
+            "rua": "Carrer de Londres_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 117,
+            "vSaida": 63,
+            "vEntrada": 110,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 114,
+            "rua": "Carrer del Comte d'Urgell_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 118,
+            "vSaida": 64,
+            "vEntrada": 79,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 18,
+            "rua": "Carrer de Balmes_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 119,
+            "vSaida": 65,
+            "vEntrada": 50,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 139,
+            "rua": "Avinguda de Roma_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 120,
+            "vSaida": 65,
+            "vEntrada": 104,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 68,
+            "rua": "Carrer d'Aragó_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 121,
+            "vSaida": 65,
+            "vEntrada": 33,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 129,
+            "rua": "Carrer de Casanova_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 122,
+            "vSaida": 66,
+            "vEntrada": 111,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 26,
+            "rua": "Plaça de Francesc Macià_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 123,
+            "vSaida": 67,
+            "vEntrada": 69,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 222,
+            "rua": "Avinguda de Josep Tarradellas_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 124,
+            "vSaida": 67,
+            "vEntrada": 66,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 33,
+            "rua": "Plaça de Francesc Macià_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 125,
+            "vSaida": 68,
+            "vEntrada": 72,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 149,
+            "rua": "Avinguda Diagonal (lateral mar)_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 126,
+            "vSaida": 68,
+            "vEntrada": 84,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 16,
+            "rua": "Carrer de Casanova_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [],
+    [
+        {
+            "id": 127,
+            "vSaida": 70,
+            "vEntrada": 75,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 131,
+            "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 128,
+            "vSaida": 70,
+            "vEntrada": 0,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 17,
+            "rua": "Carrer de Casanova_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 129,
+            "vSaida": 71,
+            "vEntrada": 48,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 93,
+            "rua": "Carrer de Villarroel_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 130,
+            "vSaida": 71,
+            "vEntrada": 68,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 148,
+            "rua": "Avinguda Diagonal (lateral mar)_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 131,
+            "vSaida": 72,
+            "vEntrada": 85,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 50,
+            "rua": "Carrer de Muntaner_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 132,
+            "vSaida": 72,
+            "vEntrada": 13,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 146,
+            "rua": "Avinguda Diagonal (lateral mar)_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 133,
+            "vSaida": 73,
+            "vEntrada": 107,
+            "imoveis": [],
+            "limVel": "10",
+            "tamanho": 84,
+            "rua": "Plaça del Doctor Letamendi_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 134,
+            "vSaida": 74,
+            "vEntrada": 107,
+            "imoveis": [],
+            "limVel": "20",
+            "tamanho": 86,
+            "rua": "Plaça del Doctor Letamendi_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 135,
+            "vSaida": 75,
+            "vEntrada": 76,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 135,
+            "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 136,
+            "vSaida": 76,
+            "vEntrada": 105,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 21,
+            "rua": "Plaça de la Universitat_sudeste",
+            "regiao": "sudeste"
+        },
+        {
+            "id": 137,
+            "vSaida": 76,
+            "vEntrada": 78,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 121,
+            "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 138,
+            "vSaida": 77,
+            "vEntrada": 51,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 133,
+            "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 139,
+            "vSaida": 77,
+            "vEntrada": 61,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 18,
+            "rua": "Carrer del Comte d'Urgell_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 140,
+            "vSaida": 78,
+            "vEntrada": 79,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 146,
+            "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [],
+    [
+        {
+            "id": 141,
+            "vSaida": 80,
+            "vEntrada": 99,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 134,
+            "rua": "Carrer del Comte d'Urgell_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 142,
+            "vSaida": 80,
+            "vEntrada": 113,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 113,
+            "rua": "Carrer del Rosselló_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 209,
+            "vSaida": 80,
+            "vEntrada": 113,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 113,
+            "rua": "Carrer del Rosselló_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 144,
+            "vSaida": 81,
+            "vEntrada": 46,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 61,
+            "rua": "Carrer de Buenos Aires_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 145,
+            "vSaida": 81,
+            "vEntrada": 90,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 40,
+            "rua": "Avinguda de Sarrià_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 146,
+            "vSaida": 82,
+            "vEntrada": 84,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 150,
+            "rua": "Avinguda Diagonal_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 148,
+            "vSaida": 82,
+            "vEntrada": 72,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 15,
+            "rua": "Carrer de Muntaner_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 149,
+            "vSaida": 82,
+            "vEntrada": 87,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 147,
+            "rua": "Avinguda Diagonal_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 155,
+            "vSaida": 82,
+            "vEntrada": 84,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 150,
+            "rua": "Avinguda Diagonal_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 164,
+            "vSaida": 82,
+            "vEntrada": 87,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 147,
+            "rua": "Avinguda Diagonal_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 151,
+            "vSaida": 83,
+            "vEntrada": 54,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 15,
+            "rua": "Carrer de Balmes_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 152,
+            "vSaida": 83,
+            "vEntrada": 87,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 300,
+            "rua": "Avinguda Diagonal_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 162,
+            "vSaida": 83,
+            "vEntrada": 87,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 300,
+            "rua": "Avinguda Diagonal_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 147,
+            "vSaida": 84,
+            "vEntrada": 82,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 150,
+            "rua": "Avinguda Diagonal_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 154,
+            "vSaida": 84,
+            "vEntrada": 82,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 150,
+            "rua": "Avinguda Diagonal_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 156,
+            "vSaida": 84,
+            "vEntrada": 88,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 200,
+            "rua": "Avinguda Diagonal_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 169,
+            "vSaida": 84,
+            "vEntrada": 88,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 200,
+            "rua": "Avinguda Diagonal_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 158,
+            "vSaida": 85,
+            "vEntrada": 11,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 43,
+            "rua": "Carrer de Muntaner_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 159,
+            "vSaida": 85,
+            "vEntrada": 86,
+            "imoveis": [],
+            "limVel": "20",
+            "tamanho": 134,
+            "rua": "Passatge Lluis Pellicer_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 160,
+            "vSaida": 86,
+            "vEntrada": 28,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 87,
+            "rua": "Carrer de Casanova_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 150,
+            "vSaida": 87,
+            "vEntrada": 82,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 147,
+            "rua": "Avinguda Diagonal_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 153,
+            "vSaida": 87,
+            "vEntrada": 83,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 300,
+            "rua": "Avinguda Diagonal_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 161,
+            "vSaida": 87,
+            "vEntrada": 83,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 300,
+            "rua": "Avinguda Diagonal_nordeste",
+            "regiao": "nordeste"
+        },
+        {
+            "id": 163,
+            "vSaida": 87,
+            "vEntrada": 82,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 147,
+            "rua": "Avinguda Diagonal_nordeste",
+            "regiao": "nordeste"
+        }
+    ],
+    [
+        {
+            "id": 157,
+            "vSaida": 88,
+            "vEntrada": 84,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 200,
+            "rua": "Avinguda Diagonal_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 165,
+            "vSaida": 88,
+            "vEntrada": 98,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 59,
+            "rua": "Avinguda Diagonal_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 167,
+            "vSaida": 88,
+            "vEntrada": 89,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 16,
+            "rua": "Carrer de Calvet_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 168,
+            "vSaida": 88,
+            "vEntrada": 84,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 200,
+            "rua": "Avinguda Diagonal_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 185,
+            "vSaida": 88,
+            "vEntrada": 98,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 59,
+            "rua": "Avinguda Diagonal_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 170,
+            "vSaida": 89,
+            "vEntrada": 71,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 53,
+            "rua": "Avinguda Diagonal (lateral mar)_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 171,
+            "vSaida": 90,
+            "vEntrada": 91,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 96,
+            "rua": "Avinguda de Josep Tarradellas_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 172,
+            "vSaida": 90,
+            "vEntrada": 69,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 30,
+            "rua": "Avinguda de Sarrià_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 173,
+            "vSaida": 91,
+            "vEntrada": 46,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 83,
+            "rua": "Carrer del Comte Borrell_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 174,
+            "vSaida": 91,
+            "vEntrada": 66,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 124,
+            "rua": "Avinguda de Josep Tarradellas_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 175,
+            "vSaida": 92,
+            "vEntrada": 60,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 14,
+            "rua": "Carrer del Comte d'Urgell_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 176,
+            "vSaida": 93,
+            "vEntrada": 92,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 66,
+            "rua": "Carrer del Comte d'Urgell_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 177,
+            "vSaida": 94,
+            "vEntrada": 118,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 115,
+            "rua": "Carrer de Villarroel_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 178,
+            "vSaida": 94,
+            "vEntrada": 93,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 131,
+            "rua": "Carrer d'Aragó_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 179,
+            "vSaida": 95,
+            "vEntrada": 114,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 134,
+            "rua": "Carrer del Comte d'Urgell_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 180,
+            "vSaida": 96,
+            "vEntrada": 59,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 23,
+            "rua": "Carrer del Comte d'Urgell_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 181,
+            "vSaida": 96,
+            "vEntrada": 109,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 26,
+            "rua": "Rua desconhecida 181_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 182,
+            "vSaida": 97,
+            "vEntrada": 89,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 81,
+            "rua": "Avinguda Diagonal (lateral mar)_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 183,
+            "vSaida": 97,
+            "vEntrada": 98,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 30,
+            "rua": "Plaça de Francesc Macià_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 166,
+            "vSaida": 98,
+            "vEntrada": 88,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 59,
+            "rua": "Avinguda Diagonal_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 184,
+            "vSaida": 98,
+            "vEntrada": 88,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 59,
+            "rua": "Avinguda Diagonal_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 186,
+            "vSaida": 99,
+            "vEntrada": 96,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 112,
+            "rua": "Carrer del Comte d'Urgell_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 187,
+            "vSaida": 100,
+            "vEntrada": 101,
+            "imoveis": [],
+            "limVel": "20",
+            "tamanho": 130,
+            "rua": "Passatge de Valeri Serra_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 188,
+            "vSaida": 101,
+            "vEntrada": 102,
+            "imoveis": [],
+            "limVel": "20",
+            "tamanho": 133,
+            "rua": "Passatge de Valeri Serra_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 189,
+            "vSaida": 101,
+            "vEntrada": 34,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 67,
+            "rua": "Carrer de la Diputació_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 190,
+            "vSaida": 102,
+            "vEntrada": 123,
+            "imoveis": [],
+            "limVel": "10",
+            "tamanho": 74,
+            "rua": "['Carrer de Muntaner', 'Carrer del Consell de Cent']_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 191,
+            "vSaida": 103,
+            "vEntrada": 104,
+            "imoveis": [],
+            "limVel": "20",
+            "tamanho": 87,
+            "rua": "Passatge d'Aragó_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 195,
+            "vSaida": 103,
+            "vEntrada": 104,
+            "imoveis": [],
+            "limVel": "20",
+            "tamanho": 87,
+            "rua": "Passatge d'Aragó_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 192,
+            "vSaida": 104,
+            "vEntrada": 103,
+            "imoveis": [],
+            "limVel": "20",
+            "tamanho": 87,
+            "rua": "Passatge d'Aragó_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 193,
+            "vSaida": 104,
+            "vEntrada": 94,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 66,
+            "rua": "Carrer d'Aragó_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 194,
+            "vSaida": 104,
+            "vEntrada": 103,
+            "imoveis": [],
+            "limVel": "20",
+            "tamanho": 87,
+            "rua": "Passatge d'Aragó_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 196,
+            "vSaida": 105,
+            "vEntrada": 64,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 267,
+            "rua": "Gran Via de les Corts Catalanes_sudeste",
+            "regiao": "sudeste"
+        },
+        {
+            "id": 197,
+            "vSaida": 105,
+            "vEntrada": 20,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 148,
+            "rua": "Carrer d'Aribau_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 198,
+            "vSaida": 106,
+            "vEntrada": 121,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 34,
+            "rua": "Carrer de Balmes_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 199,
+            "vSaida": 107,
+            "vEntrada": 19,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 83,
+            "rua": "Carrer d'Aragó_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 200,
+            "vSaida": 108,
+            "vEntrada": 8,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 149,
+            "rua": "Avinguda de Sarrià_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 201,
+            "vSaida": 109,
+            "vEntrada": 2,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 116,
+            "rua": "Carrer de París_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 202,
+            "vSaida": 110,
+            "vEntrada": 108,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 19,
+            "rua": "Carrer del Comte d'Urgell_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 203,
+            "vSaida": 110,
+            "vEntrada": 109,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 28,
+            "rua": "Rua desconhecida 203_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 204,
+            "vSaida": 111,
+            "vEntrada": 58,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 134,
+            "rua": "Carrer del Comte d'Urgell_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 205,
+            "vSaida": 111,
+            "vEntrada": 97,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 15,
+            "rua": "Plaça de Francesc Macià_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 206,
+            "vSaida": 112,
+            "vEntrada": 64,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 149,
+            "rua": "Carrer de Balmes_sudeste",
+            "regiao": "sudeste"
+        },
+        {
+            "id": 207,
+            "vSaida": 112,
+            "vEntrada": 20,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 268,
+            "rua": "Carrer de la Diputació_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 143,
+            "vSaida": 113,
+            "vEntrada": 80,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 113,
+            "rua": "Carrer del Rosselló_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 208,
+            "vSaida": 113,
+            "vEntrada": 80,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 113,
+            "rua": "Carrer del Rosselló_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 210,
+            "vSaida": 114,
+            "vEntrada": 80,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 129,
+            "rua": "Carrer del Comte d'Urgell_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [],
+    [
+        {
+            "id": 211,
+            "vSaida": 116,
+            "vEntrada": 114,
+            "imoveis": [],
+            "limVel": "30",
+            "tamanho": 65,
+            "rua": "Carrer de Provença_noroeste",
+            "regiao": "noroeste"
+        },
+        {
+            "id": 212,
+            "vSaida": 116,
+            "vEntrada": 115,
+            "imoveis": [],
+            "limVel": "N/A",
+            "tamanho": 124,
+            "rua": "Passatge de Batlló_noroeste",
+            "regiao": "noroeste"
+        }
+    ],
+    [
+        {
+            "id": 213,
+            "vSaida": 117,
+            "vEntrada": 0,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 133,
+            "rua": "Gran Via de les Corts Catalanes_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 214,
+            "vSaida": 117,
+            "vEntrada": 51,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 18,
+            "rua": "Carrer de Villarroel_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 215,
+            "vSaida": 118,
+            "vEntrada": 119,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 32,
+            "rua": "Carrer de Villarroel_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 216,
+            "vSaida": 118,
+            "vEntrada": 125,
+            "imoveis": [],
+            "limVel": "10",
+            "tamanho": 146,
+            "rua": "['Carrer de Casanova', 'Carrer de Villarroel', 'Carrer del Consell de Cent']_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 217,
+            "vSaida": 119,
+            "vEntrada": 39,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 119,
+            "rua": "Carrer de Villarroel_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 218,
+            "vSaida": 120,
+            "vEntrada": 93,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 152,
+            "rua": "Carrer del Comte d'Urgell_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 219,
+            "vSaida": 120,
+            "vEntrada": 119,
+            "imoveis": [],
+            "limVel": "10",
+            "tamanho": 143,
+            "rua": "[\"Carrer del Comte d'Urgell\", 'Carrer de Villarroel', 'Carrer del Consell de Cent']_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 220,
+            "vSaida": 121,
+            "vEntrada": 112,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 115,
+            "rua": "Carrer de Balmes_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 221,
+            "vSaida": 122,
+            "vEntrada": 123,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 35,
+            "rua": "Carrer de Muntaner_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 222,
+            "vSaida": 122,
+            "vEntrada": 127,
+            "imoveis": [],
+            "limVel": "10",
+            "tamanho": 147,
+            "rua": "['Carrer de Muntaner', 'Carrer del Consell de Cent']_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 223,
+            "vSaida": 123,
+            "vEntrada": 27,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 115,
+            "rua": "Carrer de Muntaner_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 224,
+            "vSaida": 124,
+            "vEntrada": 125,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 33,
+            "rua": "Carrer de Casanova_sudoeste",
+            "regiao": "sudoeste"
+        },
+        {
+            "id": 225,
+            "vSaida": 124,
+            "vEntrada": 102,
+            "imoveis": [],
+            "limVel": "10",
+            "tamanho": 73,
+            "rua": "['Carrer de Casanova', 'Carrer del Consell de Cent']_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 226,
+            "vSaida": 125,
+            "vEntrada": 65,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 117,
+            "rua": "Carrer de Casanova_sudoeste",
+            "regiao": "sudoeste"
+        }
+    ],
+    [
+        {
+            "id": 227,
+            "vSaida": 126,
+            "vEntrada": 127,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 33,
+            "rua": "Carrer d'Aribau_sudeste",
+            "regiao": "sudeste"
+        },
+        {
+            "id": 228,
+            "vSaida": 126,
+            "vEntrada": 128,
+            "imoveis": [],
+            "limVel": "10",
+            "tamanho": 152,
+            "rua": "Carrer del Consell de Cent_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 229,
+            "vSaida": 127,
+            "vEntrada": 19,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 116,
+            "rua": "Carrer d'Aribau_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 230,
+            "vSaida": 128,
+            "vEntrada": 74,
+            "imoveis": [],
+            "limVel": "10",
+            "tamanho": 44,
+            "rua": "Carrer d'Enric Granados_sudeste",
+            "regiao": "sudeste"
+        },
+        {
+            "id": 231,
+            "vSaida": 128,
+            "vEntrada": 121,
+            "imoveis": [],
+            "limVel": "10",
+            "tamanho": 149,
+            "rua": "['Carrer de Balmes', 'Carrer del Consell de Cent']_sudeste",
+            "regiao": "sudeste"
+        }
+    ],
+    [
+        {
+            "id": 232,
+            "vSaida": 129,
+            "vEntrada": 74,
+            "imoveis": [],
+            "limVel": "20",
+            "tamanho": 87,
+            "rua": "Plaça del Doctor Letamendi_sudeste",
+            "regiao": "sudeste"
+        },
+        {
+            "id": 233,
+            "vSaida": 129,
+            "vEntrada": 73,
+            "imoveis": [],
+            "limVel": "10",
+            "tamanho": 87,
+            "rua": "Plaça del Doctor Letamendi_sudeste",
+            "regiao": "sudeste"
+        },
+        {
+            "id": 234,
+            "vSaida": 129,
+            "vEntrada": 107,
+            "imoveis": [],
+            "limVel": "50",
+            "tamanho": 109,
+            "rua": "Carrer d'Aragó_sudeste",
+            "regiao": "sudeste"
+        }
     ]
-}
+]
