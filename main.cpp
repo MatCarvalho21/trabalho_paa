@@ -1,5 +1,6 @@
 #include "estrutura.h"
 #include "mapa.h"
+#include "algoritmosBase.h"
 
 int main()
 {
@@ -7,15 +8,16 @@ int main()
 
     carregaJSON("mapa.json", planta);
 
-    // Exibe a lista de adjacência para verificação
-    for (size_t i = 0; i < planta->listaAdj.size(); ++i) {
-        cout << "Vértice " << i << ":\n";
-        for (size_t j = 0; j < planta->listaAdj[i].size(); ++j) {
-            Segmento* segmento = planta->listaAdj[i][j];
-            cout << "  Segmento de " << segmento->vSaida << " para " << segmento->vEntrada << endl;
-            cout << "    Rua: " << segmento->rua << ", Limite de Velocidade: " << segmento->limVel
-                 << ", Tamanho: " << segmento->tamanho << endl;
-        }
+    vector<int> parents;
+    parents.resize(130);
+    vector<int> distances;
+    distances.resize(130);
+
+    dijkstra(0, parents, distances, 130, planta);
+
+    for (int i = 0; i < parents.size(); i++)
+    {
+        cout << parents[i] << endl;
     }
 
     return 0;
