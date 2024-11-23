@@ -9,7 +9,8 @@
             "tamanho": 132,
             "rua": "Gran Via de les Corts Catalanes_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 1,
@@ -20,7 +21,8 @@
             "tamanho": 150,
             "rua": "Carrer de Casanova_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -33,7 +35,8 @@
             "tamanho": 19,
             "rua": "Carrer de Muntaner_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 3,
@@ -44,7 +47,8 @@
             "tamanho": 134,
             "rua": "Gran Via de les Corts Catalanes_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -57,7 +61,8 @@
             "tamanho": 137,
             "rua": "Carrer de París_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 5,
@@ -68,7 +73,8 @@
             "tamanho": 130,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -81,7 +87,8 @@
             "tamanho": 136,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 7,
@@ -92,7 +99,8 @@
             "tamanho": 132,
             "rua": "Carrer de París_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -105,7 +113,8 @@
             "tamanho": 133,
             "rua": "Carrer de París_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 9,
@@ -116,7 +125,8 @@
             "tamanho": 129,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -129,7 +139,8 @@
             "tamanho": 139,
             "rua": "Carrer d'Aribau_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 11,
@@ -140,7 +151,8 @@
             "tamanho": 135,
             "rua": "Carrer de París_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -153,7 +165,8 @@
             "tamanho": 131,
             "rua": "Carrer d'Enric Granados_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 13,
@@ -164,7 +177,8 @@
             "tamanho": 133,
             "rua": "Carrer de París_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -177,7 +191,8 @@
             "tamanho": 131,
             "rua": "Carrer de Balmes_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -190,7 +205,8 @@
             "tamanho": 56,
             "rua": "Avinguda de Sarrià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -203,7 +219,8 @@
             "tamanho": 136,
             "rua": "Carrer de Londres_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 17,
@@ -214,7 +231,8 @@
             "tamanho": 136,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -227,7 +245,8 @@
             "tamanho": 43,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 19,
@@ -238,7 +257,8 @@
             "tamanho": 135,
             "rua": "Carrer de Londres_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -251,7 +271,8 @@
             "tamanho": 138,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 21,
@@ -262,7 +283,8 @@
             "tamanho": 133,
             "rua": "Carrer de Londres_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -275,7 +297,8 @@
             "tamanho": 132,
             "rua": "Carrer de Londres_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 23,
@@ -286,7 +309,8 @@
             "tamanho": 28,
             "rua": "Carrer d'Aribau_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -299,7 +323,8 @@
             "tamanho": 300,
             "rua": "Avinguda Diagonal (lateral mar)_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 25,
@@ -310,7 +335,8 @@
             "tamanho": 14,
             "rua": "Carrer d'Aribau_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -323,7 +349,8 @@
             "tamanho": 129,
             "rua": "Carrer d'Aribau_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 27,
@@ -334,7 +361,8 @@
             "tamanho": 133,
             "rua": "Carrer de Còrsega_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -347,7 +375,8 @@
             "tamanho": 140,
             "rua": "Carrer del Rosselló_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 29,
@@ -358,7 +387,8 @@
             "tamanho": 132,
             "rua": "Carrer d'Aribau_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -371,7 +401,8 @@
             "tamanho": 136,
             "rua": "Carrer d'Aribau_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 31,
@@ -382,7 +413,8 @@
             "tamanho": 129,
             "rua": "Carrer de Provença_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -395,7 +427,8 @@
             "tamanho": 132,
             "rua": "Carrer de Mallorca_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 33,
@@ -406,7 +439,8 @@
             "tamanho": 131,
             "rua": "Carrer d'Aribau_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -419,7 +453,8 @@
             "tamanho": 136,
             "rua": "Carrer de València_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         },
         {
             "id": 35,
@@ -430,7 +465,8 @@
             "tamanho": 135,
             "rua": "Carrer d'Aribau_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -443,7 +479,8 @@
             "tamanho": 133,
             "rua": "Carrer d'Aragó_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         },
         {
             "id": 37,
@@ -454,7 +491,8 @@
             "tamanho": 132,
             "rua": "Carrer d'Aribau_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -467,7 +505,8 @@
             "tamanho": 133,
             "rua": "Carrer de la Diputació_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         },
         {
             "id": 39,
@@ -478,7 +517,8 @@
             "tamanho": 117,
             "rua": "Carrer d'Aribau_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -491,7 +531,8 @@
             "tamanho": 133,
             "rua": "Carrer de Còrsega_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 41,
@@ -502,7 +543,8 @@
             "tamanho": 132,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -515,7 +557,8 @@
             "tamanho": 131,
             "rua": "Carrer del Rosselló_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 43,
@@ -526,7 +569,8 @@
             "tamanho": 136,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -539,7 +583,8 @@
             "tamanho": 127,
             "rua": "Carrer de Provença_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 45,
@@ -550,7 +595,8 @@
             "tamanho": 135,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -563,7 +609,8 @@
             "tamanho": 135,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 47,
@@ -574,7 +621,8 @@
             "tamanho": 138,
             "rua": "Carrer de Mallorca_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -587,7 +635,8 @@
             "tamanho": 133,
             "rua": "Carrer de València_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         },
         {
             "id": 49,
@@ -598,7 +647,8 @@
             "tamanho": 130,
             "rua": "Carrer de Muntaner_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -611,7 +661,8 @@
             "tamanho": 134,
             "rua": "Carrer d'Aragó_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 51,
@@ -622,7 +673,8 @@
             "tamanho": 115,
             "rua": "Carrer de Muntaner_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -635,7 +687,8 @@
             "tamanho": 66,
             "rua": "Carrer de la Diputació_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 53,
@@ -646,7 +699,8 @@
             "tamanho": 149,
             "rua": "Carrer de Muntaner_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -659,7 +713,8 @@
             "tamanho": 28,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -672,7 +727,8 @@
             "tamanho": 136,
             "rua": "Carrer de Còrsega_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 56,
@@ -683,7 +739,8 @@
             "tamanho": 130,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -696,7 +753,8 @@
             "tamanho": 137,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 58,
@@ -707,7 +765,8 @@
             "tamanho": 111,
             "rua": "Carrer del Rosselló_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -720,7 +779,8 @@
             "tamanho": 137,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 60,
@@ -731,7 +791,8 @@
             "tamanho": 138,
             "rua": "Carrer de Provença_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -744,7 +805,8 @@
             "tamanho": 134,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 62,
@@ -755,7 +817,8 @@
             "tamanho": 129,
             "rua": "Carrer de Mallorca_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -768,7 +831,8 @@
             "tamanho": 134,
             "rua": "Carrer de València_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 64,
@@ -779,7 +843,8 @@
             "tamanho": 136,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -792,7 +857,8 @@
             "tamanho": 116,
             "rua": "Carrer de Casanova_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 66,
@@ -803,7 +869,8 @@
             "tamanho": 133,
             "rua": "Carrer de la Diputació_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -816,7 +883,8 @@
             "tamanho": 69,
             "rua": "Carrer de Provença_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 68,
@@ -827,7 +895,8 @@
             "tamanho": 130,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -840,7 +909,8 @@
             "tamanho": 132,
             "rua": "Carrer d'Enric Granados_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 70,
@@ -851,7 +921,8 @@
             "tamanho": 142,
             "rua": "Carrer de Provença_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -864,7 +935,8 @@
             "tamanho": 132,
             "rua": "Carrer de Balmes_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 72,
@@ -875,7 +947,8 @@
             "tamanho": 127,
             "rua": "Carrer de Provença_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -888,7 +961,8 @@
             "tamanho": 115,
             "rua": "Carrer del Comte d'Urgell_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -901,7 +975,8 @@
             "tamanho": 149,
             "rua": "Carrer de Villarroel_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 75,
@@ -912,7 +987,8 @@
             "tamanho": 133,
             "rua": "Carrer de la Diputació_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -925,7 +1001,8 @@
             "tamanho": 134,
             "rua": "Carrer de València_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 77,
@@ -936,7 +1013,8 @@
             "tamanho": 96,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -949,7 +1027,8 @@
             "tamanho": 68,
             "rua": "Carrer d'Enric Granados_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         },
         {
             "id": 79,
@@ -960,7 +1039,8 @@
             "tamanho": 130,
             "rua": "Carrer de València_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -973,7 +1053,8 @@
             "tamanho": 130,
             "rua": "Carrer de Balmes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -986,7 +1067,8 @@
             "tamanho": 134,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 82,
@@ -997,7 +1079,8 @@
             "tamanho": 133,
             "rua": "Carrer de Mallorca_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -1010,7 +1093,8 @@
             "tamanho": 136,
             "rua": "Carrer d'Enric Granados_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 84,
@@ -1021,7 +1105,8 @@
             "tamanho": 136,
             "rua": "Carrer de Mallorca_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -1034,7 +1119,8 @@
             "tamanho": 136,
             "rua": "Carrer de Balmes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         },
         {
             "id": 86,
@@ -1045,7 +1131,8 @@
             "tamanho": 129,
             "rua": "Carrer de Mallorca_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -1058,7 +1145,8 @@
             "tamanho": 131,
             "rua": "Carrer de Buenos Aires_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -1071,7 +1159,8 @@
             "tamanho": 94,
             "rua": "Carrer del Comte Borrell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 89,
@@ -1082,7 +1171,8 @@
             "tamanho": 111,
             "rua": "Avinguda de Sarrià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -1095,7 +1185,8 @@
             "tamanho": 133,
             "rua": "Carrer de Buenos Aires_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 91,
@@ -1106,7 +1197,8 @@
             "tamanho": 133,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -1119,7 +1211,8 @@
             "tamanho": 132,
             "rua": "Carrer de Còrsega_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 93,
@@ -1130,7 +1223,8 @@
             "tamanho": 270,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -1143,7 +1237,8 @@
             "tamanho": 140,
             "rua": "Avinguda de Roma_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 95,
@@ -1154,7 +1249,8 @@
             "tamanho": 37,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -1167,7 +1263,8 @@
             "tamanho": 133,
             "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -1180,7 +1277,8 @@
             "tamanho": 135,
             "rua": "Carrer de Còrsega_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 98,
@@ -1191,7 +1289,8 @@
             "tamanho": 133,
             "rua": "Carrer d'Enric Granados_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -1204,7 +1303,8 @@
             "tamanho": 127,
             "rua": "Carrer del Rosselló_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 100,
@@ -1215,7 +1315,8 @@
             "tamanho": 135,
             "rua": "Carrer d'Enric Granados_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -1228,7 +1329,8 @@
             "tamanho": 32,
             "rua": "Carrer de Balmes_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -1241,7 +1343,8 @@
             "tamanho": 131,
             "rua": "Carrer de Còrsega_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 103,
@@ -1252,7 +1355,8 @@
             "tamanho": 135,
             "rua": "Carrer de Balmes_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -1265,7 +1369,8 @@
             "tamanho": 133,
             "rua": "Carrer de Balmes_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -1278,7 +1383,8 @@
             "tamanho": 76,
             "rua": "Carrer d'Aragó_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         },
         {
             "id": 106,
@@ -1289,7 +1395,8 @@
             "tamanho": 118,
             "rua": "Carrer de Balmes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -1302,7 +1409,8 @@
             "tamanho": 137,
             "rua": "Carrer de Buenos Aires_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 108,
@@ -1313,7 +1421,8 @@
             "tamanho": 136,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -1326,7 +1435,8 @@
             "tamanho": 29,
             "rua": "Carrer de París_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 110,
@@ -1337,7 +1447,8 @@
             "tamanho": 13,
             "rua": "Avinguda de Sarrià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -1350,7 +1461,8 @@
             "tamanho": 54,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -1363,7 +1475,8 @@
             "tamanho": 149,
             "rua": "Carrer del Comte d'Urgell_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 113,
@@ -1374,7 +1487,8 @@
             "tamanho": 133,
             "rua": "Gran Via de les Corts Catalanes_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -1387,7 +1501,8 @@
             "tamanho": 131,
             "rua": "Carrer de València_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 115,
@@ -1398,7 +1513,8 @@
             "tamanho": 134,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -1411,7 +1527,8 @@
             "tamanho": 99,
             "rua": "Carrer de Londres_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 117,
@@ -1422,7 +1539,8 @@
             "tamanho": 114,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -1435,7 +1553,8 @@
             "tamanho": 18,
             "rua": "Carrer de Balmes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -1448,7 +1567,8 @@
             "tamanho": 139,
             "rua": "Avinguda de Roma_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 120,
@@ -1459,7 +1579,8 @@
             "tamanho": 68,
             "rua": "Carrer d'Aragó_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 121,
@@ -1470,7 +1591,8 @@
             "tamanho": 129,
             "rua": "Carrer de Casanova_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -1483,7 +1605,8 @@
             "tamanho": 26,
             "rua": "Plaça de Francesc Macià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -1496,7 +1619,8 @@
             "tamanho": 222,
             "rua": "Avinguda de Josep Tarradellas_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 124,
@@ -1507,7 +1631,8 @@
             "tamanho": 33,
             "rua": "Plaça de Francesc Macià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -1520,7 +1645,8 @@
             "tamanho": 149,
             "rua": "Avinguda Diagonal (lateral mar)_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 126,
@@ -1531,7 +1657,8 @@
             "tamanho": 16,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [],
@@ -1545,7 +1672,8 @@
             "tamanho": 131,
             "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 128,
@@ -1556,7 +1684,8 @@
             "tamanho": 17,
             "rua": "Carrer de Casanova_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -1569,7 +1698,8 @@
             "tamanho": 93,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 130,
@@ -1580,7 +1710,8 @@
             "tamanho": 148,
             "rua": "Avinguda Diagonal (lateral mar)_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -1593,7 +1724,8 @@
             "tamanho": 50,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 132,
@@ -1604,7 +1736,8 @@
             "tamanho": 146,
             "rua": "Avinguda Diagonal (lateral mar)_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -1617,7 +1750,8 @@
             "tamanho": 84,
             "rua": "Plaça del Doctor Letamendi_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -1630,7 +1764,8 @@
             "tamanho": 86,
             "rua": "Plaça del Doctor Letamendi_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -1643,7 +1778,8 @@
             "tamanho": 135,
             "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -1656,7 +1792,8 @@
             "tamanho": 21,
             "rua": "Plaça de la Universitat_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         },
         {
             "id": 137,
@@ -1667,7 +1804,8 @@
             "tamanho": 121,
             "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -1680,7 +1818,8 @@
             "tamanho": 133,
             "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 139,
@@ -1691,7 +1830,8 @@
             "tamanho": 18,
             "rua": "Carrer del Comte d'Urgell_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -1704,7 +1844,8 @@
             "tamanho": 146,
             "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [],
@@ -1718,7 +1859,8 @@
             "tamanho": 134,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 142,
@@ -1729,7 +1871,8 @@
             "tamanho": 113,
             "rua": "Carrer del Rosselló_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 209,
@@ -1739,7 +1882,8 @@
             "limVel": "30",
             "tamanho": 113,
             "rua": "Carrer del Rosselló_noroeste",
-            "regiao": "noroeste"
+            "regiao": "noroeste",
+            "volta": true
         }
     ],
     [
@@ -1752,7 +1896,8 @@
             "tamanho": 61,
             "rua": "Carrer de Buenos Aires_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 145,
@@ -1763,7 +1908,8 @@
             "tamanho": 40,
             "rua": "Avinguda de Sarrià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -1776,7 +1922,8 @@
             "tamanho": 150,
             "rua": "Avinguda Diagonal_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 148,
@@ -1787,7 +1934,8 @@
             "tamanho": 15,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 149,
@@ -1798,7 +1946,8 @@
             "tamanho": 147,
             "rua": "Avinguda Diagonal_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 155,
@@ -1808,7 +1957,8 @@
             "limVel": "50",
             "tamanho": 150,
             "rua": "Avinguda Diagonal_nordeste",
-            "regiao": "nordeste"
+            "regiao": "nordeste",
+            "volta": true
         },
         {
             "id": 164,
@@ -1818,7 +1968,8 @@
             "limVel": "50",
             "tamanho": 147,
             "rua": "Avinguda Diagonal_nordeste",
-            "regiao": "nordeste"
+            "regiao": "nordeste",
+            "volta": true
         }
     ],
     [
@@ -1831,7 +1982,8 @@
             "tamanho": 15,
             "rua": "Carrer de Balmes_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 152,
@@ -1842,7 +1994,8 @@
             "tamanho": 300,
             "rua": "Avinguda Diagonal_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 162,
@@ -1852,7 +2005,8 @@
             "limVel": "50",
             "tamanho": 300,
             "rua": "Avinguda Diagonal_nordeste",
-            "regiao": "nordeste"
+            "regiao": "nordeste",
+            "volta": true
         }
     ],
     [
@@ -1864,7 +2018,8 @@
             "limVel": "50",
             "tamanho": 150,
             "rua": "Avinguda Diagonal_noroeste",
-            "regiao": "noroeste"
+            "regiao": "noroeste",
+            "volta": true
         },
         {
             "id": 154,
@@ -1875,7 +2030,8 @@
             "tamanho": 150,
             "rua": "Avinguda Diagonal_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 156,
@@ -1886,7 +2042,8 @@
             "tamanho": 200,
             "rua": "Avinguda Diagonal_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 169,
@@ -1896,7 +2053,8 @@
             "limVel": "50",
             "tamanho": 200,
             "rua": "Avinguda Diagonal_noroeste",
-            "regiao": "noroeste"
+            "regiao": "noroeste",
+            "volta": true
         }
     ],
     [
@@ -1909,7 +2067,8 @@
             "tamanho": 43,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 159,
@@ -1920,7 +2079,8 @@
             "tamanho": 134,
             "rua": "Passatge Lluis Pellicer_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -1933,7 +2093,8 @@
             "tamanho": 87,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -1945,7 +2106,8 @@
             "limVel": "50",
             "tamanho": 147,
             "rua": "Avinguda Diagonal_nordeste",
-            "regiao": "nordeste"
+            "regiao": "nordeste",
+            "volta": true
         },
         {
             "id": 153,
@@ -1955,7 +2117,8 @@
             "limVel": "50",
             "tamanho": 300,
             "rua": "Avinguda Diagonal_nordeste",
-            "regiao": "nordeste"
+            "regiao": "nordeste",
+            "volta": true
         },
         {
             "id": 161,
@@ -1966,7 +2129,8 @@
             "tamanho": 300,
             "rua": "Avinguda Diagonal_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         },
         {
             "id": 163,
@@ -1977,7 +2141,8 @@
             "tamanho": 147,
             "rua": "Avinguda Diagonal_nordeste",
             "regiao": "nordeste",
-            "CEP": 102
+            "CEP": 102,
+            "volta": false
         }
     ],
     [
@@ -1989,7 +2154,8 @@
             "limVel": "50",
             "tamanho": 200,
             "rua": "Avinguda Diagonal_noroeste",
-            "regiao": "noroeste"
+            "regiao": "noroeste",
+            "volta": true
         },
         {
             "id": 165,
@@ -2000,7 +2166,8 @@
             "tamanho": 59,
             "rua": "Avinguda Diagonal_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 167,
@@ -2011,7 +2178,8 @@
             "tamanho": 16,
             "rua": "Carrer de Calvet_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 168,
@@ -2022,7 +2190,8 @@
             "tamanho": 200,
             "rua": "Avinguda Diagonal_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 185,
@@ -2032,7 +2201,8 @@
             "limVel": "50",
             "tamanho": 59,
             "rua": "Avinguda Diagonal_noroeste",
-            "regiao": "noroeste"
+            "regiao": "noroeste",
+            "volta": true
         }
     ],
     [
@@ -2045,7 +2215,8 @@
             "tamanho": 53,
             "rua": "Avinguda Diagonal (lateral mar)_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -2058,7 +2229,8 @@
             "tamanho": 96,
             "rua": "Avinguda de Josep Tarradellas_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 172,
@@ -2069,7 +2241,8 @@
             "tamanho": 30,
             "rua": "Avinguda de Sarrià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -2082,7 +2255,8 @@
             "tamanho": 83,
             "rua": "Carrer del Comte Borrell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 174,
@@ -2093,7 +2267,8 @@
             "tamanho": 124,
             "rua": "Avinguda de Josep Tarradellas_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -2106,7 +2281,8 @@
             "tamanho": 14,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -2119,7 +2295,8 @@
             "tamanho": 66,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -2132,7 +2309,8 @@
             "tamanho": 115,
             "rua": "Carrer de Villarroel_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 178,
@@ -2143,7 +2321,8 @@
             "tamanho": 131,
             "rua": "Carrer d'Aragó_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -2156,7 +2335,8 @@
             "tamanho": 134,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -2169,7 +2349,8 @@
             "tamanho": 23,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 181,
@@ -2180,7 +2361,8 @@
             "tamanho": 26,
             "rua": "Rua desconhecida 181_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -2193,7 +2375,8 @@
             "tamanho": 81,
             "rua": "Avinguda Diagonal (lateral mar)_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 183,
@@ -2204,7 +2387,8 @@
             "tamanho": 30,
             "rua": "Plaça de Francesc Macià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -2216,7 +2400,8 @@
             "limVel": "50",
             "tamanho": 59,
             "rua": "Avinguda Diagonal_noroeste",
-            "regiao": "noroeste"
+            "regiao": "noroeste",
+            "volta": true
         },
         {
             "id": 184,
@@ -2227,7 +2412,8 @@
             "tamanho": 59,
             "rua": "Avinguda Diagonal_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -2240,7 +2426,8 @@
             "tamanho": 112,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -2253,7 +2440,8 @@
             "tamanho": 130,
             "rua": "Passatge de Valeri Serra_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -2266,7 +2454,8 @@
             "tamanho": 133,
             "rua": "Passatge de Valeri Serra_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 189,
@@ -2277,7 +2466,8 @@
             "tamanho": 67,
             "rua": "Carrer de la Diputació_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -2290,7 +2480,8 @@
             "tamanho": 74,
             "rua": "['Carrer de Muntaner', 'Carrer del Consell de Cent']_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -2303,7 +2494,8 @@
             "tamanho": 87,
             "rua": "Passatge d'Aragó_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 195,
@@ -2313,7 +2505,8 @@
             "limVel": "20",
             "tamanho": 87,
             "rua": "Passatge d'Aragó_sudoeste",
-            "regiao": "sudoeste"
+            "regiao": "sudoeste",
+            "volta": true
         }
     ],
     [
@@ -2325,7 +2518,8 @@
             "limVel": "20",
             "tamanho": 87,
             "rua": "Passatge d'Aragó_sudoeste",
-            "regiao": "sudoeste"
+            "regiao": "sudoeste",
+            "volta": true
         },
         {
             "id": 193,
@@ -2336,7 +2530,8 @@
             "tamanho": 66,
             "rua": "Carrer d'Aragó_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 194,
@@ -2347,7 +2542,8 @@
             "tamanho": 87,
             "rua": "Passatge d'Aragó_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -2360,7 +2556,8 @@
             "tamanho": 267,
             "rua": "Gran Via de les Corts Catalanes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         },
         {
             "id": 197,
@@ -2371,7 +2568,8 @@
             "tamanho": 148,
             "rua": "Carrer d'Aribau_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -2384,7 +2582,8 @@
             "tamanho": 34,
             "rua": "Carrer de Balmes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -2397,7 +2596,8 @@
             "tamanho": 83,
             "rua": "Carrer d'Aragó_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -2410,7 +2610,8 @@
             "tamanho": 149,
             "rua": "Avinguda de Sarrià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -2423,7 +2624,8 @@
             "tamanho": 116,
             "rua": "Carrer de París_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -2436,7 +2638,8 @@
             "tamanho": 19,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 203,
@@ -2447,7 +2650,8 @@
             "tamanho": 28,
             "rua": "Rua desconhecida 203_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -2460,7 +2664,8 @@
             "tamanho": 134,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 205,
@@ -2471,7 +2676,8 @@
             "tamanho": 15,
             "rua": "Plaça de Francesc Macià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -2484,7 +2690,8 @@
             "tamanho": 149,
             "rua": "Carrer de Balmes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         },
         {
             "id": 207,
@@ -2495,7 +2702,8 @@
             "tamanho": 268,
             "rua": "Carrer de la Diputació_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -2507,7 +2715,8 @@
             "limVel": "30",
             "tamanho": 113,
             "rua": "Carrer del Rosselló_noroeste",
-            "regiao": "noroeste"
+            "regiao": "noroeste",
+            "volta": true
         },
         {
             "id": 208,
@@ -2518,7 +2727,8 @@
             "tamanho": 113,
             "rua": "Carrer del Rosselló_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -2531,7 +2741,8 @@
             "tamanho": 129,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [],
@@ -2545,7 +2756,8 @@
             "tamanho": 65,
             "rua": "Carrer de Provença_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         },
         {
             "id": 212,
@@ -2556,7 +2768,8 @@
             "tamanho": 124,
             "rua": "Passatge de Batlló_noroeste",
             "regiao": "noroeste",
-            "CEP": 203
+            "CEP": 203,
+            "volta": false
         }
     ],
     [
@@ -2569,7 +2782,8 @@
             "tamanho": 133,
             "rua": "Gran Via de les Corts Catalanes_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 214,
@@ -2580,7 +2794,8 @@
             "tamanho": 18,
             "rua": "Carrer de Villarroel_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -2593,7 +2808,8 @@
             "tamanho": 32,
             "rua": "Carrer de Villarroel_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 216,
@@ -2604,7 +2820,8 @@
             "tamanho": 146,
             "rua": "['Carrer de Casanova', 'Carrer de Villarroel', 'Carrer del Consell de Cent']_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -2617,7 +2834,8 @@
             "tamanho": 119,
             "rua": "Carrer de Villarroel_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -2630,7 +2848,8 @@
             "tamanho": 152,
             "rua": "Carrer del Comte d'Urgell_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 219,
@@ -2641,7 +2860,8 @@
             "tamanho": 143,
             "rua": "[\"Carrer del Comte d'Urgell\", 'Carrer de Villarroel', 'Carrer del Consell de Cent']_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -2654,7 +2874,8 @@
             "tamanho": 115,
             "rua": "Carrer de Balmes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -2667,7 +2888,8 @@
             "tamanho": 35,
             "rua": "Carrer de Muntaner_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 222,
@@ -2678,7 +2900,8 @@
             "tamanho": 147,
             "rua": "['Carrer de Muntaner', 'Carrer del Consell de Cent']_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -2691,7 +2914,8 @@
             "tamanho": 115,
             "rua": "Carrer de Muntaner_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -2704,7 +2928,8 @@
             "tamanho": 33,
             "rua": "Carrer de Casanova_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         },
         {
             "id": 225,
@@ -2715,7 +2940,8 @@
             "tamanho": 73,
             "rua": "['Carrer de Casanova', 'Carrer del Consell de Cent']_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -2728,7 +2954,8 @@
             "tamanho": 117,
             "rua": "Carrer de Casanova_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404
+            "CEP": 404,
+            "volta": false
         }
     ],
     [
@@ -2741,7 +2968,8 @@
             "tamanho": 33,
             "rua": "Carrer d'Aribau_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         },
         {
             "id": 228,
@@ -2752,7 +2980,8 @@
             "tamanho": 152,
             "rua": "Carrer del Consell de Cent_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -2765,7 +2994,8 @@
             "tamanho": 116,
             "rua": "Carrer d'Aribau_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -2778,7 +3008,8 @@
             "tamanho": 44,
             "rua": "Carrer d'Enric Granados_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         },
         {
             "id": 231,
@@ -2789,7 +3020,8 @@
             "tamanho": 149,
             "rua": "['Carrer de Balmes', 'Carrer del Consell de Cent']_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ],
     [
@@ -2802,7 +3034,8 @@
             "tamanho": 87,
             "rua": "Plaça del Doctor Letamendi_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         },
         {
             "id": 233,
@@ -2813,7 +3046,8 @@
             "tamanho": 87,
             "rua": "Plaça del Doctor Letamendi_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         },
         {
             "id": 234,
@@ -2824,7 +3058,8 @@
             "tamanho": 109,
             "rua": "Carrer d'Aragó_sudeste",
             "regiao": "sudeste",
-            "CEP": 305
+            "CEP": 305,
+            "volta": false
         }
     ]
 ]
