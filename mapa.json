@@ -4,24 +4,56 @@
             "id": 0,
             "vSaida": 0,
             "vEntrada": 1,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 41,
+                    "num": 41,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 55,
+                    "num": 55,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 74,
+                    "num": 74,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 132,
             "rua": "Gran Via de les Corts Catalanes_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
             "id": 1,
             "vSaida": 0,
             "vEntrada": 34,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 81,
+                    "num": 81,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 117,
+                    "num": 117,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 146,
+                    "num": 146,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 150,
             "rua": "Carrer de Casanova_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
@@ -30,24 +62,66 @@
             "id": 2,
             "vSaida": 1,
             "vEntrada": 75,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 8,
+                    "num": 8,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 10,
+                    "num": 10,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 13,
+                    "num": 13,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 19,
             "rua": "Carrer de Muntaner_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
             "id": 3,
             "vSaida": 1,
             "vEntrada": 105,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 20,
+                    "num": 39,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 25,
+                    "num": 44,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 36,
+                    "num": 55,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 74,
+                    "num": 93,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 129,
+                    "num": 148,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 134,
             "rua": "Gran Via de les Corts Catalanes_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
@@ -56,24 +130,61 @@
             "id": 4,
             "vSaida": 2,
             "vEntrada": 3,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 38,
+                    "num": 191,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 59,
+                    "num": 212,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 106,
+                    "num": 259,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 118,
+                    "num": 271,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 137,
             "rua": "Carrer de París_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 5,
             "vSaida": 2,
             "vEntrada": 49,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 5,
+                    "num": 5,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 108,
+                    "num": 108,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 115,
+                    "num": 115,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 130,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -82,24 +193,61 @@
             "id": 6,
             "vSaida": 3,
             "vEntrada": 10,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 5,
+                    "num": 5,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 77,
+                    "num": 77,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 83,
+                    "num": 83,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 136,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 7,
             "vSaida": 3,
             "vEntrada": 4,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 38,
+                    "num": 38,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 75,
+                    "num": 75,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 100,
+                    "num": 100,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 109,
+                    "num": 109,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 132,
             "rua": "Carrer de París_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -108,24 +256,66 @@
             "id": 8,
             "vSaida": 4,
             "vEntrada": 5,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 23,
+                    "num": 691,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 42,
+                    "num": 710,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 106,
+                    "num": 774,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 122,
+                    "num": 790,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 126,
+                    "num": 794,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 133,
             "rua": "Carrer de París_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 9,
             "vSaida": 4,
             "vEntrada": 21,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 42,
+                    "num": 42,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 68,
+                    "num": 68,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 122,
+                    "num": 122,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 129,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -134,24 +324,56 @@
             "id": 10,
             "vSaida": 5,
             "vEntrada": 12,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 3,
+                    "num": 132,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 21,
+                    "num": 150,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 97,
+                    "num": 226,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 139,
             "rua": "Carrer d'Aribau_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 11,
             "vSaida": 5,
             "vEntrada": 6,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 63,
+                    "num": 331,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 78,
+                    "num": 346,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 101,
+                    "num": 369,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 135,
             "rua": "Carrer de París_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -160,24 +382,61 @@
             "id": 12,
             "vSaida": 6,
             "vEntrada": 52,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 6,
+                    "num": 409,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 26,
+                    "num": 429,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 113,
+                    "num": 516,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "10",
             "tamanho": 131,
             "rua": "Carrer d'Enric Granados_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 13,
             "vSaida": 6,
             "vEntrada": 7,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 14,
+                    "num": 14,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 34,
+                    "num": 34,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 102,
+                    "num": 102,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 117,
+                    "num": 117,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 133,
             "rua": "Carrer de París_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -186,12 +445,33 @@
             "id": 14,
             "vSaida": 7,
             "vEntrada": 55,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 53,
+                    "num": 53,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 58,
+                    "num": 58,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 77,
+                    "num": 77,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 92,
+                    "num": 92,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 131,
             "rua": "Carrer de Balmes_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -200,12 +480,38 @@
             "id": 15,
             "vSaida": 8,
             "vEntrada": 47,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 15,
+                    "num": 15,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 22,
+                    "num": 22,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 24,
+                    "num": 24,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 29,
+                    "num": 29,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 33,
+                    "num": 33,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 56,
             "rua": "Avinguda de Sarrià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -214,24 +520,66 @@
             "id": 16,
             "vSaida": 9,
             "vEntrada": 63,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 14,
+                    "num": 14,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 18,
+                    "num": 18,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 38,
+                    "num": 38,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 104,
+                    "num": 104,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 136,
             "rua": "Carrer de Londres_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 17,
             "vSaida": 9,
             "vEntrada": 2,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 11,
+                    "num": 11,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 62,
+                    "num": 62,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 76,
+                    "num": 76,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 100,
+                    "num": 100,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 136,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -240,24 +588,66 @@
             "id": 18,
             "vSaida": 10,
             "vEntrada": 86,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 1,
+                    "num": 1,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 19,
+                    "num": 19,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 22,
+                    "num": 22,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 43,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 19,
             "vSaida": 10,
             "vEntrada": 9,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 28,
+                    "num": 28,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 32,
+                    "num": 32,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 39,
+                    "num": 39,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 65,
+                    "num": 65,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 89,
+                    "num": 89,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 135,
             "rua": "Carrer de Londres_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -266,24 +656,71 @@
             "id": 20,
             "vSaida": 11,
             "vEntrada": 4,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 13,
+                    "num": 13,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 44,
+                    "num": 44,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 74,
+                    "num": 74,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 95,
+                    "num": 95,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 101,
+                    "num": 101,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 138,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 21,
             "vSaida": 11,
             "vEntrada": 10,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 37,
+                    "num": 370,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 74,
+                    "num": 407,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 76,
+                    "num": 409,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 84,
+                    "num": 417,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "30",
             "tamanho": 133,
             "rua": "Carrer de Londres_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -292,24 +729,56 @@
             "id": 22,
             "vSaida": 12,
             "vEntrada": 11,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 2,
+                    "num": 337,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 38,
+                    "num": 373,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 61,
+                    "num": 396,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 132,
             "rua": "Carrer de Londres_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 23,
             "vSaida": 12,
             "vEntrada": 13,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 7,
+                    "num": 408,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 11,
+                    "num": 412,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 23,
+                    "num": 424,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 28,
             "rua": "Carrer d'Aribau_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -318,24 +787,76 @@
             "id": 24,
             "vSaida": 13,
             "vEntrada": 54,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 103,
+                    "num": 239,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 124,
+                    "num": 260,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 200,
+                    "num": 336,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 264,
+                    "num": 400,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 291,
+                    "num": 427,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 300,
             "rua": "Avinguda Diagonal (lateral mar)_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 25,
             "vSaida": 13,
             "vEntrada": 87,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 2,
+                    "num": 308,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 4,
+                    "num": 310,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 4,
+                    "num": 310,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 10,
+                    "num": 316,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 14,
+                    "num": 320,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 14,
             "rua": "Carrer d'Aribau_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -344,24 +865,66 @@
             "id": 26,
             "vSaida": 14,
             "vEntrada": 5,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 36,
+                    "num": 171,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 50,
+                    "num": 185,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 55,
+                    "num": 190,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 62,
+                    "num": 197,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 101,
+                    "num": 236,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 129,
             "rua": "Carrer d'Aribau_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 27,
             "vSaida": 14,
             "vEntrada": 21,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 61,
+                    "num": 348,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 93,
+                    "num": 380,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 133,
+                    "num": 420,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 133,
             "rua": "Carrer de Còrsega_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -370,24 +933,61 @@
             "id": 28,
             "vSaida": 15,
             "vEntrada": 53,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 53,
+                    "num": 566,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 60,
+                    "num": 573,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 107,
+                    "num": 620,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 113,
+                    "num": 626,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 140,
             "rua": "Carrer del Rosselló_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 29,
             "vSaida": 15,
             "vEntrada": 14,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 3,
+                    "num": 469,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 16,
+                    "num": 482,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 45,
+                    "num": 511,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 132,
             "rua": "Carrer d'Aribau_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -396,24 +996,71 @@
             "id": 30,
             "vSaida": 16,
             "vEntrada": 15,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 3,
+                    "num": 470,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 40,
+                    "num": 507,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 58,
+                    "num": 525,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 66,
+                    "num": 533,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 131,
+                    "num": 598,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 136,
             "rua": "Carrer d'Aribau_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 31,
             "vSaida": 16,
             "vEntrada": 23,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 7,
+                    "num": 436,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 12,
+                    "num": 441,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 43,
+                    "num": 472,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 91,
+                    "num": 520,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "30",
             "tamanho": 129,
             "rua": "Carrer de Provença_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -422,24 +1069,61 @@
             "id": 32,
             "vSaida": 17,
             "vEntrada": 24,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 11,
+                    "num": 447,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 54,
+                    "num": 490,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 127,
+                    "num": 563,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 132,
             "rua": "Carrer de Mallorca_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 33,
             "vSaida": 17,
             "vEntrada": 16,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 43,
+                    "num": 363,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 47,
+                    "num": 367,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 76,
+                    "num": 396,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 99,
+                    "num": 419,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 131,
             "rua": "Carrer d'Aribau_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -448,24 +1132,61 @@
             "id": 34,
             "vSaida": 18,
             "vEntrada": 41,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 7,
+                    "num": 459,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 103,
+                    "num": 555,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 124,
+                    "num": 576,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 136,
+                    "num": 588,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 136,
             "rua": "Carrer de València_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         },
         {
             "id": 35,
             "vSaida": 18,
             "vEntrada": 17,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 29,
+                    "num": 587,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 69,
+                    "num": 627,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 85,
+                    "num": 643,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 135,
             "rua": "Carrer d'Aribau_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
@@ -474,24 +1195,71 @@
             "id": 36,
             "vSaida": 19,
             "vEntrada": 26,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 28,
+                    "num": 164,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 83,
+                    "num": 219,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 105,
+                    "num": 241,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 114,
+                    "num": 250,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 133,
             "rua": "Carrer d'Aragó_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         },
         {
             "id": 37,
             "vSaida": 19,
             "vEntrada": 18,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 31,
+                    "num": 300,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 43,
+                    "num": 312,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 86,
+                    "num": 355,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 126,
+                    "num": 395,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 129,
+                    "num": 398,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 132,
             "rua": "Carrer d'Aribau_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
@@ -500,24 +1268,56 @@
             "id": 38,
             "vSaida": 20,
             "vEntrada": 27,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 43,
+                    "num": 43,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 74,
+                    "num": 74,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 85,
+                    "num": 85,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 133,
             "rua": "Carrer de la Diputació_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         },
         {
             "id": 39,
             "vSaida": 20,
             "vEntrada": 126,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 54,
+                    "num": 642,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 62,
+                    "num": 650,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 62,
+                    "num": 650,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 117,
             "rua": "Carrer d'Aribau_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
@@ -526,24 +1326,66 @@
             "id": 40,
             "vSaida": 21,
             "vEntrada": 29,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 28,
+                    "num": 479,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 30,
+                    "num": 481,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 84,
+                    "num": 535,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 133,
             "rua": "Carrer de Còrsega_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 41,
             "vSaida": 21,
             "vEntrada": 22,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 6,
+                    "num": 49,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 29,
+                    "num": 72,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 38,
+                    "num": 81,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 102,
+                    "num": 145,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 111,
+                    "num": 154,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 132,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -552,24 +1394,56 @@
             "id": 42,
             "vSaida": 22,
             "vEntrada": 15,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 32,
+                    "num": 207,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 77,
+                    "num": 252,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 127,
+                    "num": 302,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "30",
             "tamanho": 131,
             "rua": "Carrer del Rosselló_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 43,
             "vSaida": 22,
             "vEntrada": 23,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 38,
+                    "num": 606,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 79,
+                    "num": 647,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 118,
+                    "num": 686,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 136,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -578,24 +1452,66 @@
             "id": 44,
             "vSaida": 23,
             "vEntrada": 31,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 15,
+                    "num": 756,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 104,
+                    "num": 845,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 126,
+                    "num": 867,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 127,
             "rua": "Carrer de Provença_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 45,
             "vSaida": 23,
             "vEntrada": 24,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 24,
+                    "num": 892,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 44,
+                    "num": 912,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 70,
+                    "num": 938,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 105,
+                    "num": 973,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 117,
+                    "num": 985,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 135,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -604,24 +1520,61 @@
             "id": 46,
             "vSaida": 24,
             "vEntrada": 25,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 14,
+                    "num": 152,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 26,
+                    "num": 164,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 88,
+                    "num": 226,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 116,
+                    "num": 254,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 135,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 47,
             "vSaida": 24,
             "vEntrada": 32,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 9,
+                    "num": 9,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 37,
+                    "num": 37,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 91,
+                    "num": 91,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 138,
             "rua": "Carrer de Mallorca_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -630,24 +1583,71 @@
             "id": 48,
             "vSaida": 25,
             "vEntrada": 18,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 12,
+                    "num": 392,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 94,
+                    "num": 474,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 102,
+                    "num": 482,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 114,
+                    "num": 494,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 118,
+                    "num": 498,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 133,
             "rua": "Carrer de València_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         },
         {
             "id": 49,
             "vSaida": 25,
             "vEntrada": 26,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 8,
+                    "num": 606,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 30,
+                    "num": 628,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 55,
+                    "num": 653,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 69,
+                    "num": 667,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 130,
             "rua": "Carrer de Muntaner_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
@@ -656,24 +1656,61 @@
             "id": 50,
             "vSaida": 26,
             "vEntrada": 65,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 32,
+                    "num": 32,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 73,
+                    "num": 73,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 106,
+                    "num": 106,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 134,
             "rua": "Carrer d'Aragó_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
             "id": 51,
             "vSaida": 26,
             "vEntrada": 122,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 17,
+                    "num": 17,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 25,
+                    "num": 25,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 72,
+                    "num": 72,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 75,
+                    "num": 75,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 115,
             "rua": "Carrer de Muntaner_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
@@ -682,24 +1719,66 @@
             "id": 52,
             "vSaida": 27,
             "vEntrada": 101,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 19,
+                    "num": 150,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 53,
+                    "num": 184,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 54,
+                    "num": 185,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 66,
             "rua": "Carrer de la Diputació_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
             "id": 53,
             "vSaida": 27,
             "vEntrada": 1,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 3,
+                    "num": 59,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 7,
+                    "num": 63,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 39,
+                    "num": 95,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 50,
+                    "num": 106,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 77,
+                    "num": 133,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 149,
             "rua": "Carrer de Muntaner_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
@@ -708,12 +1787,38 @@
             "id": 54,
             "vSaida": 28,
             "vEntrada": 68,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 1,
+                    "num": 769,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 2,
+                    "num": 770,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 11,
+                    "num": 779,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 17,
+                    "num": 785,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 24,
+                    "num": 792,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 28,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -722,24 +1827,56 @@
             "id": 55,
             "vSaida": 29,
             "vEntrada": 49,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 70,
+                    "num": 267,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 93,
+                    "num": 290,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 101,
+                    "num": 298,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 136,
             "rua": "Carrer de Còrsega_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 56,
             "vSaida": 29,
             "vEntrada": 3,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 6,
+                    "num": 211,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 92,
+                    "num": 297,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 114,
+                    "num": 319,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 130,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -748,24 +1885,66 @@
             "id": 57,
             "vSaida": 30,
             "vEntrada": 29,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 57,
+                    "num": 1210,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 86,
+                    "num": 1239,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 100,
+                    "num": 1253,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 137,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 58,
             "vSaida": 30,
             "vEntrada": 22,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 10,
+                    "num": 279,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 19,
+                    "num": 288,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 20,
+                    "num": 289,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 56,
+                    "num": 325,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 100,
+                    "num": 369,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "30",
             "tamanho": 111,
             "rua": "Carrer del Rosselló_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -774,24 +1953,61 @@
             "id": 59,
             "vSaida": 31,
             "vEntrada": 30,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 23,
+                    "num": 1451,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 36,
+                    "num": 1464,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 61,
+                    "num": 1489,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 119,
+                    "num": 1547,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 137,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 60,
             "vSaida": 31,
             "vEntrada": 35,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 14,
+                    "num": 264,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 27,
+                    "num": 277,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 66,
+                    "num": 316,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 138,
             "rua": "Carrer de Provença_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -800,24 +2016,76 @@
             "id": 61,
             "vSaida": 32,
             "vEntrada": 31,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 24,
+                    "num": 1728,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 27,
+                    "num": 1731,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 38,
+                    "num": 1742,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 39,
+                    "num": 1743,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 55,
+                    "num": 1759,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 134,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 62,
             "vSaida": 32,
             "vEntrada": 43,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 79,
+                    "num": 820,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 79,
+                    "num": 820,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 95,
+                    "num": 836,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 105,
+                    "num": 846,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 128,
+                    "num": 869,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 129,
             "rua": "Carrer de Mallorca_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -826,24 +2094,66 @@
             "id": 63,
             "vSaida": 33,
             "vEntrada": 25,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 42,
+                    "num": 207,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 76,
+                    "num": 241,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 95,
+                    "num": 260,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 103,
+                    "num": 268,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 134,
             "rua": "Carrer de València_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 64,
             "vSaida": 33,
             "vEntrada": 32,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 24,
+                    "num": 1517,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 39,
+                    "num": 1532,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 61,
+                    "num": 1554,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 127,
+                    "num": 1620,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 136,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -852,24 +2162,76 @@
             "id": 65,
             "vSaida": 34,
             "vEntrada": 124,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 18,
+                    "num": 152,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 21,
+                    "num": 155,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 56,
+                    "num": 190,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 87,
+                    "num": 221,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 96,
+                    "num": 230,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 116,
             "rua": "Carrer de Casanova_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
             "id": 66,
             "vSaida": 34,
             "vEntrada": 39,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 24,
+                    "num": 290,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 27,
+                    "num": 293,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 34,
+                    "num": 300,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 66,
+                    "num": 332,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 77,
+                    "num": 343,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 133,
             "rua": "Carrer de la Diputació_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
@@ -878,24 +2240,66 @@
             "id": 67,
             "vSaida": 35,
             "vEntrada": 116,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 28,
+                    "num": 28,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 28,
+                    "num": 28,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 43,
+                    "num": 43,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 69,
             "rua": "Carrer de Provença_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 68,
             "vSaida": 35,
             "vEntrada": 43,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 5,
+                    "num": 265,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 34,
+                    "num": 294,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 44,
+                    "num": 304,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 45,
+                    "num": 305,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 68,
+                    "num": 328,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 130,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -904,24 +2308,56 @@
             "id": 69,
             "vSaida": 36,
             "vEntrada": 44,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 16,
+                    "num": 85,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 55,
+                    "num": 124,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 59,
+                    "num": 128,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "10",
             "tamanho": 132,
             "rua": "Carrer d'Enric Granados_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 70,
             "vSaida": 36,
             "vEntrada": 16,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 63,
+                    "num": 274,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 78,
+                    "num": 289,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 132,
+                    "num": 343,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 142,
             "rua": "Carrer de Provença_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -930,24 +2366,71 @@
             "id": 71,
             "vSaida": 37,
             "vEntrada": 45,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 41,
+                    "num": 431,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 55,
+                    "num": 445,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 67,
+                    "num": 457,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 127,
+                    "num": 517,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 132,
             "rua": "Carrer de Balmes_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 72,
             "vSaida": 37,
             "vEntrada": 36,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 12,
+                    "num": 145,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 16,
+                    "num": 149,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 17,
+                    "num": 150,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 56,
+                    "num": 189,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 93,
+                    "num": 226,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 127,
             "rua": "Carrer de Provença_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -956,12 +2439,38 @@
             "id": 73,
             "vSaida": 38,
             "vEntrada": 120,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 15,
+                    "num": 15,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 21,
+                    "num": 21,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 70,
+                    "num": 70,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 110,
+                    "num": 110,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 111,
+                    "num": 111,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 115,
             "rua": "Carrer del Comte d'Urgell_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
@@ -970,24 +2479,71 @@
             "id": 74,
             "vSaida": 39,
             "vEntrada": 117,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 3,
+                    "num": 211,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 61,
+                    "num": 269,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 71,
+                    "num": 279,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 145,
+                    "num": 353,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 149,
             "rua": "Carrer de Villarroel_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
             "id": 75,
             "vSaida": 39,
             "vEntrada": 38,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 4,
+                    "num": 357,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 32,
+                    "num": 385,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 60,
+                    "num": 413,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 71,
+                    "num": 424,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 105,
+                    "num": 458,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "30",
             "tamanho": 133,
             "rua": "Carrer de la Diputació_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
@@ -996,24 +2552,66 @@
             "id": 76,
             "vSaida": 40,
             "vEntrada": 33,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 53,
+                    "num": 53,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 69,
+                    "num": 69,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 72,
+                    "num": 72,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 118,
+                    "num": 118,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 134,
             "rua": "Carrer de València_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 77,
             "vSaida": 40,
             "vEntrada": 50,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 53,
+                    "num": 168,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 67,
+                    "num": 182,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 71,
+                    "num": 186,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 81,
+                    "num": 196,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 96,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1022,24 +2620,66 @@
             "id": 78,
             "vSaida": 41,
             "vEntrada": 73,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 1,
+                    "num": 621,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 22,
+                    "num": 642,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 26,
+                    "num": 646,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 50,
+                    "num": 670,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "10",
             "tamanho": 68,
             "rua": "Carrer d'Enric Granados_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         },
         {
             "id": 79,
             "vSaida": 41,
             "vEntrada": 42,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 52,
+                    "num": 740,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 66,
+                    "num": 754,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 86,
+                    "num": 774,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 103,
+                    "num": 791,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 130,
             "rua": "Carrer de València_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
@@ -1048,12 +2688,33 @@
             "id": 80,
             "vSaida": 42,
             "vEntrada": 57,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 34,
+                    "num": 1072,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 37,
+                    "num": 1075,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 70,
+                    "num": 1108,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 96,
+                    "num": 1134,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 130,
             "rua": "Carrer de Balmes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
@@ -1062,24 +2723,56 @@
             "id": 81,
             "vSaida": 43,
             "vEntrada": 40,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 45,
+                    "num": 180,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 103,
+                    "num": 238,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 122,
+                    "num": 257,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 134,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 82,
             "vSaida": 43,
             "vEntrada": 95,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 75,
+                    "num": 75,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 82,
+                    "num": 82,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 133,
+                    "num": 133,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 133,
             "rua": "Carrer de Mallorca_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1088,24 +2781,56 @@
             "id": 83,
             "vSaida": 44,
             "vEntrada": 41,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 27,
+                    "num": 654,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 33,
+                    "num": 660,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 95,
+                    "num": 722,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "10",
             "tamanho": 136,
             "rua": "Carrer d'Enric Granados_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 84,
             "vSaida": 44,
             "vEntrada": 17,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 98,
+                    "num": 231,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 116,
+                    "num": 249,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 128,
+                    "num": 261,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 136,
             "rua": "Carrer de Mallorca_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -1114,24 +2839,61 @@
             "id": 85,
             "vSaida": 45,
             "vEntrada": 42,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 22,
+                    "num": 22,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 22,
+                    "num": 22,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 77,
+                    "num": 77,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 136,
             "rua": "Carrer de Balmes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         },
         {
             "id": 86,
             "vSaida": 45,
             "vEntrada": 44,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 52,
+                    "num": 188,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 54,
+                    "num": 190,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 56,
+                    "num": 192,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 71,
+                    "num": 207,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 129,
             "rua": "Carrer de Mallorca_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
@@ -1140,12 +2902,38 @@
             "id": 87,
             "vSaida": 46,
             "vEntrada": 58,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 21,
+                    "num": 517,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 31,
+                    "num": 527,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 46,
+                    "num": 542,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 62,
+                    "num": 558,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 77,
+                    "num": 573,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 131,
             "rua": "Carrer de Buenos Aires_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1154,24 +2942,66 @@
             "id": 88,
             "vSaida": 47,
             "vEntrada": 46,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 26,
+                    "num": 26,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 39,
+                    "num": 39,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 68,
+                    "num": 68,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 73,
+                    "num": 73,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 90,
+                    "num": 90,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 94,
             "rua": "Carrer del Comte Borrell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 89,
             "vSaida": 47,
             "vEntrada": 81,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 12,
+                    "num": 106,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 30,
+                    "num": 124,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 107,
+                    "num": 201,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 111,
             "rua": "Avinguda de Sarrià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1180,24 +3010,56 @@
             "id": 90,
             "vSaida": 48,
             "vEntrada": 28,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 44,
+                    "num": 44,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 58,
+                    "num": 58,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 88,
+                    "num": 88,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 133,
             "rua": "Carrer de Buenos Aires_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 91,
             "vSaida": 48,
             "vEntrada": 9,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 58,
+                    "num": 191,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 70,
+                    "num": 203,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 89,
+                    "num": 222,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 133,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1206,24 +3068,71 @@
             "id": 92,
             "vSaida": 49,
             "vEntrada": 99,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 25,
+                    "num": 496,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 71,
+                    "num": 542,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 84,
+                    "num": 555,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 90,
+                    "num": 561,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 120,
+                    "num": 591,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 132,
             "rua": "Carrer de Còrsega_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 93,
             "vSaida": 49,
             "vEntrada": 35,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 12,
+                    "num": 213,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 117,
+                    "num": 318,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 185,
+                    "num": 386,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 259,
+                    "num": 460,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 270,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1232,24 +3141,56 @@
             "id": 94,
             "vSaida": 50,
             "vEntrada": 60,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 4,
+                    "num": 517,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 49,
+                    "num": 562,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 110,
+                    "num": 623,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 140,
             "rua": "Avinguda de Roma_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 95,
             "vSaida": 50,
             "vEntrada": 94,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 6,
+                    "num": 876,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 12,
+                    "num": 882,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 12,
+                    "num": 882,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 37,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1258,12 +3199,38 @@
             "id": 96,
             "vSaida": 51,
             "vEntrada": 70,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 1,
+                    "num": 1,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 3,
+                    "num": 3,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 59,
+                    "num": 59,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 109,
+                    "num": 109,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 127,
+                    "num": 127,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 133,
             "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
@@ -1272,24 +3239,61 @@
             "id": 97,
             "vSaida": 52,
             "vEntrada": 14,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 46,
+                    "num": 302,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 66,
+                    "num": 322,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 82,
+                    "num": 338,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 111,
+                    "num": 367,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 135,
             "rua": "Carrer de Còrsega_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 98,
             "vSaida": 52,
             "vEntrada": 53,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 33,
+                    "num": 396,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 75,
+                    "num": 438,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 98,
+                    "num": 461,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "10",
             "tamanho": 133,
             "rua": "Carrer d'Enric Granados_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -1298,24 +3302,66 @@
             "id": 99,
             "vSaida": 53,
             "vEntrada": 56,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 17,
+                    "num": 1185,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 49,
+                    "num": 1217,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 74,
+                    "num": 1242,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 102,
+                    "num": 1270,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 120,
+                    "num": 1288,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "30",
             "tamanho": 127,
             "rua": "Carrer del Rosselló_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 100,
             "vSaida": 53,
             "vEntrada": 36,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 40,
+                    "num": 40,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 80,
+                    "num": 80,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 99,
+                    "num": 99,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "10",
             "tamanho": 135,
             "rua": "Carrer d'Enric Granados_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -1324,12 +3370,33 @@
             "id": 101,
             "vSaida": 54,
             "vEntrada": 7,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 4,
+                    "num": 139,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 13,
+                    "num": 148,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 13,
+                    "num": 148,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 27,
+                    "num": 162,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 32,
             "rua": "Carrer de Balmes_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -1338,24 +3405,61 @@
             "id": 102,
             "vSaida": 55,
             "vEntrada": 52,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 15,
+                    "num": 182,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 21,
+                    "num": 188,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 34,
+                    "num": 201,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 131,
             "rua": "Carrer de Còrsega_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
             "id": 103,
             "vSaida": 55,
             "vEntrada": 56,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 19,
+                    "num": 19,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 20,
+                    "num": 20,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 45,
+                    "num": 45,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 124,
+                    "num": 124,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 135,
             "rua": "Carrer de Balmes_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -1364,12 +3468,28 @@
             "id": 104,
             "vSaida": 56,
             "vEntrada": 37,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 67,
+                    "num": 202,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 89,
+                    "num": 224,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 93,
+                    "num": 228,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 133,
             "rua": "Carrer de Balmes_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -1378,24 +3498,66 @@
             "id": 105,
             "vSaida": 57,
             "vEntrada": 129,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 19,
+                    "num": 153,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 46,
+                    "num": 180,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 66,
+                    "num": 200,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 72,
+                    "num": 206,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 76,
             "rua": "Carrer d'Aragó_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         },
         {
             "id": 106,
             "vSaida": 57,
             "vEntrada": 106,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 55,
+                    "num": 1152,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 81,
+                    "num": 1178,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 81,
+                    "num": 1178,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 118,
+                    "num": 1215,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 118,
             "rua": "Carrer de Balmes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
@@ -1404,24 +3566,61 @@
             "id": 107,
             "vSaida": 58,
             "vEntrada": 48,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 3,
+                    "num": 360,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 67,
+                    "num": 424,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 98,
+                    "num": 455,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 128,
+                    "num": 485,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 137,
             "rua": "Carrer de Buenos Aires_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 108,
             "vSaida": 58,
             "vEntrada": 63,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 7,
+                    "num": 319,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 39,
+                    "num": 351,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 59,
+                    "num": 371,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 136,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1430,24 +3629,71 @@
             "id": 109,
             "vSaida": 59,
             "vEntrada": 109,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 5,
+                    "num": 18,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 13,
+                    "num": 26,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 20,
+                    "num": 33,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 28,
+                    "num": 41,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 29,
             "rua": "Carrer de París_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 110,
             "vSaida": 59,
             "vEntrada": 108,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 1,
+                    "num": 1,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 1,
+                    "num": 1,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 4,
+                    "num": 4,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 8,
+                    "num": 8,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 10,
+                    "num": 10,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 13,
             "rua": "Avinguda de Sarrià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1456,12 +3702,33 @@
             "id": 111,
             "vSaida": 60,
             "vEntrada": 62,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 9,
+                    "num": 211,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 21,
+                    "num": 223,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 21,
+                    "num": 223,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 27,
+                    "num": 229,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 54,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1470,24 +3737,71 @@
             "id": 112,
             "vSaida": 61,
             "vEntrada": 38,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 28,
+                    "num": 166,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 66,
+                    "num": 204,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 83,
+                    "num": 221,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 109,
+                    "num": 247,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 144,
+                    "num": 282,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 149,
             "rua": "Carrer del Comte d'Urgell_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
             "id": 113,
             "vSaida": 61,
             "vEntrada": 117,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 56,
+                    "num": 186,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 92,
+                    "num": 222,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 97,
+                    "num": 227,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 102,
+                    "num": 232,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 133,
             "rua": "Gran Via de les Corts Catalanes_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
@@ -1496,24 +3810,56 @@
             "id": 114,
             "vSaida": 62,
             "vEntrada": 40,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 18,
+                    "num": 925,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 77,
+                    "num": 984,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 101,
+                    "num": 1008,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 131,
             "rua": "Carrer de València_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 115,
             "vSaida": 62,
             "vEntrada": 95,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 31,
+                    "num": 130,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 75,
+                    "num": 174,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 96,
+                    "num": 195,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 134,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1522,24 +3868,66 @@
             "id": 116,
             "vSaida": 63,
             "vEntrada": 8,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 2,
+                    "num": 2,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 32,
+                    "num": 32,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 43,
+                    "num": 43,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 47,
+                    "num": 47,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 84,
+                    "num": 84,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 99,
             "rua": "Carrer de Londres_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 117,
             "vSaida": 63,
             "vEntrada": 110,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 10,
+                    "num": 1111,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 18,
+                    "num": 1119,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 77,
+                    "num": 1178,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 114,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1548,12 +3936,38 @@
             "id": 118,
             "vSaida": 64,
             "vEntrada": 79,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 6,
+                    "num": 833,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 7,
+                    "num": 834,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 8,
+                    "num": 835,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 8,
+                    "num": 835,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 9,
+                    "num": 836,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 18,
             "rua": "Carrer de Balmes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
@@ -1562,36 +3976,94 @@
             "id": 119,
             "vSaida": 65,
             "vEntrada": 50,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 9,
+                    "num": 1574,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 9,
+                    "num": 1574,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 54,
+                    "num": 1619,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 120,
+                    "num": 1685,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 127,
+                    "num": 1692,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 139,
             "rua": "Avinguda de Roma_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
             "id": 120,
             "vSaida": 65,
             "vEntrada": 104,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 7,
+                    "num": 140,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 30,
+                    "num": 163,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 36,
+                    "num": 169,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 68,
             "rua": "Carrer d'Aragó_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
             "id": 121,
             "vSaida": 65,
             "vEntrada": 33,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 8,
+                    "num": 1223,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 19,
+                    "num": 1234,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 58,
+                    "num": 1273,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 129,
             "rua": "Carrer de Casanova_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
@@ -1600,12 +4072,28 @@
             "id": 122,
             "vSaida": 66,
             "vEntrada": 111,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 10,
+                    "num": 515,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 13,
+                    "num": 518,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 26,
+                    "num": 531,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 26,
             "rua": "Plaça de Francesc Macià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1614,24 +4102,71 @@
             "id": 123,
             "vSaida": 67,
             "vEntrada": 69,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 4,
+                    "num": 287,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 7,
+                    "num": 290,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 79,
+                    "num": 362,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 187,
+                    "num": 470,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 200,
+                    "num": 483,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 222,
             "rua": "Avinguda de Josep Tarradellas_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 124,
             "vSaida": 67,
             "vEntrada": 66,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 1,
+                    "num": 269,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 5,
+                    "num": 273,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 14,
+                    "num": 282,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 28,
+                    "num": 296,
+                    "tipo": "comercial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 33,
             "rua": "Plaça de Francesc Macià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1640,24 +4175,66 @@
             "id": 125,
             "vSaida": 68,
             "vEntrada": 72,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 55,
+                    "num": 356,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 110,
+                    "num": 411,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 111,
+                    "num": 412,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 148,
+                    "num": 449,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 149,
             "rua": "Avinguda Diagonal (lateral mar)_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
             "id": 126,
             "vSaida": 68,
             "vEntrada": 84,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 1,
+                    "num": 1,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 4,
+                    "num": 4,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 9,
+                    "num": 9,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 16,
+                    "num": 16,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "50",
             "tamanho": 16,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1667,24 +4244,66 @@
             "id": 127,
             "vSaida": 70,
             "vEntrada": 75,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 4,
+                    "num": 1166,
+                    "tipo": "comercial"
+                },
+                {
+                    "dFinalSeg": 50,
+                    "num": 1212,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 50,
+                    "num": 1212,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 52,
+                    "num": 1214,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 89,
+                    "num": 1251,
+                    "tipo": "residencial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 131,
             "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
             "id": 128,
             "vSaida": 70,
             "vEntrada": 0,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 5,
+                    "num": 21,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 7,
+                    "num": 23,
+                    "tipo": "residencial"
+                },
+                {
+                    "dFinalSeg": 9,
+                    "num": 25,
+                    "tipo": "industrial"
+                }
+            ],
             "limVel": "30",
             "tamanho": 17,
             "rua": "Carrer de Casanova_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
@@ -1693,12 +4312,33 @@
             "id": 129,
             "vSaida": 71,
             "vEntrada": 48,
-            "imoveis": [],
+            "imoveis": [
+                {
+                    "dFinalSeg": 37,
+                    "num": 152,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 63,
+                    "num": 178,
+                    "tipo": "atração turística"
+                },
+                {
+                    "dFinalSeg": 72,
+                    "num": 187,
+                    "tipo": "industrial"
+                },
+                {
+                    "dFinalSeg": 93,
+                    "num": 208,
+                    "tipo": "atração turística"
+                }
+            ],
             "limVel": "50",
             "tamanho": 93,
             "rua": "Carrer de Villarroel_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
@@ -1710,7 +4350,7 @@
             "tamanho": 148,
             "rua": "Avinguda Diagonal (lateral mar)_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1724,7 +4364,7 @@
             "tamanho": 50,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
@@ -1736,7 +4376,7 @@
             "tamanho": 146,
             "rua": "Avinguda Diagonal (lateral mar)_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
@@ -1750,7 +4390,7 @@
             "tamanho": 84,
             "rua": "Plaça del Doctor Letamendi_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
@@ -1764,7 +4404,7 @@
             "tamanho": 86,
             "rua": "Plaça del Doctor Letamendi_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
@@ -1778,7 +4418,7 @@
             "tamanho": 135,
             "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
@@ -1792,7 +4432,7 @@
             "tamanho": 21,
             "rua": "Plaça de la Universitat_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         },
         {
@@ -1804,7 +4444,7 @@
             "tamanho": 121,
             "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
@@ -1818,7 +4458,7 @@
             "tamanho": 133,
             "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
@@ -1830,7 +4470,7 @@
             "tamanho": 18,
             "rua": "Carrer del Comte d'Urgell_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
@@ -1844,7 +4484,7 @@
             "tamanho": 146,
             "rua": "Gran Via de les Corts Catalanes (lateral mar)_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
@@ -1859,7 +4499,7 @@
             "tamanho": 134,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
@@ -1871,19 +4511,8 @@
             "tamanho": 113,
             "rua": "Carrer del Rosselló_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
-        },
-        {
-            "id": 209,
-            "vSaida": 80,
-            "vEntrada": 113,
-            "imoveis": [],
-            "limVel": "30",
-            "tamanho": 113,
-            "rua": "Carrer del Rosselló_noroeste",
-            "regiao": "noroeste",
-            "volta": true
         }
     ],
     [
@@ -1896,7 +4525,7 @@
             "tamanho": 61,
             "rua": "Carrer de Buenos Aires_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
@@ -1908,7 +4537,7 @@
             "tamanho": 40,
             "rua": "Avinguda de Sarrià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -1922,7 +4551,7 @@
             "tamanho": 150,
             "rua": "Avinguda Diagonal_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
@@ -1934,7 +4563,7 @@
             "tamanho": 15,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
@@ -1946,30 +4575,8 @@
             "tamanho": 147,
             "rua": "Avinguda Diagonal_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
-        },
-        {
-            "id": 155,
-            "vSaida": 82,
-            "vEntrada": 84,
-            "imoveis": [],
-            "limVel": "50",
-            "tamanho": 150,
-            "rua": "Avinguda Diagonal_nordeste",
-            "regiao": "nordeste",
-            "volta": true
-        },
-        {
-            "id": 164,
-            "vSaida": 82,
-            "vEntrada": 87,
-            "imoveis": [],
-            "limVel": "50",
-            "tamanho": 147,
-            "rua": "Avinguda Diagonal_nordeste",
-            "regiao": "nordeste",
-            "volta": true
         }
     ],
     [
@@ -1982,7 +4589,7 @@
             "tamanho": 15,
             "rua": "Carrer de Balmes_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
@@ -1994,19 +4601,8 @@
             "tamanho": 300,
             "rua": "Avinguda Diagonal_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
-        },
-        {
-            "id": 162,
-            "vSaida": 83,
-            "vEntrada": 87,
-            "imoveis": [],
-            "limVel": "50",
-            "tamanho": 300,
-            "rua": "Avinguda Diagonal_nordeste",
-            "regiao": "nordeste",
-            "volta": true
         }
     ],
     [
@@ -2024,42 +4620,19 @@
         {
             "id": 154,
             "vSaida": 84,
-            "vEntrada": 82,
-            "imoveis": [],
-            "limVel": "50",
-            "tamanho": 150,
-            "rua": "Avinguda Diagonal_noroeste",
-            "regiao": "noroeste",
-            "CEP": 203,
-            "volta": false
-        },
-        {
-            "id": 156,
-            "vSaida": 84,
             "vEntrada": 88,
             "imoveis": [],
             "limVel": "50",
             "tamanho": 200,
             "rua": "Avinguda Diagonal_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
-        },
-        {
-            "id": 169,
-            "vSaida": 84,
-            "vEntrada": 88,
-            "imoveis": [],
-            "limVel": "50",
-            "tamanho": 200,
-            "rua": "Avinguda Diagonal_noroeste",
-            "regiao": "noroeste",
-            "volta": true
         }
     ],
     [
         {
-            "id": 158,
+            "id": 156,
             "vSaida": 85,
             "vEntrada": 11,
             "imoveis": [],
@@ -2067,11 +4640,11 @@
             "tamanho": 43,
             "rua": "Carrer de Muntaner_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         },
         {
-            "id": 159,
+            "id": 157,
             "vSaida": 85,
             "vEntrada": 86,
             "imoveis": [],
@@ -2079,13 +4652,13 @@
             "tamanho": 134,
             "rua": "Passatge Lluis Pellicer_nordeste",
             "regiao": "nordeste",
-            "CEP": 102,
+            "CEP": 0,
             "volta": false
         }
     ],
     [
         {
-            "id": 160,
+            "id": 158,
             "vSaida": 86,
             "vEntrada": 28,
             "imoveis": [],
@@ -2093,7 +4666,7 @@
             "tamanho": 87,
             "rua": "Carrer de Casanova_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
@@ -2119,35 +4692,11 @@
             "rua": "Avinguda Diagonal_nordeste",
             "regiao": "nordeste",
             "volta": true
-        },
-        {
-            "id": 161,
-            "vSaida": 87,
-            "vEntrada": 83,
-            "imoveis": [],
-            "limVel": "50",
-            "tamanho": 300,
-            "rua": "Avinguda Diagonal_nordeste",
-            "regiao": "nordeste",
-            "CEP": 102,
-            "volta": false
-        },
-        {
-            "id": 163,
-            "vSaida": 87,
-            "vEntrada": 82,
-            "imoveis": [],
-            "limVel": "50",
-            "tamanho": 147,
-            "rua": "Avinguda Diagonal_nordeste",
-            "regiao": "nordeste",
-            "CEP": 102,
-            "volta": false
         }
     ],
     [
         {
-            "id": 157,
+            "id": 155,
             "vSaida": 88,
             "vEntrada": 84,
             "imoveis": [],
@@ -2158,7 +4707,7 @@
             "volta": true
         },
         {
-            "id": 165,
+            "id": 159,
             "vSaida": 88,
             "vEntrada": 98,
             "imoveis": [],
@@ -2166,11 +4715,11 @@
             "tamanho": 59,
             "rua": "Avinguda Diagonal_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
-            "id": 167,
+            "id": 161,
             "vSaida": 88,
             "vEntrada": 89,
             "imoveis": [],
@@ -2178,36 +4727,13 @@
             "tamanho": 16,
             "rua": "Carrer de Calvet_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
-        },
-        {
-            "id": 168,
-            "vSaida": 88,
-            "vEntrada": 84,
-            "imoveis": [],
-            "limVel": "50",
-            "tamanho": 200,
-            "rua": "Avinguda Diagonal_noroeste",
-            "regiao": "noroeste",
-            "CEP": 203,
-            "volta": false
-        },
-        {
-            "id": 185,
-            "vSaida": 88,
-            "vEntrada": 98,
-            "imoveis": [],
-            "limVel": "50",
-            "tamanho": 59,
-            "rua": "Avinguda Diagonal_noroeste",
-            "regiao": "noroeste",
-            "volta": true
         }
     ],
     [
         {
-            "id": 170,
+            "id": 162,
             "vSaida": 89,
             "vEntrada": 71,
             "imoveis": [],
@@ -2215,13 +4741,13 @@
             "tamanho": 53,
             "rua": "Avinguda Diagonal (lateral mar)_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
     [
         {
-            "id": 171,
+            "id": 163,
             "vSaida": 90,
             "vEntrada": 91,
             "imoveis": [],
@@ -2229,11 +4755,11 @@
             "tamanho": 96,
             "rua": "Avinguda de Josep Tarradellas_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
-            "id": 172,
+            "id": 164,
             "vSaida": 90,
             "vEntrada": 69,
             "imoveis": [],
@@ -2241,13 +4767,13 @@
             "tamanho": 30,
             "rua": "Avinguda de Sarrià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
     [
         {
-            "id": 173,
+            "id": 165,
             "vSaida": 91,
             "vEntrada": 46,
             "imoveis": [],
@@ -2255,11 +4781,11 @@
             "tamanho": 83,
             "rua": "Carrer del Comte Borrell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
-            "id": 174,
+            "id": 166,
             "vSaida": 91,
             "vEntrada": 66,
             "imoveis": [],
@@ -2267,13 +4793,13 @@
             "tamanho": 124,
             "rua": "Avinguda de Josep Tarradellas_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
     [
         {
-            "id": 175,
+            "id": 167,
             "vSaida": 92,
             "vEntrada": 60,
             "imoveis": [],
@@ -2281,13 +4807,13 @@
             "tamanho": 14,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
     [
         {
-            "id": 176,
+            "id": 168,
             "vSaida": 93,
             "vEntrada": 92,
             "imoveis": [],
@@ -2295,13 +4821,13 @@
             "tamanho": 66,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
     [
         {
-            "id": 177,
+            "id": 169,
             "vSaida": 94,
             "vEntrada": 118,
             "imoveis": [],
@@ -2309,11 +4835,11 @@
             "tamanho": 115,
             "rua": "Carrer de Villarroel_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
-            "id": 178,
+            "id": 170,
             "vSaida": 94,
             "vEntrada": 93,
             "imoveis": [],
@@ -2321,13 +4847,13 @@
             "tamanho": 131,
             "rua": "Carrer d'Aragó_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
     [
         {
-            "id": 179,
+            "id": 171,
             "vSaida": 95,
             "vEntrada": 114,
             "imoveis": [],
@@ -2335,13 +4861,13 @@
             "tamanho": 134,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
     [
         {
-            "id": 180,
+            "id": 172,
             "vSaida": 96,
             "vEntrada": 59,
             "imoveis": [],
@@ -2349,25 +4875,25 @@
             "tamanho": 23,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
-            "id": 181,
+            "id": 173,
             "vSaida": 96,
             "vEntrada": 109,
             "imoveis": [],
             "limVel": "50",
             "tamanho": 26,
-            "rua": "Rua desconhecida 181_noroeste",
+            "rua": "Rua desconhecida 173_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
     [
         {
-            "id": 182,
+            "id": 174,
             "vSaida": 97,
             "vEntrada": 89,
             "imoveis": [],
@@ -2375,11 +4901,11 @@
             "tamanho": 81,
             "rua": "Avinguda Diagonal (lateral mar)_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
-            "id": 183,
+            "id": 175,
             "vSaida": 97,
             "vEntrada": 98,
             "imoveis": [],
@@ -2387,13 +4913,13 @@
             "tamanho": 30,
             "rua": "Plaça de Francesc Macià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
     [
         {
-            "id": 166,
+            "id": 160,
             "vSaida": 98,
             "vEntrada": 88,
             "imoveis": [],
@@ -2402,23 +4928,11 @@
             "rua": "Avinguda Diagonal_noroeste",
             "regiao": "noroeste",
             "volta": true
-        },
-        {
-            "id": 184,
-            "vSaida": 98,
-            "vEntrada": 88,
-            "imoveis": [],
-            "limVel": "50",
-            "tamanho": 59,
-            "rua": "Avinguda Diagonal_noroeste",
-            "regiao": "noroeste",
-            "CEP": 203,
-            "volta": false
         }
     ],
     [
         {
-            "id": 186,
+            "id": 176,
             "vSaida": 99,
             "vEntrada": 96,
             "imoveis": [],
@@ -2426,13 +4940,13 @@
             "tamanho": 112,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
     [
         {
-            "id": 187,
+            "id": 177,
             "vSaida": 100,
             "vEntrada": 101,
             "imoveis": [],
@@ -2440,13 +4954,13 @@
             "tamanho": 130,
             "rua": "Passatge de Valeri Serra_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
     [
         {
-            "id": 188,
+            "id": 178,
             "vSaida": 101,
             "vEntrada": 102,
             "imoveis": [],
@@ -2454,11 +4968,11 @@
             "tamanho": 133,
             "rua": "Passatge de Valeri Serra_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
-            "id": 189,
+            "id": 179,
             "vSaida": 101,
             "vEntrada": 34,
             "imoveis": [],
@@ -2466,27 +4980,27 @@
             "tamanho": 67,
             "rua": "Carrer de la Diputació_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
     [
         {
-            "id": 190,
+            "id": 180,
             "vSaida": 102,
             "vEntrada": 123,
             "imoveis": [],
             "limVel": "10",
             "tamanho": 74,
-            "rua": "['Carrer de Muntaner', 'Carrer del Consell de Cent']_sudoeste",
+            "rua": "Carrer de Muntaner_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
     [
         {
-            "id": 191,
+            "id": 181,
             "vSaida": 103,
             "vEntrada": 104,
             "imoveis": [],
@@ -2494,24 +5008,13 @@
             "tamanho": 87,
             "rua": "Passatge d'Aragó_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
-        },
-        {
-            "id": 195,
-            "vSaida": 103,
-            "vEntrada": 104,
-            "imoveis": [],
-            "limVel": "20",
-            "tamanho": 87,
-            "rua": "Passatge d'Aragó_sudoeste",
-            "regiao": "sudoeste",
-            "volta": true
         }
     ],
     [
         {
-            "id": 192,
+            "id": 182,
             "vSaida": 104,
             "vEntrada": 103,
             "imoveis": [],
@@ -2522,7 +5025,7 @@
             "volta": true
         },
         {
-            "id": 193,
+            "id": 183,
             "vSaida": 104,
             "vEntrada": 94,
             "imoveis": [],
@@ -2530,25 +5033,13 @@
             "tamanho": 66,
             "rua": "Carrer d'Aragó_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
-            "volta": false
-        },
-        {
-            "id": 194,
-            "vSaida": 104,
-            "vEntrada": 103,
-            "imoveis": [],
-            "limVel": "20",
-            "tamanho": 87,
-            "rua": "Passatge d'Aragó_sudoeste",
-            "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
     [
         {
-            "id": 196,
+            "id": 184,
             "vSaida": 105,
             "vEntrada": 64,
             "imoveis": [],
@@ -2556,11 +5047,11 @@
             "tamanho": 267,
             "rua": "Gran Via de les Corts Catalanes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         },
         {
-            "id": 197,
+            "id": 185,
             "vSaida": 105,
             "vEntrada": 20,
             "imoveis": [],
@@ -2568,13 +5059,13 @@
             "tamanho": 148,
             "rua": "Carrer d'Aribau_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
     [
         {
-            "id": 198,
+            "id": 186,
             "vSaida": 106,
             "vEntrada": 121,
             "imoveis": [],
@@ -2582,13 +5073,13 @@
             "tamanho": 34,
             "rua": "Carrer de Balmes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
     [
         {
-            "id": 199,
+            "id": 187,
             "vSaida": 107,
             "vEntrada": 19,
             "imoveis": [],
@@ -2596,13 +5087,13 @@
             "tamanho": 83,
             "rua": "Carrer d'Aragó_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
     [
         {
-            "id": 200,
+            "id": 188,
             "vSaida": 108,
             "vEntrada": 8,
             "imoveis": [],
@@ -2610,13 +5101,13 @@
             "tamanho": 149,
             "rua": "Avinguda de Sarrià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
     [
         {
-            "id": 201,
+            "id": 189,
             "vSaida": 109,
             "vEntrada": 2,
             "imoveis": [],
@@ -2624,13 +5115,13 @@
             "tamanho": 116,
             "rua": "Carrer de París_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
     [
         {
-            "id": 202,
+            "id": 190,
             "vSaida": 110,
             "vEntrada": 108,
             "imoveis": [],
@@ -2638,25 +5129,25 @@
             "tamanho": 19,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
-            "id": 203,
+            "id": 191,
             "vSaida": 110,
             "vEntrada": 109,
             "imoveis": [],
             "limVel": "50",
             "tamanho": 28,
-            "rua": "Rua desconhecida 203_noroeste",
+            "rua": "Rua desconhecida 191_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
     [
         {
-            "id": 204,
+            "id": 192,
             "vSaida": 111,
             "vEntrada": 58,
             "imoveis": [],
@@ -2664,11 +5155,11 @@
             "tamanho": 134,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
-            "id": 205,
+            "id": 193,
             "vSaida": 111,
             "vEntrada": 97,
             "imoveis": [],
@@ -2676,13 +5167,13 @@
             "tamanho": 15,
             "rua": "Plaça de Francesc Macià_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
     [
         {
-            "id": 206,
+            "id": 194,
             "vSaida": 112,
             "vEntrada": 64,
             "imoveis": [],
@@ -2690,11 +5181,11 @@
             "tamanho": 149,
             "rua": "Carrer de Balmes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         },
         {
-            "id": 207,
+            "id": 195,
             "vSaida": 112,
             "vEntrada": 20,
             "imoveis": [],
@@ -2702,7 +5193,7 @@
             "tamanho": 268,
             "rua": "Carrer de la Diputació_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
@@ -2717,23 +5208,11 @@
             "rua": "Carrer del Rosselló_noroeste",
             "regiao": "noroeste",
             "volta": true
-        },
-        {
-            "id": 208,
-            "vSaida": 113,
-            "vEntrada": 80,
-            "imoveis": [],
-            "limVel": "30",
-            "tamanho": 113,
-            "rua": "Carrer del Rosselló_noroeste",
-            "regiao": "noroeste",
-            "CEP": 203,
-            "volta": false
         }
     ],
     [
         {
-            "id": 210,
+            "id": 196,
             "vSaida": 114,
             "vEntrada": 80,
             "imoveis": [],
@@ -2741,14 +5220,14 @@
             "tamanho": 129,
             "rua": "Carrer del Comte d'Urgell_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
     [],
     [
         {
-            "id": 211,
+            "id": 197,
             "vSaida": 116,
             "vEntrada": 114,
             "imoveis": [],
@@ -2756,11 +5235,11 @@
             "tamanho": 65,
             "rua": "Carrer de Provença_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         },
         {
-            "id": 212,
+            "id": 198,
             "vSaida": 116,
             "vEntrada": 115,
             "imoveis": [],
@@ -2768,13 +5247,13 @@
             "tamanho": 124,
             "rua": "Passatge de Batlló_noroeste",
             "regiao": "noroeste",
-            "CEP": 203,
+            "CEP": 1,
             "volta": false
         }
     ],
     [
         {
-            "id": 213,
+            "id": 199,
             "vSaida": 117,
             "vEntrada": 0,
             "imoveis": [],
@@ -2782,11 +5261,11 @@
             "tamanho": 133,
             "rua": "Gran Via de les Corts Catalanes_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
-            "id": 214,
+            "id": 200,
             "vSaida": 117,
             "vEntrada": 51,
             "imoveis": [],
@@ -2794,13 +5273,13 @@
             "tamanho": 18,
             "rua": "Carrer de Villarroel_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
     [
         {
-            "id": 215,
+            "id": 201,
             "vSaida": 118,
             "vEntrada": 119,
             "imoveis": [],
@@ -2808,25 +5287,25 @@
             "tamanho": 32,
             "rua": "Carrer de Villarroel_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
-            "id": 216,
+            "id": 202,
             "vSaida": 118,
             "vEntrada": 125,
             "imoveis": [],
             "limVel": "10",
             "tamanho": 146,
-            "rua": "['Carrer de Casanova', 'Carrer de Villarroel', 'Carrer del Consell de Cent']_sudoeste",
+            "rua": "Carrer de Casanova_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
     [
         {
-            "id": 217,
+            "id": 203,
             "vSaida": 119,
             "vEntrada": 39,
             "imoveis": [],
@@ -2834,13 +5313,13 @@
             "tamanho": 119,
             "rua": "Carrer de Villarroel_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
     [
         {
-            "id": 218,
+            "id": 204,
             "vSaida": 120,
             "vEntrada": 93,
             "imoveis": [],
@@ -2848,25 +5327,25 @@
             "tamanho": 152,
             "rua": "Carrer del Comte d'Urgell_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
-            "id": 219,
+            "id": 205,
             "vSaida": 120,
             "vEntrada": 119,
             "imoveis": [],
             "limVel": "10",
             "tamanho": 143,
-            "rua": "[\"Carrer del Comte d'Urgell\", 'Carrer de Villarroel', 'Carrer del Consell de Cent']_sudoeste",
+            "rua": "Carrer del Comte d'Urgell_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
     [
         {
-            "id": 220,
+            "id": 206,
             "vSaida": 121,
             "vEntrada": 112,
             "imoveis": [],
@@ -2874,13 +5353,13 @@
             "tamanho": 115,
             "rua": "Carrer de Balmes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
     [
         {
-            "id": 221,
+            "id": 207,
             "vSaida": 122,
             "vEntrada": 123,
             "imoveis": [],
@@ -2888,25 +5367,25 @@
             "tamanho": 35,
             "rua": "Carrer de Muntaner_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
-            "id": 222,
+            "id": 208,
             "vSaida": 122,
             "vEntrada": 127,
             "imoveis": [],
             "limVel": "10",
             "tamanho": 147,
-            "rua": "['Carrer de Muntaner', 'Carrer del Consell de Cent']_sudoeste",
+            "rua": "Carrer de Muntaner_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
     [
         {
-            "id": 223,
+            "id": 209,
             "vSaida": 123,
             "vEntrada": 27,
             "imoveis": [],
@@ -2914,13 +5393,13 @@
             "tamanho": 115,
             "rua": "Carrer de Muntaner_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
     [
         {
-            "id": 224,
+            "id": 210,
             "vSaida": 124,
             "vEntrada": 125,
             "imoveis": [],
@@ -2928,25 +5407,25 @@
             "tamanho": 33,
             "rua": "Carrer de Casanova_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         },
         {
-            "id": 225,
+            "id": 211,
             "vSaida": 124,
             "vEntrada": 102,
             "imoveis": [],
             "limVel": "10",
             "tamanho": 73,
-            "rua": "['Carrer de Casanova', 'Carrer del Consell de Cent']_sudoeste",
+            "rua": "Carrer de Casanova_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
     [
         {
-            "id": 226,
+            "id": 212,
             "vSaida": 125,
             "vEntrada": 65,
             "imoveis": [],
@@ -2954,13 +5433,13 @@
             "tamanho": 117,
             "rua": "Carrer de Casanova_sudoeste",
             "regiao": "sudoeste",
-            "CEP": 404,
+            "CEP": 3,
             "volta": false
         }
     ],
     [
         {
-            "id": 227,
+            "id": 213,
             "vSaida": 126,
             "vEntrada": 127,
             "imoveis": [],
@@ -2968,11 +5447,11 @@
             "tamanho": 33,
             "rua": "Carrer d'Aribau_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         },
         {
-            "id": 228,
+            "id": 214,
             "vSaida": 126,
             "vEntrada": 128,
             "imoveis": [],
@@ -2980,13 +5459,13 @@
             "tamanho": 152,
             "rua": "Carrer del Consell de Cent_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
     [
         {
-            "id": 229,
+            "id": 215,
             "vSaida": 127,
             "vEntrada": 19,
             "imoveis": [],
@@ -2994,13 +5473,13 @@
             "tamanho": 116,
             "rua": "Carrer d'Aribau_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
     [
         {
-            "id": 230,
+            "id": 216,
             "vSaida": 128,
             "vEntrada": 74,
             "imoveis": [],
@@ -3008,25 +5487,25 @@
             "tamanho": 44,
             "rua": "Carrer d'Enric Granados_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         },
         {
-            "id": 231,
+            "id": 217,
             "vSaida": 128,
             "vEntrada": 121,
             "imoveis": [],
             "limVel": "10",
             "tamanho": 149,
-            "rua": "['Carrer de Balmes', 'Carrer del Consell de Cent']_sudeste",
+            "rua": "Carrer de Balmes_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ],
     [
         {
-            "id": 232,
+            "id": 218,
             "vSaida": 129,
             "vEntrada": 74,
             "imoveis": [],
@@ -3034,11 +5513,11 @@
             "tamanho": 87,
             "rua": "Plaça del Doctor Letamendi_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         },
         {
-            "id": 233,
+            "id": 219,
             "vSaida": 129,
             "vEntrada": 73,
             "imoveis": [],
@@ -3046,11 +5525,11 @@
             "tamanho": 87,
             "rua": "Plaça del Doctor Letamendi_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         },
         {
-            "id": 234,
+            "id": 220,
             "vSaida": 129,
             "vEntrada": 107,
             "imoveis": [],
@@ -3058,7 +5537,7 @@
             "tamanho": 109,
             "rua": "Carrer d'Aragó_sudeste",
             "regiao": "sudeste",
-            "CEP": 305,
+            "CEP": 2,
             "volta": false
         }
     ]
