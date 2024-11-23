@@ -1,97 +1,168 @@
-/**
- * @file mapa.cpp
- * @brief Módulo para definição da função de leitura e construção do mapa e de suas funções auxiliares.
- */
-
-#include <iostream>
 #include <fstream>
-#include <string>
-#include <vector>
 #include <sstream>
-
 #include "estrutura.h"
 
-using std::string;
-using std::vector;
-using std::cout;
-using std::endl;
-
-// Função para converter string para inteiro
-int stringToInt(const std::string& str) {
-    std::stringstream ss(str);
-    int result;
-    ss >> result;
-    return result;
+int stringToInt(const string& str) {
+    std::istringstream ss(str);
+    int num;
+    ss >> num;
+    return num;
 }
 
-// Função para remover caracteres específicos de uma string
-string removeChar(const string& str, char ch) {
-    string result;
-    for (size_t i = 0; i < str.size(); ++i) {
-        if (str[i] != ch) {
-            result += str[i];
-        }
+string trim(const string& str) {
+    size_t first = str.find_first_not_of(" \t\n\r");
+    size_t last = str.find_last_not_of(" \t\n\r");
+    if (first == string::npos) return "";
+    return str.substr(first, (last - first + 1));
+}
+
+string removeQuotes(const string& str) {
+    string trimmed = trim(str);
+    if (trimmed.length() >= 2 && trimmed.front() == '"' && trimmed.back() == '"') {
+        return trimmed.substr(1, trimmed.length() - 2);
     }
-    return result;
+    return trimmed;
 }
 
-// Função para dividir uma string com base em um delimitador
-vector<string> split(const string& str, char delimiter) {
-    vector<string> tokens;
-    std::stringstream ss(str);
-    string token;
-    while (std::getline(ss, token, delimiter)) {
-        tokens.push_back(token);
+string extractValue(const string& line) {
+    size_t colonPos = line.find(':');
+    if (colonPos == string::npos) return "";
+    string value = line.substr(colonPos + 1);
+    if (!value.empty() && value.back() == ',') {
+        value.pop_back();
     }
-    return tokens;
+    return removeQuotes(value);
 }
 
-/// @brief Carrega um JSON com o mapa, cria os segmentos e os insere na planta
-/// @param caminhoArquivo Caminho do JSON contendo o mapa
-/// @param planta Planta que receberá os segmentos
-void carregaJSON(const string& caminhoArquivo, Planta* planta) {
-    std::ifstream arquivo(caminhoArquivo.c_str()); // Usando c_str() para compatibilidade com C++98
-    if (!arquivo.is_open()) {
-        cout << "Erro ao abrir o arquivo JSON." << endl;
+void carregaJSON(const string& filename, Planta* planta) {
+    cout << "Iniciando leitura do arquivo " << filename << endl;
+    
+    std::ifstream file(filename.c_str());
+    if (!file.is_open()) {
+        cout << "Erro ao abrir o arquivo " << filename << endl;
         return;
     }
 
-    string linha;
-    Segmento* segmento = NULL;
+    string line;
+    Segmento* currentSegment = nullptr;
+    Imovel* currentImovel = nullptr;
+    bool insideSegment = false;
+    bool insideImovel = false;
+    bool insideImoveis = false;
+    int segmentCount = 0;
+    int imovelCount = 0;
 
-    while (std::getline(arquivo, linha)) {
-        linha = removeChar(linha, ' ');
-        linha = removeChar(linha, '"');
-        linha = removeChar(linha, ',');
+    while (std::getline(file, line)) {
+        line = trim(line);
+        
+        // Início de um novo segmento
+        if (line == "{" && !insideImovel && !insideImoveis) {
+            insideSegment = true;
+            currentSegment = new Segmento();
+            currentSegment->vSaida = 0;
+            currentSegment->vEntrada = 0;
+            currentSegment->limVel = 0;
+            currentSegment->tamanho = 0;
+            currentSegment->CEP = 0;
+            currentSegment->rua = "";
+            currentSegment->dupla = false;
+            currentSegment->imoveis = vector<Imovel*>();  // Inicializa vetor vazio
+            cout << "Novo segmento iniciado" << endl;
+            continue;
+        }
 
-        if (linha.find("vSaida") != string::npos) {
-            vector<string> partes = split(linha, ':');
-            int vSaida = stringToInt(partes[1]);
-            segmento = new Segmento();
-            segmento->vSaida = vSaida;
-        }
-        else if (linha.find("vEntrada") != string::npos) {
-            vector<string> partes = split(linha, ':');
-            segmento->vEntrada = stringToInt(partes[1]);
-        }
-        else if (linha.find("limVel") != string::npos) {
-            vector<string> partes = split(linha, ':');
-            segmento->limVel = stringToInt(partes[1]);
-        }
-        else if (linha.find("tamanho") != string::npos) {
-            vector<string> partes = split(linha, ':');
-            segmento->tamanho = stringToInt(partes[1]);
-        }
-        else if (linha.find("rua") != string::npos) {
-            vector<string> partes = split(linha, ':');
-            segmento->rua = partes[1];
-
-            // Adiciona o segmento à planta depois de completar os dados
-            if (segmento->vSaida >= planta->listaAdj.size()) {
-                planta->listaAdj.resize(segmento->vSaida + 1);
+        // Processamento dos campos do segmento
+        if (insideSegment && !insideImovel) {
+            // Ignoramos o campo "id" pois não está na estrutura
+            if (line.find("\"vSaida\"") != string::npos) {
+                currentSegment->vSaida = stringToInt(extractValue(line));
+                cout << "vSaida: " << currentSegment->vSaida << endl;
             }
-            adicionaSegmentoAPlanta(segmento, planta);
-            segmento = NULL; // Reseta o ponteiro para o próximo segmento
+            else if (line.find("\"vEntrada\"") != string::npos) {
+                currentSegment->vEntrada = stringToInt(extractValue(line));
+                cout << "vEntrada: " << currentSegment->vEntrada << endl;
+            }
+            else if (line.find("\"limVel\"") != string::npos) {
+                currentSegment->limVel = stringToInt(extractValue(line));
+                cout << "limVel: " << currentSegment->limVel << endl;
+            }
+            else if (line.find("\"tamanho\"") != string::npos) {
+                currentSegment->tamanho = stringToInt(extractValue(line));
+                cout << "tamanho: " << currentSegment->tamanho << endl;
+            }
+            else if (line.find("\"rua\"") != string::npos) {
+                currentSegment->rua = extractValue(line);
+                cout << "rua: " << currentSegment->rua << endl;
+            }
+            else if (line.find("\"CEP\"") != string::npos) {
+                currentSegment->CEP = stringToInt(extractValue(line));
+                cout << "CEP: " << currentSegment->CEP << endl;
+            }
+            else if (line.find("\"volta\"") != string::npos) {
+                currentSegment->dupla = (extractValue(line) == "true");
+                cout << "dupla: " << currentSegment->dupla << endl;
+            }
+            else if (line.find("\"imoveis\"") != string::npos) {
+                insideImoveis = true;
+                cout << "Iniciando array de imóveis" << endl;
+            }
+        }
+
+        // Início de um novo imóvel
+        if (line == "{" && insideImoveis) {
+            insideImovel = true;
+            currentImovel = new Imovel();
+            currentImovel->dFinalSeg = 0;
+            currentImovel->num = 0;
+            currentImovel->tipo = "";
+            cout << "Novo imóvel iniciado" << endl;
+            continue;
+        }
+
+        // Processamento dos campos do imóvel
+        if (insideImovel) {
+            if (line.find("\"dFinalSeg\"") != string::npos) {
+                currentImovel->dFinalSeg = stringToInt(extractValue(line));
+                cout << "dFinalSeg: " << currentImovel->dFinalSeg << endl;
+            }
+            else if (line.find("\"num\"") != string::npos) {
+                currentImovel->num = stringToInt(extractValue(line));
+                cout << "num: " << currentImovel->num << endl;
+            }
+            else if (line.find("\"tipo\"") != string::npos) {
+                currentImovel->tipo = extractValue(line);
+                cout << "tipo: " << currentImovel->tipo << endl;
+            }
+        }
+
+        // Fim de um imóvel
+        if (line == "}" && insideImovel) {
+            insideImovel = false;
+            cout << "Imóvel finalizado, adicionando ao segmento atual" << endl;
+            cout << "Tamanho do vetor antes: " << currentSegment->imoveis.size() << endl;
+            currentSegment->imoveis.push_back(currentImovel);
+            cout << "Tamanho do vetor depois: " << currentSegment->imoveis.size() << endl;
+            imovelCount++;
+        }
+
+        // Fim do array de imóveis
+        if (line == "]" && insideImoveis) {
+            insideImoveis = false;
+            cout << "Array de imóveis finalizado com " << currentSegment->imoveis.size() << " imóveis" << endl;
+        }
+
+        // Fim de um segmento
+        if (line == "}" && !insideImovel && !insideImoveis) {
+            insideSegment = false;
+            cout << "Finalizando segmento com " << currentSegment->imoveis.size() << " imóveis" << endl;
+            adicionaSegmentoAPlanta(currentSegment, planta);
+            segmentCount++;
         }
     }
+
+    cout << "Finalizado processamento do arquivo" << endl;
+    cout << "Total de segmentos processados: " << segmentCount << endl;
+    cout << "Total de imóveis processados: " << imovelCount << endl;
+
+    file.close();
 }
