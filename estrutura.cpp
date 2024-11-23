@@ -1,116 +1,93 @@
+/**
+ * @file estrutura.cpp
+ * @brief Módulo para definição das funções de criação e manipulação das estruturas Planta, Segmento e Imovel.
+ */
+
 #include <iostream>
 #include <string>
 #include <vector>
+#include <set>
 
 using std::cout;
 using std::string;
 using std::endl;
 using std::vector;
+using std::set;
 
-// Estrutura do imóvel
-typedef struct Imovel
-{
-    // Distância até o final do segmento a que pertence
-    int dFinalSeg;
-    int CEP;
-    string rua;
-    int num;
-    string tipo;    
-} Imovel;
+#include "estrutura.h"
 
-// Estrutura do segmento (aresta do grafo)
-typedef struct Segmento
-{
-    // Vértices de onde ele sai e entra
-    int vSaida;
-    int vEntrada;
-    // Vetor dos imóveis
-    vector<Imovel*> imoveis;
-    int limVel;
-    int tamanho;
-    string rua;
-} Segmento;
-
-typedef struct Planta
-{
-    // A lista de adjacência é um vetor de vetores de segmentos
-    // Cada entrada i do vetor externo corresponde às arestas de saída do vértice i
-    vector<vector<Segmento*> > listaAdj;
-} Planta;
-
-
+/// @brief Inicializa uma planta.
+/// @param numVertices Número de vértices que a planta terá.
+/// @return A planta inicializada.
 Planta* newPlanta(int numVertices)
 {
     Planta* temp = new Planta();
+    // Configura o tamanho de sua lista de adjacência
     temp->listaAdj.resize(numVertices);
     return temp;
 }
 
-Segmento* newSegmento(int vSaida, int vEntrada, int limVel, int tamanho, string rua)
+/// @brief Inicializa um segmento (aresta).
+/// @param vSaida Vértice do qual a aresta direcionada sai.
+/// @param vEntrada Vértice no qual a aresta direcionada entra.
+/// @param limVel Limite de velocidade do segmento.
+/// @param tamanho Tamanho do segmento (metros).
+/// @param CEP Região à qual o segmento pertence.
+/// @param rua Rua à qual o segmento pertence
+/// @return O segmento inicializado
+Segmento* newSegmento(int vSaida, int vEntrada, int limVel, int tamanho, int CEP, string rua)
 {
     Segmento* temp = new Segmento();
     
     temp->vSaida = vSaida;
     temp->vEntrada = vEntrada;
 
+    // Inicializa sua lista de imóveis vazia
     vector<Imovel*> tempImoveis;
     temp->imoveis = tempImoveis;
 
     temp->limVel = limVel;
     temp->tamanho = tamanho;
+    temp->CEP = CEP;
     temp->rua = rua;
 
     return temp;
 }
 
-Imovel* newImovel(int dFinalSeg, int CEP, string rua, int num, string tipo)
+/// @brief Inicializa um imóvel.
+/// @param dFinalSeg Distância do final do segmento, ou seja, ao vértice de entrada do segmento.
+/// @param num Número do imóvel.
+/// @param tipo Tipo do imóvel ("residencial", "comercial", "industrial" ou "turismo")
+/// @return Um imóvel inicializado.
+Imovel* newImovel(int dFinalSeg, int num, string tipo)
 {
     Imovel* temp = new Imovel();
     
     temp->dFinalSeg = dFinalSeg;
-    temp->CEP = CEP;
-    temp->rua = rua;
     temp->num = num;
     temp->tipo = tipo;
 
     return temp;
 }
 
+/// @brief Adiciona um imóvel a um segmento
+/// @param imovel Objeto do tipo Imovel a ser inserido.
+/// @param segmento Objeto do tipo Segmento que receberá o imóvel.
 void adicionaImovelASegmento(Imovel* imovel, Segmento* segmento)
 {
+    // Adiciona o imóvel à lista de imóveis do segmento
     segmento -> imoveis.push_back(imovel);
+    // Configura o CEP e a rua do imóvel como os mesmos do segmento
+    imovel -> CEP = segmento -> CEP;
+    imovel -> rua = segmento -> rua;
 }
 
+/// @brief Adiciona um segmento a uma planta.
+/// @param segmento Objeto do tipo segmento a ser adicionado.
+/// @param planta Objeto do tipo planta que receberá o segmento.
 void adicionaSegmentoAPlanta(Segmento* segmento, Planta* planta)
 {
+    // Adiciona o segmento à lista de adjacência da planta na posição correspondente ao seu vértice de saída
     ((planta -> listaAdj)[segmento -> vSaida]).push_back(segmento);
-}
-
-
-int main()
-{
-    Imovel* teste = newImovel(3, 20, "rua", 30, "com");
-    Segmento* steste = newSegmento(1, 2, 50, 30, "rua");
-    Planta* pteste = newPlanta(5);
-
-    // cout << "Imovel: " << endl;
-    // cout << "dFinalSeg: " << teste->dFinalSeg << endl;
-    // cout << "CEP: " << teste->CEP << endl;
-    // cout << "Rua: " << teste->rua << endl;
-    // cout << "Número: " << teste->num << endl;
-    // cout << "Tipo: " << teste->tipo << endl;
-
-    adicionaImovelASegmento(teste, steste);
-
-    cout << steste->vSaida << endl;
-
-    adicionaSegmentoAPlanta(steste, pteste);
-
-    // printListaAdj(pteste);
-
-    cout << (((pteste -> listaAdj)[1])[0]) -> rua;
-
-    delete teste; // Liberando a memória alocada
-
-    return 0;
+    (planta -> CEPs).insert(segmento -> CEP);
 }
