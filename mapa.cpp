@@ -90,7 +90,7 @@ void carregaJSON(const string& caminhoArquivo, Planta* planta) {
             if (segmento->vSaida >= planta->listaAdj.size()) {
                 planta->listaAdj.resize(segmento->vSaida + 1);
             }
-            planta->listaAdj[segmento->vSaida].push_back(segmento);
+            adicionaSegmentoAPlanta(segmento, planta);
             segmento = NULL; // Reseta o ponteiro para o próximo segmento
         }
     }

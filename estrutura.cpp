@@ -6,11 +6,13 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <set>
 
 using std::cout;
 using std::string;
 using std::endl;
 using std::vector;
+using std::set;
 
 #include "estrutura.h"
 
@@ -87,4 +89,5 @@ void adicionaSegmentoAPlanta(Segmento* segmento, Planta* planta)
 {
     // Adiciona o segmento à lista de adjacência da planta na posição correspondente ao seu vértice de saída
     ((planta -> listaAdj)[segmento -> vSaida]).push_back(segmento);
+    (planta -> CEPs).insert(segmento -> CEP);
 }

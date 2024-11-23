@@ -6,11 +6,13 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <set>
 
 using std::cout;
 using std::string;
 using std::endl;
 using std::vector;
+using std::set;
 
 #ifndef ESTRUTURA_H
 #define ESTRUTURA_H
@@ -46,6 +48,7 @@ typedef struct Planta
     // A lista de adjacência é um vetor de vetores de segmentos
     // Cada entrada i do vetor externo corresponde às arestas de saída do vértice i
     vector<vector<Segmento*> > listaAdj;
+    set<int> CEPs;
 } Planta;
 
 // Protótipos das funções
