@@ -1,3 +1,8 @@
+/**
+ * @file estrutura.h
+ * @brief Módulo para definição das estruturas Planta, Segmento e Imovel.
+ */
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -10,7 +15,7 @@ using std::vector;
 #ifndef ESTRUTURA_H
 #define ESTRUTURA_H
 
-// Estrutura do imóvel
+/// @brief Estrutura dos imóveis.
 typedef struct Imovel
 {
     // Distância até o final do segmento a que pertence
@@ -21,7 +26,7 @@ typedef struct Imovel
     string tipo;    
 } Imovel;
 
-// Estrutura do segmento (aresta do grafo)
+/// @brief Estrutura do segmento (aresta do grafo).
 typedef struct Segmento
 {
     // Vértices de onde ele sai e entra
@@ -31,10 +36,11 @@ typedef struct Segmento
     vector<Imovel*> imoveis;
     int limVel;
     int tamanho;
-    int regiao;
+    int CEP;
     string rua;
 } Segmento;
 
+/// @brief Estrutura da planta.
 typedef struct Planta
 {
     // A lista de adjacência é um vetor de vetores de segmentos
@@ -42,9 +48,10 @@ typedef struct Planta
     vector<vector<Segmento*> > listaAdj;
 } Planta;
 
+// Protótipos das funções
 Planta* newPlanta(int);
 Segmento* newSegmento(int, int, int, int, int, string);
-Imovel* newImovel(int, int, string, int, string);
+Imovel* newImovel(int, int, string);
 void adicionaImovelASegmento(Imovel*, Segmento*);
 void adicionaSegmentoAPlanta(Segmento*, Planta*);
 

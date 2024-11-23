@@ -1,3 +1,8 @@
+/**
+ * @file mapa.h
+ * @brief Módulo para definição dos protótipos das funções de criação do mapa.
+ */
+
 #ifndef MAPA_H
 #define MAPA_H
 

@@ -1,3 +1,8 @@
+/**
+ * @file mapa.cpp
+ * @brief Módulo para definição da função de leitura e construção do mapa e de suas funções auxiliares.
+ */
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -41,7 +46,9 @@ vector<string> split(const string& str, char delimiter) {
     return tokens;
 }
 
-// Função para carregar o JSON e criar os segmentos
+/// @brief Carrega um JSON com o mapa, cria os segmentos e os insere na planta
+/// @param caminhoArquivo Caminho do JSON contendo o mapa
+/// @param planta Planta que receberá os segmentos
 void carregaJSON(const string& caminhoArquivo, Planta* planta) {
     std::ifstream arquivo(caminhoArquivo.c_str()); // Usando c_str() para compatibilidade com C++98
     if (!arquivo.is_open()) {
