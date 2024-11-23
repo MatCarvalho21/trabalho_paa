@@ -40,6 +40,7 @@ typedef struct Segmento
     int tamanho;
     int CEP;
     string rua;
+    bool dupla;
 } Segmento;
 
 /// @brief Estrutura da planta.
@@ -53,7 +54,7 @@ typedef struct Planta
 
 // Protótipos das funções
 Planta* newPlanta(int);
-Segmento* newSegmento(int, int, int, int, int, string);
+Segmento* newSegmento(int, int, int, int, int, string, bool);
 Imovel* newImovel(int, int, string);
 void adicionaImovelASegmento(Imovel*, Segmento*);
 void adicionaSegmentoAPlanta(Segmento*, Planta*);

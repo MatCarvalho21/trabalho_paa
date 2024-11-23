@@ -8,16 +8,37 @@ int main()
 
     carregaJSON("mapa.json", planta);
 
-    vector<int> parents;
-    parents.resize(130);
-    vector<int> distances;
-    distances.resize(130);
+    // Percorre a lista de segmentos na planta
+    for (size_t i = 0; i < planta->listaAdj.size(); ++i) {
+        // Acessa o segmento atual
+        vector<Segmento*> segmentos = (planta->listaAdj)[i];
+        
+        for (int j = 0; j < segmentos.size(); j++)
+        {
+            Segmento* segmento = segmentos[j];
 
-    dijkstra(0, parents, distances, 130, planta);
+            cout << "Segmento " << i << ":" << endl;
+            cout << "  vSaida: " << segmento->vSaida << endl;
+            cout << "  vEntrada: " << segmento->vEntrada << endl;
+            cout << "  limVel: " << segmento->limVel << endl;
+            cout << "  tamanho: " << segmento->tamanho << endl;
+            cout << "  rua: " << segmento->rua << endl;
+            cout << "  CEP: " << segmento->CEP << endl;
+            cout << "  Volta (dupla): " << (segmento->dupla ? "Sim" : "Não") << endl;
 
-    for (int i = 0; i < parents.size(); i++)
-    {
-        cout << parents[i] << endl;
+            // Imprime os imóveis associados ao segmento
+            if (!segmento->imoveis.empty()) {
+                cout << "  Imóveis:" << endl;
+                for (const auto& imovel : segmento->imoveis) {
+                    cout << "    Número: " << imovel->num << endl;
+                    cout << "    Tipo: " << imovel->tipo << endl;
+                    cout << "    Data Final do Segmento: " << imovel->dFinalSeg << endl;
+                }
+            } else {
+                cout << "  Não há imóveis associados a este segmento." << endl;
+            }
+            cout << endl;
+        }
     }
 
     return 0;

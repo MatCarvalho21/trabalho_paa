@@ -35,7 +35,7 @@ Planta* newPlanta(int numVertices)
 /// @param CEP Região à qual o segmento pertence.
 /// @param rua Rua à qual o segmento pertence
 /// @return O segmento inicializado
-Segmento* newSegmento(int vSaida, int vEntrada, int limVel, int tamanho, int CEP, string rua)
+Segmento* newSegmento(int vSaida, int vEntrada, int limVel, int tamanho, int CEP, string rua, bool dupla)
 {
     Segmento* temp = new Segmento();
     
