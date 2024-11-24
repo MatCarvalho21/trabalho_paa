@@ -3,6 +3,7 @@
 #include "algoritmosBase.h"
 #include "ex1.h"
 #include "utils.h"
+#include "estrutura.cpp"
 #include "mapa.cpp"
 #include "algoritmosBase.cpp"
 #include "ex1.cpp"
