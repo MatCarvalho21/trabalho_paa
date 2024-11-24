@@ -8,6 +8,6 @@
 
 #include "estrutura.h"
 
-vector<Segmento*> subway(Planta*);
+vector<Segmento*> subway(Planta*, int);
 
 #endif

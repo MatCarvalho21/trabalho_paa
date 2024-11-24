@@ -6,7 +6,13 @@
 
 using namespace std;
 
-vector<Segmento*> subway(Planta* planta)
+vector<Segmento*> subway(Planta* planta, int numVertices)
 {
+    Planta* newPlanta(numVertices);
+    
+    // for(int v = 0; v < numVertices; v++){
+    //     vector<Segmento*> edges = planta -> listaAdj;
+
+    // }
 
 }
