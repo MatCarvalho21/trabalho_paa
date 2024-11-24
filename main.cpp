@@ -9,5 +9,7 @@ int main()
 
     carregaJSON("mapa.json", planta);
 
+    set<Segmento*> ex1 = subway(planta, 130);
+
     return 0;
 }

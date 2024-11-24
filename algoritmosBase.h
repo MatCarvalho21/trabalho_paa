@@ -16,11 +16,11 @@ using std::endl;
 using std::vector;
 using std::set;
 
-#ifndef EX1_H
-#define EX1_H
+#ifndef BASE_H
+#define BASE_H
 
 void dijkstra(int, vector<int>&, vector<int>&, int, Planta*);
-void primMST(vector<int>, int);
+void primMST(int, vector<int>&, int, Planta*);
 
 
 #endif

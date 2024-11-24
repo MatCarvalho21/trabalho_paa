@@ -106,6 +106,7 @@ void dijkstra(int v0, vector<int>& parents, vector<int>& distances, int numVerti
         checked[v1] = true;
     }
 }
+
 void primMST(int start, vector<int>& parents, int numVertices, Planta* planta)
 {
     // Criando os vetores de custo mínimo e de se está na árvore

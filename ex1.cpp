@@ -15,7 +15,7 @@ using namespace std;
 /// @param planta Planta original que contém os segmentos.
 /// @param numVertices Número de vértices que a nova planta terá.
 /// @return Vetor
-vector<Segmento*> subway(Planta* planta, int numVertices)
+set<Segmento*> subway(Planta* planta, int numVertices)
 // void subway(Planta* planta, int numVertices)
 {
     // Cria uma nova planta com o número de vértices especificado
@@ -78,4 +78,37 @@ vector<Segmento*> subway(Planta* planta, int numVertices)
         }
         }
     }
+
+    int v0 = minMaxDistancesVertices[0];
+
+    vector<int> parents(numVertices, -1);
+
+    primMST(v0, parents, numVertices, plantaND);
+
+    set<Segmento*> result;
+
+    for (int i = 1; i < numReg; i++)
+    {
+        int v1 = minMaxDistancesVertices[i];
+
+        while (v1 != v0)
+        {
+            int current_parent = parents[v1];
+            vector<Segmento*> edges = (plantaND -> listaAdj)[current_parent];
+            
+            for (int e = 0; e < edges.size(); e++)
+            {
+                Segmento* edge = edges[e];
+                if (edge -> vEntrada == v1)
+                {
+                    result.insert(edge);
+                    break;
+                }
+            }
+
+            v1 = current_parent;
+        }
+    }
+
+    return result;
 }

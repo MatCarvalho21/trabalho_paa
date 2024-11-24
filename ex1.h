@@ -3,11 +3,15 @@
  * @brief Módulo para definição da função do algoritmo do problema 1.
  */
 
+#include <set>
+
 #ifndef EX1_H
 #define EX1_H
 
 #include "estrutura.h"
 
-vector<Segmento*> subway(Planta*, int);
+using namespace std;
+
+set<Segmento*> subway(Planta*, int);
 
 #endif
