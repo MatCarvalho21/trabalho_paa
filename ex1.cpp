@@ -3,9 +3,6 @@
 #include <string>
 #include <vector>
 #include <set>
-#include "estrutura.h"
-#include <iostream>
-#include <vector>
 #include <climits>
 #include "algoritmosBase.h"
 
@@ -109,6 +106,8 @@ set<Segmento*> subway(Planta* planta, int numVertices)
             v1 = current_parent;
         }
     }
+
+    delete plantaND;
 
     return result;
 }
