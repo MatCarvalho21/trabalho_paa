@@ -123,7 +123,7 @@ void carregaJSON(const string& filename, Planta* planta) {
         // Fim de um imóvel
         if (line.find("}") != string::npos && insideImovel) {
             insideImovel = false;
-            currentSegment->imoveis.push_back(currentImovel);
+            adicionaImovelASegmento(currentImovel, currentSegment);
             imovelCount++;
         }
 
