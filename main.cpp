@@ -3,6 +3,10 @@
 #include "algoritmosBase.h"
 #include "ex1.h"
 #include "utils.h"
+#include "mapa.cpp"
+#include "algoritmosBase.cpp"
+#include "ex1.cpp"
+#include "utils.cpp"
 
 int main()
 {
