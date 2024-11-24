@@ -1,6 +1,7 @@
 #include "estrutura.h"
 #include "mapa.h"
 #include "algoritmosBase.h"
+#include "ex1.h"
 
 int main()
 {
