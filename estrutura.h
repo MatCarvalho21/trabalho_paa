@@ -59,4 +59,5 @@ Imovel* newImovel(int, int, string);
 void adicionaImovelASegmento(Imovel*, Segmento*);
 void adicionaSegmentoAPlanta(Segmento*, Planta*);
 
+
 #endif

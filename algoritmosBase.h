@@ -20,5 +20,7 @@ using std::set;
 #define EX1_H
 
 void dijkstra(int, vector<int>&, vector<int>&, int, Planta*);
+void primMST(vector<int>, int);
+
 
 #endif
