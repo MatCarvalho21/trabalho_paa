@@ -2,6 +2,7 @@
 #include "mapa.h"
 #include "algoritmosBase.h"
 #include "ex1.h"
+#include "utils.h"
 
 int main()
 {
@@ -10,6 +11,9 @@ int main()
     carregaJSON("mapa.json", planta);
 
     set<Segmento*> ex1 = subway(planta, 130);
+
+    // Chama a função para imprimir o set
+    printSet(ex1);
 
     return 0;
 }

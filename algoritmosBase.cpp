@@ -111,7 +111,7 @@ void primMST(int start, vector<int>& parents, int numVertices, Planta* planta)
 {
     // Criando os vetores de custo mínimo e de se está na árvore
     vector<int> minEdgeCost(numVertices, INT_MAX);
-    vector<bool> inTree(numVertices, -1);
+    vector<bool> inTree(numVertices, false);
 
     // Fila de prioridade que armazena tuplas (peso, vértice)
     priority_queue<tuple<int, int>, vector<tuple<int, int>>, greater<tuple<int, int>>> heap;
