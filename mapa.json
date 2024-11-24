@@ -4511,7 +4511,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4525,7 +4527,9 @@
             "regiao": "nordeste",
             "CEP": 0,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 132,
@@ -4537,7 +4541,9 @@
             "regiao": "nordeste",
             "CEP": 0,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4551,7 +4557,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4565,7 +4573,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4579,7 +4589,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4593,7 +4605,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 137,
@@ -4605,7 +4619,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4619,7 +4635,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 139,
@@ -4631,7 +4649,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4645,7 +4665,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [],
@@ -4660,7 +4682,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 142,
@@ -4672,7 +4696,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4686,7 +4712,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 145,
@@ -4698,7 +4726,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4712,7 +4742,9 @@
             "regiao": "nordeste",
             "CEP": 0,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 148,
@@ -4724,7 +4756,9 @@
             "regiao": "nordeste",
             "CEP": 0,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 149,
@@ -4736,7 +4770,9 @@
             "regiao": "nordeste",
             "CEP": 0,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4750,7 +4786,9 @@
             "regiao": "nordeste",
             "CEP": 0,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 152,
@@ -4762,7 +4800,9 @@
             "regiao": "nordeste",
             "CEP": 0,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4775,7 +4815,9 @@
             "rua": "Avinguda Diagonal_noroeste",
             "regiao": "noroeste",
             "volta": true,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 154,
@@ -4787,7 +4829,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4801,7 +4845,9 @@
             "regiao": "nordeste",
             "CEP": 0,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 157,
@@ -4813,7 +4859,9 @@
             "regiao": "nordeste",
             "CEP": 0,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4827,7 +4875,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4840,7 +4890,9 @@
             "rua": "Avinguda Diagonal_nordeste",
             "regiao": "nordeste",
             "volta": true,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 153,
@@ -4851,7 +4903,9 @@
             "rua": "Avinguda Diagonal_nordeste",
             "regiao": "nordeste",
             "volta": true,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4864,7 +4918,9 @@
             "rua": "Avinguda Diagonal_noroeste",
             "regiao": "noroeste",
             "volta": true,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 159,
@@ -4876,7 +4932,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 161,
@@ -4888,7 +4946,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4902,7 +4962,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4916,7 +4978,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 164,
@@ -4928,7 +4992,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4942,7 +5008,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 166,
@@ -4954,7 +5022,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4968,7 +5038,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4982,7 +5054,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -4996,7 +5070,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 170,
@@ -5008,7 +5084,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5022,7 +5100,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5036,7 +5116,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 173,
@@ -5048,7 +5130,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5062,7 +5146,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 175,
@@ -5074,7 +5160,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5087,7 +5175,9 @@
             "rua": "Avinguda Diagonal_noroeste",
             "regiao": "noroeste",
             "volta": true,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5101,7 +5191,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5115,7 +5207,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5129,7 +5223,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 179,
@@ -5141,7 +5237,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5155,7 +5253,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5169,7 +5269,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5182,7 +5284,9 @@
             "rua": "Passatge d'Aragó_sudoeste",
             "regiao": "sudoeste",
             "volta": true,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 183,
@@ -5194,7 +5298,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5208,7 +5314,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 185,
@@ -5220,7 +5328,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5234,7 +5344,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5248,7 +5360,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5262,7 +5376,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5276,7 +5392,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5290,7 +5408,8 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+]
         },
         {
             "id": 191,
@@ -5302,7 +5421,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5316,7 +5437,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 193,
@@ -5328,7 +5451,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5342,7 +5467,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 195,
@@ -5354,7 +5481,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5367,7 +5496,9 @@
             "rua": "Carrer del Rosselló_noroeste",
             "regiao": "noroeste",
             "volta": true,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5381,7 +5512,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [],
@@ -5396,7 +5529,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 198,
@@ -5408,7 +5543,9 @@
             "regiao": "noroeste",
             "CEP": 1,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5422,7 +5559,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 200,
@@ -5434,7 +5573,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5448,7 +5589,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 202,
@@ -5460,7 +5603,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5474,7 +5619,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5488,7 +5635,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 205,
@@ -5500,7 +5649,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5514,7 +5665,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5528,7 +5681,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 208,
@@ -5540,7 +5695,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5554,7 +5711,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5568,7 +5727,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 211,
@@ -5580,7 +5741,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5594,7 +5757,9 @@
             "regiao": "sudoeste",
             "CEP": 3,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5608,7 +5773,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 214,
@@ -5620,7 +5787,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5634,7 +5803,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5648,7 +5819,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 217,
@@ -5660,7 +5833,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ],
     [
@@ -5674,7 +5849,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 219,
@@ -5686,7 +5863,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         },
         {
             "id": 220,
@@ -5698,7 +5877,9 @@
             "regiao": "sudeste",
             "CEP": 2,
             "volta": false,
-            "imoveis": []
+            "imoveis": [
+
+]
         }
     ]
 ]
