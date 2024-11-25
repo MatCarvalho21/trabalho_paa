@@ -5,14 +5,17 @@
 #include <set>
 #include <climits>
 #include "algoritmosBase.h"
+#include <utility> // Necessário para usar std::pair
 
 using namespace std;
 
-/// @brief Função para gerar o vértice
+/// @brief Função para gerar as estações de metrô em um grafo, bem como a menor rota de metrô entre todas as estações.
 /// @param planta Planta original que contém os segmentos.
-/// @param numVertices Número de vértices que a nova planta terá.
-/// @return Vetor
-vector<Segmento*> subway(Planta* planta, int numVertices)
+/// @param numVertices Número de vértices que a planta possui.
+/// @return Um par contendo:
+/// - Vetor de vértices que compõem a menor rota de metrô.
+/// - Vetor com os segmentos pertencentes à rota de metrô.
+pair<vector<int>, vector<Segmento*>> subway(Planta* planta, int numVertices)
 {
     // Cria uma nova planta com o número de vértices especificado
     Planta* plantaND = newPlanta(numVertices);
@@ -31,7 +34,7 @@ vector<Segmento*> subway(Planta* planta, int numVertices)
                                                 edge -> CEP,
                                                 edge -> rua,
                                                 true);
-                // Não iremos criar os imóveis pois não será usado
+                // Não iremos criar os imóveis pois não será usado para o metro
                 adicionaSegmentoAPlanta(newEdge, plantaND);
                 }
             }
@@ -53,6 +56,7 @@ vector<Segmento*> subway(Planta* planta, int numVertices)
     // Vetores para as distancias máximas de cada região
     vector<int> minMaxDistances(numReg, INT_MAX);
     vector<int> minMaxDistancesVertices(numReg, -1);
+    // Vetores para guardar os parents e os tamanhos das distâncias máximas
     vector<vector<int> > minMaxDistancesParents(numReg, vector<int>(numVertices, -1));
     vector<vector<int> > minMaxDistancesLengths(numReg, vector<int>(numVertices, INT_MAX));
 
@@ -90,6 +94,7 @@ vector<Segmento*> subway(Planta* planta, int numVertices)
                     // Se for redefinimos
                     minMaxDistances[r] = maxDistance;
                     minMaxDistancesVertices[r] = v;
+                    // Atualizamos o vetor de pais e vetor de distâncias
                     minMaxDistancesParents[r] = parents;
                     minMaxDistancesLengths[r] = distances;
             }
@@ -97,8 +102,10 @@ vector<Segmento*> subway(Planta* planta, int numVertices)
         }
     }
 
+    // Agora que temos os menores caminhos, nossa ideia será gerar uma MST com arestas virtuais para cobrir todas as rotas de metrô
     Planta* plantaVirtual = newPlanta(numReg);
 
+    // Nesse for, criamos esses segmentos virtuais, os quais possuem apenas a distância entre as estações de metro
     for (int i = 0; i < numReg; i++)
     {
         for (int j = 0; j < numReg; j++)
@@ -111,22 +118,29 @@ vector<Segmento*> subway(Planta* planta, int numVertices)
         }
     }
 
-    // Pegamos um ponto de partida par ao algorítimo
+    // Agora queremos saber quais sao os elementos da árvore, e para isso temos um set
     vector<int> parents(numReg, -1);
 
-    // Fazemos a mst
+    // Fazemos a mst na planta virtual
     primMST(0, parents, numReg, plantaVirtual);
 
-    // Resultado é um set 
+    // criamos um vetor de result
     vector<Segmento*> result;
 
+    // Agora vamos iterar sobre a mst virtual e achar as arestas reais do nosso grafo
+    // Começamos do 1, porque começamos nossa mst antes com 0
     for (int i = 1; i < numReg; i++)
     {
+        // Encontramos o pai virtual desse índice, 
         int virtualParent = parents[i];
+        // Encontramos agora o pai real, (do índice)
         int realParent = minMaxDistancesVertices[virtualParent];
+        // Pegamos o vetor de parents dos pais reais
         vector<int> currentRealParents = minMaxDistancesParents[virtualParent];
+        // O começo é o ponto atual
         int realStart = minMaxDistancesVertices[i];
 
+        // Enquanto não encontrarmos o pai
         while (realStart != realParent)
         {
             // Obtém o pai de realStart (isto é, o vértice anterior no caminho da árvore geradora mínima)
@@ -146,13 +160,15 @@ vector<Segmento*> subway(Planta* planta, int numVertices)
                     break;
                 }
             }
-
+            // "Andamos" para trás no caminho
             realStart = currentParent;
         }
     }
 
+    // Deletamos para não ocupar espaço
     delete plantaND;
     delete plantaVirtual;
 
-    return result;
+    // Retornamos o par
+    return make_pair(minMaxDistancesVertices, result);
 }

@@ -1,6 +1,6 @@
 /**
  * @file mapa_random.h
- * @brief Módulo para definição das estruturas Planta, Segmento e Imovel.
+ * @brief Módulo o qual serve para gerar uma planta aleatória dado um número de vértices e um número de arestas. Ele garante a conexidade de cada região.
  */
 
 #include <iostream>

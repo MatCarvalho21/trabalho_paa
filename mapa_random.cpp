@@ -9,6 +9,7 @@
 
 using namespace std;
 
+
 template <typename T>
 std::string to_string(const T& value) {
     std::ostringstream oss;
@@ -64,7 +65,7 @@ void geraImoveis(Segmento* seg, RuaInfo& rua) {
     }
 }
 
-// Nova função para determinar o CEP de um vértice baseado na proximidade aos centroides
+// Função para determinar o CEP de um vértice baseado na proximidade aos centroides
 int determinaCEP(int vertice, const vector<CEPInfo>& ceps, const vector<vector<int>>& distancias) {
     int menorDist = INT_MAX;
     int cepEscolhido = ceps[0].numero;
@@ -79,11 +80,11 @@ int determinaCEP(int vertice, const vector<CEPInfo>& ceps, const vector<vector<i
     return cepEscolhido;
 }
 
-// Nova função para calcular distâncias entre todos os vértices
+// Função para calcular distâncias entre todos os vértices
 vector<vector<int>> calculaDistancias(int numVertices, const vector<pair<int,int>>& arestas) {
     vector<vector<int>> dist(numVertices, vector<int>(numVertices, INT_MAX));
     
-    // Inicializa distâncias
+    // Inicializamos distâncias
     for (int i = 0; i < numVertices; i++) {
         dist[i][i] = 0;
     }
@@ -92,7 +93,6 @@ vector<vector<int>> calculaDistancias(int numVertices, const vector<pair<int,int
         dist[aresta.second][aresta.first] = 1;
     }
     
-    // Floyd-Warshall
     for (int k = 0; k < numVertices; k++) {
         for (int i = 0; i < numVertices; i++) {
             for (int j = 0; j < numVertices; j++) {
@@ -106,6 +106,7 @@ vector<vector<int>> calculaDistancias(int numVertices, const vector<pair<int,int
     return dist;
 }
 
+// Função para gerar uma planta dado um núemro de vértices e um número de arestas
 Planta* geraPlantaAutomatica(int numVertices, int numArestas) {
     if (numVertices < 2 || numArestas < numVertices - 1 || 
         numArestas > 3 * numVertices - 6) {
@@ -120,21 +121,21 @@ Planta* geraPlantaAutomatica(int numVertices, int numArestas) {
     map<string, RuaInfo> ruas;
     vector<CEPInfo> ceps;
     
-    // Reduz significativamente o número de CEPs
-    int numCEPs = std::max(2, numVertices / 30);  // Aproximadamente 1 CEP para cada 15 vértices
+    // Criamos mais ou menos 1 cep para cada 30
+    int numCEPs = std::max(2, numVertices / 30); 
     for (int i = 0; i < numCEPs; i++)
     {
         planta -> CEPs.insert(i);
     }
 
-    // Primeiro, cria a árvore geradora para garantir conectividade
+    // Criamos a árvore geradora para a conexidade
     vector<int> verticesDisponiveis;
     for(int i = 0; i < numVertices; i++) {
         verticesDisponiveis.push_back(i);
     }
     std::shuffle(verticesDisponiveis.begin(), verticesDisponiveis.end(), gen);
     
-    // Escolhe os centroides dos CEPs
+    // Escolhemos centróides
     for(int i = 0; i < numCEPs; i++) {
         CEPInfo cep;
         cep.numero = i;
@@ -142,7 +143,7 @@ Planta* geraPlantaAutomatica(int numVertices, int numArestas) {
         ceps.push_back(cep);
     }
     
-    // Cria árvore geradora
+    // Criamos árvore geradora
     for(int i = 1; i < numVertices; i++) {
         int vAnterior = std::uniform_int_distribution<>(0, i-1)(gen);
         arestasExistentes.push_back({vAnterior, i});
@@ -153,7 +154,7 @@ Planta* geraPlantaAutomatica(int numVertices, int numArestas) {
         rua.numAtual = 2;
         rua.maoUnica = std::uniform_int_distribution<>(0, 1)(gen) == 1;
         
-        // Temporariamente atribui ao primeiro CEP
+        // Temporariamente atribuimos ao primeiro CEP
         Segmento* seg = newSegmento(vAnterior, i, 
                                    std::uniform_int_distribution<>(30, 60)(gen),
                                    std::uniform_int_distribution<>(100, 500)(gen),
@@ -179,10 +180,10 @@ Planta* geraPlantaAutomatica(int numVertices, int numArestas) {
         }
     }
     
-    // Calcula distâncias entre todos os vértices
+    // Calculamos as distâncias entre todos os vértices
     vector<vector<int>> distancias = calculaDistancias(numVertices, arestasExistentes);
     
-    // Reatribui CEPs baseado na proximidade aos centroides
+    // Reatribuimos os CEPs baseado na proximidade aos centroides
     for (auto& segVec : planta->listaAdj) {
         for (auto& seg : segVec) {
             int cepVSaida = determinaCEP(seg->vSaida, ceps, distancias);
@@ -202,7 +203,7 @@ Planta* geraPlantaAutomatica(int numVertices, int numArestas) {
         }
     }
     
-    // Adiciona arestas restantes
+    // Adicionamos arestas restantes
     int arestasAdicionadas = numVertices - 1;
     int tentativas = 0;
     const int maxTentativas = 1000;

@@ -3,15 +3,16 @@
  * @brief Módulo para definição da função do algoritmo do problema 1.
  */
 
-#include <set>
-
 #ifndef EX1_H
 #define EX1_H
 
 #include "estrutura.h"
+#include <vector>
+#include <utility> 
 
 using namespace std;
 
-vector<Segmento*> subway(Planta*, int);
+// Declaração da função com a ordem invertida no par
+pair<vector<int>, vector<Segmento*>> subway(Planta* planta, int numVertices);
 
-#endif
+#endif // EX1_H

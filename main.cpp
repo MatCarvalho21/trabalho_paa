@@ -39,11 +39,17 @@ int main()
     //     }
     // }
 
-    vector<Segmento*> ex1 = subway(planta, 200);
+    // Chama a função subway e armazena o resultado em um std::pair
+    pair<vector<int>, vector<Segmento*>> resultado = subway(planta, 200);
 
-    for (int i = 0; i < ex1.size(); i++)
+    // Separando os valores do par
+    vector<int> menorRota = resultado.first;
+    vector<Segmento*> segmentosRota = resultado.second;
+
+
+    for (int i = 0; i < segmentosRota.size(); i++)
     {
-        Segmento* seg = ex1[i];
+        Segmento* seg = segmentosRota[i];
         cout << "Segmento:" << endl;
         cout << "   vSaida: " << seg -> vSaida << endl;
         cout << "   vEntrada: " << seg -> vEntrada << endl;
