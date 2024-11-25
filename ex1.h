@@ -12,6 +12,6 @@
 
 using namespace std;
 
-set<Segmento*> subway(Planta*, int);
+vector<Segmento*> subway(Planta*, int);
 
 #endif

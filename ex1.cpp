@@ -12,7 +12,7 @@ using namespace std;
 /// @param planta Planta original que contém os segmentos.
 /// @param numVertices Número de vértices que a nova planta terá.
 /// @return Vetor
-set<Segmento*> subway(Planta* planta, int numVertices)
+vector<Segmento*> subway(Planta* planta, int numVertices)
 {
     // Cria uma nova planta com o número de vértices especificado
     Planta* plantaND = newPlanta(numVertices);
@@ -44,9 +44,11 @@ set<Segmento*> subway(Planta* planta, int numVertices)
     // Setamos como true caso aquele vértice esteja na região
     for(int i =0; i<numVertices; i++){
         vector<Segmento*> edges = plantaND -> listaAdj[i];
+        cout << edges.size() << endl;
         for(int e = 0; e< edges.size(); e++){
             Segmento* edge = edges[e];
             regioes[edge->CEP][i] = true; 
+            cout << e << endl;
         
         }
     }
@@ -54,6 +56,8 @@ set<Segmento*> subway(Planta* planta, int numVertices)
     // Vetores para as distancias máximas de cada região
     vector<int> minMaxDistances(numReg, INT_MAX);
     vector<int> minMaxDistancesVertices(numReg, -1);
+    vector<vector<int> > minMaxDistancesParents(numReg, vector<int>(numVertices, -1));
+    vector<vector<int> > minMaxDistancesLengths(numReg, vector<int>(numVertices, INT_MAX));
 
     // Agora iteramos sobre todas as arestas
     for(int v = 0; v < numVertices; v++){
@@ -89,53 +93,74 @@ set<Segmento*> subway(Planta* planta, int numVertices)
                     // Se for redefinimos
                     minMaxDistances[r] = maxDistance;
                     minMaxDistancesVertices[r] = v;
+                    minMaxDistancesParents[r] = parents;
+                    minMaxDistancesLengths[r] = distances;
             }
         }
         }
     }
 
+    Planta* plantaVirtual = newPlanta(numReg);
+
+    for (int i = 0; i < numReg; i++)
+    {
+        for (int j = 0; j < numReg; j++)
+        {
+            if (i != j)
+            {
+                Segmento* seg = newSegmento(i, j, 0, minMaxDistancesLengths[i][minMaxDistancesVertices[j]], 0, "null", false);
+                adicionaSegmentoAPlanta(seg, plantaVirtual);
+            }
+        }
+    }
+
     // Pegamos um ponto de partida par ao algorítimo
-    int v0 = minMaxDistancesVertices[0];
-    vector<int> parents(numVertices, -1);
+    vector<int> parents(numReg, -1);
 
     // Fazemos a mst
-    primMST(v0, parents, numVertices, plantaND);
+    primMST(0, parents, numReg, plantaVirtual);
+    
+    for (int i = 0; i < numReg; i++)
+    {
+        cout << minMaxDistancesVertices[i] << endl;
+    }
 
     // Resultado é um set 
-    set<Segmento*> result;
+    vector<Segmento*> result;
 
-    // Para cada região
     for (int i = 1; i < numReg; i++)
     {
-        // Pegamos o vertice do metro   
-        int v1 = minMaxDistancesVertices[i];
+        int virtualParent = parents[i];
+        int realParent = minMaxDistancesVertices[virtualParent];
+        vector<int> currentRealParents = minMaxDistancesParents[virtualParent];
+        int realStart = minMaxDistancesVertices[i];
 
-        // o pai atual é o pai de v1, e iteramos até encontrar v0
-        while (v1 != v0)
+        while (realStart != realParent)
         {
-            // Obtém o pai de v1 (isto é, o vértice anterior no caminho da árvore geradora mínima)
-            int current_parent = parents[v1];
+            // Obtém o pai de realStart (isto é, o vértice anterior no caminho da árvore geradora mínima)
+            int currentParent = currentRealParents[realStart];
             // Obtém a lista de segmentos (arestas) do vértice current_parent
-            vector<Segmento*> edges = (plantaND -> listaAdj)[current_parent];
+            vector<Segmento*> edges = (plantaND -> listaAdj)[currentParent];
             
             // Percorre todos os segmentos do vértice current_parent
             for (int e = 0; e < edges.size(); e++)
             {
                 Segmento* edge = edges[e];
                 // Verifica se o segmento é a aresta que conecta v1 ao seu pai
-                if (edge -> vEntrada == v1)
+                if (edge -> vEntrada == realStart)
                 {
                     // Se for a aresta que conecta v1 ao seu pai, adicionamos ela
-                    result.insert(edge);
+                    result.push_back(edge);
                     break;
                 }
             }
-            // Setamos v1 como o pai
-            v1 = current_parent;
+
+            realStart = currentParent;
         }
     }
 
     delete plantaND;
+    delete plantaVirtual;
 
     return result;
 }

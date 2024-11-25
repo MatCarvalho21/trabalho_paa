@@ -159,6 +159,7 @@ Planta* geraPlantaAutomatica(int numVertices, int numArestas) {
         
         geraImoveis(seg, rua);
         adicionaSegmentoAPlanta(seg, planta);
+
         rua.segmentos.push_back(seg);
         ruas[nomeRua] = rua;
         
