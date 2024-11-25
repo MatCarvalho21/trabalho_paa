@@ -15,7 +15,7 @@ int main()
 {
     // Planta* planta = newPlanta(130);
 
-    // carregaJSON("mapa.json", planta);
+    // carregaJSON("data/mapa.json", planta);
 
 
 
