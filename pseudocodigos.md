@@ -2,7 +2,7 @@
 
 A ideia desse algoritmo é:
 
-- Criamos uma cópia da planta com todas as arestas e suas cópias na direção oposta (basicamente uma versão não direcionada do grafo). Isso é $O(V + E) = O(V)$ (nosso grafo é esparso).
+- Criamos uma cópia da planta com todas as arestas e suas cópias na direção oposta (basicamente uma versão não direcionada do grafo, já que o metrô não leva em conta as direções das ruas por passar por baixo delas). Isso é $O(V + E) = O(V)$ (nosso grafo é esparso).
 
 ```python
 plantaND = Planta()
@@ -64,7 +64,7 @@ for v de 0 a |V| - 1:
         parents[i] = -1
         distances[i] = infinito
 
-    Dijkstra(v, parents, distances, |V|)
+    Dijkstra(v, parents, distances, |V|, plantaND)
 
     for regiao em regioes:
         if regiao[v] == True:
@@ -84,7 +84,7 @@ for v de 0 a |V| - 1:
 - Por fim, para encontrar uma aproximação da árvore mais barata que conecta esses vértices que receberão estações (o algoritmo para realmente solucionar esse problema é NP-difícil), pegamos os caminhos mais curtos entre cada par de vértices que possuem estações (esses caminhos já ficaram salvos acima na matriz `min_max_distances_parents`) e seus tamanhos, criamos uma planta virtual completa com arestas entre esses vértices e com os tamanhos sendo os tamanhos desses caminhos mais curtos, encontramos a MST dessa nova planta e pegamos as arestas utilizadas nos caminhos mais curtos usados na MST encontrada. Essas arestas são nossa resposta. Isso é $O(E \cdot E + E \cdot V + (V + E) \cdot \log V + E \cdot V) = O(V^2)$.
 
 ```python
-plantaVirtual = Planta() // com o número de regiões
+plantaVirtual = Planta()
 
 for i de 0 a |planta -> CEPs|-1:
     for j de 0 a |planta -> CEPs|:
