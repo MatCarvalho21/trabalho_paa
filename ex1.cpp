@@ -44,12 +44,9 @@ vector<Segmento*> subway(Planta* planta, int numVertices)
     // Setamos como true caso aquele vértice esteja na região
     for(int i =0; i<numVertices; i++){
         vector<Segmento*> edges = plantaND -> listaAdj[i];
-        cout << edges.size() << endl;
         for(int e = 0; e< edges.size(); e++){
             Segmento* edge = edges[e];
             regioes[edge->CEP][i] = true; 
-            cout << e << endl;
-        
         }
     }
 
@@ -119,11 +116,6 @@ vector<Segmento*> subway(Planta* planta, int numVertices)
 
     // Fazemos a mst
     primMST(0, parents, numReg, plantaVirtual);
-    
-    for (int i = 0; i < numReg; i++)
-    {
-        cout << minMaxDistancesVertices[i] << endl;
-    }
 
     // Resultado é um set 
     vector<Segmento*> result;

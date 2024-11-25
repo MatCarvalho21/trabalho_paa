@@ -121,8 +121,12 @@ Planta* geraPlantaAutomatica(int numVertices, int numArestas) {
     vector<CEPInfo> ceps;
     
     // Reduz significativamente o número de CEPs
-    int numCEPs = std::max(2, numVertices / 15);  // Aproximadamente 1 CEP para cada 15 vértices
-    
+    int numCEPs = std::max(2, numVertices / 30);  // Aproximadamente 1 CEP para cada 15 vértices
+    for (int i = 0; i < numCEPs; i++)
+    {
+        planta -> CEPs.insert(i);
+    }
+
     // Primeiro, cria a árvore geradora para garantir conectividade
     vector<int> verticesDisponiveis;
     for(int i = 0; i < numVertices; i++) {

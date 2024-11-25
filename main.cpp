@@ -22,8 +22,23 @@ int main()
     // // Chama a função para imprimir o set
     // printSet(ex1);
 
-    Planta* planta = geraPlantaAutomatica(200, 400);
+    Planta* planta = geraPlantaAutomatica(200, 300);
     
+
+    // for (int i = 0; i < planta -> listaAdj.size(); i++)
+    // {
+    //     vector<Segmento*> segs = planta -> listaAdj[i];
+    //     for (int j = 0; j < segs.size(); j++)
+    //     {
+    //         Segmento* seg = segs[j];
+    //         cout << "Segmento:" << endl;
+    //         cout << "   vSaida: " << seg -> vSaida << endl;
+    //         cout << "   vEntrada: " << seg -> vEntrada << endl;
+    //         cout << "   CEP: " << seg -> CEP << endl;
+    //         cout << "   " << endl;
+    //     }
+    // }
+
     vector<Segmento*> ex1 = subway(planta, 200);
 
     for (int i = 0; i < ex1.size(); i++)
@@ -32,6 +47,7 @@ int main()
         cout << "Segmento:" << endl;
         cout << "   vSaida: " << seg -> vSaida << endl;
         cout << "   vEntrada: " << seg -> vEntrada << endl;
+        cout << "   CEP: " << seg -> CEP << endl;
         cout << "   " << endl;
     }
 
