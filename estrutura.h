@@ -41,6 +41,7 @@ typedef struct Segmento
     int CEP;
     string rua;
     bool dupla;
+    float transito;
 } Segmento;
 
 /// @brief Estrutura da planta.

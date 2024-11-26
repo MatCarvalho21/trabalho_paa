@@ -50,6 +50,7 @@ Segmento* newSegmento(int vSaida, int vEntrada, int limVel, int tamanho, int CEP
     temp->tamanho = tamanho;
     temp->CEP = CEP;
     temp->rua = rua;
+    temp->transito = 1;
 
     return temp;
 }
