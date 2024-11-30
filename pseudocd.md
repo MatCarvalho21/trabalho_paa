@@ -165,7 +165,44 @@ def NearestNeighbor(plantaRegioes, verticeAtual = 0)
 
 
 
+```python
+def two_opt_directed(graph, initial_cycle):
+    """
+    graph: matriz de adjacência do grafo direcionado (custos das arestas)
+    initial_cycle: lista de vértices representando o ciclo inicial
+    Retorna: ciclo otimizado e o custo associado
+    """
+    n = len(initial_cycle)
+    best_cycle = initial_cycle[:]
+    best_cost = calculate_cost_directed(graph, best_cycle)
+    improved = True
 
+    while improved:
+        improved = False
+        for i in range(n - 1):
+            for j in range(i + 2, n):  # Garantir que não há sobreposição
+                # Troca duas arestas, mantendo a direção
+                new_cycle = best_cycle[:i+1] + best_cycle[i+1:j+1][::-1] + best_cycle[j+1:]
+                new_cost = calculate_cost_directed(graph, new_cycle)
+                
+                if new_cost < best_cost:
+                    best_cycle = new_cycle
+                    best_cost = new_cost
+                    improved = True
+
+    return best_cycle, best_cost
+
+
+def calculate_cost_directed(graph, cycle):
+    """
+    Calcula o custo total de um ciclo no grafo direcionado.
+    """
+    cost = 0
+    for i in range(len(cycle) - 1):
+        cost += graph[cycle[i]][cycle[i+1]]
+    cost += graph[cycle[-1]][cycle[0]]  # Retorno ao vértice inicial
+    return cost
+```
 
 
 
