@@ -6,6 +6,7 @@
 #include "mapa_random.h"
 #include <sstream>
 #include <utility>
+#include <climits>
 
 using namespace std;
 
