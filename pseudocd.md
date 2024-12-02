@@ -551,4 +551,39 @@ def calcular_custo_direcionado(grafo, ciclo):
     return custo
 
 ```
+---
+# Questão 03
 
+Funções Auxiliares:
+
+Dijkstra da Origem até o metrô mais próximo: Caminho andando e de táxi
+Dijkstra da Origem até o ônibus mais próximo: Caminho andando e de táxi
+Dijkstra Multi-source das estações de metrô até o destino: Caminho andando e de táxi
+Dijkstra Multi-source das paradas de ônibus até o destino: Caminho andando e de táxi
+
+Executamos dijkstra até o destino andando e de táxi 
+
+A - A - A
+T - T - T (A)
+A - M - A
+A - M - T
+A - O - A
+A - O - T
+T - M - A
+T - M - T
+T - O - A
+T - O - T
+A/T - O - M - A/T
+
+
+```python
+
+def ex03(origem, destino, valor = inf):
+    Dijkstra_Origem_Final() # me retorna a rota, tempo e o custo gasto pra ir andando e de táxi até o final
+    Dijkstra_MS_Origem_Metro()
+    Dijkstra_MS_Origem_Onibus()
+    Dijkstra_MS_Metro_Destino()
+    Dijkstra_MS_Onibus_Destino()
+    Dijkstra_Metro_Metro()
+    Dijkstra_Onibus_Onibus()
+```
