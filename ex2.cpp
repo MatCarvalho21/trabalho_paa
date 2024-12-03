@@ -13,32 +13,33 @@ using namespace std;
 
 int main(){
     cout << "\nTESTE: calcula_peso() \n" <<endl;
+
     // Criação da planta com 6 vértices
     Planta* plantaTeste = newPlanta(6);  // Cria a planta com 6 vértices
 
     // Criação dos segmentos entre os vértices
-    Segmento* segmento1 = newSegmento(0, 1, 60, 250, 2004, "Rua A", true);
-    Segmento* segmento2 = newSegmento(1, 2, 60, 250, 2004, "Rua B", true);
-    Segmento* segmento3 = newSegmento(2, 3, 60, 250, 2004, "Rua C", true);
-    Segmento* segmento4 = newSegmento(3, 4, 60, 250, 2004, "Rua D", true);
-    Segmento* segmento5 = newSegmento(4, 5, 60, 250, 2004, "Rua E", true);
-    Segmento* segmento6 = newSegmento(5, 0, 60, 250, 2004, "Rua F", true);
+    Segmento* segmento1 = newSegmento(0, 1, 60, 250, 1, "Rua A", true);
+    Segmento* segmento2 = newSegmento(1, 2, 60, 250, 1, "Rua B", true);
+    Segmento* segmento3 = newSegmento(2, 3, 60, 250, 2, "Rua C", true);
+    Segmento* segmento4 = newSegmento(3, 4, 60, 250, 2, "Rua D", true);
+    Segmento* segmento5 = newSegmento(4, 5, 60, 250, 3, "Rua E", true);
+    Segmento* segmento6 = newSegmento(5, 0, 60, 250, 3, "Rua F", true);
 
     // Criando mais segmentos para obter 18 arestas no total
-    Segmento* segmento7 = newSegmento(0, 2, 60, 250, 2004, "Rua G", true);
-    Segmento* segmento8 = newSegmento(1, 3, 60, 250, 2004, "Rua H", true);
-    Segmento* segmento9 = newSegmento(2, 4, 60, 250, 2004, "Rua I", true);
-    Segmento* segmento10 = newSegmento(3, 5, 60, 250, 2004, "Rua J", true);
-    Segmento* segmento11 = newSegmento(4, 0, 60, 250, 2004, "Rua K", true);
-    Segmento* segmento12 = newSegmento(5, 1, 60, 250, 2004, "Rua L", true);
+    Segmento* segmento7 = newSegmento(0, 2, 60, 250, 4, "Rua G", true);
+    Segmento* segmento8 = newSegmento(1, 3, 60, 250, 4, "Rua H", true);
+    Segmento* segmento9 = newSegmento(2, 4, 60, 250, 5, "Rua I", true);
+    Segmento* segmento10 = newSegmento(3, 5, 60, 250, 5, "Rua J", true);
+    Segmento* segmento11 = newSegmento(4, 0, 60, 250, 6, "Rua K", true);
+    Segmento* segmento12 = newSegmento(5, 1, 60, 250, 6, "Rua L", true);
 
     // Segmentos adicionais para completar o número de arestas
-    Segmento* segmento13 = newSegmento(0, 3, 60, 250, 2004, "Rua M", true);
-    Segmento* segmento14 = newSegmento(1, 4, 60, 250, 2004, "Rua N", true);
-    Segmento* segmento15 = newSegmento(2, 5, 60, 250, 2004, "Rua O", true);
-    Segmento* segmento16 = newSegmento(3, 0, 60, 250, 2004, "Rua P", true);
-    Segmento* segmento17 = newSegmento(4, 1, 60, 250, 2004, "Rua Q", true);
-    Segmento* segmento18 = newSegmento(5, 2, 60, 250, 2004, "Rua R", true);
+    Segmento* segmento13 = newSegmento(0, 3, 60, 250, 1, "Rua M", true);
+    Segmento* segmento14 = newSegmento(1, 4, 60, 250, 2, "Rua N", true);
+    Segmento* segmento15 = newSegmento(2, 5, 60, 250, 3, "Rua O", true);
+    Segmento* segmento16 = newSegmento(3, 0, 60, 250, 4, "Rua P", true);
+    Segmento* segmento17 = newSegmento(4, 1, 60, 250, 5, "Rua Q", true);
+    Segmento* segmento18 = newSegmento(5, 2, 60, 250, 6, "Rua R", true);
 
     // Adicionando os segmentos à planta
     adicionaSegmentoAPlanta(segmento1, plantaTeste);
@@ -59,14 +60,6 @@ int main(){
     adicionaSegmentoAPlanta(segmento16, plantaTeste);
     adicionaSegmentoAPlanta(segmento17, plantaTeste);
     adicionaSegmentoAPlanta(segmento18, plantaTeste);
-
-    // Criando os imóveis
-    Imovel* im1 = newImovel(250, 5, "residencial");
-    Imovel* im2 = newImovel(200, 10, "comercial");
-    Imovel* im3 = newImovel(150, 15, "industrial");
-    Imovel* im4 = newImovel(100, 20, "residencial");
-    Imovel* im5 = newImovel(50, 25, "industrial");
-    Imovel* im6 = newImovel(0, 30, "turismo");
 
     // Adicionando imóveis diferentes para cada segmento
     adicionaImovelASegmento(newImovel(300, 5, "comercial"), segmento1);
@@ -114,9 +107,84 @@ int main(){
     
     cout << "\nTESTE: construir_grafo_virtual() \n" <<endl;
 
+    pair<Planta*, set<int>> resultado = construir_grafo_virtual(plantaTeste, 100);
+
+    cout << "Vértices da Borda: ";
+    for (int elemento : resultado.second) {
+        cout << elemento << " ";
+    }
+    cout << endl;
+
     cout << "\nTESTE: dijkstra_regional() \n" <<endl;
 
+    Planta* plantaAux = newPlanta(5);
+    Segmento* segmento1aux = newSegmento(0, 1, 60, 1, 1, "Rua A", false);
+    Segmento* segmento2aux = newSegmento(1, 2, 60, 1, 1, "Rua A", false);
+    Segmento* segmento3aux = newSegmento(2, 3, 60, 1, 1, "Rua A", false);
+    Segmento* segmento4aux = newSegmento(3, 4, 60, 1, 1, "Rua A", false);
+    Segmento* segmento5aux = newSegmento(4, 0, 60, 1, 1, "Rua A", false);
+    adicionaSegmentoAPlanta(segmento1aux, plantaAux);
+    adicionaSegmentoAPlanta(segmento2aux, plantaAux);
+    adicionaSegmentoAPlanta(segmento3aux, plantaAux);
+    adicionaSegmentoAPlanta(segmento4aux, plantaAux);
+    adicionaSegmentoAPlanta(segmento5aux, plantaAux);
+
+    pair<vector<int>, vector<int>> resultado2 = dijkstra_regional(plantaAux, 0, 1);
+
+    cout << "Distâncias mínimas: "; 
+    for (int elemento : resultado2.first) {
+        cout << elemento << " ";
+    }
+    cout << endl;
+
+    cout << "Predecessores: ";
+    for (int elemento : resultado2.second) {
+        cout << elemento << " ";
+    }
+    cout << endl;
+
     cout << "\nTESTE: encontrarVerticesOtimos() \n" <<endl;
+
+    vector<int> verticesOtimos = encontrarVerticesOtimos(plantaTeste, resultado.second, 1);
+
+    cout << "Vértices Ótimos: ";
+    for (int elemento : verticesOtimos) {
+        cout << elemento << " ";
+    }
+    cout << endl;
+
+    cout << "\nTESTE: nearestNeighbor() \n" <<endl;
+
+    pair<vector<int>, vector<Segmento*>> ciclos = nearestNeighbor(plantaAux, 0);
+
+    cout << "Ciclo: ";
+    for (int elemento : ciclos.first) {
+        cout << elemento << " ";
+    }
+    cout << endl;
+
+    cout << "Segmentos: ";
+    for (Segmento* elemento : ciclos.second) {
+        cout << "(" << elemento->vSaida << ", " << elemento->vEntrada << ")" << " ";
+    }
+    cout << endl;
+
+    cout << "\nTESTE: calcularCustoDirecionado() \n" <<endl;
+
+    int custo = calcularCustoDirecionado(ciclos.second);
+
+    cout << "Custo: " << custo << endl;
+
+    cout << "\nTESTE: twoOptDirected() \n" <<endl;
+
+    pair<vector<Segmento*>, int> cicloOtimizado = twoOptDirected(plantaAux, ciclos.second);
+
+    cout << "Ciclo Otimizado: ";
+    for (Segmento* elemento : cicloOtimizado.first) {
+        cout << "(" << elemento->vSaida << ", " << elemento->vEntrada << ")" << " ";
+    }
+
+    cout << "\nCusto do Ciclo Otimizado: " << cicloOtimizado.second << endl;
 
     return 0;
 }
@@ -235,7 +303,7 @@ pair<vector<int>, vector<int>> dijkstra_regional(Planta* planta, int origem, int
                 continue;
 
             int vizinho = segmento->vEntrada; // Considerando o vEntrada como o vizinho
-            int peso_aresta = segmento->limVel; // Usando a limitação de velocidade como o peso da aresta
+            int peso_aresta = segmento->tamanho; // Usando a limitação de velocidade como o peso da aresta
 
             if (!visitados[vizinho])
             {
@@ -301,13 +369,18 @@ vector<int> encontrarVerticesOtimos(Planta* planta, const set<int>& verticesBord
 }
 
 /// @brief Aplica a heurística do vizinho mais próximo para encontrar um ciclo no grafo.
-/// @param plantaRegioes Ponteiro para a estrutura Planta representando o grafo das regiões.
-/// @param verticeInicial Inteiro representando o vértice inicial do ciclo. Padrão é 0.
-/// @return Vetor de inteiros contendo o ciclo encontrado, passando por todos os vértices e retornando ao inicial.
-vector<int> nearestNeighbor(Planta* plantaRegioes, int verticeInicial = 0)
+/// @param plantaRegioes Ponteiro para a estrutura Planta que representa o grafo das regiões, com as listas de adjacências.
+/// @param verticeInicial Inteiro representando o vértice inicial do ciclo. O valor padrão é 0.
+/// @return Um par contendo:
+///         - Um vetor de inteiros representando o ciclo encontrado, começando e terminando no vértice inicial.
+///         - Um vetor de ponteiros para os segmentos (arestas) que compõem o ciclo, na ordem em que são visitados.
+
+pair<vector<int>, vector<Segmento*>> nearestNeighbor(Planta* plantaRegioes, int verticeInicial = 0)
 {
     int numVertices = plantaRegioes->listaAdj.size();
     vector<int> ciclo;
+    vector<Segmento*> cicloSegmentos;
+    ciclo.push_back(verticeInicial);
     vector<bool> visitados(numVertices, false);
 
     int verticeAtual = verticeInicial;
@@ -318,6 +391,7 @@ vector<int> nearestNeighbor(Planta* plantaRegioes, int verticeInicial = 0)
         auto& listaAdjAtual = plantaRegioes->listaAdj[verticeAtual];
         float menorPeso = numeric_limits<float>::infinity();
         int proximoVertice = -1;
+        Segmento* segmento_aux = nullptr;
 
         for (Segmento* segmento : listaAdjAtual)
         {
@@ -326,6 +400,7 @@ vector<int> nearestNeighbor(Planta* plantaRegioes, int verticeInicial = 0)
 
             if (!visitados[vizinho] && peso < menorPeso)
             {
+                segmento_aux = segmento;
                 menorPeso = peso;
                 proximoVertice = vizinho;
             }
@@ -337,45 +412,39 @@ vector<int> nearestNeighbor(Planta* plantaRegioes, int verticeInicial = 0)
         }
 
         ciclo.push_back(proximoVertice);
+        cicloSegmentos.push_back(segmento_aux);
         verticeAtual = proximoVertice;
         visitados[verticeAtual] = true;
     }
 
+    // Adicionar o segmento que fecha o ciclo, se existir
+    auto& listaAdjAtual = plantaRegioes->listaAdj[verticeAtual];
+    for (Segmento* segmento : listaAdjAtual)
+    {
+        if (segmento->vEntrada == verticeInicial)
+        {
+            cicloSegmentos.push_back(segmento); // Adiciona o segmento que fecha o ciclo
+            break;
+        }
+    }
+
     ciclo.push_back(verticeInicial); // Retorna ao vértice inicial para formar o ciclo
-    return ciclo;
+    return make_pair(ciclo, cicloSegmentos);
 }
+
 
 /// @brief Calcula o custo total de um ciclo em um grafo direcionado usando as estruturas Planta e Segmento.
 /// @param planta Ponteiro para a estrutura Planta representando o grafo.
 /// @param ciclo Vetor de inteiros representando o ciclo.
 /// @return Custo total do ciclo.
-int calcularCustoDirecionado(Planta* planta, const vector<int>& ciclo)
+int calcularCustoDirecionado(const vector<Segmento*>& ciclo)
 {
     int custoTotal = 0;
     int n = ciclo.size();
 
-    for (int i = 0; i < n; ++i)
+    for (int i = 0; i < n - 1; ++i)
     {
-        int vAtual = ciclo[i];
-        int vProximo = ciclo[(i + 1) % n]; // Considera o ciclo retornando ao início no último passo
-        bool arestaEncontrada = false;
-
-        // Verifica os segmentos que saem de vAtual
-        for (Segmento* segmento : planta->listaAdj[vAtual])
-        {
-            if (segmento->vEntrada == vProximo)
-            {
-                custoTotal += segmento->limVel; // Usando limVel como custo
-                arestaEncontrada = true;
-                break;
-            }
-        }
-
-        // Se não encontrar uma aresta válida, o ciclo é inválido
-        if (!arestaEncontrada)
-        {
-            return numeric_limits<int>::max();
-        }
+        custoTotal += ciclo[i]->tamanho;
     }
 
     return custoTotal;
@@ -385,11 +454,11 @@ int calcularCustoDirecionado(Planta* planta, const vector<int>& ciclo)
 /// @param planta Ponteiro para a estrutura Planta representando o grafo.
 /// @param cicloInicial Vetor representando o ciclo inicial.
 /// @return Um par contendo o ciclo otimizado e o custo total do ciclo.
-pair<vector<int>, int> twoOptDirected(Planta* planta, const vector<int>& cicloInicial)
+pair<vector<Segmento*>, int> twoOptDirected(Planta* planta, const vector<Segmento*>& cicloInicial)
 {
     int n = cicloInicial.size();
-    vector<int> melhorCiclo = cicloInicial;
-    int melhorCusto = calcularCustoDirecionado(planta, melhorCiclo);
+    vector<Segmento*> melhorCiclo = cicloInicial;
+    int melhorCusto = calcularCustoDirecionado(melhorCiclo);
     bool melhorado = true;
 
     while (melhorado)
@@ -400,11 +469,11 @@ pair<vector<int>, int> twoOptDirected(Planta* planta, const vector<int>& cicloIn
             for (int j = i + 2; j < n; ++j) // j deve ser pelo menos dois índices à frente de i
             {
                 // Gera um novo ciclo invertendo os nós entre i+1 e j
-                vector<int> novoCiclo = melhorCiclo;
+                vector<Segmento*> novoCiclo = melhorCiclo;
                 reverse(novoCiclo.begin() + i + 1, novoCiclo.begin() + j + 1);
 
                 // Calcula o custo do novo ciclo
-                int novoCusto = calcularCustoDirecionado(planta, novoCiclo);
+                int novoCusto = calcularCustoDirecionado(novoCiclo);
 
                 // Se o novo ciclo for melhor, atualiza as variáveis
                 if (novoCusto < melhorCusto)
@@ -417,5 +486,5 @@ pair<vector<int>, int> twoOptDirected(Planta* planta, const vector<int>& cicloIn
         }
     }
 
-    return {melhorCiclo, melhorCusto};
+    return make_pair(melhorCiclo, melhorCusto);
 }

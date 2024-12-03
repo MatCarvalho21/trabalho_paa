@@ -554,7 +554,31 @@ def calcular_custo_direcionado(grafo, ciclo):
 ---
 # Questão 03
 
+Pessoa vai inserir Origem, Destino e Dinheiro
+
+vamos rodas o dijkstra normal e encontrar o menor caminho a pé (grafo normal) (sequência de segmentos e tempo gasto)
+
+criar grafo virtual sendo o peso dos segmentos o tempo = comprimento/(vel_max * transito) (sequência de segmentos e tempo gasto)
+
+vamos rodar dijkstra pro táxi nesse novo grafo virtual 
+
+encontrar a estação de metrô e o ponto do ônibus mais próximo da origem (dijsktra multi-source)
+encontrar a estação de metrô e o ponto de ônibus mais próximo do destino a partir da estação de origem (dijkstra multi-source)
+
+dijsktra estação de metrô inicial e estação de metrô final (sequência de segmentos e tempo gasto)
+dijskstra estação de ônibus inicial e estação de metrô final (sequência de segmentos e tempo gasto)
+
+
+
+Grafo virtual com linha de metrô (ligação A e B) e o ciclo do ônibus (KNN arestas paralelas)
+
+
+
+Temos que retornar preço, tempo gasto, pair(sequência de segmentos e métodos de transporte).
+
 Funções Auxiliares:
+
+Remodelar o mapa
 
 Dijkstra da Origem até o metrô mais próximo: Caminho andando e de táxi
 Dijkstra da Origem até o ônibus mais próximo: Caminho andando e de táxi
