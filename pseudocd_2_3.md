@@ -273,17 +273,21 @@ def construir_grafo_regioes(planta_regioes, vertices_otimos):
     -------
     Planta
         Grafo virtual completo conectando os vértices ideais.
+    list
+        Lista dos resultados de pais a partir da execução do Dijkstra para o vértice i,
+        usada para reconstruir o caminho completo entre o vértice i e j das regiões.
     """
     planta_virtual = Planta()
+    lista_anteriores = [None] * len(vertices_otimos)
 
     for vertice1 in vertices_otimos:
-        distancias = dijkstra_normal(planta_regioes, vertice1)
-
+        distancias, anteriores = dijkstra_normal(planta_regioes, vertice1)
+        lista_anteriores[vertice1] = anteriores
         for vertice2 in vertices_otimos:
             if vertice1 != vertice2:
                 planta_virtual.adiciona_vertice(vertice1, vertice2, distancias[vertice2])
 
-    return planta_virtual
+    return planta_virtual, lista_anteriores
 ```
 
 ```python
