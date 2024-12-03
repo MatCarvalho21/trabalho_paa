@@ -171,20 +171,43 @@ int main(){
 
     cout << "\nTESTE: calcularCustoDirecionado() \n" <<endl;
 
-    int custo = calcularCustoDirecionado(ciclos.second);
+    pair<int, int> custo = calcularCustoDirecionado(plantaAux, ciclos.first);
 
-    cout << "Custo: " << custo << endl;
+    cout << "Custo Ida: " << custo.first << endl;
+    cout << "Custo Volta: " << custo.second << endl;
 
     cout << "\nTESTE: twoOptDirected() \n" <<endl;
 
-    pair<vector<Segmento*>, int> cicloOtimizado = twoOptDirected(plantaAux, ciclos.second);
+    pair<vector<int>, int> cicloOtimizado = twoOptDirected(plantaAux, ciclos.first);
 
     cout << "Ciclo Otimizado: ";
-    for (Segmento* elemento : cicloOtimizado.first) {
-        cout << "(" << elemento->vSaida << ", " << elemento->vEntrada << ")" << " ";
+    for (int elemento : cicloOtimizado.first) {
+        cout << elemento << " ";
     }
 
     cout << "\nCusto do Ciclo Otimizado: " << cicloOtimizado.second << endl;
+
+    cout << "\nTESTE: gerarMatrizAdjacencia() \n" <<endl;
+
+    vector<vector<float>> matriz = gerarMatrizAdjacencia(plantaAux);
+
+    cout << "Matriz de Adjacência: " << endl;
+    for (vector<float> linha : matriz) {
+        for (float elemento : linha) {
+            cout << elemento << " ";
+        }
+        cout << endl;
+    }
+
+    vector<vector<float>> matriz2 = gerarMatrizAdjacencia(plantaTeste);
+
+    cout << "Matriz de Adjacência: " << endl;
+    for (vector<float> linha : matriz2) {
+        for (float elemento : linha) {
+            cout << elemento << " ";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
@@ -374,7 +397,6 @@ vector<int> encontrarVerticesOtimos(Planta* planta, const set<int>& verticesBord
 /// @return Um par contendo:
 ///         - Um vetor de inteiros representando o ciclo encontrado, começando e terminando no vértice inicial.
 ///         - Um vetor de ponteiros para os segmentos (arestas) que compõem o ciclo, na ordem em que são visitados.
-
 pair<vector<int>, vector<Segmento*>> nearestNeighbor(Planta* plantaRegioes, int verticeInicial = 0)
 {
     int numVertices = plantaRegioes->listaAdj.size();
@@ -432,33 +454,100 @@ pair<vector<int>, vector<Segmento*>> nearestNeighbor(Planta* plantaRegioes, int 
     return make_pair(ciclo, cicloSegmentos);
 }
 
-
-/// @brief Calcula o custo total de um ciclo em um grafo direcionado usando as estruturas Planta e Segmento.
+/// @brief Calcula o custo total de um ciclo em um grafo direcionado.
 /// @param planta Ponteiro para a estrutura Planta representando o grafo.
-/// @param ciclo Vetor de inteiros representando o ciclo.
-/// @return Custo total do ciclo.
-int calcularCustoDirecionado(const vector<Segmento*>& ciclo)
+/// @param ciclo Vetor de inteiros representando o ciclo (sequência de vértices).
+/// @return Um par contendo o custo total na ordem de ida e na ordem de volta.
+pair<int, int> calcularCustoDirecionado(Planta* planta, const vector<int>& ciclo)
 {
-    int custoTotal = 0;
+    int custoIda = 0, custoVolta = 0;
     int n = ciclo.size();
 
     for (int i = 0; i < n - 1; ++i)
     {
-        custoTotal += ciclo[i]->tamanho;
+        int vSaida = ciclo[i];
+        int vEntrada = ciclo[i + 1];
+        bool encontrouAresta = false;
+
+        // Busca a aresta na lista de adjacência
+        for (Segmento* segmento : planta->listaAdj[vSaida])
+        {
+            if (segmento->vEntrada == vEntrada)
+            {
+                custoIda += segmento->tamanho;
+                encontrouAresta = true;
+                break;
+            }
+        }
+
+        if (!encontrouAresta)
+        {
+            // Se não encontrou a aresta, considera um custo infinito (ou lança uma exceção)
+            custoIda = numeric_limits<int>::max();
+            break;
+        }
+
+        // Calcula o custo na volta
+        int j = n - 1 - i; // Índice para a volta
+        vSaida = ciclo[j];
+        vEntrada = ciclo[j - 1];
+
+        encontrouAresta = false;
+        for (Segmento* segmento : planta->listaAdj[vSaida])
+        {
+            if (segmento->vEntrada == vEntrada)
+            {
+                custoVolta += segmento->tamanho;
+                encontrouAresta = true;
+                break;
+            }
+        }
+
+        if (!encontrouAresta)
+        {
+            custoVolta = numeric_limits<int>::max();
+            break;
+        }
     }
 
-    return custoTotal;
+    // Adiciona o custo para fechar o ciclo
+    if (custoIda != numeric_limits<int>::max())
+    {
+        for (Segmento* segmento : planta->listaAdj[ciclo[n - 1]])
+        {
+            if (segmento->vEntrada == ciclo[0])
+            {
+                custoIda += segmento->tamanho;
+                break;
+            }
+        }
+    }
+
+    if (custoVolta != numeric_limits<int>::max())
+    {
+        for (Segmento* segmento : planta->listaAdj[ciclo[0]])
+        {
+            if (segmento->vEntrada == ciclo[n - 1])
+            {
+                custoVolta += segmento->tamanho;
+                break;
+            }
+        }
+    }
+
+    return make_pair(custoIda, custoVolta);
 }
 
-/// @brief Otimiza um ciclo direcionado em um grafo usando a técnica Two-Opt com as estruturas Planta e Segmento.
+/// @brief Otimiza um ciclo direcionado em um grafo usando a técnica Two-Opt.
 /// @param planta Ponteiro para a estrutura Planta representando o grafo.
-/// @param cicloInicial Vetor representando o ciclo inicial.
-/// @return Um par contendo o ciclo otimizado e o custo total do ciclo.
-pair<vector<Segmento*>, int> twoOptDirected(Planta* planta, const vector<Segmento*>& cicloInicial)
+/// @param cicloInicial Vetor de inteiros representando o ciclo inicial.
+/// @return Um par contendo o ciclo otimizado e o menor custo total do ciclo.
+pair<vector<int>, int> twoOptDirected(Planta* planta, const vector<int>& cicloInicial)
 {
     int n = cicloInicial.size();
-    vector<Segmento*> melhorCiclo = cicloInicial;
-    int melhorCusto = calcularCustoDirecionado(melhorCiclo);
+    vector<int> melhorCiclo = cicloInicial;
+    auto [melhorCustoIda, melhorCustoVolta] = calcularCustoDirecionado(planta, melhorCiclo);
+    int melhorCusto = min(melhorCustoIda, melhorCustoVolta);
     bool melhorado = true;
 
     while (melhorado)
@@ -469,11 +558,12 @@ pair<vector<Segmento*>, int> twoOptDirected(Planta* planta, const vector<Segment
             for (int j = i + 2; j < n; ++j) // j deve ser pelo menos dois índices à frente de i
             {
                 // Gera um novo ciclo invertendo os nós entre i+1 e j
-                vector<Segmento*> novoCiclo = melhorCiclo;
+                vector<int> novoCiclo = melhorCiclo;
                 reverse(novoCiclo.begin() + i + 1, novoCiclo.begin() + j + 1);
 
                 // Calcula o custo do novo ciclo
-                int novoCusto = calcularCustoDirecionado(novoCiclo);
+                auto [novoCustoIda, novoCustoVolta] = calcularCustoDirecionado(planta, novoCiclo);
+                int novoCusto = min(novoCustoIda, novoCustoVolta);
 
                 // Se o novo ciclo for melhor, atualiza as variáveis
                 if (novoCusto < melhorCusto)
@@ -487,4 +577,32 @@ pair<vector<Segmento*>, int> twoOptDirected(Planta* planta, const vector<Segment
     }
 
     return make_pair(melhorCiclo, melhorCusto);
+}
+
+/// @brief Gera uma matriz de adjacência a partir da lista de adjacência de uma planta.
+/// @param planta Ponteiro para a estrutura Planta representando o grafo.
+/// @return Uma matriz de adjacência (vetor de vetores) com os pesos das arestas.
+vector<vector<float>> gerarMatrizAdjacencia(Planta* planta)
+{
+    int numVertices = planta->listaAdj.size();
+    // Inicializar a matriz de adjacência com infinito (indicando ausência de arestas)
+    vector<vector<float>> matriz(numVertices, vector<float>(numVertices, 0));
+
+    // Preencher a matriz com os pesos das arestas a partir da lista de adjacência
+    for (int i = 0; i < numVertices; i++)
+    {
+        for (Segmento* segmento : planta->listaAdj[i])
+        {
+            int vEntrada = segmento->vEntrada;
+            float peso = segmento->tamanho; // Exemplo: usar o limite de velocidade como peso
+
+            matriz[i][vEntrada] = peso; // Define o peso da aresta de i para vEntrada
+            if (segmento->dupla)
+            {
+                matriz[vEntrada][i] = peso; // Se o segmento for bidirecional, adiciona também a aresta reversa
+            }
+        }
+    }
+
+    return matriz;
 }

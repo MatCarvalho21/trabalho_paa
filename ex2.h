@@ -18,7 +18,8 @@ pair<Planta*, set<int>> construir_grafo_virtual(Planta*, int);
 pair<vector<int>, vector<int>> dijkstra_regional(Planta*, int, int);
 vector<int> encontrarVerticesOtimos(Planta*, const set<int>&, int);
 pair<vector<int>, vector<Segmento*>> nearestNeighbor(Planta*, int);
-int calcularCustoDirecionado(const vector<Segmento*>&);
-pair<vector<Segmento*>, int> twoOptDirected(Planta*, const vector<Segmento*>&);
+pair<int, int> calcularCustoDirecionado(Planta*, const vector<int>&);
+pair<vector<int>, int> twoOptDirected(Planta*, const vector<int>&);
+vector<vector<float>> gerarMatrizAdjacencia(Planta*);
 
 #endif // EX2_H
