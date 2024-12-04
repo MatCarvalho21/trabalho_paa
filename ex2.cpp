@@ -515,150 +515,150 @@ vector<int> bus(Planta* planta, int origem = 0)
 }
 
 
-int main(){
+// int main(){
 
-    Planta* plantaTeste = newPlanta(6);  // Cria a planta com 6 vértices
+//     Planta* plantaTeste = newPlanta(6);  // Cria a planta com 6 vértices
 
-    // Criação dos segmentos entre os vértices
-    Segmento* segmento1 = newSegmento(0, 1, 60, 250, 1, "Rua A", true);
-    Segmento* segmento2 = newSegmento(1, 2, 60, 250, 1, "Rua B", true);
-    Segmento* segmento3 = newSegmento(2, 3, 60, 250, 2, "Rua C", true);
-    Segmento* segmento4 = newSegmento(3, 4, 60, 250, 2, "Rua D", true);
-    Segmento* segmento5 = newSegmento(4, 5, 60, 250, 2, "Rua E", true);
-    Segmento* segmento6 = newSegmento(5, 0, 60, 250, 3, "Rua F", true);
+//     // Criação dos segmentos entre os vértices
+//     Segmento* segmento1 = newSegmento(0, 1, 60, 250, 1, "Rua A", true);
+//     Segmento* segmento2 = newSegmento(1, 2, 60, 250, 1, "Rua B", true);
+//     Segmento* segmento3 = newSegmento(2, 3, 60, 250, 2, "Rua C", true);
+//     Segmento* segmento4 = newSegmento(3, 4, 60, 250, 2, "Rua D", true);
+//     Segmento* segmento5 = newSegmento(4, 5, 60, 250, 2, "Rua E", true);
+//     Segmento* segmento6 = newSegmento(5, 0, 60, 250, 3, "Rua F", true);
 
-    // Criando mais segmentos para obter 18 arestas no total
-    Segmento* segmento7 = newSegmento(0, 2, 60, 250, 4, "Rua G", true);
-    Segmento* segmento8 = newSegmento(1, 3, 60, 250, 4, "Rua H", true);
-    Segmento* segmento9 = newSegmento(2, 4, 60, 250, 2, "Rua I", true);
-    Segmento* segmento10 = newSegmento(3, 5, 60, 250, 5, "Rua J", true);
-    Segmento* segmento11 = newSegmento(4, 0, 60, 250, 2, "Rua K", true);
-    Segmento* segmento12 = newSegmento(5, 1, 60, 250, 5, "Rua L", true);
+//     // Criando mais segmentos para obter 18 arestas no total
+//     Segmento* segmento7 = newSegmento(0, 2, 60, 250, 4, "Rua G", true);
+//     Segmento* segmento8 = newSegmento(1, 3, 60, 250, 4, "Rua H", true);
+//     Segmento* segmento9 = newSegmento(2, 4, 60, 250, 2, "Rua I", true);
+//     Segmento* segmento10 = newSegmento(3, 5, 60, 250, 5, "Rua J", true);
+//     Segmento* segmento11 = newSegmento(4, 0, 60, 250, 2, "Rua K", true);
+//     Segmento* segmento12 = newSegmento(5, 1, 60, 250, 5, "Rua L", true);
 
-    // Segmentos adicionais para completar o número de arestas
-    Segmento* segmento13 = newSegmento(0, 3, 60, 250, 1, "Rua M", true);
-    Segmento* segmento14 = newSegmento(1, 4, 60, 250, 2, "Rua N", true);
-    Segmento* segmento15 = newSegmento(2, 5, 60, 250, 3, "Rua O", true);
-    Segmento* segmento16 = newSegmento(3, 0, 60, 250, 4, "Rua P", true);
-    Segmento* segmento17 = newSegmento(4, 1, 60, 250, 2, "Rua Q", true);
-    Segmento* segmento18 = newSegmento(5, 2, 60, 250, 5, "Rua R", true);
+//     // Segmentos adicionais para completar o número de arestas
+//     Segmento* segmento13 = newSegmento(0, 3, 60, 250, 1, "Rua M", true);
+//     Segmento* segmento14 = newSegmento(1, 4, 60, 250, 2, "Rua N", true);
+//     Segmento* segmento15 = newSegmento(2, 5, 60, 250, 3, "Rua O", true);
+//     Segmento* segmento16 = newSegmento(3, 0, 60, 250, 4, "Rua P", true);
+//     Segmento* segmento17 = newSegmento(4, 1, 60, 250, 2, "Rua Q", true);
+//     Segmento* segmento18 = newSegmento(5, 2, 60, 250, 5, "Rua R", true);
 
-    // Adicionando os segmentos à planta
-    adicionaSegmentoAPlanta(segmento1, plantaTeste);
-    adicionaSegmentoAPlanta(segmento2, plantaTeste);
-    adicionaSegmentoAPlanta(segmento3, plantaTeste);
-    adicionaSegmentoAPlanta(segmento4, plantaTeste);
-    adicionaSegmentoAPlanta(segmento5, plantaTeste);
-    adicionaSegmentoAPlanta(segmento6, plantaTeste);
-    adicionaSegmentoAPlanta(segmento7, plantaTeste);
-    adicionaSegmentoAPlanta(segmento8, plantaTeste);
-    adicionaSegmentoAPlanta(segmento9, plantaTeste);
-    adicionaSegmentoAPlanta(segmento10, plantaTeste);
-    adicionaSegmentoAPlanta(segmento11, plantaTeste);
-    adicionaSegmentoAPlanta(segmento12, plantaTeste);
-    adicionaSegmentoAPlanta(segmento13, plantaTeste);
-    adicionaSegmentoAPlanta(segmento14, plantaTeste);
-    adicionaSegmentoAPlanta(segmento15, plantaTeste);
-    adicionaSegmentoAPlanta(segmento16, plantaTeste);
-    adicionaSegmentoAPlanta(segmento17, plantaTeste);
-    adicionaSegmentoAPlanta(segmento18, plantaTeste);
+//     // Adicionando os segmentos à planta
+//     adicionaSegmentoAPlanta(segmento1, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento2, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento3, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento4, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento5, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento6, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento7, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento8, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento9, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento10, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento11, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento12, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento13, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento14, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento15, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento16, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento17, plantaTeste);
+//     adicionaSegmentoAPlanta(segmento18, plantaTeste);
 
-    // Adicionando imóveis diferentes para cada segmento
-    adicionaImovelASegmento(newImovel(300, 5, "comercial"), segmento1);
-    adicionaImovelASegmento(newImovel(350, 10, "residencial"), segmento1);
-    adicionaImovelASegmento(newImovel(400, 15, "industrial"), segmento1);
-    adicionaImovelASegmento(newImovel(450, 20, "comercial"), segmento1);
-    adicionaImovelASegmento(newImovel(500, 25, "industrial"), segmento1);
+//     // Adicionando imóveis diferentes para cada segmento
+//     adicionaImovelASegmento(newImovel(300, 5, "comercial"), segmento1);
+//     adicionaImovelASegmento(newImovel(350, 10, "residencial"), segmento1);
+//     adicionaImovelASegmento(newImovel(400, 15, "industrial"), segmento1);
+//     adicionaImovelASegmento(newImovel(450, 20, "comercial"), segmento1);
+//     adicionaImovelASegmento(newImovel(500, 25, "industrial"), segmento1);
 
-    adicionaImovelASegmento(newImovel(250, 5, "residencial"), segmento2);
-    adicionaImovelASegmento(newImovel(200, 10, "comercial"), segmento2);
-    adicionaImovelASegmento(newImovel(150, 15, "industrial"), segmento2);
-    adicionaImovelASegmento(newImovel(100, 20, "residencial"), segmento2);
-    adicionaImovelASegmento(newImovel(50, 25, "industrial"), segmento2);
+//     adicionaImovelASegmento(newImovel(250, 5, "residencial"), segmento2);
+//     adicionaImovelASegmento(newImovel(200, 10, "comercial"), segmento2);
+//     adicionaImovelASegmento(newImovel(150, 15, "industrial"), segmento2);
+//     adicionaImovelASegmento(newImovel(100, 20, "residencial"), segmento2);
+//     adicionaImovelASegmento(newImovel(50, 25, "industrial"), segmento2);
 
-    adicionaImovelASegmento(newImovel(500, 5, "turismo"), segmento3);
-    adicionaImovelASegmento(newImovel(400, 10, "residencial"), segmento3);
-    adicionaImovelASegmento(newImovel(350, 15, "industrial"), segmento3);
-    adicionaImovelASegmento(newImovel(300, 20, "comercial"), segmento3);
-    adicionaImovelASegmento(newImovel(450, 25, "industrial"), segmento3);
+//     adicionaImovelASegmento(newImovel(500, 5, "turismo"), segmento3);
+//     adicionaImovelASegmento(newImovel(400, 10, "residencial"), segmento3);
+//     adicionaImovelASegmento(newImovel(350, 15, "industrial"), segmento3);
+//     adicionaImovelASegmento(newImovel(300, 20, "comercial"), segmento3);
+//     adicionaImovelASegmento(newImovel(450, 25, "industrial"), segmento3);
 
-    adicionaImovelASegmento(newImovel(350, 5, "comercial"), segmento4);
-    adicionaImovelASegmento(newImovel(300, 10, "residencial"), segmento4);
-    adicionaImovelASegmento(newImovel(400, 15, "industrial"), segmento4);
-    adicionaImovelASegmento(newImovel(250, 20, "residencial"), segmento4);
-    adicionaImovelASegmento(newImovel(100, 25, "turismo"), segmento4);
+//     adicionaImovelASegmento(newImovel(350, 5, "comercial"), segmento4);
+//     adicionaImovelASegmento(newImovel(300, 10, "residencial"), segmento4);
+//     adicionaImovelASegmento(newImovel(400, 15, "industrial"), segmento4);
+//     adicionaImovelASegmento(newImovel(250, 20, "residencial"), segmento4);
+//     adicionaImovelASegmento(newImovel(100, 25, "turismo"), segmento4);
 
-    adicionaImovelASegmento(newImovel(200, 5, "residencial"), segmento5);
-    adicionaImovelASegmento(newImovel(500, 10, "industrial"), segmento5);
-    adicionaImovelASegmento(newImovel(350, 15, "comercial"), segmento5);
-    adicionaImovelASegmento(newImovel(250, 20, "industrial"), segmento5);
-    adicionaImovelASegmento(newImovel(400, 25, "comercial"), segmento5);
+//     adicionaImovelASegmento(newImovel(200, 5, "residencial"), segmento5);
+//     adicionaImovelASegmento(newImovel(500, 10, "industrial"), segmento5);
+//     adicionaImovelASegmento(newImovel(350, 15, "comercial"), segmento5);
+//     adicionaImovelASegmento(newImovel(250, 20, "industrial"), segmento5);
+//     adicionaImovelASegmento(newImovel(400, 25, "comercial"), segmento5);
 
-    adicionaImovelASegmento(newImovel(100, 5, "industrial"), segmento6);
-    adicionaImovelASegmento(newImovel(150, 10, "turismo"), segmento6);
-    adicionaImovelASegmento(newImovel(250, 15, "turismo"), segmento6);
-    adicionaImovelASegmento(newImovel(300, 20, "industrial"), segmento6);
-    adicionaImovelASegmento(newImovel(450, 25, "comercial"), segmento6);
+//     adicionaImovelASegmento(newImovel(100, 5, "industrial"), segmento6);
+//     adicionaImovelASegmento(newImovel(150, 10, "turismo"), segmento6);
+//     adicionaImovelASegmento(newImovel(250, 15, "turismo"), segmento6);
+//     adicionaImovelASegmento(newImovel(300, 20, "industrial"), segmento6);
+//     adicionaImovelASegmento(newImovel(450, 25, "comercial"), segmento6);
 
-    cout << "Regiões (CEP): ";
-    for (int elemento : plantaTeste->CEPs) {
-        cout << elemento << " ";
-    }
-    cout << endl;
+//     cout << "Regiões (CEP): ";
+//     for (int elemento : plantaTeste->CEPs) {
+//         cout << elemento << " ";
+//     }
+//     cout << endl;
 
-    cout << "TESTE: construir_grafo_virtual()" <<endl;
+//     cout << "TESTE: construir_grafo_virtual()" <<endl;
 
-    pair<Planta*, set<int>> resultado2 = construir_grafo_virtual(plantaTeste, 10);
+//     pair<Planta*, set<int>> resultado2 = construir_grafo_virtual(plantaTeste, 10);
 
-    cout << "Regiões (CEP-Virtual): ";
-    for (int elemento : resultado2.first->CEPs) {
-        cout << elemento << " ";
-    }
-    cout << endl;
+//     cout << "Regiões (CEP-Virtual): ";
+//     for (int elemento : resultado2.first->CEPs) {
+//         cout << elemento << " ";
+//     }
+//     cout << endl;
 
-    cout << "Vértices da Borda: ";
-    for (int elemento : resultado2.second) {
-        cout << elemento << " ";
-    }
-    cout << endl;
+//     cout << "Vértices da Borda: ";
+//     for (int elemento : resultado2.second) {
+//         cout << elemento << " ";
+//     }
+//     cout << endl;
 
-    set<int> verticesOtimos2 = achaVerticesRegionais(resultado2.first, resultado2.second);
+//     set<int> verticesOtimos2 = achaVerticesRegionais(resultado2.first, resultado2.second);
 
-    cout << "Vértices Ótimos: ";
-    for (int elemento : verticesOtimos2) {
-        cout << elemento << " ";
-    } 
-    cout << endl;
+//     cout << "Vértices Ótimos: ";
+//     for (int elemento : verticesOtimos2) {
+//         cout << elemento << " ";
+//     } 
+//     cout << endl;
 
-    cout << "TESTE: construirGrafoRegioes()" <<endl;
+//     cout << "TESTE: construirGrafoRegioes()" <<endl;
 
-    pair<Planta*, vector<vector<int>>> resultado6 = construirGrafoRegioes(resultado2.first, verticesOtimos2);
+//     pair<Planta*, vector<vector<int>>> resultado6 = construirGrafoRegioes(resultado2.first, verticesOtimos2);
 
-    cout << "TESTE: nearestNeighbor()" <<endl;
+//     cout << "TESTE: nearestNeighbor()" <<endl;
 
-    vector<int>resultado4 = nearestNeighbor(resultado6.first, 2);
+//     vector<int>resultado4 = nearestNeighbor(resultado6.first, 2);
 
-    cout << "Ciclo: ";
-    for (int elemento : resultado4) {
-        cout << elemento << " ";
-    }
-    cout << endl;
+//     cout << "Ciclo: ";
+//     for (int elemento : resultado4) {
+//         cout << elemento << " ";
+//     }
+//     cout << endl;
 
-    cout << "TESTE: twoOptDirected()" <<endl;
+//     cout << "TESTE: twoOptDirected()" <<endl;
 
-    pair<vector<int>, int> resultado5 = twoOptDirected(resultado6.first, resultado4);
+//     pair<vector<int>, int> resultado5 = twoOptDirected(resultado6.first, resultado4);
     
-    cout << "Ciclo Otimizado: ";
-    for (int elemento : resultado5.first) {
-        cout << elemento << " ";
-    }
+//     cout << "Ciclo Otimizado: ";
+//     for (int elemento : resultado5.first) {
+//         cout << elemento << " ";
+//     }
 
-    cout << "TESTE: bus()" <<endl;
-    vector<int> resultado15 = bus(plantaTeste, 2);
-    for (int elemento : resultado15) {
-        cout << elemento << " ";
-    }
-    cout << endl;
+//     cout << "TESTE: bus()" <<endl;
+//     vector<int> resultado15 = bus(plantaTeste, 2);
+//     for (int elemento : resultado15) {
+//         cout << elemento << " ";
+//     }
+//     cout << endl;
 
-    return 0;
-}
+//     return 0;
+// }
