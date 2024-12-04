@@ -61,13 +61,13 @@ int main()
         return 1;
     }
 
-    file << "problem, V, E, time;" << endl;
+    file << "problem,V,E,ratio,time" << endl;
 
     vector<int> Es(3);
     pair<vector<int>, vector<Segmento*>> return1;
     vector<int> return2;
 
-    for (int V = 10; V <= 1000; V = V * 10)
+    for (int V = 100; V <= 1000; V = V + 200)
     {
         Es[0] = V;
         Es[1] = 2*V;
@@ -76,7 +76,6 @@ int main()
         for (int i = 0; i <= 2; i++)
         {
             int E = Es[i];
-
             planta = geraPlantaAutomatica(V, E);
 
             if (planta == nullptr)
@@ -89,15 +88,22 @@ int main()
             return1 = subway(planta, V);
             auto timeStop = high_resolution_clock::now();
             auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart).count();
-            cout << 1 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
-            // file << 1 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
+            cout << 1 << "," << V << "," << E << "," << i+1 << "," << timeDuration << endl;
+            file << 1 << "," << V << "," << E << "," << i+1 << "," << timeDuration << endl;
 
             // timeStart = high_resolution_clock::now();
             // return2 = bus(planta);
             // timeStop = high_resolution_clock::now();
             // timeDuration = duration_cast<nanoseconds>(timeStop - timeStart).count();
-            // cout << 2 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
-            // file << 2 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
+            // cout << 2 << "," << V << "," << E << "," << i+1 << "," << timeDuration << endl;
+            // file << 2 << "," << V << "," << E << "," << i+1 << "," << timeDuration << endl;
+
+            // timeStart = high_resolution_clock::now();
+            // return2 = -> função da 3 <-(planta);
+            // timeStop = high_resolution_clock::now();
+            // timeDuration = duration_cast<nanoseconds>(timeStop - timeStart).count();
+            // cout << 3 << "," << V << "," << E << "," << i+1 << "," << timeDuration << endl;
+            // file << 3 << "," << V << "," << E << "," << i+1 << "," << timeDuration << endl;
         }
     }
 
