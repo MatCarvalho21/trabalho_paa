@@ -178,6 +178,8 @@ PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, Planta* m
                 0,
                 "taxi"
             );
+            segmentoConexaoIda->vertical = true;
+            segmentoConexaoVolta->vertical = true;
 
             plantaBusca->adicionaSegmento(segmentoConexaoIda);
             plantaBusca->adicionaSegmento(segmentoConexaoVolta);
