@@ -270,7 +270,7 @@ def dijkstra_custo(grafo, lim_dinheiro)
             if newCost < lim_dinheiro and newCost < cost[cada_adjacente]:
                 cost[cada_adjacente] = newCost
                 parents[cada_adjacente] = vertice_atual
-                newTime = tempo + each_aresta.custo() // nesse caso o custo é o tempo
+                newTime = tempo + each_aresta.tempo
                 heap.add(newTime, cada_adjacente)
 
     // lista vazia

@@ -10,9 +10,9 @@ using namespace std;
 const float INF = numeric_limits<float>::max();
 
 // variáveis táxi
-float limite_metros = 10.0;
-float taxa_variavel = 2.0;
-float taxa_fixa = 5.0;
+float limite_km = 2.0;
+float taxa_variavel = 3.0;
+float taxa_fixa = 7.0;
 
 // passagens
 float passagem_metro = 2.0;
@@ -23,13 +23,12 @@ pair<float, float> calcula_custo_taxi(int origem, int destino, float dist_taxi, 
     float nova_distancia = dist_taxi + segmento_tamanho;
     float custo = 0.0;
 
-    // Calcula custo variável caso exceda o limite de metros gratuitos
-    if (nova_distancia > limite_metros) {
-        custo = taxa_variavel * (nova_distancia - limite_metros);
+    // Calcula custo variável caso exceda o limite de km gratuitos
+    if (nova_distancia > limite_km) {
+        custo = taxa_variavel * (nova_distancia - limite_km);
     }
 
     return {custo, nova_distancia};
-
 }
 
 pair<float, float> calcula_custo(SegmentoBusca* atual, SegmentoBusca* adjacente, float distancia_taxi) {
@@ -41,7 +40,7 @@ pair<float, float> calcula_custo(SegmentoBusca* atual, SegmentoBusca* adjacente,
             return {passagem_onibus, distancia_taxi}; // Exemplo: custo fixo para mudar para ônibus
         }
     }
-    if (adjacente->meioTransporte == "taxi" && adjacente->vertical == true){
+    if (adjacente->meioTransporte == "taxi" && adjacente->vertical == true) {
         return {taxa_fixa, distancia_taxi}; // Exemplo: custo fixo para mudar para táxi
     }
 
@@ -51,37 +50,45 @@ pair<float, float> calcula_custo(SegmentoBusca* atual, SegmentoBusca* adjacente,
     return {0.0, distancia_taxi}; // Não muda de meio de transporte
 }
 
-
 struct Estado {
-    SegmentoBusca* segmento; // O segmento atual
-    float custo_acumulado;   // Custo acumulado até o segmento
-    float distancia_taxi;    // Distância acumulada para táxi
+    SegmentoBusca* segmento;
+    float custo_acumulado;
+    float distancia_taxi;
+    float tempo_acumulado;
 
-    // Ordena pelo menor custo acumulado
+    // Comparação pelo operador '<' para a fila de prioridade
     bool operator<(const Estado& outro) const {
-        return custo_acumulado > outro.custo_acumulado; // Para a fila de prioridade (menor custo tem maior prioridade)
+        return custo_acumulado > outro.custo_acumulado; // Menor custo tem maior prioridade
+    }
+
+    // Comparação pelo operador '>'
+    bool operator>(const Estado& outro) const {
+        return custo_acumulado < outro.custo_acumulado; // Inverso para std::greater
     }
 };
 
 vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca& grafo, int vertice_inicial, int vertice_destino, float lim_dinheiro) {
-    // Mapas para armazenar o menor custo e o "pai" de cada segmento
-    unordered_map<SegmentoBusca*, float> custo_minimo;
+    // Mapas para armazenar o menor tempo e o "pai" de cada segmento
+    unordered_map<SegmentoBusca*, float> tempo_minimo;
+    unordered_map<SegmentoBusca*, float> custo_acumulado;
     unordered_map<SegmentoBusca*, SegmentoBusca*> segmento_pai;
 
     // Fila de prioridade (menor custo no topo)
-    priority_queue<Estado> fila;
+    priority_queue<Estado, vector<Estado>, greater<>> fila;
 
-    // Inicialização com todos os custos como infinito
+    // Inicialização com todos os tempos e custos como infinito
     for (const auto& adjacencias : grafo.listaAdj) {
         for (SegmentoBusca* segmento : adjacencias) {
-            custo_minimo[segmento] = INF;
+            tempo_minimo[segmento] = INF;
+            custo_acumulado[segmento] = INF;
         }
     }
 
     // Processa os segmentos saindo do vértice inicial
     for (SegmentoBusca* segmento : grafo.listaAdj[vertice_inicial]) {
-        custo_minimo[segmento] = 0.0; // Custo inicial é zero
-        fila.push({segmento, 0.0, 0.0});
+        tempo_minimo[segmento] = 0.0; // Tempo inicial é zero
+        custo_acumulado[segmento] = 0.0; // Custo inicial é zero
+        fila.push({segmento, 0.0, 0.0, 0}); // Inicializa com distância_taxi = 0
         segmento_pai[segmento] = nullptr; // Sem pai para o primeiro segmento
     }
 
@@ -97,7 +104,7 @@ vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca& grafo, int vertice_inic
             continue;
         }
 
-        // Se o segmento atual for o destino, pare o Dijkstra
+        // Se o segmento atual for o destino, interrompa
         if (segmento_atual->vDestino == vertice_destino) {
             break;
         }
@@ -110,11 +117,13 @@ vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca& grafo, int vertice_inic
             tie(custo_aux, nova_distancia_taxi) = calcula_custo(segmento_atual, adjacente, estado_atual.distancia_taxi);
 
             float novo_custo = estado_atual.custo_acumulado + custo_aux;
+            float novo_tempo = estado_atual.tempo_acumulado + adjacente->tempo;
 
-            // Atualiza se encontrar um custo menor
-            if (novo_custo < custo_minimo[adjacente]) {
-                custo_minimo[adjacente] = novo_custo;
-                fila.push({adjacente, novo_custo, nova_distancia_taxi});
+            // Atualiza se encontrar um custo menor e dentro do limite de dinheiro
+            if (novo_custo <= lim_dinheiro && novo_tempo < tempo_minimo[adjacente]) {
+                tempo_minimo[adjacente] = novo_tempo;
+                custo_acumulado[adjacente] = novo_custo;
+                fila.push({adjacente, novo_custo, nova_distancia_taxi, novo_tempo});
                 segmento_pai[adjacente] = segmento_atual;
             }
         }
@@ -124,11 +133,11 @@ vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca& grafo, int vertice_inic
     vector<SegmentoBusca*> caminho;
     SegmentoBusca* segmento_atual = nullptr;
 
-    // Encontrar o segmento de destino com menor custo
-    float menor_custo = INF;
-    for (const auto& [segmento, custo] : custo_minimo) {
-        if (custo < menor_custo) {
-            menor_custo = custo;
+    // Encontrar o segmento de destino com menor tempo
+    float menor_tempo = INF;
+    for (const auto& [segmento, tempo] : tempo_minimo) {
+        if (tempo < menor_tempo && segmento->vDestino == vertice_destino) {
+            menor_tempo = tempo;
             segmento_atual = segmento;
         }
     }
@@ -144,6 +153,7 @@ vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca& grafo, int vertice_inic
 
     return caminho;
 }
+
 
 int main(){
     SegmentoBusca* seg1 = newSegmentoBusca(0, 1, 10, 50.0, "taxi");

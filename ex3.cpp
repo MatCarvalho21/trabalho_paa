@@ -200,7 +200,6 @@ PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, Planta* m
     }
 
     vector<pair<pair<int, int>, float>> arestasMetro = achaArestasMetro(mstMetro, estacoesMetro);
-
     for (pair<pair<int, int>, float> arestaMetro : arestasMetro)
     {
         pair<int, int> aresta = arestaMetro.first;
