@@ -58,13 +58,15 @@ struct SegmentoBusca
 {
     int vOrigem;
     int vDestino;
+    float distancia;
     float tempo;
     string meioTransporte;
 
-    SegmentoBusca(int vOrigem, int vDestino, float tempo, string meioTransporte)
+    SegmentoBusca(int vOrigem, int vDestino, float distancia, float tempo, string meioTransporte)
     {
         this->vOrigem = vOrigem;
         this->vDestino = vDestino;
+        this->distancia = distancia;
         this->tempo = tempo;
         this->meioTransporte = meioTransporte;
     }
@@ -87,13 +89,13 @@ struct PlantaBusca
     void adicionaSegmentoDuplo(SegmentoBusca* s)
     {
         listaAdj[s->vOrigem].push_back(s);
-        SegmentoBusca* s2 = new SegmentoBusca(s->vDestino, s->vOrigem, s->tempo, s->meioTransporte);
+        SegmentoBusca* s2 = new SegmentoBusca(s->vDestino, s->vOrigem, s->distancia, s->tempo, s->meioTransporte);
         listaAdj[s->vDestino].push_back(s2);
     }
 
     void adicionaSegmentoBusca(int vOrigem, int vDestino, float tempo, string meioTransporte)
     {
-        SegmentoBusca* s = new SegmentoBusca(vOrigem, vDestino, tempo, meioTransporte);
+        SegmentoBusca* s = new SegmentoBusca(vOrigem, vDestino, s->distancia, tempo, meioTransporte);
         listaAdj[vOrigem].push_back(s);
     }
 };
@@ -102,7 +104,7 @@ struct PlantaBusca
 Planta* newPlanta(int);
 Segmento* newSegmento(int, int, int, int, int, string, bool);
 Imovel* newImovel(int, int, string);
-SegmentoBusca* newSegmentoBusca(int, int, float, string);
+SegmentoBusca* newSegmentoBusca(int, int, float, float, string);
 PlantaBusca* newPlantaBusca(int);
 void adicionaImovelASegmento(Imovel*, Segmento*);
 void adicionaSegmentoAPlanta(Segmento*, Planta*);
