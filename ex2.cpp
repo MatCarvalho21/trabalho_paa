@@ -44,6 +44,7 @@ int calcula_peso(const Segmento& segmento) {
 pair<Planta*, set<int>> construir_grafo_virtual(Planta* planta, int limiar) {
     // Conjunto para armazenar os vértices de borda
     set<int> vertices_borda;
+    vector<int> num_regioes_vertice_alcanca (planta->listaAdj.size(), 0);
 
     // Número de vértices na planta
     int num_vertices = planta->listaAdj.size();
@@ -53,11 +54,13 @@ pair<Planta*, set<int>> construir_grafo_virtual(Planta* planta, int limiar) {
 
     // Itera sobre os vértices da planta original
     for (int i = 0; i < num_vertices; i++) {
-        set<int> aux_set; // Conjunto auxiliar para armazenar os CEPs únicos
         vector<Segmento*> lista_aux = planta->listaAdj[i]; // Lista de adjacência do vértice i
 
         // Itera sobre os segmentos (arestas) de saída do vértice i
         for (Segmento* temp_node : lista_aux) {
+
+            num_regioes_vertice_alcanca[temp_node->vEntrada] += 1;
+
             // Calcula o novo peso ajustado
             int novo_peso = calcula_peso(*temp_node);
 
@@ -72,15 +75,14 @@ pair<Planta*, set<int>> construir_grafo_virtual(Planta* planta, int limiar) {
                 temp_node->dupla         // Dupla direção (se aplicável)
             );
 
-            // Adiciona o CEP do segmento ao conjunto auxiliar
-            aux_set.insert(temp_node->CEP);
+            temp_segmento->imoveis = temp_node->imoveis;
 
             // Adiciona o novo segmento ao grafo virtual (ajusta a lista de adjacência)
-            planta_virtual->listaAdj[temp_node->vSaida].push_back(temp_segmento);
+            adicionaSegmentoAPlanta(temp_segmento, planta_virtual);
         }
 
         // Verifica se há mais de um CEP único no conjunto auxiliar (vértices de borda)
-        if (aux_set.size() > 1) {
+        if (num_regioes_vertice_alcanca[i] > 1) {
             vertices_borda.insert(i); // Marca o vértice como de borda
         }
     }
@@ -161,15 +163,15 @@ int encontrarVerticeOtimo(Planta* planta, const set<int>& verticesBorda, int cep
 
     for (int vertice = 0; vertice < numVertices; ++vertice)
     {
-        auto [distancias, _] = dijkstra_regional(planta, vertice, cepRegiao);
+        pair<vector<int>, vector<int>> dist = dijkstra_regional(planta, vertice, cepRegiao);
 
         // Obter as distâncias apenas dos vértices de borda
         vector<int> distanciasBorda;
         for (int borda : verticesBorda)
         {
-            if (distancias[borda] != numeric_limits<int>::max())
+            if (dist.first[borda] != numeric_limits<int>::max())
             {
-                distanciasBorda.push_back(distancias[borda]);
+                distanciasBorda.push_back(dist.first[borda]);
             }
         }
 
@@ -197,9 +199,9 @@ int encontrarVerticeOtimo(Planta* planta, const set<int>& verticesBorda, int cep
 /// @param planta Ponteiro para a estrutura Planta representando o grafo da região.
 /// @param verticesBorda Conjunto de vértices de borda do grafo.
 /// @return Vetor de vetores, onde cada vetor interno contém os índices dos vértices ótimos de uma região.
-vector<int> achaVerticesRegionais(Planta* planta, const set<int>& verticesBorda)
+set<int> achaVerticesRegionais(Planta* planta, const set<int>& verticesBorda)
 {
-    vector<int> verticesOtimosPorRegiao;
+    set<int> verticesOtimosPorRegiao;
 
     // Iterar diretamente sobre os CEPs do set na estrutura Planta
     for (int cep : planta->CEPs)
@@ -208,7 +210,7 @@ vector<int> achaVerticesRegionais(Planta* planta, const set<int>& verticesBorda)
         int verticeOtimo = encontrarVerticeOtimo(planta, verticesBorda, cep);
 
         // Adiciona os vértices ótimos dessa região à lista final
-        verticesOtimosPorRegiao.push_back(verticeOtimo);
+        verticesOtimosPorRegiao.insert(verticeOtimo);
     }
 
     return verticesOtimosPorRegiao;
@@ -228,7 +230,7 @@ pair<vector<int>, vector<int>> dijkstra_normal(Planta* planta, int origem)
     vector<int> distancias(numVertices, numeric_limits<int>::max());
     vector<int> predecessores(numVertices, -1); // Para reconstruir o caminho
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> filaPrioridade;
-
+    
     // A distância para o vértice de origem é 0
     distancias[origem] = 0;
     filaPrioridade.push({0, origem});
@@ -237,18 +239,17 @@ pair<vector<int>, vector<int>> dijkstra_normal(Planta* planta, int origem)
     {
         // Pegar o vértice com menor distância
         auto [distAtual, verticeAtual] = filaPrioridade.top();
+        
         filaPrioridade.pop();
 
-        // Ignorar se a distância atual for maior que a registrada (lazy removal)
-        if (distAtual > distancias[verticeAtual])
-            continue;
+        if (distAtual > distancias[verticeAtual]) { continue; }
 
-        // Processar todos os vizinhos do vértice atual
-        for (Segmento* segmento : planta->listaAdj[verticeAtual])
+        vector<Segmento*> segmentos = planta->listaAdj[verticeAtual];
+        for (int i = 0; i < segmentos.size(); i++)
         {
-            int vizinho = segmento->vEntrada;
-            int peso = segmento->tamanho;
-
+            int vizinho = segmentos[i]->vEntrada;
+            
+            int peso = segmentos[i]->tamanho;
             // Relaxar a aresta
             if (distancias[verticeAtual] + peso < distancias[vizinho])
             {
@@ -266,26 +267,22 @@ pair<vector<int>, vector<int>> dijkstra_normal(Planta* planta, int origem)
 /// @param plantaOriginal Ponteiro para a planta original contendo todos os segmentos e vértices.
 /// @param verticesOtimos Vetor de vértices ótimos identificados.
 /// @return Ponteiro para o grafo completo das regiões (planta virtual).
-pair<Planta*, vector<vector<int>>> construirGrafoRegioes(Planta* plantaOriginal, const vector<int>& verticesOtimos)
+pair<Planta*, vector<vector<int>>> construirGrafoRegioes(Planta* plantaOriginal, const set<int>& verticesOtimos)
 {
     // Criar a planta virtual (grafo da região)
-    Planta* plantaVirtual = new Planta();
-    plantaVirtual->listaAdj.resize(verticesOtimos.size());
-    vector<vector<int>> listaPredecessores;
-    listaPredecessores.resize(verticesOtimos.size());
+    Planta* plantaVirtual = newPlanta(plantaOriginal->listaAdj.size());
+    vector<vector<int>> listaPredecessores(plantaOriginal->listaAdj.size());
     // Iterar sobre todos os pares de vértices ótimos
-    for (size_t i = 0; i < verticesOtimos.size(); ++i)
-    {
-        int vertice1 = verticesOtimos[i];
+    for (int vertice1 : verticesOtimos)
+    {   
+        pair<vector<int>, vector<int>> resultado = dijkstra_normal(plantaOriginal, vertice1);
+        vector<int> distancias = resultado.first;
+        vector<int> predecessores = resultado.second;
+        
+        listaPredecessores[vertice1] = predecessores;
 
-        // Executar Dijkstra a partir do vértice atual
-        auto [distancias, predecessores] = dijkstra_normal(plantaOriginal, vertice1);
-        listaPredecessores[i] = predecessores;
-
-        for (size_t j = 0; j < verticesOtimos.size(); ++j)
+        for (int vertice2 : verticesOtimos)
         {
-            int vertice2 = verticesOtimos[j];
-
             // Garantir que não conectamos o vértice a ele mesmo
             if (vertice1 != vertice2 && distancias[vertice2] != numeric_limits<int>::max())
             {
@@ -307,7 +304,7 @@ pair<Planta*, vector<vector<int>>> construirGrafoRegioes(Planta* plantaOriginal,
 /// @return Um par contendo:
 ///         - Um vetor de inteiros representando o ciclo encontrado, começando e terminando no vértice inicial.
 ///         - Um vetor de ponteiros para os segmentos (arestas) que compõem o ciclo, na ordem em que são visitados.
-pair<vector<int>, vector<Segmento*>> nearestNeighbor(Planta* plantaRegioes, int verticeInicial = 0)
+vector<int> nearestNeighbor(Planta* plantaRegioes, int verticeInicial = 0)
 {
     int numVertices = plantaRegioes->listaAdj.size();
     vector<int> ciclo;
@@ -361,7 +358,7 @@ pair<vector<int>, vector<Segmento*>> nearestNeighbor(Planta* plantaRegioes, int 
     }
 
     ciclo.push_back(verticeInicial); // Retorna ao vértice inicial para formar o ciclo
-    return make_pair(ciclo, cicloSegmentos);
+    return ciclo;
 }
 
 /// @brief Calcula o custo total de um ciclo em um grafo direcionado.
@@ -466,6 +463,41 @@ vector<vector<int>> gerarMatrizAdjacencia(Planta* planta)
     return matriz;
 }
 
+vector<int> bus(Planta* planta, int origem = 0)
+{
+    pair<Planta*, set<int>> grafoVirutal = construir_grafo_virtual(planta, 10);
+
+    set<int> verticesRegionais = achaVerticesRegionais(grafoVirutal.first, grafoVirutal.second);
+
+    pair<Planta*, vector<vector<int>>> grafoRegioes = construirGrafoRegioes(grafoVirutal.first, verticesRegionais);
+
+    vector<int> cicloInicial = nearestNeighbor(grafoRegioes.first, origem);
+
+    pair<vector<int>, int> cicloOtimizado = twoOptDirected(grafoRegioes.first, cicloInicial);
+    
+    vector<int> ciclo;
+
+    if (cicloOtimizado.first.size() < 3)
+    {
+        return cicloOtimizado.first;
+    }
+
+    for (int i = cicloOtimizado.first.size() - 2; i >= 0; i--)
+    {
+        int verticeAtual = cicloOtimizado.first[i];
+        int verticeProximo = cicloOtimizado.first[i + 1];
+        vector<int> predecessores = grafoRegioes.second[verticeAtual];
+        
+        while (verticeProximo != -1)
+        {
+            ciclo.push_back(verticeProximo);
+            verticeProximo = predecessores[verticeProximo];
+        }
+    }
+
+    return ciclo;
+}
+
 
 int main(){
 
@@ -562,13 +594,19 @@ int main(){
 
     pair<Planta*, set<int>> resultado2 = construir_grafo_virtual(plantaTeste, 10);
 
+    cout << "Regiões (CEP-Virtual): ";
+    for (int elemento : resultado2.first->CEPs) {
+        cout << elemento << " ";
+    }
+    cout << endl;
+
     cout << "Vértices da Borda: ";
     for (int elemento : resultado2.second) {
         cout << elemento << " ";
     }
     cout << endl;
 
-    vector<int> verticesOtimos2 = achaVerticesRegionais(plantaTeste, resultado2.second);
+    set<int> verticesOtimos2 = achaVerticesRegionais(resultado2.first, resultado2.second);
 
     cout << "Vértices Ótimos: ";
     for (int elemento : verticesOtimos2) {
@@ -578,59 +616,33 @@ int main(){
 
     cout << "TESTE: construirGrafoRegioes()" <<endl;
 
-    auto [plantaRegioes, lista_predecessores] = construirGrafoRegioes(resultado2.first, verticesOtimos2);
-
+    pair<Planta*, vector<vector<int>>> resultado6 = construirGrafoRegioes(resultado2.first, verticesOtimos2);
 
     cout << "TESTE: nearestNeighbor()" <<endl;
 
-    pair<vector<int>, vector<Segmento*>> resultado4 = nearestNeighbor(plantaRegioes, 2);
+    vector<int>resultado4 = nearestNeighbor(resultado6.first, 2);
 
     cout << "Ciclo: ";
-    for (int elemento : resultado4.first) {
+    for (int elemento : resultado4) {
         cout << elemento << " ";
     }
     cout << endl;
 
     cout << "TESTE: twoOptDirected()" <<endl;
 
-    pair<vector<int>, int> resultado5 = twoOptDirected(plantaRegioes, resultado4.first);
+    pair<vector<int>, int> resultado5 = twoOptDirected(resultado6.first, resultado4);
     
     cout << "Ciclo Otimizado: ";
     for (int elemento : resultado5.first) {
         cout << elemento << " ";
     }
-    cout << endl;
-    cout << endl;
-    cout << endl;
 
-    Planta* plantaTeste2 = newPlanta(5);
-
-    Segmento* segmento21 = newSegmento(0, 1, 60, 250, 1, "Rua A", true);
-    Segmento* segmento22 = newSegmento(1, 2, 60, 250, 1, "Rua B", true);
-    Segmento* segmento23 = newSegmento(2, 3, 60, 250, 2, "Rua C", true);
-    Segmento* segmento24 = newSegmento(3, 4, 60, 250, 2, "Rua D", true);
-    Segmento* segmento25 = newSegmento(1, 0, 60, 250, 1, "Rua A", true);
-    Segmento* segmento26 = newSegmento(2, 1, 60, 250, 1, "Rua B", true);
-    Segmento* segmento27 = newSegmento(3, 2, 60, 250, 1, "Rua C", true);
-    Segmento* segmento28 = newSegmento(4, 3, 60, 250, 2, "Rua D", true);
-
-    adicionaSegmentoAPlanta(segmento21, plantaTeste2);
-    adicionaSegmentoAPlanta(segmento22, plantaTeste2);
-    adicionaSegmentoAPlanta(segmento23, plantaTeste2);
-    adicionaSegmentoAPlanta(segmento24, plantaTeste2);
-    adicionaSegmentoAPlanta(segmento25, plantaTeste2);
-    adicionaSegmentoAPlanta(segmento26, plantaTeste2);
-    adicionaSegmentoAPlanta(segmento27, plantaTeste2);
-    adicionaSegmentoAPlanta(segmento28, plantaTeste2);
-
-    pair<Planta*, set<int>> resultado3 = construir_grafo_virtual(plantaTeste2, 10);
-
-    vector<int> verticesOtimos = achaVerticesRegionais(plantaTeste2, resultado3.second);
-
-    cout << "Vértices Ótimos: ";
-    for (int elemento : verticesOtimos) {
+    cout << "TESTE: bus()" <<endl;
+    vector<int> resultado15 = bus(plantaTeste, 2);
+    for (int elemento : resultado15) {
         cout << elemento << " ";
     }
+    cout << endl;
 
     return 0;
 }

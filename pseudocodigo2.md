@@ -480,3 +480,34 @@ def two_opt_directed(grafo, ciclo_inicial):
     melhor_ciclo.append(melhor_ciclo[0])
     return melhor_ciclo, melhor_custo
 ```
+
+Note que, esta função possui a maior complexidade das funções implementadas anteriormente,
+sendo esta $O(R*V^3)$, visto que, no loop final, 
+
+```python
+limiar = 10
+def bus(planta):
+    planta_virtual, vertices_borda = construir_grafo_virtual(planta, limiar)
+
+    vertices_regionais = acha_vertices_regionais(planta_virtual, vertices_borda)
+
+    planta_regioes, lista_predecessores = construir_grafo_regioes(planta_virtual, vertices_regionais)
+
+    ciclo_inicial = nearest_neighbor(planta_regioes, 0)
+
+    ciclo_novo, custo_ciclo = two_opt_directed(planta_regioes, ciclo_inicial)
+
+    result = list()
+
+    for i in range(len(ciclo_novo) - 2, -1, -1):
+        vertice_atual = ciclo_novo[i]
+        next_vertice = ciclo_novo[i + 1]
+
+        predecessores = lista_predecessores[vertice_atual]
+
+        while (next_vertice != -1):
+            result.append(next_vertice)
+            next_vertice = predecessores[next_vertice]
+
+    return result
+```
