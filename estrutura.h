@@ -61,6 +61,7 @@ struct SegmentoBusca
     float distancia;
     float tempo;
     string meioTransporte;
+    bool vertical;
 
     SegmentoBusca(int vOrigem, int vDestino, float distancia, float tempo, string meioTransporte)
     {
@@ -69,6 +70,7 @@ struct SegmentoBusca
         this->distancia = distancia;
         this->tempo = tempo;
         this->meioTransporte = meioTransporte;
+        this->vertical = false;
     }
 };
 
