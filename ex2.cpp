@@ -238,7 +238,9 @@ pair<vector<int>, vector<int>> dijkstra_normal(Planta* planta, int origem)
     while (!filaPrioridade.empty())
     {
         // Pegar o vértice com menor distância
-        auto [distAtual, verticeAtual] = filaPrioridade.top();
+        pair<int, int> topo = filaPrioridade.top();
+        int distAtual = topo.first;
+        int verticeAtual = topo.second;
         
         filaPrioridade.pop();
 
@@ -317,7 +319,7 @@ vector<int> nearestNeighbor(Planta* plantaRegioes, int verticeInicial = 0)
 
     while (true)
     {
-        auto& listaAdjAtual = plantaRegioes->listaAdj[verticeAtual];
+        vector<Segmento*> listaAdjAtual = plantaRegioes->listaAdj[verticeAtual];
         float menorPeso = numeric_limits<float>::infinity();
         int proximoVertice = -1;
         Segmento* segmento_aux = nullptr;
@@ -347,7 +349,7 @@ vector<int> nearestNeighbor(Planta* plantaRegioes, int verticeInicial = 0)
     }
 
     // Adicionar o segmento que fecha o ciclo, se existir
-    auto& listaAdjAtual = plantaRegioes->listaAdj[verticeAtual];
+    vector<Segmento*> listaAdjAtual = plantaRegioes->listaAdj[verticeAtual];
     for (Segmento* segmento : listaAdjAtual)
     {
         if (segmento->vEntrada == verticeInicial)
@@ -397,7 +399,10 @@ pair<vector<int>, int> twoOptDirected(Planta* planta, const vector<int>& cicloIn
     for (int i = 0; i < n; ++i) { melhorCiclo.push_back(cicloInicial[i]); }
     vector<vector<int>> matrizAdj = gerarMatrizAdjacencia(planta);
 
-    auto [melhorCustoIda, melhorCustoVolta] = calcularCustoDirecionado(matrizAdj, melhorCiclo);
+    pair<int, int> custos = calcularCustoDirecionado(matrizAdj, melhorCiclo);
+    int melhorCustoIda = custos.first;
+    int melhorCustoVolta = custos.second;
+
     int melhorCusto = min(melhorCustoIda, melhorCustoVolta);
     bool melhorado = true;
 
@@ -413,8 +418,10 @@ pair<vector<int>, int> twoOptDirected(Planta* planta, const vector<int>& cicloIn
                 int temp = novoCiclo[j];
                 novoCiclo[j] = novoCiclo[i + 1];
                 novoCiclo[i + 1] = temp;
-
-                auto [novoCustoIda, novoCustoVolta] = calcularCustoDirecionado(matrizAdj, novoCiclo);
+                
+                pair<int, int> custos = calcularCustoDirecionado(matrizAdj, novoCiclo);
+                int novoCustoIda = custos.first;
+                int novoCustoVolta = custos.second;
 
                 int novoCusto = min(novoCustoIda, novoCustoVolta);
 

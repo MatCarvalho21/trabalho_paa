@@ -95,7 +95,7 @@ def calcula_pesos_ciclo(grafo, ciclo, start):
 
     distancias[startIndex] = 0
     end = startIndex - 1
-    if end == -1:
+    if end < 0:
         end = n - 1
 
     while start != end:

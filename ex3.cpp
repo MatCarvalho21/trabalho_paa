@@ -44,7 +44,6 @@ pair<vector<int>, vector<int>> dijkstraMetro(Planta* mstMetro, int origem)
             }
         }
     }
-
     return {distancias, predecessores};
 }
 
@@ -69,13 +68,67 @@ vector<pair<pair<int, int>, int>> achaArestasMetro(Planta* mstMetro, vector<int>
     return arestasMetro;
 }
 
-
-
-vector<pair<pair<int, int>, int>> achaArestasOnibus(Planta* planta, vector<int> cicloBus)
+vector<pair<int, float>> calculaDistTempoCiclo(Planta* planta, vector<int> ciclo, int start)
 {
-    
+    int n = ciclo.size();
+    vector<pair<int, float>> distanciasTempos;
+    distanciasTempos.resize(n);
+
+    int startIndex = -1;
+    for (int i = 0; i < n; i++)
+    {
+        if (ciclo[i] == start)
+        {
+            startIndex = i;
+            break;
+        }
+    }
+    distanciasTempos[startIndex] = {0, 0};
+
+    int endIndex = startIndex - 1;
+    if (endIndex < 0) { endIndex = n - 1; }
+
+    while (startIndex != endIndex)
+    {
+        vector<Segmento*> segmentos = planta->listaAdj[ciclo[startIndex]];
+
+        int nextIndex = (startIndex + 1) % n;
+        distanciasTempos[nextIndex] = distanciasTempos[startIndex];
+
+        for (Segmento* segmento : segmentos)
+        {
+            if (segmento->vEntrada == ciclo[nextIndex])
+            {
+                float distanciaKM = segmento->tamanho/1000.0;
+                distanciasTempos[nextIndex].first += segmento->tamanho;
+                distanciasTempos[nextIndex].second += (distanciaKM / segmento->limVel);
+                break;
+            }
+        }
+    }
+
+    return distanciasTempos;
 }
 
+vector<pair<pair<int, int>, pair<int, float>>> achaArestasOnibus(Planta* planta, vector<int> cicloBus)
+{
+    vector<int> cicloTemp = cicloBus;
+    cicloTemp.pop_back();
+
+    vector<pair<pair<int, int>, pair<int, float>>> arestasOnibus;
+
+    for (int i = 0; i < cicloTemp.size(); i++)
+    {
+        vector<pair<int, float>> distanciasTempos = calculaDistTempoCiclo(planta, cicloTemp, cicloTemp[i]);
+
+        for (int j = 0; j < cicloTemp.size(); j++)
+        {
+            if (i == j) { continue; }
+            arestasOnibus.push_back({{cicloTemp[i], cicloTemp[j]}, {distanciasTempos[j].first, distanciasTempos[j].second}});
+        }
+    }
+    return arestasOnibus;
+}
 
 
 PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, Planta* mstMetro, vector<int> estacoesMetro)
