@@ -92,3 +92,21 @@ void adicionaSegmentoAPlanta(Segmento* segmento, Planta* planta)
     ((planta -> listaAdj)[segmento -> vSaida]).push_back(segmento);
     (planta -> CEPs).insert(segmento -> CEP);
 }
+
+SegmentoBusca* newSegmentoBusca(int vOrigem, int vDestino, float tempo, string meioTransporte)
+{
+    SegmentoBusca* temp = new SegmentoBusca(vOrigem, vDestino, tempo, meioTransporte);
+    
+    temp->vOrigem = vOrigem;
+    temp->vDestino = vDestino;
+    temp->tempo = tempo;
+    temp->meioTransporte = meioTransporte;
+
+    return temp;
+}
+
+PlantaBusca* newPlantaBusca(int numVertices)
+{
+    PlantaBusca* temp = new PlantaBusca(numVertices);
+    return temp;
+}
