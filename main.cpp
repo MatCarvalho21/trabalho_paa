@@ -50,6 +50,8 @@ int main()
 
     cout << "]" << endl;
 
+    // TODO: ALGORITMOS 2 E 3 NO MAPA MANUAL
+
     //////////////////////////////////////////////////////////////////////////////////
 
     // Calculando os tempos de execução por tamanho de entrada
