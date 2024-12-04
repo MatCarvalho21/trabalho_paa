@@ -1,4 +1,4 @@
-# Questão 02
+# Questão 03
 
 ## Parâmetros
 - Planta da Cidade (Planta);
@@ -27,6 +27,111 @@ Com o grafo construido, teremos que criar um Dijkstra de certa maneira modificad
 A grande questão desse Dijkstra é que ele vai ir tendo o tempo como peso e quando chegar em uma aresta que seja ônibus ou metrô, ele vai ter que adicionar ao peso dessa aresta o tempo_acumulado (mod X) que é o tempo de espera para pegar esse determinado meio de transporte. Outra modificação é ir olhando sempre para o valor restante, vai existir verificações se é possível entrar no ônibus ou no metrô, caso não seja, essas arestas que falamos vão ter peso infinito e vão ser descosideradas pelo Dijkstra. De resto, é um Dijkstra comum que retorna uma lista de segmentos, o tempo e o valor gastos. 
 
 Com essa lista de segmentos, estrutura de dados que teremos que adaptar dos problemas anteriores, podemos encontrar a lista de meios de transporte usados.
+
+
+```python
+def dijkstra(mst, origem):
+    num_vertices = mst.listaAdj.size()
+    distancias = [float('inf')] * num_vertices
+    visitados = [False] * num_vertices
+    anteriores = [None] * num_vertices
+
+    distancias[origem] = 0
+
+    while True:
+        menor_distancia = float('inf')
+        vertice_atual = -1
+
+        for i in range(num_vertices):
+            if not visitados[i] and distancias[i] < menor_distancia:
+                menor_distancia = distancias[i]
+                vertice_atual = i
+
+        if menor_distancia == float('inf'):
+            break
+
+        adj_node = mst.listaAdj[vertice_atual].head()
+
+        while adj_node is not None:
+            vizinho = adj_node.vertex
+            peso_aresta = adj_node.weight
+
+            if not visitados[vizinho]:
+                nova_distancia = distancias[vertice_atual] + peso_aresta
+                if nova_distancia < distancias[vizinho]:
+                    distancias[vizinho] = nova_distancia
+                    anteriores[vizinho] = vertice_atual
+
+            adj_node = adj_node.next()
+
+        visitados[vertice_atual] = True
+
+    return distancias, anteriores
+```
+
+```python
+def constroi_arestas_metro(mst, lista_estacoes):
+    lista_arestas = list()
+
+    for estacao in lista_estacoes:
+        distancias, anteriores = dijkstra(mst, estacao)
+        for estacao2 in lista_estacoes:
+            if estacao = estacao2:
+                continue
+            lista_arestas.append((estacao, estacao2, distancias[estacao2]))
+
+    return lista_arestas
+```
+
+```python
+def calcula_pesos_ciclo(grafo, ciclo, start):
+    n = len(ciclo)
+    distancias = [float("inf")] * n
+
+    for i in range(n):
+        if ciclo[i] == start:
+            startIndex = i
+            break
+
+    distancias[startIndex] = 0
+    end = startIndex - 1
+    if end == -1:
+        end = n - 1
+
+    while start != end:
+        listaAdj = grafo.listaAdj[start]
+
+        nextIndex = (startIndex + 1) % n
+        nextVertex = ciclo[nextIndex]
+        distancias[nextIndex] = distancias[startIndex]
+
+        for i in range(len(listaAdj)):
+            if listaAdj[i].destino == nextVertex:
+                peso = listaAdj[i].peso
+                distancias[nextIndex] += peso
+                break
+        
+        start = nextVertex
+        startIndex = nextIndex
+
+    return peso
+```
+
+```python
+def constroi_arestas_onibus(grafo, ciclo):
+    ordem_vertices = ciclo[:-1]
+
+    for v1 in ordem_vertices:
+        pesos = calcula_pesos_ciclo(grafo, ordem_vertices, v1)
+        for v2 in ordem_vertices:
+            if v1 != v2:
+                peso = pesos[v2]
+                grafo.adiciona_aresta(v1, v2, peso)
+
+    return grafo
+```
+
+
 
 ```python
 velocidade = 5
