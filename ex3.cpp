@@ -47,9 +47,9 @@ pair<vector<int>, vector<int>> dijkstraMetro(Planta* mstMetro, int origem)
     return {distancias, predecessores};
 }
 
-vector<pair<pair<int, int>, int>> achaArestasMetro(Planta* mstMetro, vector<int> estacoesMetro)
+vector<pair<pair<int, int>, float>> achaArestasMetro(Planta* mstMetro, vector<int> estacoesMetro)
 {
-    vector<pair<pair<int, int>, int>> arestasMetro;
+    vector<pair<pair<int, int>, float>> arestasMetro;
 
     for (int i = 0; i < estacoesMetro.size(); i++)
     {
@@ -61,7 +61,7 @@ vector<pair<pair<int, int>, int>> achaArestasMetro(Planta* mstMetro, vector<int>
         {
             if (i == j) { continue; }
 
-            int peso = distancias[estacoesMetro[j]];
+            float peso = (distancias[estacoesMetro[j]])/1000.0;
             arestasMetro.push_back({{estacoesMetro[i], estacoesMetro[j]}, peso});
         }
     }
@@ -100,7 +100,7 @@ vector<pair<int, float>> calculaDistTempoCiclo(Planta* planta, vector<int> ciclo
             if (segmento->vEntrada == ciclo[nextIndex])
             {
                 float distanciaKM = segmento->tamanho/1000.0;
-                distanciasTempos[nextIndex].first += segmento->tamanho;
+                distanciasTempos[nextIndex].first += distanciaKM;
                 distanciasTempos[nextIndex].second += (distanciaKM / segmento->limVel);
                 break;
             }
