@@ -8,6 +8,9 @@
 
 using namespace std;
 
+const float VelocidadeMetro = 70.0;
+const float VelocidadeAndar = 5.0;
+
 pair<vector<int>, vector<int>> dijkstraMetro(Planta* mstMetro, int origem)
 {
     int numVertices = mstMetro->listaAdj.size();
@@ -130,18 +133,106 @@ vector<pair<pair<int, int>, pair<int, float>>> achaArestasOnibus(Planta* planta,
     return arestasOnibus;
 }
 
-
 PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, Planta* mstMetro, vector<int> estacoesMetro)
 {
     int nVertices = planta->listaAdj.size();
     PlantaBusca* plantaBusca = newPlantaBusca(nVertices * 2);
 
+    for (int i = 0; i < nVertices; i++)
+    {
+        vector<Segmento*> segmentos = planta->listaAdj[i];
+        for (Segmento* segmento : segmentos)
+        {
+            float segmentoKm = segmento->tamanho / 1000.0;
+            SegmentoBusca* segmentoAndar = newSegmentoBusca(
+                i,
+                segmento->vEntrada,
+                segmentoKm,
+                segmentoKm / VelocidadeAndar,
+                "andar"
+            );
 
+            SegmentoBusca* segmentoTaxi = newSegmentoBusca(
+                i + nVertices,
+                segmento->vEntrada + nVertices,
+                segmentoKm,
+                segmentoKm / segmento->limVel,
+                "taxi"
+            );
 
+            plantaBusca->adicionaSegmento(segmentoAndar);
+            plantaBusca->adicionaSegmento(segmentoTaxi);
+
+            SegmentoBusca* segmentoConexaoIda = newSegmentoBusca(
+                i,
+                i + nVertices,
+                0,
+                0,
+                "andar"
+            );
+
+            SegmentoBusca* segmentoConexaoVolta = newSegmentoBusca(
+                i + nVertices,
+                i,
+                0,
+                0,
+                "taxi"
+            );
+
+            plantaBusca->adicionaSegmento(segmentoConexaoIda);
+            plantaBusca->adicionaSegmento(segmentoConexaoVolta);
+
+            if (segmento->dupla) { continue; }
+            else
+            {
+                SegmentoBusca* segmentoAndar2 = newSegmentoBusca(
+                    segmento->vEntrada,
+                    i,
+                    segmentoKm,
+                    segmentoKm / VelocidadeAndar,
+                    "andar"
+                );
+                plantaBusca->adicionaSegmento(segmentoAndar2);
+            }
+        }
+    }
+
+    vector<pair<pair<int, int>, float>> arestasMetro = achaArestasMetro(mstMetro, estacoesMetro);
+
+    for (pair<pair<int, int>, float> arestaMetro : arestasMetro)
+    {
+        pair<int, int> aresta = arestaMetro.first;
+        float distancia = arestaMetro.second;
+
+        SegmentoBusca* segmentoMetro = newSegmentoBusca(
+            aresta.first,
+            aresta.second,
+            distancia,
+            distancia / VelocidadeMetro,
+            "metro"
+        );
+        plantaBusca->adicionaSegmento(segmentoMetro);
+    }
+
+    vector<pair<pair<int, int>, pair<int, float>>> arestasOnibus = achaArestasOnibus(planta, cicloBus);
+
+    for (pair<pair<int, int>, pair<int, float>> arestaOnibus : arestasOnibus)
+    {
+        pair<int, int> aresta = arestaOnibus.first;
+        pair<int, float> distTempo = arestaOnibus.second;
+
+        SegmentoBusca* segmentoOnibus = newSegmentoBusca(
+            aresta.first,
+            aresta.second,
+            distTempo.first,
+            distTempo.second,
+            "onibus"
+        );
+        plantaBusca->adicionaSegmento(segmentoOnibus);
+    }
+
+    return plantaBusca;
 }
-
-
-
 
 
 
