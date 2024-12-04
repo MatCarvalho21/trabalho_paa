@@ -146,14 +146,15 @@ vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca& grafo, int vertice_inic
 }
 
 int main(){
-    SegmentoBusca* seg1 = newSegmentoBusca(0, 1, 10, 50.0, "taxi", false);
-    SegmentoBusca* seg2 = newSegmentoBusca(1, 2, 10, 50.0, "taxi", false);
-    SegmentoBusca* seg3 = newSegmentoBusca(2, 3, 10, 100.0, "andando", false);
-    SegmentoBusca* seg4 = newSegmentoBusca(3, 4, 10, 50.0, "onibus", false);
-    SegmentoBusca* seg5 = newSegmentoBusca(4, 5, 10, 50.0, "onibus", false);
-    SegmentoBusca* seg6 = newSegmentoBusca(5, 6, 10, 25.0, "metro", false);
-    SegmentoBusca* seg7 = newSegmentoBusca(6, 7, 10, 100, "andando", false);
-    SegmentoBusca* seg8 = newSegmentoBusca(7, 8, 0, 0, "taxi", true);
+    SegmentoBusca* seg1 = newSegmentoBusca(0, 1, 10, 50.0, "taxi");
+    SegmentoBusca* seg2 = newSegmentoBusca(1, 2, 10, 50.0, "taxi");
+    SegmentoBusca* seg3 = newSegmentoBusca(2, 3, 10, 100.0, "andando");
+    SegmentoBusca* seg4 = newSegmentoBusca(3, 4, 10, 50.0, "onibus");
+    SegmentoBusca* seg5 = newSegmentoBusca(4, 5, 10, 50.0, "onibus");
+    SegmentoBusca* seg6 = newSegmentoBusca(5, 6, 10, 25.0, "metro");
+    SegmentoBusca* seg7 = newSegmentoBusca(6, 7, 10, 100, "andando");
+    SegmentoBusca* seg8 = newSegmentoBusca(7, 8, 0, 0, "taxi");
+    seg8->vertical = true;
 
     cout << "TESTE: calcula_custo_taxi()" << endl;
     cout << "Custo: " << calcula_custo_taxi(0, 1, 0.0, seg2).first << endl;
