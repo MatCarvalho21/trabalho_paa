@@ -1,4 +1,3 @@
-#include "estrutura.cpp"
 #include "ex2.h"
 #include <vector>
 #include <limits>
