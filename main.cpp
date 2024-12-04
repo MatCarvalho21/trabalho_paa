@@ -5,13 +5,6 @@
 #include "utils.h"
 #include "mapa_random.h"
 #include "ex2.h"
-#include "estrutura.cpp"
-#include "mapa.cpp"
-#include "algoritmosBase.cpp"
-#include "ex1.cpp"
-#include "utils.cpp"
-#include "mapa_random.cpp"
-// #include "ex2.cpp"
 
 #include <chrono>
 #include <fstream>
@@ -64,12 +57,12 @@ int main()
             cout << 1 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
             file << 1 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
 
-            // timeStart = high_resolution_clock::now();
-            // return2 = bus(planta);
-            // timeStop = high_resolution_clock::now();
-            // timeDuration = duration_cast<nanoseconds>(timeStop - timeStart).count();
-            // cout << 2 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
-            // file << 2 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
+            timeStart = high_resolution_clock::now();
+            return2 = bus(planta);
+            timeStop = high_resolution_clock::now();
+            timeDuration = duration_cast<nanoseconds>(timeStop - timeStart).count();
+            cout << 2 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
+            file << 2 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
         }
     }
 

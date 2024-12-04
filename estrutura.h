@@ -106,7 +106,7 @@ struct PlantaBusca
 Planta* newPlanta(int);
 Segmento* newSegmento(int, int, int, int, int, string, bool);
 Imovel* newImovel(int, int, string);
-SegmentoBusca* newSegmentoBusca(int, int, float, float, string);
+SegmentoBusca* newSegmentoBusca(int, int, float, float, string, bool);
 PlantaBusca* newPlantaBusca(int);
 void adicionaImovelASegmento(Imovel*, Segmento*);
 void adicionaSegmentoAPlanta(Segmento*, Planta*);

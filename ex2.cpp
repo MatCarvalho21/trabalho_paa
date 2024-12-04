@@ -470,7 +470,7 @@ vector<vector<int>> gerarMatrizAdjacencia(Planta* planta)
     return matriz;
 }
 
-vector<int> bus(Planta* planta, int origem = 0)
+vector<int> bus(Planta* planta, int origem)
 {
     pair<Planta*, set<int>> grafoVirutal = construir_grafo_virtual(planta, 10);
 

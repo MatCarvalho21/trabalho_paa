@@ -12,6 +12,7 @@ const float INF = numeric_limits<float>::max();
 // variáveis táxi
 float limite_metros = 10.0;
 float taxa_variavel = 2.0;
+float taxa_fixa = 5.0;
 
 // passagens
 float passagem_metro = 2.0;
@@ -40,7 +41,11 @@ pair<float, float> calcula_custo(SegmentoBusca* atual, SegmentoBusca* adjacente,
             return {passagem_onibus, distancia_taxi}; // Exemplo: custo fixo para mudar para ônibus
         }
     }
-    if (adjacente->meioTransporte == "taxi") {
+    if (adjacente->meioTransporte == "taxi" && adjacente->vertical == true){
+        return {taxa_fixa, distancia_taxi}; // Exemplo: custo fixo para mudar para táxi
+    }
+
+    if (adjacente->meioTransporte == "taxi" && adjacente->vertical == false) {
         return calcula_custo_taxi(atual->vDestino, adjacente->vDestino, distancia_taxi, adjacente);
     }
     return {0.0, distancia_taxi}; // Não muda de meio de transporte
@@ -141,12 +146,14 @@ vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca& grafo, int vertice_inic
 }
 
 int main(){
-    SegmentoBusca* seg1 = newSegmentoBusca(0, 1, 10, 50.0, "taxi");
-    SegmentoBusca* seg2 = newSegmentoBusca(1, 2, 10, 50.0, "taxi");
-    SegmentoBusca* seg3 = newSegmentoBusca(2, 3, 10, 100.0, "andando");
-    SegmentoBusca* seg4 = newSegmentoBusca(3, 4, 10, 50.0, "onibus");
-    SegmentoBusca* seg5 = newSegmentoBusca(4, 5, 10, 50.0, "onibus");
-    SegmentoBusca* seg6 = newSegmentoBusca(5, 6, 10, 25.0, "metro");
+    SegmentoBusca* seg1 = newSegmentoBusca(0, 1, 10, 50.0, "taxi", false);
+    SegmentoBusca* seg2 = newSegmentoBusca(1, 2, 10, 50.0, "taxi", false);
+    SegmentoBusca* seg3 = newSegmentoBusca(2, 3, 10, 100.0, "andando", false);
+    SegmentoBusca* seg4 = newSegmentoBusca(3, 4, 10, 50.0, "onibus", false);
+    SegmentoBusca* seg5 = newSegmentoBusca(4, 5, 10, 50.0, "onibus", false);
+    SegmentoBusca* seg6 = newSegmentoBusca(5, 6, 10, 25.0, "metro", false);
+    SegmentoBusca* seg7 = newSegmentoBusca(6, 7, 10, 100, "andando", false);
+    SegmentoBusca* seg8 = newSegmentoBusca(7, 8, 0, 0, "taxi", true);
 
     cout << "TESTE: calcula_custo_taxi()" << endl;
     cout << "Custo: " << calcula_custo_taxi(0, 1, 0.0, seg2).first << endl;
@@ -174,6 +181,10 @@ int main(){
     cout << "TESTE: calcula_custo() - Ônibus to Metrô" << endl;
     cout << "Custo: " << calcula_custo(seg5, seg6, 100).first << endl;
     cout << "Distância: " << calcula_custo(seg5, seg6, 100).second << endl;
+
+    cout << "TESTE: calcula_custo() - Andando to Táxi (vertical)" << endl;
+    cout << "Custo: " << calcula_custo(seg7, seg8, 0).first << endl;
+    cout << "Distância: " << calcula_custo(seg7, seg8, 0).second << endl;
 
     return 0; 
 }
