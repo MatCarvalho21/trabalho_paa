@@ -70,7 +70,6 @@ struct SegmentoBusca
         this->distancia = distancia;
         this->tempo = tempo;
         this->meioTransporte = meioTransporte;
-        this->vertical = false;
     }
 };
 
