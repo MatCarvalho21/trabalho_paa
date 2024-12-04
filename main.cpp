@@ -3,14 +3,14 @@
 #include "algoritmosBase.h"
 #include "algoritmos.h"
 #include "utils.h"
-#include "mapa_random.h"
+#include "mapaRandom.h"
 #include "ex2.h"
 #include "estrutura.cpp"
 #include "mapa.cpp"
 #include "algoritmosBase.cpp"
 #include "algoritmos.cpp"
 #include "utils.cpp"
-#include "mapa_random.cpp"
+#include "mapaRandom.cpp"
 // #include "ex2.cpp"
 
 #include <chrono>

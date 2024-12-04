@@ -8,7 +8,7 @@
 #include <iostream>
 #include <queue>
 #include <utility>
-#include "mapa_random.h"
+#include "mapaRandom.h"
 
 using namespace std;
 
