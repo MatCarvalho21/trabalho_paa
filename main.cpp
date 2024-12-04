@@ -4,58 +4,76 @@
 #include "ex1.h"
 #include "utils.h"
 #include "mapa_random.h"
+#include "ex2.h"
 #include "estrutura.cpp"
 #include "mapa.cpp"
 #include "algoritmosBase.cpp"
 #include "ex1.cpp"
 #include "utils.cpp"
 #include "mapa_random.cpp"
+// #include "ex2.cpp"
+
+#include <chrono>
+#include <fstream>
+#include <string>
+
+using namespace std::chrono;
+using namespace std;
 
 int main()
 {
     // Planta* planta = newPlanta(130);
-
     // carregaJSON("data/mapa.json", planta);
 
+    ofstream file("times.csv", ios::out);
 
-
-    // // Chama a função para imprimir o set
-    // printSet(ex1);
-
-    Planta* planta = geraPlantaAutomatica(200, 300);
-    
-
-    // for (int i = 0; i < planta -> listaAdj.size(); i++)
-    // {
-    //     vector<Segmento*> segs = planta -> listaAdj[i];
-    //     for (int j = 0; j < segs.size(); j++)
-    //     {
-    //         Segmento* seg = segs[j];
-    //         cout << "Segmento:" << endl;
-    //         cout << "   vSaida: " << seg -> vSaida << endl;
-    //         cout << "   vEntrada: " << seg -> vEntrada << endl;
-    //         cout << "   CEP: " << seg -> CEP << endl;
-    //         cout << "   " << endl;
-    //     }
-    // }
-
-    // Chama a função subway e armazena o resultado em um std::pair
-    pair<vector<int>, vector<Segmento*>> resultado = subway(planta, 200);
-
-    // Separando os valores do par
-    vector<int> menorRota = resultado.first;
-    vector<Segmento*> segmentosRota = resultado.second;
-
-
-    for (int i = 0; i < segmentosRota.size(); i++)
-    {
-        Segmento* seg = segmentosRota[i];
-        cout << "Segmento:" << endl;
-        cout << "   vSaida: " << seg -> vSaida << endl;
-        cout << "   vEntrada: " << seg -> vEntrada << endl;
-        cout << "   CEP: " << seg -> CEP << endl;
-        cout << "   " << endl;
+    if (!file.is_open()) {
+        std::cerr << "Erro ao abrir o arquivo!" << std::endl;
+        return 1;
     }
+
+    file << "problem, V, E, time;" << endl;
+
+    vector<int> Es(3);
+    Planta* planta;
+    pair<vector<int>, vector<Segmento*>> return1;
+    vector<int> return2;
+
+    for (int V = 10; V <= 10000; V = V * 10)
+    {
+        Es[0] = V;
+        Es[1] = 2*V;
+        Es[2] = 3*V - 6;
+
+        for (int i = 0; i <= 2; i++)
+        {
+            int E = Es[i];
+
+            planta = geraPlantaAutomatica(V, E);
+
+            if (planta == nullptr)
+            {
+                cout << "Planta inadequada" << endl;
+                return 1;
+            }
+            
+            auto timeStart = high_resolution_clock::now();
+            return1 = subway(planta, V);
+            auto timeStop = high_resolution_clock::now();
+            auto timeDuration = duration_cast<nanoseconds>(timeStop - timeStart).count();
+            cout << 1 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
+            file << 1 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
+
+            // timeStart = high_resolution_clock::now();
+            // return2 = bus(planta);
+            // timeStop = high_resolution_clock::now();
+            // timeDuration = duration_cast<nanoseconds>(timeStop - timeStart).count();
+            // cout << 2 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
+            // file << 2 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
+        }
+    }
+
+    file.close();
 
     return 0;
 }
