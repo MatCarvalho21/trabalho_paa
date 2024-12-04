@@ -14,23 +14,23 @@
 
 ## Passo a Passo
 
-Vamos receber a planta da cidade, mas vamos operar em um grafo virtual e para contruir ele vamos precisar adicionar arestas. 
+Vamos receber a planta da cidade, mas vamos operar em um grafo virtual e para contruir ele vamos precisar adicionar arestas.
 
 Primeiramente, para todo vértice conectado, vamos adicionar uma indo e uma voltando entre eles. Elas vão ser referentes ao trajeto andando (ele independe do segmento ser mão dupla ou não). Como peso, ela vai ter o tempo gasto percorrendo a pé (5km/h).
 
 Logo em seguida, vou adicionar mais arestas ao grafo virtual, dessa vez referente ao metrô. Vou conectar diretamente as estações e os seus pesos vão ser o tempo para ir de uma estação para a outra.
 
-Por fim, vou adicionar ainda mais arestas, agora entre todos os vértices que compõe a rota de ônibus. A ideia é criar um grafo completo ligando todas esses vértices entre si e o peso de cada uma dessas arestas, digamos A(i,j) é o tempo gasto de ônibus para ir da aresta i para a aresta j seguindo a rota e o sentido da linha de ônibus. Lembrando que i e j são arestas da linha de ônibus. 
+Por fim, vou adicionar ainda mais arestas, agora entre todos os vértices que compõe a rota de ônibus. A ideia é criar um grafo completo ligando todas esses vértices entre si e o peso de cada uma dessas arestas, digamos A(i,j) é o tempo gasto de ônibus para ir da aresta i para a aresta j seguindo a rota e o sentido da linha de ônibus. Lembrando que i e j são arestas da linha de ônibus.
 
 Com o grafo construido, teremos que criar um Dijkstra de certa maneira modificado, mas que vai conseguir identificar exatamente qual o melhor caminho.
 
-A grande questão desse Dijkstra é que ele vai ir tendo o tempo como peso e quando chegar em uma aresta que seja ônibus ou metrô, ele vai ter que adicionar ao peso dessa aresta o tempo_acumulado (mod X) que é o tempo de espera para pegar esse determinado meio de transporte. Outra modificação é ir olhando sempre para o valor restante, vai existir verificações se é possível entrar no ônibus ou no metrô, caso não seja, essas arestas que falamos vão ter peso infinito e vão ser descosideradas pelo Dijkstra. De resto, é um Dijkstra comum que retorna uma lista de segmentos, o tempo e o valor gastos. 
+A grande questão desse Dijkstra é que ele vai ir tendo o tempo como peso e quando chegar em uma aresta que seja ônibus ou metrô, ele vai ter que adicionar ao peso dessa aresta o tempo_acumulado (mod X) que é o tempo de espera para pegar esse determinado meio de transporte. Outra modificação é ir olhando sempre para o valor restante, vai existir verificações se é possível entrar no ônibus ou no metrô, caso não seja, essas arestas que falamos vão ter peso infinito e vão ser descosideradas pelo Dijkstra. De resto, é um Dijkstra comum que retorna uma lista de segmentos, o tempo e o valor gastos.
 
 Com essa lista de segmentos, estrutura de dados que teremos que adaptar dos problemas anteriores, podemos encontrar a lista de meios de transporte usados.
 
 
 ```python
-def dijkstra(mst, origem):
+def dijkstra_metro(mst, origem):
     num_vertices = mst.listaAdj.size()
     distancias = [float('inf')] * num_vertices
     visitados = [False] * num_vertices
@@ -180,3 +180,152 @@ def dijkstra_adapitado(plantaVirtual, origem, destino, dinheiro):
         
 
 ```
+
+``` 
+    t = limite de tempo
+
+    Heap tempHeap = newHeap()
+
+    vetor<int> = times(num_vertices, MAX_INT)
+    vetor<int> = parents(num_vertices, -1)
+
+    times[vertice_inicial] = 0
+    parents[vertice_inicial] = vertice_inicial
+    temp_heap.add((0, vertice_inicial))
+
+    while !tempHeap.empty(): 
+        (dist, w) = tempHeap.topElement()
+        tempHeap.removeTopElement()
+        if w = vertice_inicial:
+            break
+        vector<Segmentos*> edges = w.listaAdj
+        // each_aresta (w, x)
+        for each_aresta in edges:
+            newTime = times[w] + each_aresta.tempo
+            if newTime < t and newTime < times[x]:
+                times[x] = newTime
+                parents[x] = w
+                newDist = dist + each_aresta.size()
+                heap.add(newDist, x)
+
+    if parent[num_vertices] = -1
+        return []
+    
+    vector<int> iPath; 
+            
+```
+
+```
+distancia_taxi = 0
+dinheiro_restante = X
+tempo_total = 0
+
+taxa_fixa = 10
+lim_metros = 2000
+taxa_variavel = 0.002
+
+calcula_pço_taxi(distancia_taxi)
+    int dist_variavel = distancia_taxi - lim_metros;
+    if dist_variavel <= 0:
+        return 0 // pois já foi discontada na hora de descer para o nível 2
+    else:
+        return taxa_fixa + taxa_variavel*dist_variavel
+
+se eu to no nível 2, ou seja, no grafo dos táxis 
+na hora de consultar o custo para se mover para uma nova aresta vai ser dado por essa função (calcula_pço_taxi)
+toda vez que eu percorrer uma aresta no grafo de baixo distancia_taxi deve ser atualizado
+quando eu sair do nível 2, distancia_taxi deve ser zerado
+quando ao que o dijstra vai olhar, vai ser o tempo que é um atributo de Segmento e vai ser somado somente no final do dijkstra, quando tivermos a sequência de segmentos
+para ir do grafo2 custa a taxa fixa (quer dizer que entrei no taxi)
+sair do grafo 2 não custa nada, significa que desci do táxi
+no grafo de cima ainda vou ter a variável de custo, ela só vai ser subtraida quando entrar no ônibus ou no metrô (caso não seja suficiente, ignora aquele meio de transporte), ent tenho que verificar qual tipo de aresta estou percorrendo (a questão do tempo não importa, visto que ele tá administrando)
+a ideia é retornar um vetor de segmentos, o tempo gasto e quanto custou 
+
+def dijkstra_custo(grafo, lim_dinheiro)
+    nivel_anterior = -1
+    nivel_atual = 1
+    distancia_taxi = 0
+    vector<int> lista_segmentos;
+
+    Heap tempHeap = newHeap()
+    vetor<int> = cost(num_vertices, MAX_INT)
+    vetor<int> = parents(num_vertices, -1)
+
+    cost[vertice_inicial] = 0
+    parents[vertice_inicial] = vertice_inicial
+    temp_heap.add((0, vertice_inicial)) // 0 é o tempo gasto para chegar no vértice inicial
+
+    while !tempHeap.empty():
+        (tempo, vertice_atual) = tempHeap.topElement()
+        tempHeap.removeTopElement()
+        if vertice_atual = vertice_inicial:
+            break
+        nivel_atual = vertice_atual.nivel
+        vector<Segmentos*> edges = vertice_atual.listaAdj
+
+        // each_aresta (vertice_atual, cada_adjacente)
+        for each_aresta in edges:
+            custo_aux, dist_taxi = calcula_custo(vertice_atual, cada_adjacente, distancia_taxi)
+            newCost = cost[vertice_atual] + custo_aux
+            if newCost < lim_dinheiro and newCost < cost[cada_adjacente]:
+                cost[cada_adjacente] = newCost
+                parents[cada_adjacente] = vertice_atual
+                newTime = tempo + each_aresta.custo() // nesse caso o custo é o tempo
+                heap.add(newTime, cada_adjacente)
+
+    // lista vazia
+    if parents[vertice_inicial] = -1:
+        return []
+
+    iPath = []  # Lista vazia para armazenar o caminho
+
+    vertice_atual = vertice_inicial
+
+    # Reconstrói o caminho a partir do vetor de pais
+    while vertice_atual != parents[vertice_atual]:
+        iPath.append(vertice_atual)  # Adiciona o vértice ao caminho
+        vertice_atual = parents[vertice_atual]  # Move para o próximo vértice no caminho
+
+    path = []
+    for i in ipath.size() a 1:
+        adiciona ipath[i] a path
+    
+    return path 
+
+
+    
+
+def calcula_custo(vertice_atual, vertice_adjacente, dist_taxi):
+    // entrei no metro cindo de outro meio de transporte
+    if vertice_atual.MT != "metro" and vertice_adjacente.MT == "metro":
+        return passagem_metro, dist_taxi
+    
+    // entrei no onibus vindo de outro meio de transporte
+    if vertice_atual.MT != "onibus" and vertice_adjacente.MT == "onibus":
+        return passagem_onibus, dist_taxi
+
+    // vou do nível 1 para o nível 2
+    if vertice_atual.MT != "taxi" and vertice_adjacente.MT = "taxi":
+        return taxa_fixa_taxi, dist_taxi
+
+    // percorrendo arestas no nível 2
+    if vertice_atual.MT == "taxi" and vertice_adjacente.MT = "taxi":
+        // vai retornar o custo e a nova dist_taxi
+        return calcula_custo_taxi(vertice_atual, vertice_adjacente, dist_taxi)   
+
+    return 0, dist_taxi  
+
+def calcula_custo_taxi(vertice_atual, vertice_adjacente, dist_taxi):
+    segmento = encontra_segmento(vertice_atual, vertice_adjacente)
+    distancia = dist_taxi + segmento.tamanho
+    custo = 0
+
+    int dist_variavel = distancia - lim_metros;
+    if dist_variavel <= 0:
+        custo = 0
+    else:
+        custo =  taxa_variavel*dist_variavel
+
+    return custo, distancia
+```
+
