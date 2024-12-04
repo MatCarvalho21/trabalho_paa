@@ -8,209 +8,10 @@
 #include <iostream>
 #include <queue>
 #include <utility>
+#include "mapa_random.h"
 
 using namespace std;
 
-int main(){
-    cout << "\nTESTE: calcula_peso() \n" <<endl;
-
-    // Criação da planta com 6 vértices
-    Planta* plantaTeste = newPlanta(6);  // Cria a planta com 6 vértices
-
-    // Criação dos segmentos entre os vértices
-    Segmento* segmento1 = newSegmento(0, 1, 60, 250, 1, "Rua A", true);
-    Segmento* segmento2 = newSegmento(1, 2, 60, 250, 1, "Rua B", true);
-    Segmento* segmento3 = newSegmento(2, 3, 60, 250, 2, "Rua C", true);
-    Segmento* segmento4 = newSegmento(3, 4, 60, 250, 2, "Rua D", true);
-    Segmento* segmento5 = newSegmento(4, 5, 60, 250, 3, "Rua E", true);
-    Segmento* segmento6 = newSegmento(5, 0, 60, 250, 3, "Rua F", true);
-
-    // Criando mais segmentos para obter 18 arestas no total
-    Segmento* segmento7 = newSegmento(0, 2, 60, 250, 4, "Rua G", true);
-    Segmento* segmento8 = newSegmento(1, 3, 60, 250, 4, "Rua H", true);
-    Segmento* segmento9 = newSegmento(2, 4, 60, 250, 5, "Rua I", true);
-    Segmento* segmento10 = newSegmento(3, 5, 60, 250, 5, "Rua J", true);
-    Segmento* segmento11 = newSegmento(4, 0, 60, 250, 6, "Rua K", true);
-    Segmento* segmento12 = newSegmento(5, 1, 60, 250, 6, "Rua L", true);
-
-    // Segmentos adicionais para completar o número de arestas
-    Segmento* segmento13 = newSegmento(0, 3, 60, 250, 1, "Rua M", true);
-    Segmento* segmento14 = newSegmento(1, 4, 60, 250, 2, "Rua N", true);
-    Segmento* segmento15 = newSegmento(2, 5, 60, 250, 3, "Rua O", true);
-    Segmento* segmento16 = newSegmento(3, 0, 60, 250, 4, "Rua P", true);
-    Segmento* segmento17 = newSegmento(4, 1, 60, 250, 5, "Rua Q", true);
-    Segmento* segmento18 = newSegmento(5, 2, 60, 250, 6, "Rua R", true);
-
-    // Adicionando os segmentos à planta
-    adicionaSegmentoAPlanta(segmento1, plantaTeste);
-    adicionaSegmentoAPlanta(segmento2, plantaTeste);
-    adicionaSegmentoAPlanta(segmento3, plantaTeste);
-    adicionaSegmentoAPlanta(segmento4, plantaTeste);
-    adicionaSegmentoAPlanta(segmento5, plantaTeste);
-    adicionaSegmentoAPlanta(segmento6, plantaTeste);
-    adicionaSegmentoAPlanta(segmento7, plantaTeste);
-    adicionaSegmentoAPlanta(segmento8, plantaTeste);
-    adicionaSegmentoAPlanta(segmento9, plantaTeste);
-    adicionaSegmentoAPlanta(segmento10, plantaTeste);
-    adicionaSegmentoAPlanta(segmento11, plantaTeste);
-    adicionaSegmentoAPlanta(segmento12, plantaTeste);
-    adicionaSegmentoAPlanta(segmento13, plantaTeste);
-    adicionaSegmentoAPlanta(segmento14, plantaTeste);
-    adicionaSegmentoAPlanta(segmento15, plantaTeste);
-    adicionaSegmentoAPlanta(segmento16, plantaTeste);
-    adicionaSegmentoAPlanta(segmento17, plantaTeste);
-    adicionaSegmentoAPlanta(segmento18, plantaTeste);
-
-    // Adicionando imóveis diferentes para cada segmento
-    adicionaImovelASegmento(newImovel(300, 5, "comercial"), segmento1);
-    adicionaImovelASegmento(newImovel(350, 10, "residencial"), segmento1);
-    adicionaImovelASegmento(newImovel(400, 15, "industrial"), segmento1);
-    adicionaImovelASegmento(newImovel(450, 20, "comercial"), segmento1);
-    adicionaImovelASegmento(newImovel(500, 25, "industrial"), segmento1);
-
-    adicionaImovelASegmento(newImovel(250, 5, "residencial"), segmento2);
-    adicionaImovelASegmento(newImovel(200, 10, "comercial"), segmento2);
-    adicionaImovelASegmento(newImovel(150, 15, "industrial"), segmento2);
-    adicionaImovelASegmento(newImovel(100, 20, "residencial"), segmento2);
-    adicionaImovelASegmento(newImovel(50, 25, "industrial"), segmento2);
-
-    adicionaImovelASegmento(newImovel(500, 5, "turismo"), segmento3);
-    adicionaImovelASegmento(newImovel(400, 10, "residencial"), segmento3);
-    adicionaImovelASegmento(newImovel(350, 15, "industrial"), segmento3);
-    adicionaImovelASegmento(newImovel(300, 20, "comercial"), segmento3);
-    adicionaImovelASegmento(newImovel(450, 25, "industrial"), segmento3);
-
-    adicionaImovelASegmento(newImovel(350, 5, "comercial"), segmento4);
-    adicionaImovelASegmento(newImovel(300, 10, "residencial"), segmento4);
-    adicionaImovelASegmento(newImovel(400, 15, "industrial"), segmento4);
-    adicionaImovelASegmento(newImovel(250, 20, "residencial"), segmento4);
-    adicionaImovelASegmento(newImovel(100, 25, "turismo"), segmento4);
-
-    adicionaImovelASegmento(newImovel(200, 5, "residencial"), segmento5);
-    adicionaImovelASegmento(newImovel(500, 10, "industrial"), segmento5);
-    adicionaImovelASegmento(newImovel(350, 15, "comercial"), segmento5);
-    adicionaImovelASegmento(newImovel(250, 20, "industrial"), segmento5);
-    adicionaImovelASegmento(newImovel(400, 25, "comercial"), segmento5);
-
-    adicionaImovelASegmento(newImovel(100, 5, "industrial"), segmento6);
-    adicionaImovelASegmento(newImovel(150, 10, "turismo"), segmento6);
-    adicionaImovelASegmento(newImovel(250, 15, "turismo"), segmento6);
-    adicionaImovelASegmento(newImovel(300, 20, "industrial"), segmento6);
-    adicionaImovelASegmento(newImovel(450, 25, "comercial"), segmento6);
-
-    cout << "Peso do segmento 1: " << calcula_peso(*segmento1) << endl;
-    cout << "Peso do segmento 2: " << calcula_peso(*segmento2) << endl;
-    cout << "Peso do segmento 3: " << calcula_peso(*segmento3) << endl;
-    cout << "Peso do segmento 4: " << calcula_peso(*segmento4) << endl;
-    cout << "Peso do segmento 5: " << calcula_peso(*segmento5) << endl;
-    cout << "Peso do segmento 6: " << calcula_peso(*segmento6) << endl;
-    
-    cout << "\nTESTE: construir_grafo_virtual() \n" <<endl;
-
-    pair<Planta*, set<int>> resultado = construir_grafo_virtual(plantaTeste, 100);
-
-    cout << "Vértices da Borda: ";
-    for (int elemento : resultado.second) {
-        cout << elemento << " ";
-    }
-    cout << endl;
-
-    cout << "\nTESTE: dijkstra_regional() \n" <<endl;
-
-    Planta* plantaAux = newPlanta(5);
-    Segmento* segmento1aux = newSegmento(0, 1, 60, 1, 1, "Rua A", false);
-    Segmento* segmento2aux = newSegmento(1, 2, 60, 1, 1, "Rua A", false);
-    Segmento* segmento3aux = newSegmento(2, 3, 60, 1, 1, "Rua A", false);
-    Segmento* segmento4aux = newSegmento(3, 4, 60, 1, 1, "Rua A", false);
-    Segmento* segmento5aux = newSegmento(4, 0, 60, 1, 1, "Rua A", false);
-    adicionaSegmentoAPlanta(segmento1aux, plantaAux);
-    adicionaSegmentoAPlanta(segmento2aux, plantaAux);
-    adicionaSegmentoAPlanta(segmento3aux, plantaAux);
-    adicionaSegmentoAPlanta(segmento4aux, plantaAux);
-    adicionaSegmentoAPlanta(segmento5aux, plantaAux);
-
-    pair<vector<int>, vector<int>> resultado2 = dijkstra_regional(plantaAux, 0, 1);
-
-    cout << "Distâncias mínimas: "; 
-    for (int elemento : resultado2.first) {
-        cout << elemento << " ";
-    }
-    cout << endl;
-
-    cout << "Predecessores: ";
-    for (int elemento : resultado2.second) {
-        cout << elemento << " ";
-    }
-    cout << endl;
-
-    cout << "\nTESTE: encontrarVerticesOtimos() \n" <<endl;
-
-    vector<int> verticesOtimos = encontrarVerticesOtimos(plantaTeste, resultado.second, 1);
-
-    cout << "Vértices Ótimos: ";
-    for (int elemento : verticesOtimos) {
-        cout << elemento << " ";
-    }
-    cout << endl;
-
-    cout << "\nTESTE: nearestNeighbor() \n" <<endl;
-
-    pair<vector<int>, vector<Segmento*>> ciclos = nearestNeighbor(plantaAux, 0);
-
-    cout << "Ciclo: ";
-    for (int elemento : ciclos.first) {
-        cout << elemento << " ";
-    }
-    cout << endl;
-
-    cout << "Segmentos: ";
-    for (Segmento* elemento : ciclos.second) {
-        cout << "(" << elemento->vSaida << ", " << elemento->vEntrada << ")" << " ";
-    }
-    cout << endl;
-
-    cout << "\nTESTE: calcularCustoDirecionado() \n" <<endl;
-
-    pair<int, int> custo = calcularCustoDirecionado(plantaAux, ciclos.first);
-
-    cout << "Custo Ida: " << custo.first << endl;
-    cout << "Custo Volta: " << custo.second << endl;
-
-    cout << "\nTESTE: twoOptDirected() \n" <<endl;
-
-    pair<vector<int>, int> cicloOtimizado = twoOptDirected(plantaAux, ciclos.first);
-
-    cout << "Ciclo Otimizado: ";
-    for (int elemento : cicloOtimizado.first) {
-        cout << elemento << " ";
-    }
-
-    cout << "\nCusto do Ciclo Otimizado: " << cicloOtimizado.second << endl;
-
-    cout << "\nTESTE: gerarMatrizAdjacencia() \n" <<endl;
-
-    vector<vector<float>> matriz = gerarMatrizAdjacencia(plantaAux);
-
-    cout << "Matriz de Adjacência: " << endl;
-    for (vector<float> linha : matriz) {
-        for (float elemento : linha) {
-            cout << elemento << " ";
-        }
-        cout << endl;
-    }
-
-    vector<vector<float>> matriz2 = gerarMatrizAdjacencia(plantaTeste);
-
-    cout << "Matriz de Adjacência: " << endl;
-    for (vector<float> linha : matriz2) {
-        for (float elemento : linha) {
-            cout << elemento << " ";
-        }
-        cout << endl;
-    }
-
-    return 0;
-}
 
 /// @brief Função para calcular o peso de um segmento com base nos tipos de imóveis.
 /// @param segmento Estrutura Segmento contendo o vetor de imóveis.
@@ -257,27 +58,28 @@ pair<Planta*, set<int>> construir_grafo_virtual(Planta* planta, int limiar) {
 
         // Itera sobre os segmentos (arestas) de saída do vértice i
         for (Segmento* temp_node : lista_aux) {
-            aux_set.insert(temp_node->CEP); // Adiciona o CEP do segmento ao conjunto auxiliar
-
             // Calcula o novo peso ajustado
             int novo_peso = calcula_peso(*temp_node);
 
             // Cria um novo segmento com o peso ajustado
             Segmento* temp_segmento = newSegmento(
-                temp_node->vSaida,
-                temp_node->vEntrada,
-                temp_node->limVel,
-                limiar + novo_peso,
-                temp_node->CEP,
-                temp_node->rua,
-                temp_node->dupla
+                temp_node->vSaida,       // Vértice de saída
+                temp_node->vEntrada,     // Vértice de entrada
+                temp_node->limVel,       // Limite de velocidade
+                limiar + novo_peso,     // Peso ajustado com o limiar
+                temp_node->CEP,          // CEP (identificador da rua/região)
+                temp_node->rua,          // Nome da rua
+                temp_node->dupla         // Dupla direção (se aplicável)
             );
 
-            // Adiciona o novo segmento ao grafo virtual
+            // Adiciona o CEP do segmento ao conjunto auxiliar
+            aux_set.insert(temp_node->CEP);
+
+            // Adiciona o novo segmento ao grafo virtual (ajusta a lista de adjacência)
             planta_virtual->listaAdj[temp_node->vSaida].push_back(temp_segmento);
         }
 
-        // Verifica se há mais de um CEP único no conjunto auxiliar
+        // Verifica se há mais de um CEP único no conjunto auxiliar (vértices de borda)
         if (aux_set.size() > 1) {
             vertices_borda.insert(i); // Marca o vértice como de borda
         }
@@ -286,6 +88,7 @@ pair<Planta*, set<int>> construir_grafo_virtual(Planta* planta, int limiar) {
     // Retorna o grafo virtual e o conjunto de vértices de borda
     return {planta_virtual, vertices_borda};
 }
+
 
 /// @brief Aplica o algoritmo de Dijkstra para calcular distâncias mínimas dentro de uma região específica.
 /// @param planta Ponteiro para a estrutura Planta representando o grafo da região.
@@ -350,10 +153,10 @@ pair<vector<int>, vector<int>> dijkstra_regional(Planta* planta, int origem, int
 /// @param verticesBorda Conjunto de vértices de borda do grafo.
 /// @param cepRegiao Inteiro identificador da região para restringir os cálculos.
 /// @return Vetor de inteiros contendo os índices dos vértices ótimos.
-vector<int> encontrarVerticesOtimos(Planta* planta, const set<int>& verticesBorda, int cepRegiao)
+int encontrarVerticeOtimo(Planta* planta, const set<int>& verticesBorda, int cepRegiao)
 {
     int numVertices = planta->listaAdj.size();
-    vector<int> verticesOtimos;
+    int verticeOtimo;
     float menorMediaDistancias = numeric_limits<float>::infinity();
 
     for (int vertice = 0; vertice < numVertices; ++vertice)
@@ -383,12 +186,119 @@ vector<int> encontrarVerticesOtimos(Planta* planta, const set<int>& verticesBord
         if (mediaDistancias < menorMediaDistancias)
         {
             menorMediaDistancias = mediaDistancias;
-            verticesOtimos.clear();
-            verticesOtimos.push_back(vertice);
+            verticeOtimo = vertice;
         }
     }
 
-    return verticesOtimos;
+    return verticeOtimo;
+}
+
+/// @brief Encontra os vértices ótimos para todas as regiões especificadas.
+/// @param planta Ponteiro para a estrutura Planta representando o grafo da região.
+/// @param verticesBorda Conjunto de vértices de borda do grafo.
+/// @return Vetor de vetores, onde cada vetor interno contém os índices dos vértices ótimos de uma região.
+vector<int> achaVerticesRegionais(Planta* planta, const set<int>& verticesBorda)
+{
+    vector<int> verticesOtimosPorRegiao;
+
+    // Iterar diretamente sobre os CEPs do set na estrutura Planta
+    for (int cep : planta->CEPs)
+    {
+        // Chama a função encontrarVerticeOtimo para cada CEP
+        int verticeOtimo = encontrarVerticeOtimo(planta, verticesBorda, cep);
+
+        // Adiciona os vértices ótimos dessa região à lista final
+        verticesOtimosPorRegiao.push_back(verticeOtimo);
+    }
+
+    return verticesOtimosPorRegiao;
+}
+
+/// @brief Executa o algoritmo de Dijkstra para encontrar as menores distâncias e os caminhos mais curtos.
+/// @param planta Ponteiro para a estrutura Planta representando o grafo.
+/// @param origem Índice do vértice de origem.
+/// @return Um par contendo:
+///         - Um vetor de distâncias mínimas do vértice de origem para todos os outros.
+///         - Um vetor de predecessores usado para reconstruir os caminhos.
+pair<vector<int>, vector<int>> dijkstra_normal(Planta* planta, int origem)
+{
+    int numVertices = planta->listaAdj.size();
+
+    // Inicialização
+    vector<int> distancias(numVertices, numeric_limits<int>::max());
+    vector<int> predecessores(numVertices, -1); // Para reconstruir o caminho
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> filaPrioridade;
+
+    // A distância para o vértice de origem é 0
+    distancias[origem] = 0;
+    filaPrioridade.push({0, origem});
+
+    while (!filaPrioridade.empty())
+    {
+        // Pegar o vértice com menor distância
+        auto [distAtual, verticeAtual] = filaPrioridade.top();
+        filaPrioridade.pop();
+
+        // Ignorar se a distância atual for maior que a registrada (lazy removal)
+        if (distAtual > distancias[verticeAtual])
+            continue;
+
+        // Processar todos os vizinhos do vértice atual
+        for (Segmento* segmento : planta->listaAdj[verticeAtual])
+        {
+            int vizinho = segmento->vEntrada;
+            int peso = segmento->tamanho;
+
+            // Relaxar a aresta
+            if (distancias[verticeAtual] + peso < distancias[vizinho])
+            {
+                distancias[vizinho] = distancias[verticeAtual] + peso;
+                predecessores[vizinho] = verticeAtual;
+                filaPrioridade.push({distancias[vizinho], vizinho});
+            }
+        }
+    }
+
+    return {distancias, predecessores};
+}
+
+/// @brief Constrói um grafo completo conectando vértices ótimos, onde o peso das arestas é a distância mínima calculada pelo Dijkstra.
+/// @param plantaOriginal Ponteiro para a planta original contendo todos os segmentos e vértices.
+/// @param verticesOtimos Vetor de vértices ótimos identificados.
+/// @return Ponteiro para o grafo completo das regiões (planta virtual).
+pair<Planta*, vector<vector<int>>> construirGrafoRegioes(Planta* plantaOriginal, const vector<int>& verticesOtimos)
+{
+    // Criar a planta virtual (grafo da região)
+    Planta* plantaVirtual = new Planta();
+    plantaVirtual->listaAdj.resize(verticesOtimos.size());
+    vector<vector<int>> listaPredecessores;
+    listaPredecessores.resize(verticesOtimos.size());
+    // Iterar sobre todos os pares de vértices ótimos
+    for (size_t i = 0; i < verticesOtimos.size(); ++i)
+    {
+        int vertice1 = verticesOtimos[i];
+
+        // Executar Dijkstra a partir do vértice atual
+        auto [distancias, predecessores] = dijkstra_normal(plantaOriginal, vertice1);
+        listaPredecessores[i] = predecessores;
+
+        for (size_t j = 0; j < verticesOtimos.size(); ++j)
+        {
+            int vertice2 = verticesOtimos[j];
+
+            // Garantir que não conectamos o vértice a ele mesmo
+            if (vertice1 != vertice2 && distancias[vertice2] != numeric_limits<int>::max())
+            {
+                // Criar um segmento virtual entre vertice1 e vertice2 com o peso sendo a distância do Dijkstra
+                Segmento* segmentoVirtual = newSegmento(vertice1, vertice2, 0, distancias[vertice2], 0, "Virtual", false);
+
+                // Adicionar o segmento à planta virtual
+                plantaVirtual->listaAdj[vertice1].push_back(segmentoVirtual);
+            }
+        }
+    }
+
+    return make_pair(plantaVirtual, listaPredecessores);
 }
 
 /// @brief Aplica a heurística do vizinho mais próximo para encontrar um ciclo no grafo.
@@ -458,82 +368,23 @@ pair<vector<int>, vector<Segmento*>> nearestNeighbor(Planta* plantaRegioes, int 
 /// @param planta Ponteiro para a estrutura Planta representando o grafo.
 /// @param ciclo Vetor de inteiros representando o ciclo (sequência de vértices).
 /// @return Um par contendo o custo total na ordem de ida e na ordem de volta.
-pair<int, int> calcularCustoDirecionado(Planta* planta, const vector<int>& ciclo)
+pair<int, int> calcularCustoDirecionado(const vector<vector<int>> matrizAdj, const vector<int>& ciclo)
 {
     int custoIda = 0, custoVolta = 0;
     int n = ciclo.size();
 
     for (int i = 0; i < n - 1; ++i)
     {
-        int vSaida = ciclo[i];
-        int vEntrada = ciclo[i + 1];
-        bool encontrouAresta = false;
+        int j = n - 1 - i;
 
-        // Busca a aresta na lista de adjacência
-        for (Segmento* segmento : planta->listaAdj[vSaida])
-        {
-            if (segmento->vEntrada == vEntrada)
-            {
-                custoIda += segmento->tamanho;
-                encontrouAresta = true;
-                break;
-            }
-        }
+        int ida = matrizAdj[ciclo[i]][ciclo[i + 1]];
+        int volta = matrizAdj[ciclo[j]][ciclo[j - 1]];
 
-        if (!encontrouAresta)
-        {
-            // Se não encontrou a aresta, considera um custo infinito (ou lança uma exceção)
-            custoIda = numeric_limits<int>::max();
-            break;
-        }
-
-        // Calcula o custo na volta
-        int j = n - 1 - i; // Índice para a volta
-        vSaida = ciclo[j];
-        vEntrada = ciclo[j - 1];
-
-        encontrouAresta = false;
-        for (Segmento* segmento : planta->listaAdj[vSaida])
-        {
-            if (segmento->vEntrada == vEntrada)
-            {
-                custoVolta += segmento->tamanho;
-                encontrouAresta = true;
-                break;
-            }
-        }
-
-        if (!encontrouAresta)
-        {
-            custoVolta = numeric_limits<int>::max();
-            break;
-        }
+        custoIda += ida;
+        custoVolta += volta;
     }
-
-    // Adiciona o custo para fechar o ciclo
-    if (custoIda != numeric_limits<int>::max())
-    {
-        for (Segmento* segmento : planta->listaAdj[ciclo[n - 1]])
-        {
-            if (segmento->vEntrada == ciclo[0])
-            {
-                custoIda += segmento->tamanho;
-                break;
-            }
-        }
-    }
-
-    if (custoVolta != numeric_limits<int>::max())
-    {
-        for (Segmento* segmento : planta->listaAdj[ciclo[0]])
-        {
-            if (segmento->vEntrada == ciclo[n - 1])
-            {
-                custoVolta += segmento->tamanho;
-                break;
-            }
-        }
-    }
+    custoIda += matrizAdj[ciclo[n - 1]][ciclo[0]];
+    custoVolta += matrizAdj[ciclo[0]][ciclo[n - 1]];
 
     return make_pair(custoIda, custoVolta);
 }
@@ -544,9 +395,12 @@ pair<int, int> calcularCustoDirecionado(Planta* planta, const vector<int>& ciclo
 /// @return Um par contendo o ciclo otimizado e o menor custo total do ciclo.
 pair<vector<int>, int> twoOptDirected(Planta* planta, const vector<int>& cicloInicial)
 {
-    int n = cicloInicial.size();
-    vector<int> melhorCiclo = cicloInicial;
-    auto [melhorCustoIda, melhorCustoVolta] = calcularCustoDirecionado(planta, melhorCiclo);
+    int n = cicloInicial.size() - 1;
+    vector<int> melhorCiclo;
+    for (int i = 0; i < n; ++i) { melhorCiclo.push_back(cicloInicial[i]); }
+    vector<vector<int>> matrizAdj = gerarMatrizAdjacencia(planta);
+
+    auto [melhorCustoIda, melhorCustoVolta] = calcularCustoDirecionado(matrizAdj, melhorCiclo);
     int melhorCusto = min(melhorCustoIda, melhorCustoVolta);
     bool melhorado = true;
 
@@ -555,54 +409,228 @@ pair<vector<int>, int> twoOptDirected(Planta* planta, const vector<int>& cicloIn
         melhorado = false;
         for (int i = 0; i < n - 1; ++i)
         {
-            for (int j = i + 2; j < n; ++j) // j deve ser pelo menos dois índices à frente de i
+            for (int j = i + 2; j < n; ++j)
             {
-                // Gera um novo ciclo invertendo os nós entre i+1 e j
                 vector<int> novoCiclo = melhorCiclo;
-                reverse(novoCiclo.begin() + i + 1, novoCiclo.begin() + j + 1);
 
-                // Calcula o custo do novo ciclo
-                auto [novoCustoIda, novoCustoVolta] = calcularCustoDirecionado(planta, novoCiclo);
+                int temp = novoCiclo[j];
+                novoCiclo[j] = novoCiclo[i + 1];
+                novoCiclo[i + 1] = temp;
+
+                auto [novoCustoIda, novoCustoVolta] = calcularCustoDirecionado(matrizAdj, novoCiclo);
+
                 int novoCusto = min(novoCustoIda, novoCustoVolta);
 
-                // Se o novo ciclo for melhor, atualiza as variáveis
                 if (novoCusto < melhorCusto)
                 {
                     melhorCiclo = novoCiclo;
                     melhorCusto = novoCusto;
                     melhorado = true;
+                    if (novoCustoVolta < novoCustoIda)
+                    {
+                        reverse(melhorCiclo.begin(), melhorCiclo.end());
+                    }
                 }
             }
         }
     }
-
+    melhorCiclo.push_back(melhorCiclo[0]);
     return make_pair(melhorCiclo, melhorCusto);
 }
 
 /// @brief Gera uma matriz de adjacência a partir da lista de adjacência de uma planta.
 /// @param planta Ponteiro para a estrutura Planta representando o grafo.
 /// @return Uma matriz de adjacência (vetor de vetores) com os pesos das arestas.
-vector<vector<float>> gerarMatrizAdjacencia(Planta* planta)
+vector<vector<int>> gerarMatrizAdjacencia(Planta* planta)
 {
     int numVertices = planta->listaAdj.size();
     // Inicializar a matriz de adjacência com infinito (indicando ausência de arestas)
-    vector<vector<float>> matriz(numVertices, vector<float>(numVertices, 0));
+    vector<vector<int>> matriz(numVertices, vector<int>(numVertices, 0));
 
     // Preencher a matriz com os pesos das arestas a partir da lista de adjacência
     for (int i = 0; i < numVertices; i++)
     {
         for (Segmento* segmento : planta->listaAdj[i])
         {
-            int vEntrada = segmento->vEntrada;
+            int vizinho = segmento->vEntrada;
             float peso = segmento->tamanho; // Exemplo: usar o limite de velocidade como peso
 
-            matriz[i][vEntrada] = peso; // Define o peso da aresta de i para vEntrada
+            matriz[i][vizinho] = peso; // Define o peso da aresta de i para vEntrada
             if (segmento->dupla)
             {
-                matriz[vEntrada][i] = peso; // Se o segmento for bidirecional, adiciona também a aresta reversa
+                matriz[vizinho][i] = peso; // Se o segmento for bidirecional, adiciona também a aresta reversa
             }
         }
     }
 
     return matriz;
+}
+
+
+int main(){
+
+    Planta* plantaTeste = newPlanta(6);  // Cria a planta com 6 vértices
+
+    // Criação dos segmentos entre os vértices
+    Segmento* segmento1 = newSegmento(0, 1, 60, 250, 1, "Rua A", true);
+    Segmento* segmento2 = newSegmento(1, 2, 60, 250, 1, "Rua B", true);
+    Segmento* segmento3 = newSegmento(2, 3, 60, 250, 2, "Rua C", true);
+    Segmento* segmento4 = newSegmento(3, 4, 60, 250, 2, "Rua D", true);
+    Segmento* segmento5 = newSegmento(4, 5, 60, 250, 2, "Rua E", true);
+    Segmento* segmento6 = newSegmento(5, 0, 60, 250, 3, "Rua F", true);
+
+    // Criando mais segmentos para obter 18 arestas no total
+    Segmento* segmento7 = newSegmento(0, 2, 60, 250, 4, "Rua G", true);
+    Segmento* segmento8 = newSegmento(1, 3, 60, 250, 4, "Rua H", true);
+    Segmento* segmento9 = newSegmento(2, 4, 60, 250, 2, "Rua I", true);
+    Segmento* segmento10 = newSegmento(3, 5, 60, 250, 5, "Rua J", true);
+    Segmento* segmento11 = newSegmento(4, 0, 60, 250, 2, "Rua K", true);
+    Segmento* segmento12 = newSegmento(5, 1, 60, 250, 5, "Rua L", true);
+
+    // Segmentos adicionais para completar o número de arestas
+    Segmento* segmento13 = newSegmento(0, 3, 60, 250, 1, "Rua M", true);
+    Segmento* segmento14 = newSegmento(1, 4, 60, 250, 2, "Rua N", true);
+    Segmento* segmento15 = newSegmento(2, 5, 60, 250, 3, "Rua O", true);
+    Segmento* segmento16 = newSegmento(3, 0, 60, 250, 4, "Rua P", true);
+    Segmento* segmento17 = newSegmento(4, 1, 60, 250, 2, "Rua Q", true);
+    Segmento* segmento18 = newSegmento(5, 2, 60, 250, 5, "Rua R", true);
+
+    // Adicionando os segmentos à planta
+    adicionaSegmentoAPlanta(segmento1, plantaTeste);
+    adicionaSegmentoAPlanta(segmento2, plantaTeste);
+    adicionaSegmentoAPlanta(segmento3, plantaTeste);
+    adicionaSegmentoAPlanta(segmento4, plantaTeste);
+    adicionaSegmentoAPlanta(segmento5, plantaTeste);
+    adicionaSegmentoAPlanta(segmento6, plantaTeste);
+    adicionaSegmentoAPlanta(segmento7, plantaTeste);
+    adicionaSegmentoAPlanta(segmento8, plantaTeste);
+    adicionaSegmentoAPlanta(segmento9, plantaTeste);
+    adicionaSegmentoAPlanta(segmento10, plantaTeste);
+    adicionaSegmentoAPlanta(segmento11, plantaTeste);
+    adicionaSegmentoAPlanta(segmento12, plantaTeste);
+    adicionaSegmentoAPlanta(segmento13, plantaTeste);
+    adicionaSegmentoAPlanta(segmento14, plantaTeste);
+    adicionaSegmentoAPlanta(segmento15, plantaTeste);
+    adicionaSegmentoAPlanta(segmento16, plantaTeste);
+    adicionaSegmentoAPlanta(segmento17, plantaTeste);
+    adicionaSegmentoAPlanta(segmento18, plantaTeste);
+
+    // Adicionando imóveis diferentes para cada segmento
+    adicionaImovelASegmento(newImovel(300, 5, "comercial"), segmento1);
+    adicionaImovelASegmento(newImovel(350, 10, "residencial"), segmento1);
+    adicionaImovelASegmento(newImovel(400, 15, "industrial"), segmento1);
+    adicionaImovelASegmento(newImovel(450, 20, "comercial"), segmento1);
+    adicionaImovelASegmento(newImovel(500, 25, "industrial"), segmento1);
+
+    adicionaImovelASegmento(newImovel(250, 5, "residencial"), segmento2);
+    adicionaImovelASegmento(newImovel(200, 10, "comercial"), segmento2);
+    adicionaImovelASegmento(newImovel(150, 15, "industrial"), segmento2);
+    adicionaImovelASegmento(newImovel(100, 20, "residencial"), segmento2);
+    adicionaImovelASegmento(newImovel(50, 25, "industrial"), segmento2);
+
+    adicionaImovelASegmento(newImovel(500, 5, "turismo"), segmento3);
+    adicionaImovelASegmento(newImovel(400, 10, "residencial"), segmento3);
+    adicionaImovelASegmento(newImovel(350, 15, "industrial"), segmento3);
+    adicionaImovelASegmento(newImovel(300, 20, "comercial"), segmento3);
+    adicionaImovelASegmento(newImovel(450, 25, "industrial"), segmento3);
+
+    adicionaImovelASegmento(newImovel(350, 5, "comercial"), segmento4);
+    adicionaImovelASegmento(newImovel(300, 10, "residencial"), segmento4);
+    adicionaImovelASegmento(newImovel(400, 15, "industrial"), segmento4);
+    adicionaImovelASegmento(newImovel(250, 20, "residencial"), segmento4);
+    adicionaImovelASegmento(newImovel(100, 25, "turismo"), segmento4);
+
+    adicionaImovelASegmento(newImovel(200, 5, "residencial"), segmento5);
+    adicionaImovelASegmento(newImovel(500, 10, "industrial"), segmento5);
+    adicionaImovelASegmento(newImovel(350, 15, "comercial"), segmento5);
+    adicionaImovelASegmento(newImovel(250, 20, "industrial"), segmento5);
+    adicionaImovelASegmento(newImovel(400, 25, "comercial"), segmento5);
+
+    adicionaImovelASegmento(newImovel(100, 5, "industrial"), segmento6);
+    adicionaImovelASegmento(newImovel(150, 10, "turismo"), segmento6);
+    adicionaImovelASegmento(newImovel(250, 15, "turismo"), segmento6);
+    adicionaImovelASegmento(newImovel(300, 20, "industrial"), segmento6);
+    adicionaImovelASegmento(newImovel(450, 25, "comercial"), segmento6);
+
+    cout << "Regiões (CEP): ";
+    for (int elemento : plantaTeste->CEPs) {
+        cout << elemento << " ";
+    }
+    cout << endl;
+
+    cout << "TESTE: construir_grafo_virtual()" <<endl;
+
+    pair<Planta*, set<int>> resultado2 = construir_grafo_virtual(plantaTeste, 10);
+
+    cout << "Vértices da Borda: ";
+    for (int elemento : resultado2.second) {
+        cout << elemento << " ";
+    }
+    cout << endl;
+
+    vector<int> verticesOtimos2 = achaVerticesRegionais(plantaTeste, resultado2.second);
+
+    cout << "Vértices Ótimos: ";
+    for (int elemento : verticesOtimos2) {
+        cout << elemento << " ";
+    } 
+    cout << endl;
+
+    cout << "TESTE: construirGrafoRegioes()" <<endl;
+
+    auto [plantaRegioes, lista_predecessores] = construirGrafoRegioes(resultado2.first, verticesOtimos2);
+
+
+    cout << "TESTE: nearestNeighbor()" <<endl;
+
+    pair<vector<int>, vector<Segmento*>> resultado4 = nearestNeighbor(plantaRegioes, 2);
+
+    cout << "Ciclo: ";
+    for (int elemento : resultado4.first) {
+        cout << elemento << " ";
+    }
+    cout << endl;
+
+    cout << "TESTE: twoOptDirected()" <<endl;
+
+    pair<vector<int>, int> resultado5 = twoOptDirected(plantaRegioes, resultado4.first);
+    
+    cout << "Ciclo Otimizado: ";
+    for (int elemento : resultado5.first) {
+        cout << elemento << " ";
+    }
+    cout << endl;
+    cout << endl;
+    cout << endl;
+
+    Planta* plantaTeste2 = newPlanta(5);
+
+    Segmento* segmento21 = newSegmento(0, 1, 60, 250, 1, "Rua A", true);
+    Segmento* segmento22 = newSegmento(1, 2, 60, 250, 1, "Rua B", true);
+    Segmento* segmento23 = newSegmento(2, 3, 60, 250, 2, "Rua C", true);
+    Segmento* segmento24 = newSegmento(3, 4, 60, 250, 2, "Rua D", true);
+    Segmento* segmento25 = newSegmento(1, 0, 60, 250, 1, "Rua A", true);
+    Segmento* segmento26 = newSegmento(2, 1, 60, 250, 1, "Rua B", true);
+    Segmento* segmento27 = newSegmento(3, 2, 60, 250, 1, "Rua C", true);
+    Segmento* segmento28 = newSegmento(4, 3, 60, 250, 2, "Rua D", true);
+
+    adicionaSegmentoAPlanta(segmento21, plantaTeste2);
+    adicionaSegmentoAPlanta(segmento22, plantaTeste2);
+    adicionaSegmentoAPlanta(segmento23, plantaTeste2);
+    adicionaSegmentoAPlanta(segmento24, plantaTeste2);
+    adicionaSegmentoAPlanta(segmento25, plantaTeste2);
+    adicionaSegmentoAPlanta(segmento26, plantaTeste2);
+    adicionaSegmentoAPlanta(segmento27, plantaTeste2);
+    adicionaSegmentoAPlanta(segmento28, plantaTeste2);
+
+    pair<Planta*, set<int>> resultado3 = construir_grafo_virtual(plantaTeste2, 10);
+
+    vector<int> verticesOtimos = achaVerticesRegionais(plantaTeste2, resultado3.second);
+
+    cout << "Vértices Ótimos: ";
+    for (int elemento : verticesOtimos) {
+        cout << elemento << " ";
+    }
+
+    return 0;
 }

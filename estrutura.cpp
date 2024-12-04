@@ -28,8 +28,8 @@ Planta* newPlanta(int numVertices)
 }
 
 /// @brief Inicializa um segmento (aresta).
-/// @param vSaida Vértice do qual a aresta direcionada sai.
-/// @param vEntrada Vértice no qual a aresta direcionada entra.
+/// @param vSaida Vértice do qual a aresta direcionada sai. (Origem)
+/// @param vEntrada Vértice no qual a aresta direcionada entra. (Destino)
 /// @param limVel Limite de velocidade do segmento.
 /// @param tamanho Tamanho do segmento (metros).
 /// @param CEP Região à qual o segmento pertence.

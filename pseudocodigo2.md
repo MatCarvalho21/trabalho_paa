@@ -290,6 +290,12 @@ def construir_grafo_regioes(planta_regioes, vertices_otimos):
     return planta_virtual, lista_anteriores
 ```
 
+Esta função é $O(V+E)$, já que, visa escolher um vértice inicial, percorrer suas arestas,
+escolher a do vértice de menor valor, após isto, repetir o mesmo processo para o vértice
+desta aresta, e fazer a escolha se considerar o vértice já adicionado ao ciclo, deste modo,
+percorreremos cada vértice uma vez, e, para cada vértice percorreremos suas
+arestas, resultando em uma complexidade $O(V+E)$ pois não repetiremos vértices nem arestas.
+
 ```python
 def nearest_neighbor(planta_regioes, vertice_inicial=0):
     """
@@ -308,7 +314,7 @@ def nearest_neighbor(planta_regioes, vertice_inicial=0):
         Ciclo encontrado que passa por todos os vértices e retorna ao inicial.
     """
     num_vertices = planta_regioes.listaAdj.size()
-    ciclo = []
+    ciclo = list()
     visitados = [False] * num_vertices
 
     vertice_atual = vertice_inicial
@@ -337,8 +343,13 @@ def nearest_neighbor(planta_regioes, vertice_inicial=0):
     return ciclo
 ```
 
-```python
+Esta função é $O(V^2)$, visto que, inicializaremos a matriz em $O(V^2)$,
+assim, percorreremos todos os vértices uma vez e suas arestas uma vez, resultando
+em complexidade $O(V+E)$ para passarmos os pesos das arestas para a matriz de
+adjascência, resultando em uma complexidade final de $O(V^2)$, visto que,
+para um grafo denso, $O(V+E) \approx O(V^2)$.
 
+```python
 def gerarMatrizAdjacencia(planta_regioes):
     """
     Cria uma matriz de adjascência a partir de uma lista de adjascência
@@ -371,8 +382,51 @@ def gerarMatrizAdjacencia(planta_regioes):
     return matriz
 ```
 
-```python
+Esta função é $O(V)$, visto que, percorreremos o ciclo uma vez, e, como ele
+contém todos os vértices, a operação se dará em $O(V)$, mas, como receberemos
+um grafo em forma de matriz de adjascência, o acesso a aresta de $i$ para $j$
+se dará em $O(1)$, resultando numa complexidade final de $O(V)$.
 
+```python
+def calcular_custo_direcionado(grafo, ciclo):
+        """
+    Calcula o custo total de um ciclo em um grafo direcionado.
+
+    Parameters
+    ----------
+    grafo : list
+        Matriz de adjacência representando os custos do grafo.
+    ciclo : list
+        Lista de vértices representando o ciclo.
+
+    Returns
+    -------
+    tuple[int, int]
+        Custo total do ciclo na ordem de ida e ordem de volta.
+    """
+    custo_ida = 0
+    custo_volta = 0
+    n_vertices = len(ciclo)
+
+    for i in range(n_vertices - 2):
+        custo_ida += grafo[ciclo[i]][ciclo[i+1]]
+
+        j = n_vertices -1 - i
+        custo_volta += grafo[ciclo[j]][ciclo[j-1]]
+
+    custo_ida += grafo[ciclo[-1]][ciclo[0]]
+    custo_volta += grafo[ciclo[0]][ciclo[-1]]
+
+    return custo_ida, custo_volta
+```
+
+Esta função é $O(V^3)$, visto que, percorre todo o ciclo inicial em $O(V)$, e,
+percorre seus sucessores do ciclo em $O(V)$ e, calcula o novo custo do ciclo
+modificado, em $O(V)$, resultando em $O(V*(V*(V)))=O(V^3)$. Note que a operação
+para inverter o ciclo também é dada em $O(V)$, mas não altera a complexidade,
+visto que teríamos apenas $O(V*(V*(V + V)))=O(V^3)$.
+
+```python
 def two_opt_directed(grafo, ciclo_inicial):
     """
     Otimiza um ciclo direcionado usando a técnica Two-Opt.
@@ -423,321 +477,6 @@ def two_opt_directed(grafo, ciclo_inicial):
                     if volta:
                         melhor_ciclo = novo_ciclo[::-1]
 
+    melhor_ciclo.append(melhor_ciclo[0])
     return melhor_ciclo, melhor_custo
 ```
-
-```python
-def calcular_custo_direcionado(grafo, ciclo):
-        """
-    Calcula o custo total de um ciclo em um grafo direcionado.
-
-    Parameters
-    ----------
-    grafo : list
-        Matriz de adjacência representando os custos do grafo.
-    ciclo : list
-        Lista de vértices representando o ciclo.
-
-    Returns
-    -------
-    tuple[int, int]
-        Custo total do ciclo na ordem de ida e ordem de volta.
-    """
-    custo_ida = 0
-    custo_volta = 0
-    n_vertices = len(ciclo)
-
-    for i in range(n_vertices - 2):
-        custo_ida += grafo[ciclo[i]][ciclo[i+1]]
-
-        j = n_vertices -1 - i
-        custo_volta += grafo[ciclo[j]][ciclo[j-1]]
-
-    custo_ida += grafo[ciclo[-1]][ciclo[0]]
-    custo_volta += grafo[ciclo[0]][ciclo[-1]]
-
-    return custo_ida, custo_volta
-```
-
----
-# Questão 03
-
-Pessoa vai inserir Origem, Destino e Dinheiro
-
-vamos rodas o dijkstra normal e encontrar o menor caminho a pé (grafo normal) (sequência de segmentos e tempo gasto)
-
-criar grafo virtual sendo o peso dos segmentos o tempo = comprimento/(vel_max * transito) (sequência de segmentos e tempo gasto)
-
-vamos rodar dijkstra pro táxi nesse novo grafo virtual 
-
-encontrar a estação de metrô e o ponto do ônibus mais próximo da origem (dijsktra multi-source)
-encontrar a estação de metrô e o ponto de ônibus mais próximo do destino a partir da estação de origem (dijkstra multi-source)
-
-dijsktra estação de metrô inicial e estação de metrô final (sequência de segmentos e tempo gasto)
-dijskstra estação de ônibus inicial e estação de metrô final (sequência de segmentos e tempo gasto)
-
-
-
-Grafo virtual com linha de metrô (ligação A e B) e o ciclo do ônibus (KNN arestas paralelas)
-
-
-
-Temos que retornar preço, tempo gasto, pair(sequência de segmentos e métodos de transporte).
-
-Funções Auxiliares:
-
-Remodelar o mapa
-
-Dijkstra da Origem até o metrô mais próximo: Caminho andando e de táxi
-Dijkstra da Origem até o ônibus mais próximo: Caminho andando e de táxi
-Dijkstra Multi-source das estações de metrô até o destino: Caminho andando e de táxi
-Dijkstra Multi-source das paradas de ônibus até o destino: Caminho andando e de táxi
-
-Executamos dijkstra até o destino andando e de táxi 
-
-A - A - A
-T - T - T (A)
-A - M - A
-A - M - T
-A - O - A
-A - O - T
-T - M - A
-T - M - T
-T - O - A
-T - O - T
-A/T - O - M - A/T
-
-
-```python
-
-def ex03(origem, destino, valor = inf):
-    Dijkstra_Origem_Final() # me retorna a rota, tempo e o custo gasto pra ir andando e de táxi até o final
-    Dijkstra_MS_Origem_Metro()
-    Dijkstra_MS_Origem_Onibus()
-    Dijkstra_MS_Metro_Destino()
-    Dijkstra_MS_Onibus_Destino()
-    Dijkstra_Metro_Metro()
-    Dijkstra_Onibus_Onibus()
-```
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
----
-# Rascunho
-# Questão 02:
-
-## Cilco Entre as Regiões:
-OK
-Construir um grafo virtual com os nossos pesos, Peso = N + (Nº imóveis turístico e comercial) - (Nº imóveis residencial e industrial).
-
-OK
-Durante a construção, vamos salvar os vértices da borda do grafo. 
-
-A fazer
-Encontrar o vértice ótimo em cada região, minimiza a distância dele para os vértices da borda.  (Dijkstra de todos os vértices da região, fazendo uma média)
-
-A fazer
-Vou construir o grafo das regiões, conectando cada par de vértice ótimo. Formando um grafo completo e direcionado. 
-
-OK
-### Nearest Neighbor Heuristic - Vídeo:
-
-A fazer
-### 2-Opt ou 3-Opt:
-
-```python
-
-def calculaPeso(segmento)
-    vetorImoveis = segmento.imoveis()
-    comerciais = 0
-    industriais = 0
-    turisticos = 0
-    residenciais = 0
-    for i in vetorImoveis.size:
-        swicth (vetorImoceis[i]):
-            case 0:
-                comerciais += 1
-                break
-            case 1: 
-                industriais += 1
-                break
-            case 2:
-                turisticos += 1
-                break
-            default:
-                residenciais += 1
-                break
-    
-    return (turisticos + comerciais) - (residenciais + industriais)
-                
-
-def grafo_virtual(planta, limiar):
-
-    verticesBorda = set()
-    numVertices = planta.listaAdj.size()
-    plantaVirtual = Planta(numVertices)
-    for i in numVertices:
-        auxSet = set()
-        listaAux = planta.listaAdj[i]
-        tempNode = listAux.head()
-        while tempNode != None:
-            auxSet.add(tempNode.CEP)
-            novoPeso = calculaPeso(tempNode)
-            tempNode2 = newSegmento(tempNode.vSaida, 
-                                    tempNode.vEntrada, 
-                                    tempNode.limVel, 
-                                    limiar + novoPeso, 
-                                    tempNode.CEP, 
-                                    tempNode.rua, 
-                                    tempNode.dupla)
-            adicionaSegmentoAPlanta(plantaVirtual, tempNode2)
-            tempNode = tempNode.next()
-
-        if auxSet.size > 1:
-            verticesBorda.add(i)
-
-    retorna plantaVirtual, verticesBorda
-```
-
-```python
-def DijkstraRegional(planta, origem, cepRegiao):
-    num_vertices = planta.listaAdj.size
-    distancias = [float('inf')] * num_vertices
-    visitados = [False] * num_vertices
-    anteriores = [None] * num_vertices
-
-    distancias[origem] = 0
-
-    while True:
-        menor_distancia = float('inf')
-        vertice = -1
-
-        for i in range(num_vertices):
-            if not visitados[i] and distancias[i] < menor_distancia:
-                menor_distancia = distancias[i]
-                vertice = i
-        
-        if min_distancia == float('inf'):
-            break
-
-        adj_node = grafo.listaAdj[vertice_atual].head
-        while adj_node != None:
-            cepVizinho = adj_node.cep
-            
-            if cepVizinho != cepRegiao:
-                adj_node = adj_node.next
-                continue
-
-            vertice_vizinho = adj_node.vertex
-            peso_aresta = adj_node.weight
-
-            if not visitados[vertice_vizinho]:
-                nova_distancia = distancias[vertice_atual] + peso_aresta
-                if nova_distancia < distancias[vertice_vizinho]:
-                    distancias[vertice_vizinho] = nova_distancia
-                    anteriores[vertice_vizinho] = vertice_atual
-
-            adj_node = adj_node.next
-
-        visitados[vertice_atual] = True
-
-    return distancias, anteriores
-```
-
-
-
-```python
-# vou supor que já existe a lista de vértices ideais
-# dijkstra top vai receber uma plantaVirtual, uma plantaOrigianl, dois vértices e adicionar na planata virtual a conexão 
-# entre os dois vértices, sendo o peso dessa conexão a menor distância entre os dois vértices no grafo/planta original
-for each_vertice in verticesIdeais:
-    for each_Vertice2 in verticesIdeais:
-        distance = dijkstraTop(plantaRegioes, each_vertice, each_vertice2):
-        plantaVirtual.addVertex(each_vertice, each_vertice2, distance)
-        
-def NearestNeighbor(plantaRegioes, verticeAtual = 0)
-    num_vertices = plantaRegioes.listaAdj.size()
-
-    ciclo = list()
-
-    visitados = [False] * num_vertices
-    visitados[verticeAtual] = True
-    # O(V + E)
-    while True:
-        listaAdjAtual = plantaRegioes.listaAdj[verticeAtual]
-
-        nextVertice = -1
-        menorPeso = float("inf")
-
-        current = listaAdjAtual.head()
-
-        while current != None:
-            if (not visitados[current.vSaida]) and (current.peso < menorPeso):
-                menorPeso = current.peso
-                nextVertice = current.vSaida
-            
-            current = current.next
-
-        if nextVertice == -1:
-            break
-        
-        ciclo.append(nextVertice)
-        verticeAtual = nextVertice
-
-    ciclo.append(ciclo[0])
-
-    return ciclo
-```
-
-
-
-
-```python
-def two_opt_directed(graph, initial_cycle):
-    """
-    graph: matriz de adjacência do grafo direcionado (custos das arestas)
-    initial_cycle: lista de vértices representando o ciclo inicial
-    Retorna: ciclo otimizado e o custo associado
-    """
-    n = len(initial_cycle)
-    best_cycle = initial_cycle[:]
-    best_cost = calculate_cost_directed(graph, best_cycle)
-    improved = True
-
-    while improved:
-        improved = False
-        for i in range(n - 1):
-            for j in range(i + 2, n):  # Garantir que não há sobreposição
-                # Troca duas arestas, mantendo a direção
-                new_cycle = best_cycle[:i+1] + best_cycle[i+1:j+1][::-1] + best_cycle[j+1:]
-                new_cost = calculate_cost_directed(graph, new_cycle)
-                
-                if new_cost < best_cost:
-                    best_cycle = new_cycle
-                    best_cost = new_cost
-                    improved = True
-
-    return best_cycle, best_cost
-
-
-def calculate_cost_directed(graph, cycle):
-    """
-    Calcula o custo total de um ciclo no grafo direcionado.
-    """
-    cost = 0
-    for i in range(len(cycle) - 1):
-        cost += graph[cycle[i]][cycle[i+1]]
-    cost += graph[cycle[-1]][cycle[0]]  # Retorno ao vértice inicial
-    return cost
-```
-
---- -->
