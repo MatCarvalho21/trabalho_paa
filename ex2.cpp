@@ -1,4 +1,4 @@
-#include "estrutura.h"
+#include "estrutura.cpp"
 #include "ex2.h"
 #include <vector>
 #include <limits>
@@ -481,17 +481,26 @@ vector<int> bus(Planta* planta, int origem = 0)
     {
         return cicloOtimizado.first;
     }
-
-    for (int i = cicloOtimizado.first.size() - 2; i >= 0; i--)
+    
+    for (int i = 0; i < cicloOtimizado.first.size() - 1; i++)
     {
         int verticeAtual = cicloOtimizado.first[i];
         int verticeProximo = cicloOtimizado.first[i + 1];
         vector<int> predecessores = grafoRegioes.second[verticeAtual];
-        
+        vector<int> path;
+
         while (verticeProximo != -1)
         {
-            ciclo.push_back(verticeProximo);
+            path.push_back(verticeProximo);
             verticeProximo = predecessores[verticeProximo];
+        }
+
+        for (int j = path.size() - 1; j >= 0; j--)
+        {
+            if (ciclo.empty() || path[j] != ciclo.back())
+            {
+                ciclo.push_back(path[j]);
+            }
         }
     }
 
