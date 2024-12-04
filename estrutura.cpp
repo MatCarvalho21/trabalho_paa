@@ -102,6 +102,7 @@ SegmentoBusca* newSegmentoBusca(int vOrigem, int vDestino, float distancia, floa
     temp->distancia = distancia;
     temp->tempo = tempo;
     temp->meioTransporte = meioTransporte;
+    temp->vertical = false;
 
     return temp;
 }
