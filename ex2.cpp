@@ -478,6 +478,8 @@ vector<int> bus(Planta* planta, int origem = 0)
 
     pair<Planta*, vector<vector<int>>> grafoRegioes = construirGrafoRegioes(grafoVirutal.first, verticesRegionais);
 
+    delete grafoVirutal.first;
+
     vector<int> cicloInicial = nearestNeighbor(grafoRegioes.first, origem);
 
     pair<vector<int>, int> cicloOtimizado = twoOptDirected(grafoRegioes.first, cicloInicial);
@@ -510,6 +512,7 @@ vector<int> bus(Planta* planta, int origem = 0)
             }
         }
     }
+    delete grafoRegioes.first;
 
     return ciclo;
 }
