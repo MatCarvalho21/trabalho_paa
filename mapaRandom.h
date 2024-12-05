@@ -1,5 +1,5 @@
 /**
- * @file mapa_random.h
+ * @file mapaRandom.h
  * @brief Módulo o qual serve para gerar uma planta aleatória dado um número de vértices e um número de arestas. Ele garante a conexidade de cada região.
  */
 

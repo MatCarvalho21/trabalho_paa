@@ -8,7 +8,7 @@
 #include <iostream>
 #include <queue>
 #include <utility>
-#include "mapa_random.h"
+#include "mapaRandom.h"
 
 using namespace std;
 
@@ -478,6 +478,8 @@ vector<int> bus(Planta* planta, int origem)
 
     pair<Planta*, vector<vector<int>>> grafoRegioes = construirGrafoRegioes(grafoVirutal.first, verticesRegionais);
 
+    delete grafoVirutal.first;
+
     vector<int> cicloInicial = nearestNeighbor(grafoRegioes.first, origem);
 
     pair<vector<int>, int> cicloOtimizado = twoOptDirected(grafoRegioes.first, cicloInicial);
@@ -510,6 +512,7 @@ vector<int> bus(Planta* planta, int origem)
             }
         }
     }
+    delete grafoRegioes.first;
 
     return ciclo;
 }
