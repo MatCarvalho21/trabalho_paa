@@ -62,7 +62,7 @@ int main()
     pair<vector<int>, vector<Segmento*>> return1;
     vector<int> return2;
 
-    for (int V = 100; V <= 500; V = V + 200)
+    for (int V = 100; V <= 1000; V = V + 200)
     {
         Es[0] = V;
         Es[1] = 2*V;
