@@ -9,7 +9,7 @@
 #include "mapaRandom.h"
 
 using namespace std;
-
+const int LIMIAR = 10;
 
 /// @brief Função para calcular o peso de um segmento com base nos tipos de imóveis.
 /// @param segmento Estrutura Segmento contendo o vetor de imóveis.
@@ -416,10 +416,12 @@ pair<vector<int>, int> twoOptDirected(Planta* planta, const vector<int>& cicloIn
     int melhorCusto = min(melhorCustoIda, melhorCustoVolta);
     bool melhorado = true;
 
+    if (n < 3) { return make_pair(melhorCiclo, melhorCusto); }
+
     while (melhorado)
     {
         melhorado = false;
-        for (int i = 0; i < n - 1; ++i)
+        for (int i = 0; i < n - 2; ++i)
         {
             for (int j = i + 2; j < n; ++j)
             {
@@ -457,7 +459,7 @@ pair<vector<int>, int> twoOptDirected(Planta* planta, const vector<int>& cicloIn
 
 vector<int> bus(Planta* planta)
 {
-    pair<Planta*, set<int>> grafoVirutal = construir_grafo_virtual(planta, 10);
+    pair<Planta*, set<int>> grafoVirutal = construir_grafo_virtual(planta, LIMIAR);
 
     set<int> verticesRegionais = achaVerticesRegionais(grafoVirutal.first, grafoVirutal.second);
 
