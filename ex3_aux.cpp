@@ -158,11 +158,11 @@ vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca& grafo, int vertice_inic
 int main(){
     SegmentoBusca* seg1 = newSegmentoBusca(0, 1, 10, 50.0, "taxi");
     SegmentoBusca* seg2 = newSegmentoBusca(1, 2, 10, 50.0, "taxi");
-    SegmentoBusca* seg3 = newSegmentoBusca(2, 3, 10, 100.0, "andando");
+    SegmentoBusca* seg3 = newSegmentoBusca(2, 3, 10, 100.0, "andar");
     SegmentoBusca* seg4 = newSegmentoBusca(3, 4, 10, 50.0, "onibus");
     SegmentoBusca* seg5 = newSegmentoBusca(4, 5, 10, 50.0, "onibus");
     SegmentoBusca* seg6 = newSegmentoBusca(5, 6, 10, 25.0, "metro");
-    SegmentoBusca* seg7 = newSegmentoBusca(6, 7, 10, 100, "andando");
+    SegmentoBusca* seg7 = newSegmentoBusca(6, 7, 10, 100, "andar");
     SegmentoBusca* seg8 = newSegmentoBusca(7, 8, 0, 0, "taxi");
     seg8->vertical = true;
 
