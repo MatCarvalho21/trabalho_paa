@@ -5,13 +5,6 @@
 #include "utils.h"
 #include "mapaRandom.h"
 #include "ex2.h"
-#include "estrutura.cpp"
-#include "mapa.cpp"
-#include "algoritmosBase.cpp"
-#include "algoritmos.cpp"
-#include "utils.cpp"
-#include "mapaRandom.cpp"
-// #include "ex2.cpp"
 
 #include <chrono>
 #include <fstream>
@@ -93,19 +86,12 @@ int main()
             cout << 1 << "," << V << "," << E << "," << i+1 << "," << timeDuration << endl;
             file << 1 << "," << V << "," << E << "," << i+1 << "," << timeDuration << endl;
 
-            // timeStart = high_resolution_clock::now();
-            // return2 = bus(planta);
-            // timeStop = high_resolution_clock::now();
-            // timeDuration = duration_cast<nanoseconds>(timeStop - timeStart).count();
-            // cout << 2 << "," << V << "," << E << "," << i+1 << "," << timeDuration << endl;
-            // file << 2 << "," << V << "," << E << "," << i+1 << "," << timeDuration << endl;
-
-            // timeStart = high_resolution_clock::now();
-            // return2 = -> função da 3 <-(planta);
-            // timeStop = high_resolution_clock::now();
-            // timeDuration = duration_cast<nanoseconds>(timeStop - timeStart).count();
-            // cout << 3 << "," << V << "," << E << "," << i+1 << "," << timeDuration << endl;
-            // file << 3 << "," << V << "," << E << "," << i+1 << "," << timeDuration << endl;
+            timeStart = high_resolution_clock::now();
+            return2 = bus(planta);
+            timeStop = high_resolution_clock::now();
+            timeDuration = duration_cast<nanoseconds>(timeStop - timeStart).count();
+            cout << 2 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
+            file << 2 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
         }
     }
 

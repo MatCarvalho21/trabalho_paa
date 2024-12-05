@@ -94,6 +94,7 @@ void adicionaSegmentoAPlanta(Segmento* segmento, Planta* planta)
 }
 
 SegmentoBusca* newSegmentoBusca(int vOrigem, int vDestino, float distancia, float tempo, string meioTransporte)
+
 {
     SegmentoBusca* temp = new SegmentoBusca(vOrigem, vDestino, distancia, tempo, meioTransporte);
     
