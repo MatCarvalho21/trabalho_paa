@@ -28,6 +28,10 @@ double taxa_fixa = 10;
 double passagem_metro = 7.5;
 double passagem_onibus = 4.0;
 
+// tempo de espera (segundos)
+double tempo_espera_onibus = 420;
+double tempo_espera_metro = 300;
+
 /// @brief Inicializa uma planta.
 /// @param numVertices Número de vértices que a planta terá.
 /// @return A planta inicializada.
@@ -105,6 +109,13 @@ void adicionaSegmentoAPlanta(Segmento* segmento, Planta* planta)
     (planta -> CEPs).insert(segmento -> CEP);
 }
 
+/// @brief Cria uma instância de um SegmentoBusca.
+/// @param vOrigem Vértice de origem do segmento.
+/// @param vDestino Vértice de destino do segmento.
+/// @param distancia Distância do segmento.
+/// @param tempo Tempo do segmento.
+/// @param meioTransporte Meio de transporte do segmento.
+/// @return O segmento de busca inicializado.
 SegmentoBusca* newSegmentoBusca(int vOrigem, int vDestino, float distancia, double tempo, string meioTransporte)
 
 {
@@ -120,6 +131,9 @@ SegmentoBusca* newSegmentoBusca(int vOrigem, int vDestino, float distancia, doub
     return temp;
 }
 
+/// @brief Inicializa uma planta de busca.
+/// @param numVertices Número de vértices que a planta terá.
+/// @return A planta de busca inicializada.
 PlantaBusca* newPlantaBusca(int numVertices)
 {
     PlantaBusca* temp = new PlantaBusca(numVertices);

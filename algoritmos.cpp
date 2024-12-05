@@ -175,6 +175,9 @@ pair<vector<int>, vector<Segmento*>> subway(Planta* planta, int numVertices)
     return make_pair(minMaxDistancesVertices, result);
 }
 
+/// @brief Função que calcula o ciclo de ônibus.
+/// @param planta Planta original que contém os segmentos.
+/// @return Vetor com os vértices que compõem o ciclo de ônibus.
 vector<int> bus(Planta* planta)
 {
     pair<Planta*, set<int>> grafoVirutal = construir_grafo_virtual(planta, LIMIAR);
@@ -223,6 +226,11 @@ vector<int> bus(Planta* planta)
     return ciclo;
 }
 
+/// @brief Função que calcula o custo de um segmento de acordo com o meio de transporte.
+/// @param atual Segmento de origem.
+/// @param adjacente Segmento de destino.
+/// @param distancia_taxi Distância acumulada de táxi.
+/// @return Par com o custo e a nova distância de táxi.
 vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca* grafo, int vertice_inicial, int vertice_destino, double lim_dinheiro) {
     // Mapas para armazenar o menor tempo e o "pai" de cada segmento
     unordered_map<SegmentoBusca*, double> tempo_minimo;
@@ -273,7 +281,30 @@ vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca* grafo, int vertice_inic
             tie(custo_aux, nova_distancia_taxi) = calcula_custo(segmento_atual, adjacente, estado_atual.distancia_taxi);
 
             double novo_custo = estado_atual.custo_acumulado + custo_aux;
-            double novo_tempo = estado_atual.tempo_acumulado + adjacente->tempo;
+            double novo_tempo = 0.0;
+
+            // Se o meio de transporte mudar, adiciona tempo de espera
+            if (segmento_atual->meioTransporte != "onibus" && adjacente->meioTransporte == "onibus") {
+
+                std::random_device rd;
+                std::mt19937 gen(rd());
+                std::uniform_int_distribution<> espera(0, tempo_espera_onibus);
+                double tempo_espera_aux = espera(gen);
+                novo_tempo = estado_atual.tempo_acumulado + adjacente->tempo; + tempo_espera_aux;
+            }
+            if (segmento_atual->meioTransporte != "metro" && adjacente->meioTransporte == "metro") {
+
+                std::random_device rd;
+                std::mt19937 gen(rd());
+                std::uniform_int_distribution<> espera(0, tempo_espera_metro);
+                double tempo_espera_aux = espera(gen);
+                novo_tempo = estado_atual.tempo_acumulado + adjacente->tempo; + tempo_espera_aux;
+            }
+            else
+            {
+                novo_tempo = estado_atual.tempo_acumulado + adjacente->tempo;
+            }
+            
 
             // Atualiza se encontrar um custo menor e dentro do limite de dinheiro
             if (novo_custo <= lim_dinheiro) {
@@ -312,6 +343,15 @@ vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca* grafo, int vertice_inic
     return caminho;
 }
 
+/// @brief Função que calcula a melhor rota entre dois vértices de uma planta.
+/// @param planta Planta original que contém os segmentos.
+/// @param cicloBus Vetor com os vértices que compõem o ciclo de ônibus.
+/// @param mstSegs Vetor com os segmentos que compõem a MST.
+/// @param estacoesMetro Vetor com os vértices que representam as estações de metrô.
+/// @param origem Vértice de origem.
+/// @param destino Vértice de destino.
+/// @param dinheiro Limite de dinheiro disponível.
+/// @return Vetor com os segmentos que compõem a melhor rota.
 vector<SegmentoBusca*> melhorRota(Planta* planta, vector<int> cicloBus, 
                             vector<Segmento*> mstSegs, vector<int> estacoesMetro, 
                             int origem, int destino, double dinheiro) 
