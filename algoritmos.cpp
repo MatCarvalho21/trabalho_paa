@@ -1,11 +1,12 @@
 #include "estrutura.h"
 #include "algoritmos.h"
+#include "algoritmosBase.h"
+
 #include <iostream>
 #include <string>
 #include <vector>
 #include <set>
 #include <climits>
-#include "algoritmosBase.h"
 #include <utility> // Necessário para usar std::pair
 
 using namespace std;
@@ -173,3 +174,151 @@ pair<vector<int>, vector<Segmento*>> subway(Planta* planta, int numVertices)
     // Retornamos o par
     return make_pair(minMaxDistancesVertices, result);
 }
+
+vector<int> bus(Planta* planta)
+{
+    pair<Planta*, set<int>> grafoVirutal = construir_grafo_virtual(planta, LIMIAR);
+
+    set<int> verticesRegionais = achaVerticesRegionais(grafoVirutal.first, grafoVirutal.second);
+
+    pair<Planta*, vector<vector<int>>> grafoRegioes = construirGrafoRegioes(grafoVirutal.first, verticesRegionais);
+
+    delete grafoVirutal.first;
+
+    int origem = *verticesRegionais.begin();
+    vector<int> cicloInicial = nearestNeighbor(grafoRegioes.first, origem);
+
+    pair<vector<int>, int> cicloOtimizado = twoOptDirected(grafoRegioes.first, cicloInicial);
+    
+    vector<int> ciclo;
+
+    if (cicloOtimizado.first.size() < 3)
+    {
+        return cicloOtimizado.first;
+    }
+    
+    for (int i = 0; i < cicloOtimizado.first.size() - 1; i++)
+    {
+        int verticeAtual = cicloOtimizado.first[i];
+        int verticeProximo = cicloOtimizado.first[i + 1];
+        vector<int> predecessores = grafoRegioes.second[verticeAtual];
+        vector<int> path;
+
+        while (verticeProximo != -1)
+        {
+            path.push_back(verticeProximo);
+            verticeProximo = predecessores[verticeProximo];
+        }
+
+        for (int j = path.size() - 1; j >= 0; j--)
+        {
+            if (ciclo.empty() || path[j] != ciclo.back())
+            {
+                ciclo.push_back(path[j]);
+            }
+        }
+    }
+    delete grafoRegioes.first;
+
+    return ciclo;
+}
+
+vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca* grafo, int vertice_inicial, int vertice_destino, double lim_dinheiro) {
+    // Mapas para armazenar o menor tempo e o "pai" de cada segmento
+    unordered_map<SegmentoBusca*, double> tempo_minimo;
+    unordered_map<SegmentoBusca*, double> custo_acumulado;
+    unordered_map<SegmentoBusca*, SegmentoBusca*> segmento_pai;
+
+    // Fila de prioridade (menor custo no topo)
+    priority_queue<Estado, vector<Estado>, greater<>> fila;
+
+    // Inicialização com todos os tempos e custos como infinito
+    for (const auto& adjacencias : grafo->listaAdj) {
+        for (SegmentoBusca* segmento : adjacencias) {
+            tempo_minimo[segmento] = INF;
+            custo_acumulado[segmento] = INF;
+        }
+    }
+
+    // Processa os segmentos saindo do vértice inicial
+    for (SegmentoBusca* segmento : grafo->listaAdj[vertice_inicial]) {
+        tempo_minimo[segmento] = 0.0; // Tempo inicial é zero
+        custo_acumulado[segmento] = 0.0; // Custo inicial é zero
+        fila.push({segmento, 0.0, 0.0, 0}); // Inicializa com distância_taxi = 0
+        segmento_pai[segmento] = nullptr; // Sem pai para o primeiro segmento
+    }
+
+    // Processamento do algoritmo de Dijkstra
+    while (!fila.empty()) {
+        Estado estado_atual = fila.top();
+        fila.pop();
+
+        SegmentoBusca* segmento_atual = estado_atual.segmento;
+
+        // Se o custo acumulado atual for maior que o limite, ignorar
+        if (estado_atual.custo_acumulado > lim_dinheiro) {
+            continue;
+        }
+
+        // Se o segmento atual for o destino, interrompa
+        if (segmento_atual->vDestino == vertice_destino) {
+            break;
+        }
+
+        // Iterar sobre os segmentos adjacentes
+        for (SegmentoBusca* adjacente : grafo->listaAdj[segmento_atual->vDestino]) {
+            double custo_aux, nova_distancia_taxi;
+
+            // Calcula o custo para o segmento adjacente
+            tie(custo_aux, nova_distancia_taxi) = calcula_custo(segmento_atual, adjacente, estado_atual.distancia_taxi);
+
+            double novo_custo = estado_atual.custo_acumulado + custo_aux;
+            double novo_tempo = estado_atual.tempo_acumulado + adjacente->tempo;
+
+            // Atualiza se encontrar um custo menor e dentro do limite de dinheiro
+            if (novo_custo <= lim_dinheiro) {
+                if (novo_tempo < tempo_minimo[adjacente]) {
+                    tempo_minimo[adjacente] = novo_tempo;
+                    custo_acumulado[adjacente] = novo_custo;
+                    fila.push({adjacente, novo_custo, nova_distancia_taxi, novo_tempo});
+                    segmento_pai[adjacente] = segmento_atual;
+                }
+            }
+        }
+    }
+
+    // Reconstruir o caminho com base no "pai" de cada segmento
+    vector<SegmentoBusca*> caminho;
+    SegmentoBusca* segmento_atual = nullptr;
+
+    // Encontrar o segmento de destino com menor tempo
+    double menor_tempo = INF;
+    for (const auto& [segmento, tempo] : tempo_minimo) {
+        if (tempo < menor_tempo && segmento->vDestino == vertice_destino) {
+            menor_tempo = tempo;
+            segmento_atual = segmento;
+        }
+    }
+
+    // Reconstrução do caminho
+    while (segmento_atual != nullptr) {
+        caminho.push_back(segmento_atual);
+        segmento_atual = segmento_pai[segmento_atual];
+    }
+
+    // Inverte o caminho para começar do vértice inicial
+    reverse(caminho.begin(), caminho.end());
+
+    return caminho;
+}
+
+vector<SegmentoBusca*> melhorRota(Planta* planta, vector<int> cicloBus, 
+                            vector<Segmento*> mstSegs, vector<int> estacoesMetro, 
+                            int origem, int destino, double dinheiro) 
+{
+    PlantaBusca* plantaBusca = constroiPlantaBusca(planta, cicloBus, mstSegs, estacoesMetro);
+    vector<SegmentoBusca*> caminho = dijkstra_custo(plantaBusca, origem, destino, dinheiro);
+    delete plantaBusca;
+    return caminho;
+}
+

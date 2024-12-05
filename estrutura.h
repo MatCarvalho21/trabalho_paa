@@ -8,15 +8,11 @@
 #include <vector>
 #include <set>
 
-using std::cout;
-using std::string;
-using std::endl;
-using std::vector;
-using std::set;
 
 #ifndef ESTRUTURA_H
 #define ESTRUTURA_H
 
+using namespace std;
 /// @brief Estrutura dos imóveis.
 typedef struct Imovel
 {
@@ -100,6 +96,24 @@ struct PlantaBusca
         listaAdj[vOrigem].push_back(s);
     }
 };
+
+struct Estado {
+    SegmentoBusca* segmento;
+    double custo_acumulado;
+    double distancia_taxi;
+    double tempo_acumulado;
+
+    // Comparação pelo operador '<' para a fila de prioridade
+    bool operator<(const Estado& outro) const {
+        return custo_acumulado > outro.custo_acumulado; // Menor custo tem maior prioridade
+    }
+
+    // Comparação pelo operador '>'
+    bool operator>(const Estado& outro) const {
+        return custo_acumulado < outro.custo_acumulado; // Inverso para std::greater
+    }
+};
+
 
 // Protótipos das funções
 Planta* newPlanta(int);

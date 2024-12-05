@@ -7,14 +7,26 @@
 #include <string>
 #include <vector>
 #include <set>
-
-using std::cout;
-using std::string;
-using std::endl;
-using std::vector;
-using std::set;
+#include <limits>
 
 #include "estrutura.h"
+// Constantes
+double INF = numeric_limits<double>::max();
+
+int LIMIAR = 10;
+
+double normalizacao = 3.6;
+double VelocidadeMetro = 70.0 / normalizacao;
+double VelocidadeAndar = 5.0 / normalizacao;
+
+// variáveis táxi
+double limite_metro = 1000;
+double taxa_variavel = 0.008;
+double taxa_fixa = 10;
+
+// passagens
+double passagem_metro = 7.5;
+double passagem_onibus = 4.0;
 
 /// @brief Inicializa uma planta.
 /// @param numVertices Número de vértices que a planta terá.
