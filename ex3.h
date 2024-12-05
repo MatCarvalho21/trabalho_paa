@@ -15,9 +15,9 @@ using namespace std;
 
 struct Estado {
     SegmentoBusca* segmento;
-    float custo_acumulado;
-    float distancia_taxi;
-    float tempo_acumulado;
+    double custo_acumulado;
+    double distancia_taxi;
+    double tempo_acumulado;
 
     // Comparação pelo operador '<' para a fila de prioridade
     bool operator<(const Estado& outro) const {
@@ -31,13 +31,13 @@ struct Estado {
 };
 
 pair<vector<int>, vector<int>> dijkstraMetro(Planta*, int);
-vector<pair<pair<int, int>, float>> achaArestasMetro(Planta*, vector<int>);
-vector<pair<int, float>> calculaDistTempoCiclo(Planta*, vector<int>, int);
-vector<pair<pair<int, int>, pair<int, float>>> achaArestasOnibus(Planta*, vector<int>);
+vector<pair<pair<int, int>, double>> achaArestasMetro(Planta*, vector<int>);
+vector<pair<double, double>> calculaDistTempoCiclo(Planta*, vector<int>, int);
+vector<pair<pair<int, int>, pair<double, double>>> achaArestasOnibus(Planta*, vector<int>);
 PlantaBusca* constroiPlantaBusca(Planta*, vector<int>, Planta*, vector<int>);
-pair<float, float> calcula_custo_taxi(int, int, float, SegmentoBusca*);
-pair<float, float> calcula_custo(SegmentoBusca* atual, SegmentoBusca* adjacente, float distancia_taxi);
-vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca&, int, int, float);
+pair<double, double> calcula_custo_taxi(int, int, double, SegmentoBusca*);
+pair<double, double> calcula_custo(SegmentoBusca* atual, SegmentoBusca* adjacente, double distancia_taxi);
+vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca&, int, int, double);
 
 
 #endif // EX3_H
