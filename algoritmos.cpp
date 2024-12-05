@@ -1,4 +1,5 @@
 #include "estrutura.h"
+#include "algoritmos.h"
 #include <iostream>
 #include <string>
 #include <vector>

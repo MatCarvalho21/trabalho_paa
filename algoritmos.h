@@ -1,10 +1,10 @@
 /**
- * @file ex1.h
- * @brief Módulo para definição da função do algoritmo do problema 1.
+ * @file algoritmos.h
+ * @brief Módulo para definição das função do algoritmos dos problemas.
  */
 
-#ifndef EX1_H
-#define EX1_H
+#ifndef ALGORITMOS_H
+#define ALGORITMOS_H
 
 #include "estrutura.h"
 #include <vector>
@@ -15,4 +15,4 @@ using namespace std;
 // Declaração da função com a ordem invertida no par
 pair<vector<int>, vector<Segmento*>> subway(Planta* planta, int numVertices);
 
-#endif // EX1_H
+#endif // ALGORITMOS_H
