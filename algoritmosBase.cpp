@@ -115,6 +115,11 @@ void dijkstra(int v0, vector<int>& parents, vector<int>& distances, int numVerti
     }
 }
 
+/// @brief Função para calcular o peso de um segmento com base nos tipos de imóveis.
+/// @param start Vértice inicial.
+/// @param parents Vetor de pais.
+/// @param numVertices Número de vértices da planta.
+/// @param planta Planta a ser percorrida.
 void primMST(int start, vector<int>& parents, int numVertices, Planta* planta)
 {
     // Criando os vetores de custo mínimo e de se está na árvore
@@ -613,7 +618,11 @@ pair<vector<int>, int> twoOptDirected(Planta* planta, const vector<int>& cicloIn
     return make_pair(melhorCiclo, melhorCusto);
 }
 
-
+/// @brief Vai construi uma MST com base nos seus segmentos.
+/// @param mstMetroSeg Vetor de ponteiros para Segmento representando a MST do metrô.
+/// @param numVertices Inteiro representando o número de vértices do grafo.
+/// @param estacoesMetro Conjunto de inteiros representando os vértices que são estações de metrô.
+/// @return Ponteiro para a Planta representando a MST do metrô.
 Planta* refazMst(vector<Segmento*> mstMetroSeg, int numVertices, set<int> estacoesMetro)
 {
     Planta* mstMetro = newPlanta(numVertices);
@@ -638,6 +647,10 @@ Planta* refazMst(vector<Segmento*> mstMetroSeg, int numVertices, set<int> estaco
 }
 
 // O((V + E) * log(V))
+/// @brief Executa o algoritmo de Dijkstra em uma planta com vértice inicial definido.
+/// @param mstMetro Ponteiro para a estrutura Planta representando a MST do metrô.
+/// @param origem Inteiro representando o vértice inicial para o cálculo das distâncias.
+/// @return Um par contendo um vetor com as distâncias mínimas e um vetor de predecessores para reconstrução dos caminhos mínimos.
 pair<vector<int>, vector<int>> dijkstraMetro(Planta* mstMetro, int origem)
 {
     int numVertices = mstMetro->listaAdj.size();
@@ -678,6 +691,10 @@ pair<vector<int>, vector<int>> dijkstraMetro(Planta* mstMetro, int origem)
 }
 
 // O(V^2 * log(V))
+/// @brief Encontra as arestas entre as estações de metrô.
+/// @param mstMetro Ponteiro para a estrutura Planta representando a MST do metrô.
+/// @param estacoesMetroSet Conjunto de inteiros representando os vértices que são estações de metrô.
+/// @return Vetor de pares de pares de inteiros representando as arestas entre as estações de metrô e o peso das arestas.
 vector<pair<pair<int, int>, int>> achaArestasMetro(Planta* mstMetro, set<int> estacoesMetroSet)
 {
     vector<pair<pair<int, int>, int>> arestasMetro;
@@ -714,6 +731,11 @@ pair<int, double> calculaDistTemp(Planta* planta, int vOrigem, int vDestino)
 }
 
 // O(V+E)
+/// @brief Calcula as distâncias e tempos de um ciclo em uma planta.
+/// @param planta Ponteiro para a estrutura Planta representando o grafo.
+/// @param ciclo Vetor de inteiros representando o ciclo.
+/// @param start Inteiro representando o vértice inicial do ciclo.
+/// @return Vetor de pares de inteiros e doubles representando as distâncias e tempos do ciclo.
 vector<pair<int, double>> calculaDistTempoCiclo(Planta* planta, vector<int> ciclo, int start)
 {
     int n = ciclo.size();
@@ -757,6 +779,10 @@ vector<pair<int, double>> calculaDistTempoCiclo(Planta* planta, vector<int> cicl
 }
 
 // O(V * ( V + E))
+/// @brief Encontra as arestas entre os vértices de um ciclo de ônibus.
+/// @param planta Ponteiro para a estrutura Planta representando o grafo.
+/// @param cicloBus Vetor de inteiros representando o ciclo de ônibus.
+/// @return Vetor de pares de pares de inteiros e doubles representando as arestas entre os vértices de um ciclo de ônibus e o peso das arestas.
 vector<pair<pair<int, int>, pair<int, double>>> achaArestasOnibus(Planta* planta, vector<int> cicloBus)
 {
     vector<int> cicloTemp = cicloBus;
@@ -778,6 +804,12 @@ vector<pair<pair<int, int>, pair<int, double>>> achaArestasOnibus(Planta* planta
 }
 
 // O(V * ((V + E) + V * log(V)))
+/// @brief Constrói uma planta de busca a partir de uma planta original.
+/// @param planta Ponteiro para a estrutura Planta representando o grafo original.
+/// @param cicloBus Vetor de inteiros representando o ciclo de ônibus.
+/// @param mstSegs Vetor de ponteiros para Segmento representando a MST do metrô.
+/// @param estacoesMetro Vetor de inteiros representando os vértices que são estações de metrô.
+/// @return Ponteiro para a PlantaBusca representando a planta de busca.
 PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, vector<Segmento*> mstSegs, vector<int> estacoesMetro)
 {
     int nVertices = planta->listaAdj.size();
@@ -888,6 +920,12 @@ PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, vector<Se
     return plantaBusca;
 }
 // O(1)
+/// @brief Calcula o custo de um segmento de táxi.
+/// @param origem Inteiro representando o vértice de origem.
+/// @param destino Inteiro representando o vértice de destino.
+/// @param dist_taxi Double representando a distância percorrida até o momento.
+/// @param adjacente Ponteiro para o SegmentoBusca adjacente.
+/// @return Par de doubles representando o custo e a nova distância.
 pair<double, double> calcula_custo_taxi(int origem, int destino, double dist_taxi, SegmentoBusca* adjacente) {
     double segmento_tamanho = adjacente->distancia;
     double nova_distancia = dist_taxi + segmento_tamanho;
@@ -901,6 +939,11 @@ pair<double, double> calcula_custo_taxi(int origem, int destino, double dist_tax
     return {custo, nova_distancia};
 }
 // O(1)
+/// @brief Calcula o custo de um segmento de transporte.
+/// @param atual Ponteiro para o SegmentoBusca atual.
+/// @param adjacente Ponteiro para o SegmentoBusca adjacente.
+/// @param distancia_taxi Double representando a distância percorrida até o momento.
+/// @return Par de doubles representando o custo e a nova distância.
 pair<double, double> calcula_custo(SegmentoBusca* atual, SegmentoBusca* adjacente, double distancia_taxi) {
     if (atual->meioTransporte != adjacente->meioTransporte) {
         if (adjacente->meioTransporte == "metro") {
