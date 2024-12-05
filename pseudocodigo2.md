@@ -94,14 +94,16 @@ def construir_grafo_virtual(planta, limiar):
     vertices_borda = set()
     num_vertices = planta.listaAdj.size()
     planta_virtual = Planta(num_vertices)
+    set_aux_ceps = [set()] * num_vertices
 
     for i in range(num_vertices):
-        aux_set = set()
         lista_aux = planta.listaAdj[i]
         temp_node = lista_aux.head()
 
         while temp_node is not None:
-            aux_set.add(temp_node.CEP)
+            set_aux_ceps[temp_node.vSaida].add(temp_node.CEP)
+            set_aux_ceps[temp_node.vEntrada].add(temp_node.CEP)
+
             novo_peso = calcula_peso(temp_node)
             temp_segmento = newSegmento(
                 temp_node.vSaida,
@@ -115,7 +117,8 @@ def construir_grafo_virtual(planta, limiar):
             planta_virtual.adiciona_segmento(temp_segmento)
             temp_node = temp_node.next()
 
-        if len(aux_set) > 1:
+    for i in range(num_vertices):
+        if len(set_aux_ceps[i]) > 1:
             vertices_borda.add(i)
 
     return planta_virtual, vertices_borda
@@ -161,7 +164,7 @@ def dijkstra_regional(planta, origem, cep_regiao):
                 menor_distancia = distancias[i]
                 vertice_atual = i
 
-        if menor_distancia == float('inf'):
+        if menor_distancia == float('inf') or vertice_atual == -1:
             break
 
         adj_node = planta.listaAdj[vertice_atual].head()
@@ -248,7 +251,8 @@ def acha_vertices_regionais(planta, vertices_borda):
 
     for cep in ceps:
         vertice_otimo = encontrar_vertice_otimo(planta, vertices_borda, cep)
-        vertices_otimos.append(vertice_otimo)
+        if ververtice_otimo != -1:
+            vertices_otimos.append(vertice_otimo)
 
     return vertices_otimos
 ```
@@ -277,7 +281,8 @@ def construir_grafo_regioes(planta_regioes, vertices_otimos):
         Lista dos resultados de pais a partir da execução do Dijkstra para o vértice i,
         usada para reconstruir o caminho completo entre o vértice i e j das regiões.
     """
-    planta_virtual = Planta()
+    numVertices = planta_regioes.num_vertices
+    planta_virtual = Planta(numVertices)
     lista_anteriores = [None] * len(vertices_otimos)
 
     for vertice1 in vertices_otimos:
@@ -314,7 +319,7 @@ def nearest_neighbor(planta_regioes, vertice_inicial=0):
         Ciclo encontrado que passa por todos os vértices e retorna ao inicial.
     """
     num_vertices = planta_regioes.listaAdj.size()
-    ciclo = list()
+    ciclo = [vertice_inicial]
     visitados = [False] * num_vertices
 
     vertice_atual = vertice_inicial
@@ -457,15 +462,17 @@ def two_opt_directed(grafo, ciclo_inicial):
 
     while melhorado:
         melhorado = False
-        for i in range(n - 4):
-            for j in range(i + 2, n - 2):
+        for i in range(n - 2):
+            for j in range(i + 2, n):
                 novo_ciclo = melhor_ciclo[:]
 
                 temp = novo_ciclo[j]
                 novo_ciclo[j] = novo_ciclo[i + 1]
                 novo_ciclo[i + i] = temp
-
+                novo_ciclo.append(novo_ciclo[0])
                 novo_custo_ida, novo_custo_volta = calcular_custo_direcionado(grafo, novo_ciclo)
+                novo_ciclo = novo_ciclo[:-1]
+
                 volta = False
                 if novo_custo_volta < novo_custo_ida:
                     volta = True
@@ -493,21 +500,29 @@ def bus(planta):
 
     planta_regioes, lista_predecessores = construir_grafo_regioes(planta_virtual, vertices_regionais)
 
-    ciclo_inicial = nearest_neighbor(planta_regioes, 0)
+    ciclo_inicial = nearest_neighbor(planta_regioes, vertices_regionais[0])
 
     ciclo_novo, custo_ciclo = two_opt_directed(planta_regioes, ciclo_inicial)
 
     result = list()
 
-    for i in range(len(ciclo_novo) - 2, -1, -1):
+    if len(ciclo_novo) < 3:
+        return result
+
+    for i in range(len(ciclo_novo) - 1):
         vertice_atual = ciclo_novo[i]
-        next_vertice = ciclo_novo[i + 1]
+        vertice_proximo = ciclo_novo[i + 1]
 
         predecessores = lista_predecessores[vertice_atual]
+        path = list()
 
-        while (next_vertice != -1):
-            result.append(next_vertice)
-            next_vertice = predecessores[next_vertice]
+        while vertice_proximo != -1:
+            path.append(vertice_proximo)
+            vertice_proximo = predecessores[vertice_proximo]
+
+        for j in range(len(path) - 1, -1, -1):
+            if path[j] != resultado[-1]:
+                result.append(path[j])
 
     return result
 ```
