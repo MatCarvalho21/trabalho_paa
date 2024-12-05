@@ -3,6 +3,7 @@
 #include "algoritmos.h"
 #include "ex3.h"
 #include "mapaRandom.h"
+#include "utils.h"
 #include <vector>
 #include <set>
 #include <iostream>
@@ -21,14 +22,39 @@ const double VelocidadeMetro = 70.0 / normalizacao;
 const double VelocidadeAndar = 5.0 / normalizacao;
 
 // variáveis táxi
-const double limite_km = 2.0;
-const double taxa_variavel = 3.0;
-const double taxa_fixa = 7.0;
+const double limite_metro = 1000;
+const double taxa_variavel = 0.008;
+const double taxa_fixa = 10;
 
 // passagens
-const double passagem_metro = 2.0;
-const double passagem_onibus = 1.5;
+const double passagem_metro = 7.5;
+const double passagem_onibus = 4.0;
 
+// O(V - 1)
+Planta* refazMst(vector<Segmento*> mstMetroSeg, int numVertices, set<int> estacoesMetro)
+{
+    Planta* mstMetro = newPlanta(numVertices);
+
+    for (Segmento* segmento : mstMetroSeg)
+    {
+        segmento->dupla = true;
+        adicionaSegmentoAPlanta(segmento, mstMetro);
+        Segmento* segmentoInverso = newSegmento(
+            segmento->vEntrada,
+            segmento->vSaida,
+            segmento->limVel,
+            segmento->tamanho,
+            segmento->CEP,
+            segmento->rua,
+            segmento->dupla
+        );
+        adicionaSegmentoAPlanta(segmentoInverso, mstMetro);
+    }
+
+    return mstMetro;
+}
+
+// O((V + E) * log(V))
 pair<vector<int>, vector<int>> dijkstraMetro(Planta* mstMetro, int origem)
 {
     int numVertices = mstMetro->listaAdj.size();
@@ -68,25 +94,27 @@ pair<vector<int>, vector<int>> dijkstraMetro(Planta* mstMetro, int origem)
     return {distancias, predecessores};
 }
 
-vector<pair<pair<int, int>, int>> achaArestasMetro(Planta* mstMetro, vector<int> estacoesMetro)
+// O(V^2 * log(V))
+vector<pair<pair<int, int>, int>> achaArestasMetro(Planta* mstMetro, set<int> estacoesMetroSet)
 {
     vector<pair<pair<int, int>, int>> arestasMetro;
 
-    for (int i = 0; i < estacoesMetro.size(); i++)
+    for (int estacao1 : estacoesMetroSet)
     {
-        pair<vector<int>, vector<int>> resultado = dijkstraMetro(mstMetro, estacoesMetro[i]);
+        pair<vector<int>, vector<int>> resultado = dijkstraMetro(mstMetro, estacao1);
         vector<int> distancias = resultado.first;
         vector<int> predecessores = resultado.second;
 
-        for (int j = 0; j < estacoesMetro.size(); j++)
+        for (int estacao2 : estacoesMetroSet)
         {
-            if (i == j) { continue; }
-            arestasMetro.push_back({{estacoesMetro[i], estacoesMetro[j]}, distancias[estacoesMetro[j]]});
+            if (estacao1 == estacao2) { continue; }
+            arestasMetro.push_back({{estacao1, estacao2}, distancias[estacao2]});
         }
     }
     return arestasMetro;
 }
 
+// O(E)
 pair<int, double> calculaDistTemp(Planta* planta, int vOrigem, int vDestino)
 {
     vector<Segmento*> segmentos = planta->listaAdj[vOrigem];
@@ -95,13 +123,14 @@ pair<int, double> calculaDistTemp(Planta* planta, int vOrigem, int vDestino)
         if (segmento->vEntrada == vDestino)
         {
             double limite = segmento->limVel / normalizacao;
-            return {segmento->tamanho, segmento->tamanho / limite};
+            return {segmento->tamanho, (segmento->tamanho / limite) * segmento->transito};
         }
     }
-    cout << "Erro: segmento não encontrado" << endl;
+    
     return {0, 0};
 }
 
+// O(V+E)
 vector<pair<int, double>> calculaDistTempoCiclo(Planta* planta, vector<int> ciclo, int start)
 {
     int n = ciclo.size();
@@ -137,8 +166,6 @@ vector<pair<int, double>> calculaDistTempoCiclo(Planta* planta, vector<int> cicl
 
         pair<int, double> distTemp = calculaDistTemp(planta, ciclo[currentIndex], ciclo[nextIndex]);
 
-        if (distTemp.first == 0) { cout << ciclo[currentIndex] << " " << ciclo[nextIndex] << endl; }
-
         distanciasTempos[nextIndex].first += distTemp.first;
         distanciasTempos[nextIndex].second += distTemp.second;
     }
@@ -146,17 +173,11 @@ vector<pair<int, double>> calculaDistTempoCiclo(Planta* planta, vector<int> cicl
     return distanciasTempos;
 }
 
+// O(V * ( V + E))
 vector<pair<pair<int, int>, pair<int, double>>> achaArestasOnibus(Planta* planta, vector<int> cicloBus)
 {
     vector<int> cicloTemp = cicloBus;
     cicloTemp.pop_back();
-    cout << endl;
-    for (int i = 0; i < cicloTemp.size(); i++)
-    {
-        cout << cicloTemp[i] << " ";
-    }
-    cout << endl;
-    cout << endl;
 
     vector<pair<pair<int, int>, pair<int, double>>> arestasOnibus;
 
@@ -173,11 +194,12 @@ vector<pair<pair<int, int>, pair<int, double>>> achaArestasOnibus(Planta* planta
     return arestasOnibus;
 }
 
-PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, Planta* mstMetro, vector<int> estacoesMetro)
+// O(V * ((V + E) + V * log(V)))
+PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, vector<Segmento*> mstSegs, vector<int> estacoesMetro)
 {
     int nVertices = planta->listaAdj.size();
     PlantaBusca* plantaBusca = newPlantaBusca(nVertices * 2);
-
+    // O(V + E)
     for (int i = 0; i < nVertices; i++)
     {
         vector<Segmento*> segmentos = planta->listaAdj[i];
@@ -195,7 +217,7 @@ PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, Planta* m
                 i + nVertices,
                 segmento->vEntrada + nVertices,
                 segmento->tamanho,
-                segmento->tamanho / (segmento->limVel / normalizacao),
+                (segmento->tamanho / (segmento->limVel / normalizacao)) * segmento->transito,
                 "taxi"
             );
 
@@ -207,7 +229,7 @@ PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, Planta* m
                 i + nVertices,
                 0,
                 0,
-                "andar"
+                "taxi"
             );
 
             SegmentoBusca* segmentoConexaoVolta = newSegmentoBusca(
@@ -215,7 +237,7 @@ PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, Planta* m
                 i,
                 0,
                 0,
-                "taxi"
+                "andar"
             );
             segmentoConexaoIda->vertical = true;
             segmentoConexaoVolta->vertical = true;
@@ -237,8 +259,17 @@ PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, Planta* m
             }
         }
     }
-
-    vector<pair<pair<int, int>, int>> arestasMetro = achaArestasMetro(mstMetro, estacoesMetro);
+    set<int> estacoesMetroSet;
+    // O(V)
+    for (int estacao : estacoesMetro)
+    {
+        if (estacao != -1) { estacoesMetroSet.insert(estacao); }
+    }
+    // O(V + E)
+    Planta* mstMetro = refazMst(mstSegs, nVertices, estacoesMetroSet);
+    // O(V^2 * log(V))
+    vector<pair<pair<int, int>, int>> arestasMetro = achaArestasMetro(mstMetro, estacoesMetroSet);
+    // O(E)
     for (pair<pair<int, int>, int> arestaMetro : arestasMetro)
     {
         pair<int, int> aresta = arestaMetro.first;
@@ -253,9 +284,9 @@ PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, Planta* m
         );
         plantaBusca->adicionaSegmento(segmentoMetro);
     }
-
+    // O(V * (V + E))
     vector<pair<pair<int, int>, pair<int, double>>> arestasOnibus = achaArestasOnibus(planta, cicloBus);
-
+    // O(E)
     for (pair<pair<int, int>, pair<int, double>> arestaOnibus : arestasOnibus)
     {
         pair<int, int> aresta = arestaOnibus.first;
@@ -273,20 +304,20 @@ PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, Planta* m
 
     return plantaBusca;
 }
-
+// O(1)
 pair<double, double> calcula_custo_taxi(int origem, int destino, double dist_taxi, SegmentoBusca* adjacente) {
     double segmento_tamanho = adjacente->distancia;
     double nova_distancia = dist_taxi + segmento_tamanho;
     double custo = 0.0;
 
     // Calcula custo variável caso exceda o limite de km gratuitos
-    if (nova_distancia > limite_km) {
-        custo = taxa_variavel * (nova_distancia - limite_km);
+    if (nova_distancia > limite_metro) {
+        custo = taxa_variavel * (nova_distancia - limite_metro);
     }
 
     return {custo, nova_distancia};
 }
-
+// O(1)
 pair<double, double> calcula_custo(SegmentoBusca* atual, SegmentoBusca* adjacente, double distancia_taxi) {
     if (atual->meioTransporte != adjacente->meioTransporte) {
         if (adjacente->meioTransporte == "metro") {
@@ -306,7 +337,8 @@ pair<double, double> calcula_custo(SegmentoBusca* atual, SegmentoBusca* adjacent
     return {0.0, distancia_taxi}; // Não muda de meio de transporte
 }
 
-vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca& grafo, int vertice_inicial, int vertice_destino, double lim_dinheiro) {
+// O((E + V )* log(V))
+vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca* grafo, int vertice_inicial, int vertice_destino, double lim_dinheiro) {
     // Mapas para armazenar o menor tempo e o "pai" de cada segmento
     unordered_map<SegmentoBusca*, double> tempo_minimo;
     unordered_map<SegmentoBusca*, double> custo_acumulado;
@@ -316,7 +348,7 @@ vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca& grafo, int vertice_inic
     priority_queue<Estado, vector<Estado>, greater<>> fila;
 
     // Inicialização com todos os tempos e custos como infinito
-    for (const auto& adjacencias : grafo.listaAdj) {
+    for (const auto& adjacencias : grafo->listaAdj) {
         for (SegmentoBusca* segmento : adjacencias) {
             tempo_minimo[segmento] = INF;
             custo_acumulado[segmento] = INF;
@@ -324,7 +356,7 @@ vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca& grafo, int vertice_inic
     }
 
     // Processa os segmentos saindo do vértice inicial
-    for (SegmentoBusca* segmento : grafo.listaAdj[vertice_inicial]) {
+    for (SegmentoBusca* segmento : grafo->listaAdj[vertice_inicial]) {
         tempo_minimo[segmento] = 0.0; // Tempo inicial é zero
         custo_acumulado[segmento] = 0.0; // Custo inicial é zero
         fila.push({segmento, 0.0, 0.0, 0}); // Inicializa com distância_taxi = 0
@@ -349,7 +381,7 @@ vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca& grafo, int vertice_inic
         }
 
         // Iterar sobre os segmentos adjacentes
-        for (SegmentoBusca* adjacente : grafo.listaAdj[segmento_atual->vDestino]) {
+        for (SegmentoBusca* adjacente : grafo->listaAdj[segmento_atual->vDestino]) {
             double custo_aux, nova_distancia_taxi;
 
             // Calcula o custo para o segmento adjacente
@@ -359,11 +391,13 @@ vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca& grafo, int vertice_inic
             double novo_tempo = estado_atual.tempo_acumulado + adjacente->tempo;
 
             // Atualiza se encontrar um custo menor e dentro do limite de dinheiro
-            if (novo_custo <= lim_dinheiro && novo_tempo < tempo_minimo[adjacente]) {
-                tempo_minimo[adjacente] = novo_tempo;
-                custo_acumulado[adjacente] = novo_custo;
-                fila.push({adjacente, novo_custo, nova_distancia_taxi, novo_tempo});
-                segmento_pai[adjacente] = segmento_atual;
+            if (novo_custo <= lim_dinheiro) {
+                if (novo_tempo < tempo_minimo[adjacente]) {
+                    tempo_minimo[adjacente] = novo_tempo;
+                    custo_acumulado[adjacente] = novo_custo;
+                    fila.push({adjacente, novo_custo, nova_distancia_taxi, novo_tempo});
+                    segmento_pai[adjacente] = segmento_atual;
+                }
             }
         }
     }
@@ -393,130 +427,160 @@ vector<SegmentoBusca*> dijkstra_custo(const PlantaBusca& grafo, int vertice_inic
     return caminho;
 }
 
-int main(){
-    // SegmentoBusca* seg1 = newSegmentoBusca(0, 1, 10, 50.0, "taxi");
-    // SegmentoBusca* seg2 = newSegmentoBusca(1, 2, 10, 50.0, "taxi");
-    // SegmentoBusca* seg3 = newSegmentoBusca(2, 3, 10, 100.0, "andar");
-    // SegmentoBusca* seg4 = newSegmentoBusca(3, 4, 10, 50.0, "onibus");
-    // SegmentoBusca* seg5 = newSegmentoBusca(4, 5, 10, 50.0, "onibus");
-    // SegmentoBusca* seg6 = newSegmentoBusca(5, 6, 10, 25.0, "metro");
-    // SegmentoBusca* seg7 = newSegmentoBusca(6, 7, 10, 100, "andar");
-    // SegmentoBusca* seg8 = newSegmentoBusca(7, 8, 0, 0, "taxi");
-    // seg8->vertical = true;
-
-    // cout << "TESTE: calcula_custo_taxi()" << endl;
-    // cout << "Custo: " << calcula_custo_taxi(0, 1, 0.0, seg2).first << endl;
-    // cout << "Distância: " << calcula_custo_taxi(0, 1, 0.0, seg2).second << endl;
-
-    // cout << "Custo: " << calcula_custo_taxi(0, 1, 50, seg2).first << endl;
-    // cout << "Distância: " << calcula_custo_taxi(0, 1, 50, seg2).second << endl;
-
-    // cout << "TESTE: calcula_custo() - Táxi to Táxi" << endl;
-    // cout << "Custo: " << calcula_custo(seg1, seg2, 100).first << endl;
-    // cout << "Distância: " << calcula_custo(seg1, seg2, 100).second << endl;
-
-    // cout << "TESTE: calcula_custo() - Táxi to Andando" << endl;
-    // cout << "Custo: " << calcula_custo(seg1, seg3, 100).first << endl;
-    // cout << "Distância: " << calcula_custo(seg1, seg3, 100).second << endl;
-
-    // cout << "TESTE: calcula_custo() - Andando to Ônibus" << endl;
-    // cout << "Custo: " << calcula_custo(seg3, seg4, 100).first << endl;
-    // cout << "Distância: " << calcula_custo(seg3, seg4, 100).second << endl;
-
-    // cout << "TESTE: calcula_custo() - Ônibus to Ônibus" << endl;
-    // cout << "Custo: " << calcula_custo(seg4, seg5, 100).first << endl;
-    // cout << "Distância: " << calcula_custo(seg4, seg5, 100).second << endl;
-
-    // cout << "TESTE: calcula_custo() - Ônibus to Metrô" << endl;
-    // cout << "Custo: " << calcula_custo(seg5, seg6, 100).first << endl;
-    // cout << "Distância: " << calcula_custo(seg5, seg6, 100).second << endl;
-
-    // cout << "TESTE: calcula_custo() - Andando to Táxi (vertical)" << endl;
-    // cout << "Custo: " << calcula_custo(seg7, seg8, 0).first << endl;
-    // cout << "Distância: " << calcula_custo(seg7, seg8, 0).second << endl;
-
-    int origem = 10;
-    int destino = 40;
-    int dinheiro = 100;
-
-    cout << "TESTE: geraPlantaAutomatica()" << endl;
-
-    Planta* planta = geraPlantaAutomatica(120, 250);
-
-    cout << "CEPs: ";
-    for (int cep : planta->CEPs) {
-        cout << cep << " ";
-    }
-    cout << endl;
-
-    cout << "TESTE: bus()" << endl;
-
-    vector<int> cicloOnibus =  bus(planta);
-
-    cout << "Ciclo: ";
-    for (int elemento : cicloOnibus) {
-        cout << elemento << " ";
-    }
-    cout << endl;
-
-    cout << "TESTE: subway()" << endl;
-
-    pair<vector<int>, vector<Segmento*>> metro = subway(planta, 120);
-
-    vector<int> estacoesMetro = metro.first;
-    vector<Segmento*> mstMetroSeg = metro.second;
-
-
-    cout << "Estações de metrô: ";
-    for (int estacao : estacoesMetro) {
-        cout << estacao << " ";
-    }
-    cout << endl;
-
-    Planta* mstMetro = newPlanta(120);
-
-    cout << "Segmentos de metrô: ";
-    for (Segmento* segmento : mstMetroSeg) {
-        cout << "(" << segmento->vSaida << ", " << segmento->vEntrada << ") ";
-        adicionaSegmentoAPlanta(segmento, mstMetro);
-    }
-    cout << endl;
-    
-    cout << "TESTE: achaArestasMetro()" << endl;
-    vector<pair<pair<int, int>, int>> resultado = achaArestasMetro(mstMetro, estacoesMetro);
-
-    cout << "Arestas de metrô: ";
-    for (pair<pair<int, int>, double> aresta : resultado) {
-        cout << "(" << aresta.first.first << ", " << aresta.first.second << ") ";
-    }
-    cout << endl;
-
-    cout << "Tempo: ";
-    for (pair<pair<int, int>, double> aresta : resultado) {
-        cout << aresta.second << " ";
-    }
-    cout << endl;
-
-    cout << "TESTE: achaArestasOnibus()" << endl;
-
-    vector<pair<pair<int, int>, pair<int, double>>> resultado2 = achaArestasOnibus(planta, cicloOnibus);
-
-    cout << "Arestas de ônibus: ";
-    for (pair<pair<int, int>, pair<int, double>> aresta : resultado2) {
-        cout << "(" << aresta.first.first << ", " << aresta.first.second << ") ";
-    }
-    cout << endl;
-
-    cout << "Distância e tempo: ";
-    for (pair<pair<int, int>, pair<int, double>> aresta : resultado2) {
-        cout << "(" << aresta.second.first << ", " << aresta.second.second << ") ";
-    }
-    cout << endl;
-
-
-
-
-    return 0; 
+vector<SegmentoBusca*> melhorRota(Planta* planta, vector<int> cicloBus, 
+                            vector<Segmento*> mstSegs, vector<int> estacoesMetro, 
+                            int origem, int destino, double dinheiro) 
+{
+    PlantaBusca* plantaBusca = constroiPlantaBusca(planta, cicloBus, mstSegs, estacoesMetro);
+    vector<SegmentoBusca*> caminho = dijkstra_custo(plantaBusca, origem, destino, dinheiro);
+    delete plantaBusca;
+    return caminho;
 }
+
+
+// int main(){
+//     // SegmentoBusca* seg1 = newSegmentoBusca(0, 1, 10, 50.0, "taxi");
+//     // SegmentoBusca* seg2 = newSegmentoBusca(1, 2, 10, 50.0, "taxi");
+//     // SegmentoBusca* seg3 = newSegmentoBusca(2, 3, 10, 100.0, "andar");
+//     // SegmentoBusca* seg4 = newSegmentoBusca(3, 4, 10, 50.0, "onibus");
+//     // SegmentoBusca* seg5 = newSegmentoBusca(4, 5, 10, 50.0, "onibus");
+//     // SegmentoBusca* seg6 = newSegmentoBusca(5, 6, 10, 25.0, "metro");
+//     // SegmentoBusca* seg7 = newSegmentoBusca(6, 7, 10, 100, "andar");
+//     // SegmentoBusca* seg8 = newSegmentoBusca(7, 8, 0, 0, "taxi");
+//     // seg8->vertical = true;
+
+//     // cout << "TESTE: calcula_custo_taxi()" << endl;
+//     // cout << "Custo: " << calcula_custo_taxi(0, 1, 0.0, seg2).first << endl;
+//     // cout << "Distância: " << calcula_custo_taxi(0, 1, 0.0, seg2).second << endl;
+
+//     // cout << "Custo: " << calcula_custo_taxi(0, 1, 50, seg2).first << endl;
+//     // cout << "Distância: " << calcula_custo_taxi(0, 1, 50, seg2).second << endl;
+
+//     // cout << "TESTE: calcula_custo() - Táxi to Táxi" << endl;
+//     // cout << "Custo: " << calcula_custo(seg1, seg2, 100).first << endl;
+//     // cout << "Distância: " << calcula_custo(seg1, seg2, 100).second << endl;
+
+//     // cout << "TESTE: calcula_custo() - Táxi to Andando" << endl;
+//     // cout << "Custo: " << calcula_custo(seg1, seg3, 100).first << endl;
+//     // cout << "Distância: " << calcula_custo(seg1, seg3, 100).second << endl;
+
+//     // cout << "TESTE: calcula_custo() - Andando to Ônibus" << endl;
+//     // cout << "Custo: " << calcula_custo(seg3, seg4, 100).first << endl;
+//     // cout << "Distância: " << calcula_custo(seg3, seg4, 100).second << endl;
+
+//     // cout << "TESTE: calcula_custo() - Ônibus to Ônibus" << endl;
+//     // cout << "Custo: " << calcula_custo(seg4, seg5, 100).first << endl;
+//     // cout << "Distância: " << calcula_custo(seg4, seg5, 100).second << endl;
+
+//     // cout << "TESTE: calcula_custo() - Ônibus to Metrô" << endl;
+//     // cout << "Custo: " << calcula_custo(seg5, seg6, 100).first << endl;
+//     // cout << "Distância: " << calcula_custo(seg5, seg6, 100).second << endl;
+
+//     // cout << "TESTE: calcula_custo() - Andando to Táxi (vertical)" << endl;
+//     // cout << "Custo: " << calcula_custo(seg7, seg8, 0).first << endl;
+//     // cout << "Distância: " << calcula_custo(seg7, seg8, 0).second << endl;
+
+//     int origem = 0;
+//     int destino = 50;
+//     int dinheiro = 15;
+
+//     cout << "TESTE: geraPlantaAutomatica()" << endl;
+
+//     Planta* planta = geraPlantaAutomatica(120, 250);
+
+//     adicionaTransito(planta);
+
+//     cout << "CEPs: ";
+//     for (int cep : planta->CEPs) {
+//         cout << cep << " ";
+//     }
+//     cout << endl;
+
+//     cout << "TESTE: bus()" << endl;
+
+//     vector<int> cicloOnibus =  bus(planta);
+
+//     cout << "Ciclo: ";
+//     for (int elemento : cicloOnibus) {
+//         cout << elemento << " ";
+//     }
+//     cout << endl;
+
+//     cout << "TESTE: subway()" << endl;
+
+//     pair<vector<int>, vector<Segmento*>> metro = subway(planta, 120);
+
+//     vector<int> estacoesMetro = metro.first;
+//     vector<Segmento*> mstMetro = metro.second;
+
+
+//     cout << "Estações de metrô: ";
+//     for (int estacao : estacoesMetro) {
+//         cout << estacao << " ";
+//     }
+//     cout << endl;
+    
+//     set<int> estacoesMetroSet;
+//     for (int estacao : estacoesMetro)
+//     {
+//         if (estacao != -1) { estacoesMetroSet.insert(estacao); }
+//     }
+
+//     Planta* mstMetroPlanta = refazMst(mstMetro, 120, estacoesMetroSet);
+    
+//     cout << "TESTE: achaArestasMetro()" << endl;
+//     vector<pair<pair<int, int>, int>> resultado = achaArestasMetro(mstMetroPlanta, estacoesMetroSet);
+
+//     cout << "Arestas de metrô: ";
+//     for (pair<pair<int, int>, double> aresta : resultado) {
+//         cout << "(" << aresta.first.first << ", " << aresta.first.second << ") ";
+//     }
+//     cout << endl;
+
+//     cout << "Tempo: ";
+//     for (pair<pair<int, int>, double> aresta : resultado) {
+//         cout << aresta.second << " ";
+//     }
+//     cout << endl;
+
+//     cout << "TESTE: achaArestasOnibus()" << endl;
+
+//     vector<pair<pair<int, int>, pair<int, double>>> resultado2 = achaArestasOnibus(planta, cicloOnibus);
+
+//     cout << "Arestas de ônibus: ";
+//     for (pair<pair<int, int>, pair<int, double>> aresta : resultado2) {
+//         cout << "(" << aresta.first.first << ", " << aresta.first.second << ") ";
+//     }
+//     cout << endl;
+
+//     cout << "Distância e tempo: ";
+//     for (pair<pair<int, int>, pair<int, double>> aresta : resultado2) {
+//         cout << "(" << aresta.second.first << ", " << aresta.second.second << ") ";
+//     }
+//     cout << endl;
+
+//     cout << "TESTE: constroiPlantaBusca()" << endl;
+
+//     PlantaBusca* plantaBusca = constroiPlantaBusca(planta, cicloOnibus, mstMetro, estacoesMetro);
+
+//     cout << "TESTE: dijkstra_custo()" << endl;
+
+//     vector<SegmentoBusca*> caminho = dijkstra_custo(plantaBusca, origem, destino, dinheiro);
+
+//     double tempoAcumulado = 0.0;
+//     double distAcumulada = 0.0;
+//     cout << "Caminho: " << endl;
+//     for (SegmentoBusca* segmento : caminho) {
+//         cout << "(" << segmento->vOrigem << ", " << segmento->vDestino << ", " << segmento->meioTransporte << ", " << segmento->tempo << ") " << endl;
+//         tempoAcumulado += segmento->tempo;
+//         distAcumulada += segmento->distancia;
+//     }
+//     cout << "Tempo gasto: " << tempoAcumulado << " segundos" << endl;
+//     cout << "Distância percorrida: " << distAcumulada << " metros" << endl;
+
+
+
+//     return 0; 
+// }
 
 

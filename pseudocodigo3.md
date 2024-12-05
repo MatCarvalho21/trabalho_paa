@@ -12,7 +12,7 @@ Posteriormente, vamso ter que defato colocar o algoritmo em prática e resolver 
 
 ##### dijkstraMetro()
 
-A função `dijkstraMetro` implementa o algoritmo de Dijkstra para encontrar as menores distâncias entre um vértice de origem e todos os outros vértices em um grafo de metrô. Ela inicializa os vetores de distâncias e predecessores, e utiliza uma fila de prioridade (min-heap) para processar os vértices de acordo com a menor distância. Para cada vértice, o algoritmo verifica seus vizinhos e atualiza a distância se um caminho mais curto for encontrado. Ao final, a função retorna as menores distâncias e os predecessores de cada vértice, permitindo reconstruir o caminho mais curto. A complexidade do algoritmo é \(O((V + E) \log V)\), onde \(V\) é o número de vértices e \(E\) o número de arestas, o que o torna eficiente para grafos esparsos como são as cidades.
+A função `dijkstraMetro` implementa o algoritmo de Dijkstra para encontrar as menores distâncias entre um vértice de origem e todos os outros vértices em um grafo de metrô. Ela inicializa os vetores de distâncias e predecessores, e utiliza uma fila de prioridade (min-heap) para processar os vértices de acordo com a menor distância. Para cada vértice, o algoritmo verifica seus vizinhos e atualiza a distância se um caminho mais curto for encontrado. Ao final, a função retorna as menores distâncias e os predecessores de cada vértice, permitindo reconstruir o caminho mais curto. A complexidade do algoritmo é \(O((V + E) $\log$ V)\), onde \(V\) é o número de vértices e \(E\) o número de arestas, o que o torna eficiente para grafos esparsos como são as cidades.
 
 ```
 Função dijkstraMetro(linha_metro, origem):
@@ -54,7 +54,7 @@ Função dijkstraMetro(linha_metro, origem):
 
 ##### achaArestasMetro()
 
-A função `achaArestasMetro` encontra as arestas entre as estações de metrô, utilizando o algoritmo de Dijkstra para calcular as distâncias mínimas entre as estações. Para cada estação na lista `estacoesMetro`, a função chama `dijkstraMetro` para obter as distâncias mínimas a partir dessa estação. Em seguida, a função percorre todas as outras estações e, se a estação não for a mesma, calcula o peso da aresta como a distância dividida por 1000 (para converter de metros para quilômetros). As arestas e seus respectivos pesos são armazenados em um vetor, que é retornado ao final. A complexidade do algoritmo é \(O(V^2 \log V + V^2 E)\), onde \(V\) é o número de vértices e \(E\) o número de arestas.
+A função `achaArestasMetro` encontra as arestas entre as estações de metrô, utilizando o algoritmo de Dijkstra para calcular as distâncias mínimas entre as estações. Para cada estação na lista `estacoesMetro`, a função chama `dijkstraMetro` para obter as distâncias mínimas a partir dessa estação. Em seguida, a função percorre todas as outras estações e, se a estação não for a mesma, calcula o peso da aresta como a distância dividida por 1000 (para converter de metros para quilômetros). As arestas e seus respectivos pesos são armazenados em um vetor, que é retornado ao final. A complexidade do algoritmo é \($O(V*( V* \log V + (V+E)))$\), onde \(V\) é o número de vértices e \(E\) o número de arestas.
 
 
 ```
@@ -85,7 +85,7 @@ Função achaArestasMetro(mstMetro, estacoesMetro):
 
 ##### calculaDistTempoCiclo()
 
-A função `calculaDistTempoCiclo` calcula as distâncias e tempos necessários para percorrer um ciclo de transporte dentro de uma planta. A função recebe a planta, um vetor de vértices representando o ciclo e um vértice inicial `start`. A partir desse vértice inicial, a função percorre os segmentos da planta, calculando a distância total em quilômetros e o tempo necessário para cada segmento do ciclo. As distâncias e tempos são armazenados em um vetor de pares e retornados ao final. A complexidade dessa função é \(O(n \cdot m)\), onde \(n\) é o número de vértices no ciclo e \(m\) o número de segmentos adjacentes.
+A função `calculaDistTempoCiclo` calcula as distâncias e tempos necessários para percorrer um ciclo de transporte dentro de uma planta. A função recebe a planta, um vetor de vértices representando o ciclo e um vértice inicial `start`. A partir desse vértice inicial, a função percorre os segmentos da planta, calculando a distância total em quilômetros e o tempo necessário para cada segmento do ciclo. As distâncias e tempos são armazenados em um vetor de pares e retornados ao final. A complexidade dessa função é \(O($n \cdot m$)\), onde \(n\) é o número de vértices no ciclo e \(m\) o número de segmentos adjacentes.
 
 
 ```

@@ -3,11 +3,14 @@
  * @brief Módulo para definição da função de utilidade.
  */
 
-#include <set>
 #include <iostream>
 #include <string>
 #include <vector>
+#include <set>
+#include <queue>
+#include <tuple>
 #include <climits>
+#include <random>
 
 #ifndef UTILS_H
 #define UTILS_H
@@ -18,6 +21,7 @@ using namespace std;
 
 void printSegmento(const Segmento*);
 void printSet(const set<Segmento*>&);
+void adicionaTransito(Planta*);
 
 #include "utils.cpp"
 

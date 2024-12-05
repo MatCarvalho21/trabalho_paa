@@ -5,6 +5,7 @@
 #include "utils.h"
 #include "mapaRandom.h"
 #include "ex2.h"
+#include "ex3.h"
 
 #include <chrono>
 #include <fstream>
@@ -45,6 +46,19 @@ int main()
 
     // TODO: ALGORITMOS 2 E 3 NO MAPA MANUAL
 
+    vector<int> busStations = bus(planta);
+
+    cout << "Bus stations Cycle: [";
+
+    for (int i = 0; i < busStations.size() - 1; i++)
+    {
+        cout << busStations[i] << ", ";
+    }
+
+    cout << busStations[busStations.size() - 1] << "]" << endl;
+
+    cout << "]" << endl;
+
     //////////////////////////////////////////////////////////////////////////////////
 
     // Calculando os tempos de execução por tamanho de entrada
@@ -61,6 +75,7 @@ int main()
     vector<int> Es(3);
     pair<vector<int>, vector<Segmento*>> return1;
     vector<int> return2;
+    vector<SegmentoBusca*> return3;
 
     for (int V = 100; V <= 1000; V = V + 200)
     {
@@ -92,6 +107,25 @@ int main()
             timeDuration = duration_cast<nanoseconds>(timeStop - timeStart).count();
             cout << 2 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
             file << 2 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
+
+            std::random_device rd;
+            std::mt19937 gen(rd());
+            std::uniform_int_distribution<> verticeAleatorio(0, V-1);
+            int v1 = verticeAleatorio(gen);
+            int v2 = verticeAleatorio(gen);
+            while (v1 == v2) { v2 = verticeAleatorio(gen); }
+
+            std::uniform_real_distribution<> dinheiro(0, 100);
+            float dinheiroAleatorio = dinheiro(gen);
+
+            adicionaTransito(planta);
+
+            timeStart = high_resolution_clock::now();
+            return3 = melhorRota(planta, return2, return1.second, return1.first, v1, v2, dinheiroAleatorio);
+            timeStop = high_resolution_clock::now();
+            timeDuration = duration_cast<nanoseconds>(timeStop - timeStart).count();
+            cout << 3 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
+            file << 3 << ", " << V << ", " << E << ", " << timeDuration << ";" << endl;
         }
     }
 
