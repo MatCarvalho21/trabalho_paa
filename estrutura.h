@@ -110,5 +110,6 @@ PlantaBusca* newPlantaBusca(int);
 void adicionaImovelASegmento(Imovel*, Segmento*);
 void adicionaSegmentoAPlanta(Segmento*, Planta*);
 
+#include "estrutura.cpp"
 
 #endif

@@ -455,7 +455,7 @@ pair<vector<int>, int> twoOptDirected(Planta* planta, const vector<int>& cicloIn
     return make_pair(melhorCiclo, melhorCusto);
 }
 
-vector<int> bus(Planta* planta, int origem = 0)
+vector<int> bus(Planta* planta)
 {
     pair<Planta*, set<int>> grafoVirutal = construir_grafo_virtual(planta, 10);
 
@@ -463,8 +463,9 @@ vector<int> bus(Planta* planta, int origem = 0)
 
     pair<Planta*, vector<vector<int>>> grafoRegioes = construirGrafoRegioes(grafoVirutal.first, verticesRegionais);
 
-    delete[] grafoVirutal.first;
+    delete grafoVirutal.first;
 
+    int origem = *verticesRegionais.begin();
     vector<int> cicloInicial = nearestNeighbor(grafoRegioes.first, origem);
 
     pair<vector<int>, int> cicloOtimizado = twoOptDirected(grafoRegioes.first, cicloInicial);
@@ -642,7 +643,7 @@ vector<int> bus(Planta* planta, int origem = 0)
 //     }
 
 //     cout << "TESTE: bus()" <<endl;
-//     vector<int> resultado15 = bus(plantaTeste, 2);
+//     vector<int> resultado15 = bus(plantaTeste);
 //     for (int elemento : resultado15) {
 //         cout << elemento << " ";
 //     }
