@@ -505,7 +505,6 @@ vector<int> bus(Planta* planta)
     return ciclo;
 }
 
-
 // int main(){
 
 //     Planta* plantaTeste = newPlanta(6);  // Cria a planta com 6 vértices

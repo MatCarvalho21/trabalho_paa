@@ -107,6 +107,34 @@ vector<vector<int>> calculaDistancias(int numVertices, const vector<pair<int,int
     return dist;
 }
 
+pair<vector<bool>, int> verificaConexidade(Planta* planta, int origem)
+{
+    int numVertices = planta->listaAdj.size();
+    vector<bool> visitado(numVertices, false);
+    queue<int> fila;
+    int visitados = 0;
+
+    // Começa a BFS a partir do vértice 0
+    fila.push(origem);
+    visitado[origem] = true;
+
+    while (!fila.empty()) {
+        int vAtual = fila.front();
+        fila.pop();
+        visitados++;
+
+        for (Segmento* seg : planta->listaAdj[vAtual]) {
+            int vizinho = seg->vEntrada;
+            if (!visitado[vizinho]) {
+                visitado[vizinho] = true;
+                fila.push(vizinho);
+            }
+        }
+    }
+
+    return make_pair(visitado, visitados);
+}
+
 // Função para gerar uma planta dado um núemro de vértices e um número de arestas
 Planta* geraPlantaAutomatica(int numVertices, int numArestas) {
     if (numVertices < 2 || numArestas < numVertices - 1 || 
@@ -244,6 +272,72 @@ Planta* geraPlantaAutomatica(int numVertices, int numArestas) {
         }
         tentativas++;
     }
-    
+
+    vector<bool> conexos(numVertices, false);
+    bool unconected = true;
+
+    while (unconected)
+    {
+        unconected = false;
+
+        for (int i = 0; i < numVertices; i++)
+        {
+            if (conexos[i]) { continue; }
+
+            pair<vector<bool>, int> conexidade = verificaConexidade(planta, i);
+
+            if (conexidade.second < numVertices)
+            {
+                unconected = true;
+
+                int desconexo = -1;
+                for (int k = 0; k < numVertices; k++)
+                {
+                    if (!conexidade.first[k])
+                    {
+                        desconexo = k;
+                        break;
+                    }
+                }
+
+                int v1 = i; // Primeiro vértice desconectado
+                int v2 = desconexo;
+
+                pair<int, int> novaAresta = {v1, v2};
+                arestasExistentes.push_back(novaAresta);
+
+                string nomeRua = geraNomeRua();
+                RuaInfo rua;
+                rua.nome = nomeRua;
+                rua.numAtual = 2;
+                rua.maoUnica = std::uniform_int_distribution<>(0, 1)(gen) == 1;
+
+                int cepEscolhido = determinaCEP(v1, ceps, distancias);
+
+                Segmento* seg = newSegmento(v1, v2,
+                                            std::uniform_int_distribution<>(30, 60)(gen),
+                                            std::uniform_int_distribution<>(100, 500)(gen),
+                                            cepEscolhido,
+                                            nomeRua,
+                                            !rua.maoUnica);
+
+                geraImoveis(seg, rua);
+                adicionaSegmentoAPlanta(seg, planta);
+
+                if (!rua.maoUnica)
+                {
+                    Segmento* segInverso = newSegmento(v2, v1,
+                                                    seg->limVel,
+                                                    seg->tamanho,
+                                                    seg->CEP,
+                                                    nomeRua,
+                                                    true);
+                    adicionaSegmentoAPlanta(segInverso, planta);
+                }
+            }
+            else { conexos[i] = true; }
+        }
+    }
+
     return planta;
 }
