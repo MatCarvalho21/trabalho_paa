@@ -22,5 +22,6 @@ using std::set;
 void dijkstra(int, vector<int>&, vector<int>&, int, Planta*);
 void primMST(int, vector<int>&, int, Planta*);
 
+#include "algoritmosBase.cpp"
 
 #endif

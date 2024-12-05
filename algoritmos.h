@@ -15,4 +15,6 @@ using namespace std;
 // Declaração da função com a ordem invertida no par
 pair<vector<int>, vector<Segmento*>> subway(Planta* planta, int numVertices);
 
+#include "algoritmos.cpp"
+
 #endif // ALGORITMOS_H

@@ -12,4 +12,6 @@ string removeQuotes(const string&);
 string extractValue(const string&);
 void carregaJSON(const string&, Planta*);
 
+#include "mapa.cpp"
+
 #endif

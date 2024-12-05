@@ -22,5 +22,7 @@ pair<vector<int>, int> twoOptDirected(Planta*, const vector<int>&);
 vector<vector<int>> gerarMatrizAdjacencia(Planta*);
 int encontrarVerticeOtimo(Planta*, const set<int>&, int);
 set<int> achaVerticesRegionais(Planta*, const set<int>&);
-vector<int> bus(Planta*, int = 0);
+
+#include "ex2.cpp"
+
 #endif // EX2_H

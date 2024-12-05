@@ -1,5 +1,3 @@
-#include "estrutura.h"
-#include "ex2.h"
 #include <vector>
 #include <limits>
 #include <algorithm>
@@ -16,13 +14,13 @@ using namespace std;
 /// @brief Função para calcular o peso de um segmento com base nos tipos de imóveis.
 /// @param segmento Estrutura Segmento contendo o vetor de imóveis.
 /// @return Peso calculado como (turísticos + comerciais) - (residenciais + industriais).
-int calcula_peso(const Segmento& segmento) {
+int calcula_peso(const Segmento* segmento) {
     int comerciais = 0;
     int industriais = 0;
     int turisticos = 0;
     int residenciais = 0;
 
-    for (Imovel* imovel : segmento.imoveis) {
+    for (Imovel* imovel : segmento->imoveis) {
         if (imovel->tipo == "comercial") {
             comerciais++;
         } else if (imovel->tipo == "industrial") {
@@ -43,26 +41,25 @@ int calcula_peso(const Segmento& segmento) {
 /// @return Um par contendo o ponteiro para a nova Planta virtual e o conjunto de vértices de borda.
 pair<Planta*, set<int>> construir_grafo_virtual(Planta* planta, int limiar) {
     // Conjunto para armazenar os vértices de borda
-    set<int> vertices_borda;
-    vector<int> num_regioes_vertice_alcanca (planta->listaAdj.size(), 0);
-
-    // Número de vértices na planta
     int num_vertices = planta->listaAdj.size();
+    set<int> vertices_borda;
+    vector<set<int>> set_aux_ceps (num_vertices);
+    // Número de vértices na planta
 
     // Cria a planta virtual (grafo virtual)
     Planta* planta_virtual = newPlanta(num_vertices);
 
     // Itera sobre os vértices da planta original
     for (int i = 0; i < num_vertices; i++) {
-        vector<Segmento*> lista_aux = planta->listaAdj[i]; // Lista de adjacência do vértice i
+        vector<Segmento*> lista_vizinhos = planta->listaAdj[i]; // Lista de adjacência do vértice i
 
         // Itera sobre os segmentos (arestas) de saída do vértice i
-        for (Segmento* temp_node : lista_aux) {
-
-            num_regioes_vertice_alcanca[temp_node->vEntrada] += 1;
+        for (Segmento* temp_node : lista_vizinhos) {
+            set_aux_ceps[temp_node->vSaida].insert(temp_node->CEP);
+            set_aux_ceps[temp_node->vEntrada].insert(temp_node->CEP);
 
             // Calcula o novo peso ajustado
-            int novo_peso = calcula_peso(*temp_node);
+            int novo_peso = calcula_peso(temp_node);
 
             // Cria um novo segmento com o peso ajustado
             Segmento* temp_segmento = newSegmento(
@@ -80,11 +77,11 @@ pair<Planta*, set<int>> construir_grafo_virtual(Planta* planta, int limiar) {
             // Adiciona o novo segmento ao grafo virtual (ajusta a lista de adjacência)
             adicionaSegmentoAPlanta(temp_segmento, planta_virtual);
         }
+    }
 
-        // Verifica se há mais de um CEP único no conjunto auxiliar (vértices de borda)
-        if (num_regioes_vertice_alcanca[i] > 1) {
-            vertices_borda.insert(i); // Marca o vértice como de borda
-        }
+    for (int i = 0; i < num_vertices; i++)
+    {
+        if (set_aux_ceps[i].size() > 1) { vertices_borda.insert(i); }
     }
 
     // Retorna o grafo virtual e o conjunto de vértices de borda
@@ -112,7 +109,7 @@ pair<vector<int>, vector<int>> dijkstra_regional(Planta* planta, int origem, int
         int vertice_atual = -1;
 
         // Encontrar o vértice com a menor distância não visitado
-        for (int i = 0; i < num_vertices; ++i)
+        for (int i = 0; i < num_vertices; i++)
         {
             if (!visitados[i] && distancias[i] < menor_distancia)
             {
@@ -121,8 +118,7 @@ pair<vector<int>, vector<int>> dijkstra_regional(Planta* planta, int origem, int
             }
         }
 
-        if (menor_distancia == numeric_limits<int>::max()) // Todos os vértices foram visitados
-            break;
+        if (vertice_atual == -1 || menor_distancia == numeric_limits<int>::max()) { break; } // Todos os vértices foram visitados
 
         // Explorar os vizinhos do vértice atual
         for (Segmento* segmento : planta->listaAdj[vertice_atual])
@@ -158,28 +154,26 @@ pair<vector<int>, vector<int>> dijkstra_regional(Planta* planta, int origem, int
 int encontrarVerticeOtimo(Planta* planta, const set<int>& verticesBorda, int cepRegiao)
 {
     int numVertices = planta->listaAdj.size();
-    int verticeOtimo;
-    float menorMediaDistancias = numeric_limits<float>::infinity();
+    int verticeOtimo = -1;
+    float menorMediaDistancias = numeric_limits<float>::max();
 
-    for (int vertice = 0; vertice < numVertices; ++vertice)
+    for (int vertice = 0; vertice < numVertices; vertice++)
     {
-        pair<vector<int>, vector<int>> dist = dijkstra_regional(planta, vertice, cepRegiao);
+        pair<vector<int>, vector<int>> distParent = dijkstra_regional(planta, vertice, cepRegiao);
+        vector<int> distancias = distParent.first;
 
         // Obter as distâncias apenas dos vértices de borda
         vector<int> distanciasBorda;
         for (int borda : verticesBorda)
         {
-            if (dist.first[borda] != numeric_limits<int>::max())
+            if (distancias[borda] < numeric_limits<int>::max() && distParent.second[borda] != -1)
             {
-                distanciasBorda.push_back(dist.first[borda]);
+                distanciasBorda.push_back(distancias[borda]);
             }
         }
 
         // Ignorar se não houver distâncias válidas
-        if (distanciasBorda.empty())
-        {
-            continue;
-        }
+        if (distanciasBorda.empty()) { continue; }
 
         // Calcular a média das distâncias
         float mediaDistancias = std::accumulate(distanciasBorda.begin(), distanciasBorda.end(), 0.0f) / distanciasBorda.size();
@@ -210,7 +204,7 @@ set<int> achaVerticesRegionais(Planta* planta, const set<int>& verticesBorda)
         int verticeOtimo = encontrarVerticeOtimo(planta, verticesBorda, cep);
 
         // Adiciona os vértices ótimos dessa região à lista final
-        verticesOtimosPorRegiao.insert(verticeOtimo);
+        if (verticeOtimo != -1) { verticesOtimosPorRegiao.insert(verticeOtimo); }
     }
 
     return verticesOtimosPorRegiao;
@@ -224,80 +218,82 @@ set<int> achaVerticesRegionais(Planta* planta, const set<int>& verticesBorda)
 ///         - Um vetor de predecessores usado para reconstruir os caminhos.
 pair<vector<int>, vector<int>> dijkstra_normal(Planta* planta, int origem)
 {
-    int numVertices = planta->listaAdj.size();
+    int num_vertices = planta->listaAdj.size();
+    vector<int> distancias(num_vertices, numeric_limits<int>::max());
+    vector<bool> visitados(num_vertices, false);
+    vector<int> anteriores(num_vertices, -1);
 
-    // Inicialização
-    vector<int> distancias(numVertices, numeric_limits<int>::max());
-    vector<int> predecessores(numVertices, -1); // Para reconstruir o caminho
-    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> filaPrioridade;
-    
-    // A distância para o vértice de origem é 0
     distancias[origem] = 0;
-    filaPrioridade.push({0, origem});
 
-    while (!filaPrioridade.empty())
+    while (true)
     {
-        // Pegar o vértice com menor distância
-        pair<int, int> topo = filaPrioridade.top();
-        int distAtual = topo.first;
-        int verticeAtual = topo.second;
-        
-        filaPrioridade.pop();
+        int menorDistancia = numeric_limits<int>::max();
+        int verticeAtual = -1;
 
-        if (distAtual > distancias[verticeAtual]) { continue; }
-
-        vector<Segmento*> segmentos = planta->listaAdj[verticeAtual];
-        for (int i = 0; i < segmentos.size(); i++)
+        for (int i = 0; i < num_vertices; i++)
         {
-            int vizinho = segmentos[i]->vEntrada;
-            
-            int peso = segmentos[i]->tamanho;
-            // Relaxar a aresta
-            if (distancias[verticeAtual] + peso < distancias[vizinho])
+            if (!visitados[i] && distancias[i] < menorDistancia)
             {
-                distancias[vizinho] = distancias[verticeAtual] + peso;
-                predecessores[vizinho] = verticeAtual;
-                filaPrioridade.push({distancias[vizinho], vizinho});
+                menorDistancia = distancias[i];
+                verticeAtual = i;
             }
         }
+
+        if (verticeAtual == -1 || menorDistancia >= numeric_limits<int>::max()) { break; } // Todos os vértices foram visitados
+
+
+        for (Segmento* segmento : planta->listaAdj[verticeAtual])
+        {
+            int vizinho = segmento->vEntrada;
+            int peso = segmento->tamanho;
+
+            if (!visitados[vizinho])
+            {
+                int novaDistancia = distancias[verticeAtual] + peso;
+                if (novaDistancia < distancias[vizinho])
+                {
+                    distancias[vizinho] = novaDistancia;
+                    anteriores[vizinho] = verticeAtual;
+                }
+            }
+        }
+        visitados[verticeAtual] = true;
     }
 
-    return {distancias, predecessores};
+    return {distancias, anteriores};
 }
 
 /// @brief Constrói um grafo completo conectando vértices ótimos, onde o peso das arestas é a distância mínima calculada pelo Dijkstra.
 /// @param plantaOriginal Ponteiro para a planta original contendo todos os segmentos e vértices.
 /// @param verticesOtimos Vetor de vértices ótimos identificados.
 /// @return Ponteiro para o grafo completo das regiões (planta virtual).
-pair<Planta*, vector<vector<int>>> construirGrafoRegioes(Planta* plantaOriginal, const set<int>& verticesOtimos)
+pair<Planta*, vector<vector<int>>> construirGrafoRegioes(Planta* planta, set<int> verticesRegioes)
 {
+    int numVertices = planta->listaAdj.size();
     // Criar a planta virtual (grafo da região)
-    Planta* plantaVirtual = newPlanta(plantaOriginal->listaAdj.size());
-    vector<vector<int>> listaPredecessores(plantaOriginal->listaAdj.size());
-    // Iterar sobre todos os pares de vértices ótimos
-    for (int vertice1 : verticesOtimos)
-    {   
-        pair<vector<int>, vector<int>> resultado = dijkstra_normal(plantaOriginal, vertice1);
+
+    Planta* plantaRegioes = newPlanta(numVertices);
+    vector<vector<int>> listaPredecessores(numVertices);
+
+    // Iterar sobre todos os pares de vértices ótimo
+    for (int verticeOtimo1 : verticesRegioes)
+    {
+        pair<vector<int>, vector<int>> resultado = dijkstra_normal(planta, verticeOtimo1);
         vector<int> distancias = resultado.first;
         vector<int> predecessores = resultado.second;
         
-        listaPredecessores[vertice1] = predecessores;
+        listaPredecessores[verticeOtimo1] = predecessores;
 
-        for (int vertice2 : verticesOtimos)
+        for (int verticeOtimo2 : verticesRegioes)
         {
-            // Garantir que não conectamos o vértice a ele mesmo
-            if (vertice1 != vertice2 && distancias[vertice2] != numeric_limits<int>::max())
-            {
-                // Criar um segmento virtual entre vertice1 e vertice2 com o peso sendo a distância do Dijkstra
-                Segmento* segmentoVirtual = newSegmento(vertice1, vertice2, 0, distancias[vertice2], 0, "Virtual", false);
+            if (verticeOtimo1 == verticeOtimo2) { continue; }
 
-                // Adicionar o segmento à planta virtual
-                plantaVirtual->listaAdj[vertice1].push_back(segmentoVirtual);
-            }
+            Segmento* segmentoVirtual = newSegmento(verticeOtimo1, verticeOtimo2, 0, distancias[verticeOtimo2], 0, "Virtual", false);
+            adicionaSegmentoAPlanta(segmentoVirtual, plantaRegioes);
         }
     }
 
-    return make_pair(plantaVirtual, listaPredecessores);
+    return make_pair(plantaRegioes, listaPredecessores);
 }
 
 /// @brief Aplica a heurística do vizinho mais próximo para encontrar um ciclo no grafo.
@@ -310,7 +306,6 @@ vector<int> nearestNeighbor(Planta* plantaRegioes, int verticeInicial = 0)
 {
     int numVertices = plantaRegioes->listaAdj.size();
     vector<int> ciclo;
-    vector<Segmento*> cicloSegmentos;
     ciclo.push_back(verticeInicial);
     vector<bool> visitados(numVertices, false);
 
@@ -322,16 +317,14 @@ vector<int> nearestNeighbor(Planta* plantaRegioes, int verticeInicial = 0)
         vector<Segmento*> listaAdjAtual = plantaRegioes->listaAdj[verticeAtual];
         float menorPeso = numeric_limits<float>::infinity();
         int proximoVertice = -1;
-        Segmento* segmento_aux = nullptr;
 
         for (Segmento* segmento : listaAdjAtual)
         {
             int vizinho = segmento->vEntrada; // Considerando o vértice de entrada como vizinho
-            float peso = segmento->limVel;   // Usando limVel como peso da aresta
+            float peso = segmento->tamanho;   // Usando tamanho como peso da aresta
 
             if (!visitados[vizinho] && peso < menorPeso)
             {
-                segmento_aux = segmento;
                 menorPeso = peso;
                 proximoVertice = vizinho;
             }
@@ -343,24 +336,41 @@ vector<int> nearestNeighbor(Planta* plantaRegioes, int verticeInicial = 0)
         }
 
         ciclo.push_back(proximoVertice);
-        cicloSegmentos.push_back(segmento_aux);
         verticeAtual = proximoVertice;
         visitados[verticeAtual] = true;
     }
 
-    // Adicionar o segmento que fecha o ciclo, se existir
-    vector<Segmento*> listaAdjAtual = plantaRegioes->listaAdj[verticeAtual];
-    for (Segmento* segmento : listaAdjAtual)
+    ciclo.push_back(verticeInicial); // Retorna ao vértice inicial para formar o ciclo
+    return ciclo;
+}
+
+
+/// @brief Gera uma matriz de adjacência a partir da lista de adjacência de uma planta.
+/// @param planta Ponteiro para a estrutura Planta representando o grafo.
+/// @return Uma matriz de adjacência (vetor de vetores) com os pesos das arestas.
+vector<vector<int>> gerarMatrizAdjacencia(Planta* planta)
+{
+    int numVertices = planta->listaAdj.size();
+    // Inicializar a matriz de adjacência com infinito (indicando ausência de arestas)
+    vector<vector<int>> matriz(numVertices, vector<int>(numVertices, numeric_limits<int>::max()));
+
+    // Preencher a matriz com os pesos das arestas a partir da lista de adjacência
+    for (int i = 0; i < numVertices; i++)
     {
-        if (segmento->vEntrada == verticeInicial)
+        for (Segmento* segmento : planta->listaAdj[i])
         {
-            cicloSegmentos.push_back(segmento); // Adiciona o segmento que fecha o ciclo
-            break;
+            int vizinho = segmento->vEntrada;
+            float peso = segmento->tamanho; // Exemplo: usar o tamanho como peso
+
+            matriz[i][vizinho] = peso; // Define o peso da aresta de i para vEntrada
+            if (segmento->dupla)
+            {
+                matriz[vizinho][i] = peso; // Se o segmento for bidirecional, adiciona também a aresta reversa
+            }
         }
     }
 
-    ciclo.push_back(verticeInicial); // Retorna ao vértice inicial para formar o ciclo
-    return ciclo;
+    return matriz;
 }
 
 /// @brief Calcula o custo total de um ciclo em um grafo direcionado.
@@ -395,11 +405,11 @@ pair<int, int> calcularCustoDirecionado(const vector<vector<int>> matrizAdj, con
 pair<vector<int>, int> twoOptDirected(Planta* planta, const vector<int>& cicloInicial)
 {
     int n = cicloInicial.size() - 1;
+    vector<vector<int>> matrizAdj = gerarMatrizAdjacencia(planta);
     vector<int> melhorCiclo;
     for (int i = 0; i < n; ++i) { melhorCiclo.push_back(cicloInicial[i]); }
-    vector<vector<int>> matrizAdj = gerarMatrizAdjacencia(planta);
 
-    pair<int, int> custos = calcularCustoDirecionado(matrizAdj, melhorCiclo);
+    pair<int, int> custos = calcularCustoDirecionado(matrizAdj, cicloInicial);
     int melhorCustoIda = custos.first;
     int melhorCustoVolta = custos.second;
 
@@ -418,8 +428,11 @@ pair<vector<int>, int> twoOptDirected(Planta* planta, const vector<int>& cicloIn
                 int temp = novoCiclo[j];
                 novoCiclo[j] = novoCiclo[i + 1];
                 novoCiclo[i + 1] = temp;
-                
+
+                novoCiclo.push_back(novoCiclo[0]);
                 pair<int, int> custos = calcularCustoDirecionado(matrizAdj, novoCiclo);
+                novoCiclo.pop_back();
+
                 int novoCustoIda = custos.first;
                 int novoCustoVolta = custos.second;
 
@@ -442,35 +455,7 @@ pair<vector<int>, int> twoOptDirected(Planta* planta, const vector<int>& cicloIn
     return make_pair(melhorCiclo, melhorCusto);
 }
 
-/// @brief Gera uma matriz de adjacência a partir da lista de adjacência de uma planta.
-/// @param planta Ponteiro para a estrutura Planta representando o grafo.
-/// @return Uma matriz de adjacência (vetor de vetores) com os pesos das arestas.
-vector<vector<int>> gerarMatrizAdjacencia(Planta* planta)
-{
-    int numVertices = planta->listaAdj.size();
-    // Inicializar a matriz de adjacência com infinito (indicando ausência de arestas)
-    vector<vector<int>> matriz(numVertices, vector<int>(numVertices, 0));
-
-    // Preencher a matriz com os pesos das arestas a partir da lista de adjacência
-    for (int i = 0; i < numVertices; i++)
-    {
-        for (Segmento* segmento : planta->listaAdj[i])
-        {
-            int vizinho = segmento->vEntrada;
-            float peso = segmento->tamanho; // Exemplo: usar o limite de velocidade como peso
-
-            matriz[i][vizinho] = peso; // Define o peso da aresta de i para vEntrada
-            if (segmento->dupla)
-            {
-                matriz[vizinho][i] = peso; // Se o segmento for bidirecional, adiciona também a aresta reversa
-            }
-        }
-    }
-
-    return matriz;
-}
-
-vector<int> bus(Planta* planta, int origem)
+vector<int> bus(Planta* planta)
 {
     pair<Planta*, set<int>> grafoVirutal = construir_grafo_virtual(planta, 10);
 
@@ -480,6 +465,7 @@ vector<int> bus(Planta* planta, int origem)
 
     delete grafoVirutal.first;
 
+    int origem = *verticesRegionais.begin();
     vector<int> cicloInicial = nearestNeighbor(grafoRegioes.first, origem);
 
     pair<vector<int>, int> cicloOtimizado = twoOptDirected(grafoRegioes.first, cicloInicial);
@@ -657,7 +643,7 @@ vector<int> bus(Planta* planta, int origem)
 //     }
 
 //     cout << "TESTE: bus()" <<endl;
-//     vector<int> resultado15 = bus(plantaTeste, 2);
+//     vector<int> resultado15 = bus(plantaTeste);
 //     for (int elemento : resultado15) {
 //         cout << elemento << " ";
 //     }
