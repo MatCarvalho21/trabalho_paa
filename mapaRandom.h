@@ -38,4 +38,6 @@ int determinaCEP(int, const vector<CEPInfo>&, const vector<vector<int>>&);
 vector<vector<int>> calculaDistancias(int, const vector<pair<int,int>>&);
 Planta* geraPlantaAutomatica(int, int);
 
+#include "mapaRandom.cpp"
+
 #endif

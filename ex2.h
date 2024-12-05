@@ -23,4 +23,6 @@ vector<vector<int>> gerarMatrizAdjacencia(Planta*);
 int encontrarVerticeOtimo(Planta*, const set<int>&, int);
 set<int> achaVerticesRegionais(Planta*, const set<int>&);
 
+#include "ex2.cpp"
+
 #endif // EX2_H

@@ -19,4 +19,6 @@ using namespace std;
 void printSegmento(const Segmento*);
 void printSet(const set<Segmento*>&);
 
+#include "utils.cpp"
+
 #endif
