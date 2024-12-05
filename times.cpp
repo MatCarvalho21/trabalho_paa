@@ -30,7 +30,7 @@ int main()
     vector<int> return2;
     vector<SegmentoBusca*> return3;
 
-    for (int V = 50; V <= 1000; V = V + 100)
+    for (int V = 150; V <= 800; V = V + 100)
     {
         Es[0] = V;
         Es[1] = 2*V;
@@ -58,27 +58,33 @@ int main()
             return2 = bus(planta);
             timeStop = high_resolution_clock::now();
             timeDuration = duration_cast<nanoseconds>(timeStop - timeStart).count();
-            cout << 2 << "," << V << "," << E << "," << i+1 << "," << timeDuration << ";" << endl;
-            file << 2 << "," << V << "," << E << "," << i+1 << "," << timeDuration << ";" << endl;
+            cout << 2 << "," << V << "," << E << "," << i+1 << "," << timeDuration << endl;
+            file << 2 << "," << V << "," << E << "," << i+1 << "," << timeDuration << endl;
 
             std::random_device rd;
             std::mt19937 gen(rd());
             std::uniform_int_distribution<> verticeAleatorio(0, V-1);
-            int v1 = verticeAleatorio(gen);
-            int v2 = verticeAleatorio(gen);
-            while (v1 == v2) { v2 = verticeAleatorio(gen); }
-
-            std::uniform_real_distribution<> dinheiro(0, 100);
-            float dinheiroAleatorio = dinheiro(gen);
-
+            std::uniform_real_distribution<> dinheiro(0, 40);
             adicionaTransito(planta);
 
-            timeStart = high_resolution_clock::now();
-            return3 = melhorRota(planta, return2, return1.second, return1.first, v1, v2, dinheiroAleatorio);
-            timeStop = high_resolution_clock::now();
-            timeDuration = duration_cast<nanoseconds>(timeStop - timeStart).count();
-            cout << 3 << "," << V << "," << E << "," << i+1 << "," << timeDuration << ";" << endl;
-            file << 3 << "," << V << "," << E << "," << i+1 << "," << timeDuration << ";" << endl;
+            timeDuration = 0;
+            int epocas = 5;
+            for (int j = 0; j < epocas; j++)
+            {
+                int v1 = verticeAleatorio(gen);
+                int v2 = verticeAleatorio(gen);
+                while (v1 == v2) { v2 = verticeAleatorio(gen); }
+                float dinheiroAleatorio = dinheiro(gen);
+
+                timeStart = high_resolution_clock::now();
+                return3 = melhorRota(planta, return2, return1.second, return1.first, v1, v2, dinheiroAleatorio);
+                timeStop = high_resolution_clock::now();
+                timeDuration += duration_cast<nanoseconds>(timeStop - timeStart).count();
+            }
+            timeDuration = timeDuration/epocas;
+
+            cout << 3 << "," << V << "," << E << "," << i+1 << "," << timeDuration << endl;
+            file << 3 << "," << V << "," << E << "," << i+1 << "," << timeDuration << endl;
 
             delete planta;
         }
