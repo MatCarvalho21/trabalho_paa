@@ -16,17 +16,18 @@
 using namespace std;
 const double INF = numeric_limits<double>::max();
 
-const double VelocidadeMetro = 70.0;
-const double VelocidadeAndar = 5.0;
+const double normalizacao = 3.6;
+const double VelocidadeMetro = 70.0 / normalizacao;
+const double VelocidadeAndar = 5.0 / normalizacao;
 
 // variáveis táxi
-double limite_km = 2.0;
-double taxa_variavel = 3.0;
-double taxa_fixa = 7.0;
+const double limite_km = 2.0;
+const double taxa_variavel = 3.0;
+const double taxa_fixa = 7.0;
 
 // passagens
-double passagem_metro = 2.0;
-double passagem_onibus = 1.5;
+const double passagem_metro = 2.0;
+const double passagem_onibus = 1.5;
 
 pair<vector<int>, vector<int>> dijkstraMetro(Planta* mstMetro, int origem)
 {
@@ -67,9 +68,9 @@ pair<vector<int>, vector<int>> dijkstraMetro(Planta* mstMetro, int origem)
     return {distancias, predecessores};
 }
 
-vector<pair<pair<int, int>, double>> achaArestasMetro(Planta* mstMetro, vector<int> estacoesMetro)
+vector<pair<pair<int, int>, int>> achaArestasMetro(Planta* mstMetro, vector<int> estacoesMetro)
 {
-    vector<pair<pair<int, int>, double>> arestasMetro;
+    vector<pair<pair<int, int>, int>> arestasMetro;
 
     for (int i = 0; i < estacoesMetro.size(); i++)
     {
@@ -80,18 +81,31 @@ vector<pair<pair<int, int>, double>> achaArestasMetro(Planta* mstMetro, vector<i
         for (int j = 0; j < estacoesMetro.size(); j++)
         {
             if (i == j) { continue; }
-
-            double peso = (distancias[estacoesMetro[j]])/1000.0;
-            arestasMetro.push_back({{estacoesMetro[i], estacoesMetro[j]}, peso});
+            arestasMetro.push_back({{estacoesMetro[i], estacoesMetro[j]}, distancias[estacoesMetro[j]]});
         }
     }
     return arestasMetro;
 }
 
-vector<pair<double, double>> calculaDistTempoCiclo(Planta* planta, vector<int> ciclo, int start)
+pair<int, double> calculaDistTemp(Planta* planta, int vOrigem, int vDestino)
+{
+    vector<Segmento*> segmentos = planta->listaAdj[vOrigem];
+    for (Segmento* segmento : segmentos)
+    {
+        if (segmento->vEntrada == vDestino)
+        {
+            double limite = segmento->limVel / normalizacao;
+            return {segmento->tamanho, segmento->tamanho / limite};
+        }
+    }
+    cout << "Erro: segmento não encontrado" << endl;
+    return {0, 0};
+}
+
+vector<pair<int, double>> calculaDistTempoCiclo(Planta* planta, vector<int> ciclo, int start)
 {
     int n = ciclo.size();
-    vector<pair<double, double>> distanciasTempos;
+    vector<pair<int, double>> distanciasTempos;
     distanciasTempos.resize(n);
 
     int startIndex = -1;
@@ -110,37 +124,45 @@ vector<pair<double, double>> calculaDistTempoCiclo(Planta* planta, vector<int> c
 
     for (int i = 0; i < n - 1; i++)
     {
-        vector<Segmento*> segmentos = planta->listaAdj[ciclo[startIndex]];
-        
-        int nextIndex = (startIndex + i) % n;
-        
-        distanciasTempos[nextIndex] = distanciasTempos[startIndex];
+        int nextIndex = (startIndex + i + 1) % n;
+        int currentIndex = (startIndex + i) % n;
 
-        for (Segmento* segmento : segmentos)
-        {
-            if (segmento->vEntrada == ciclo[nextIndex])
-            {
-                double distanciaKM = segmento->tamanho/1000.0;
-                distanciasTempos[nextIndex].first += distanciaKM;
-                distanciasTempos[nextIndex].second += (distanciaKM / segmento->limVel);
-                break;
-            }
-        }
+        vector<Segmento*> segmentos = planta->listaAdj[ciclo[currentIndex]];
+
+        distanciasTempos[nextIndex].first = 0;
+        distanciasTempos[nextIndex].second = 0;
+
+        distanciasTempos[nextIndex].first += distanciasTempos[currentIndex].first;
+        distanciasTempos[nextIndex].second += distanciasTempos[currentIndex].second;
+
+        pair<int, double> distTemp = calculaDistTemp(planta, ciclo[currentIndex], ciclo[nextIndex]);
+
+        if (distTemp.first == 0) { cout << ciclo[currentIndex] << " " << ciclo[nextIndex] << endl; }
+
+        distanciasTempos[nextIndex].first += distTemp.first;
+        distanciasTempos[nextIndex].second += distTemp.second;
     }
 
     return distanciasTempos;
 }
 
-vector<pair<pair<int, int>, pair<double, double>>> achaArestasOnibus(Planta* planta, vector<int> cicloBus)
+vector<pair<pair<int, int>, pair<int, double>>> achaArestasOnibus(Planta* planta, vector<int> cicloBus)
 {
     vector<int> cicloTemp = cicloBus;
     cicloTemp.pop_back();
+    cout << endl;
+    for (int i = 0; i < cicloTemp.size(); i++)
+    {
+        cout << cicloTemp[i] << " ";
+    }
+    cout << endl;
+    cout << endl;
 
-    vector<pair<pair<int, int>, pair<double, double>>> arestasOnibus;
+    vector<pair<pair<int, int>, pair<int, double>>> arestasOnibus;
 
     for (int i = 0; i < cicloTemp.size(); i++)
     {
-        vector<pair<double, double>> distanciasTempos = calculaDistTempoCiclo(planta, cicloTemp, cicloTemp[i]);
+        vector<pair<int, double>> distanciasTempos = calculaDistTempoCiclo(planta, cicloTemp, cicloTemp[i]);
 
         for (int j = 0; j < cicloTemp.size(); j++)
         {
@@ -161,20 +183,19 @@ PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, Planta* m
         vector<Segmento*> segmentos = planta->listaAdj[i];
         for (Segmento* segmento : segmentos)
         {
-            double segmentoKm = segmento->tamanho;
             SegmentoBusca* segmentoAndar = newSegmentoBusca(
                 i,
                 segmento->vEntrada,
-                segmentoKm,
-                segmentoKm / VelocidadeAndar,
+                segmento->tamanho,
+                segmento->tamanho / VelocidadeAndar,
                 "andar"
             );
 
             SegmentoBusca* segmentoTaxi = newSegmentoBusca(
                 i + nVertices,
                 segmento->vEntrada + nVertices,
-                segmentoKm,
-                segmentoKm / segmento->limVel,
+                segmento->tamanho,
+                segmento->tamanho / (segmento->limVel / normalizacao),
                 "taxi"
             );
 
@@ -208,8 +229,8 @@ PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, Planta* m
                 SegmentoBusca* segmentoAndar2 = newSegmentoBusca(
                     segmento->vEntrada,
                     i,
-                    segmentoKm,
-                    segmentoKm / VelocidadeAndar,
+                    segmento->tamanho,
+                    segmento->tamanho / VelocidadeAndar,
                     "andar"
                 );
                 plantaBusca->adicionaSegmento(segmentoAndar2);
@@ -217,11 +238,11 @@ PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, Planta* m
         }
     }
 
-    vector<pair<pair<int, int>, double>> arestasMetro = achaArestasMetro(mstMetro, estacoesMetro);
-    for (pair<pair<int, int>, double> arestaMetro : arestasMetro)
+    vector<pair<pair<int, int>, int>> arestasMetro = achaArestasMetro(mstMetro, estacoesMetro);
+    for (pair<pair<int, int>, int> arestaMetro : arestasMetro)
     {
         pair<int, int> aresta = arestaMetro.first;
-        double distancia = arestaMetro.second;
+        int distancia = arestaMetro.second;
 
         SegmentoBusca* segmentoMetro = newSegmentoBusca(
             aresta.first,
@@ -233,7 +254,7 @@ PlantaBusca* constroiPlantaBusca(Planta* planta, vector<int> cicloBus, Planta* m
         plantaBusca->adicionaSegmento(segmentoMetro);
     }
 
-    vector<pair<pair<int, int>, pair<double, double>>> arestasOnibus = achaArestasOnibus(planta, cicloBus);
+    vector<pair<pair<int, int>, pair<int, double>>> arestasOnibus = achaArestasOnibus(planta, cicloBus);
 
     for (pair<pair<int, int>, pair<int, double>> arestaOnibus : arestasOnibus)
     {
@@ -462,7 +483,7 @@ int main(){
     cout << endl;
     
     cout << "TESTE: achaArestasMetro()" << endl;
-    vector<pair<pair<int, int>, double>> resultado = achaArestasMetro(mstMetro, estacoesMetro);
+    vector<pair<pair<int, int>, int>> resultado = achaArestasMetro(mstMetro, estacoesMetro);
 
     cout << "Arestas de metrô: ";
     for (pair<pair<int, int>, double> aresta : resultado) {
@@ -478,7 +499,7 @@ int main(){
 
     cout << "TESTE: achaArestasOnibus()" << endl;
 
-    vector<pair<pair<int, int>, pair<double, double>>> resultado2 = achaArestasOnibus(planta, cicloOnibus);
+    vector<pair<pair<int, int>, pair<int, double>>> resultado2 = achaArestasOnibus(planta, cicloOnibus);
 
     cout << "Arestas de ônibus: ";
     for (pair<pair<int, int>, pair<int, double>> aresta : resultado2) {

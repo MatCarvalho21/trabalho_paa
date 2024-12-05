@@ -59,11 +59,11 @@ struct SegmentoBusca
     int vOrigem;
     int vDestino;
     float distancia;
-    float tempo;
+    double tempo;
     string meioTransporte;
     bool vertical;
 
-    SegmentoBusca(int vOrigem, int vDestino, float distancia, float tempo, string meioTransporte)
+    SegmentoBusca(int vOrigem, int vDestino, float distancia, double tempo, string meioTransporte)
     {
         this->vOrigem = vOrigem;
         this->vDestino = vDestino;
@@ -105,7 +105,7 @@ struct PlantaBusca
 Planta* newPlanta(int);
 Segmento* newSegmento(int, int, int, int, int, string, bool);
 Imovel* newImovel(int, int, string);
-SegmentoBusca* newSegmentoBusca(int, int, float, float, string);
+SegmentoBusca* newSegmentoBusca(int, int, float, double, string);
 PlantaBusca* newPlantaBusca(int);
 void adicionaImovelASegmento(Imovel*, Segmento*);
 void adicionaSegmentoAPlanta(Segmento*, Planta*);

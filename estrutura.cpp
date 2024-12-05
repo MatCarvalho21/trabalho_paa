@@ -93,7 +93,7 @@ void adicionaSegmentoAPlanta(Segmento* segmento, Planta* planta)
     (planta -> CEPs).insert(segmento -> CEP);
 }
 
-SegmentoBusca* newSegmentoBusca(int vOrigem, int vDestino, float distancia, float tempo, string meioTransporte)
+SegmentoBusca* newSegmentoBusca(int vOrigem, int vDestino, float distancia, double tempo, string meioTransporte)
 
 {
     SegmentoBusca* temp = new SegmentoBusca(vOrigem, vDestino, distancia, tempo, meioTransporte);
